@@ -1,0 +1,46 @@
+{
+  "slug": "ch-fhir-ig-ch-epr-fhir-5-0-0-iti-67",
+  "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
+  "canonical": "http://fhir.ch/ig/ch-epr-fhir",
+  "candidateBases": [
+    "http://fhir.ch/ig/ch-epr-fhir",
+    "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir"
+  ],
+  "fileName": "iti-67.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/ch.fhir.ig.ch-epr-fhir#5.0.0/iti-67.html",
+  "pagePath": "iti-67.html",
+  "pageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-67.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 372,
+  "totalDiagramLength": 372,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67",
+    "caseJson": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/case.json",
+    "before": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/before",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/before/index.html"
+    },
+    "after": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/after",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/failure",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/source",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-67.html",
+  "remoteMermaidUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid-init.js"
+}

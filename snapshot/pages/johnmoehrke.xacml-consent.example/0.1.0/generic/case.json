@@ -1,0 +1,47 @@
+{
+  "slug": "johnmoehrke-xacml-consent-example-0-1-0-generic",
+  "packageId": "johnmoehrke.xacml-consent.example#0.1.0",
+  "canonical": "http://johnmoehrke.github.io/xacml-consent",
+  "candidateBases": [
+    "http://johnmoehrke.github.io/xacml-consent",
+    "https://build.fhir.org/ig/JohnMoehrke/xacml-consent"
+  ],
+  "fileName": "generic.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/johnmoehrke.xacml-consent.example#0.1.0/generic.html",
+  "pagePath": "generic.html",
+  "pageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/generic.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 207,
+  "totalDiagramLength": 414,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic",
+    "caseJson": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/case.json",
+    "before": {
+      "dir": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/before",
+      "html": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/before/index.html"
+    },
+    "after": {
+      "dir": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/after",
+      "html": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/failure",
+      "html": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/source",
+      "html": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/generic.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/assets/js/mermaid-init.js"
+}

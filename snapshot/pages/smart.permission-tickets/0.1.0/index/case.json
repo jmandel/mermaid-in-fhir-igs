@@ -1,0 +1,47 @@
+{
+  "slug": "smart-permission-tickets-0-1-0-index",
+  "packageId": "smart.permission-tickets#0.1.0",
+  "canonical": "http://smarthealthit.org/ig/permission-tickets",
+  "candidateBases": [
+    "http://smarthealthit.org/ig/permission-tickets",
+    "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip"
+  ],
+  "fileName": "index.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/smart.permission-tickets#0.1.0/index.html",
+  "pagePath": "index.html",
+  "pageUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/index.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 930,
+  "totalDiagramLength": 1860,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/smart.permission-tickets/0.1.0/index",
+    "caseJson": "pages/smart.permission-tickets/0.1.0/index/case.json",
+    "before": {
+      "dir": "pages/smart.permission-tickets/0.1.0/index/before",
+      "html": "pages/smart.permission-tickets/0.1.0/index/before/index.html"
+    },
+    "after": {
+      "dir": "pages/smart.permission-tickets/0.1.0/index/after",
+      "html": "pages/smart.permission-tickets/0.1.0/index/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/smart.permission-tickets/0.1.0/index/failure",
+      "html": "pages/smart.permission-tickets/0.1.0/index/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/smart.permission-tickets/0.1.0/index/source",
+      "html": "pages/smart.permission-tickets/0.1.0/index/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/index.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/assets/js/mermaid-init.js"
+}

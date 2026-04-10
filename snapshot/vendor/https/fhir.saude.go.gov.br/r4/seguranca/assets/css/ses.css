@@ -1,0 +1,69 @@
+:root {
+  --ig-status-text-color: #000000;
+
+  --navbar-bg-color: #000000; /* 2. Cor do container do cabeçalho */
+
+  --footer-bg-color: #000000; /* 3. Cor de fundo do rodapé */
+  --footer-container-color: #333333; /* 4. Cor do container do rodapé (variação mais clara) */
+  --footer-container-bg-color: #000000;
+
+  --btn-hover-color: #1a1a1a; /* 6. Cor de hover do botão do menu (variação mais clara) */
+  --ig-header-color: #f7f7f7;
+  --ig-header-container-color: #f7f7f7;
+  --btn-active-color: #1a1a1a;
+  --btn-gradient-start-color: #000000;
+
+  --btn-gradient-end-color: #1a1a1a;
+}
+
+
+
+  
+  /* Common content for section numbering */
+  body {
+    counter-reset: section;
+  }
+  h2 {
+    counter-reset: sub-section;
+  }
+  h3 {
+    counter-reset: composite;
+  }
+  h4 {
+    counter-reset: detail;
+  }
+  h5 {
+    counter-reset: more-detail;
+  }
+  h2:before {
+    content: " " !important;
+  }
+  h3:before {
+    content: " " !important;
+  }
+  h4:before {
+    content: " " !important;
+  }
+  h5:before {
+    content: " " !important;
+  }
+  h6:before {
+    content: " " !important;
+  }
+  
+  /*--------- smooth transitions ---------- */
+  
+  body {
+    opacity: 0;
+    transition: opacity 0.7s;
+    -webkit-transition: opacity 0.7s; /* Safari */
+    -ms-transition: opacity 0.7s; /* ie */
+    -o-transition: opacity 0.7s; /* opera */
+    -moz-transition: opacity 0.7s; /* firefox */
+  }
+
+  #ig-status{
+
+    margin-top: 34px !important;
+    
+  }

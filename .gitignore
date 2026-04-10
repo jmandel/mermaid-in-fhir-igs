@@ -3,3 +3,4 @@ qas.json
 content/
 packages/
 mermaid_skipped.jsonl
+tools/static-compare/node_modules/

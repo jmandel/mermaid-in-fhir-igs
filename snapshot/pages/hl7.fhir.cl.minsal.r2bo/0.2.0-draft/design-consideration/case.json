@@ -1,0 +1,47 @@
+{
+  "slug": "hl7-fhir-cl-minsal-r2bo-0-2-0-draft-design-consideration",
+  "packageId": "hl7.fhir.cl.minsal.r2bo#0.2.0-draft",
+  "canonical": "https://interoperabilidad.minsal.cl/fhir/ig/r2bo",
+  "candidateBases": [
+    "https://interoperabilidad.minsal.cl/fhir/ig/r2bo",
+    "https://build.fhir.org/ig/Minsal-CL/R2BO"
+  ],
+  "fileName": "design-consideration.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.cl.minsal.r2bo#0.2.0-draft/design-consideration.html",
+  "pagePath": "design-consideration.html",
+  "pageUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/design-consideration.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 211,
+  "totalDiagramLength": 422,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration",
+    "caseJson": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/case.json",
+    "before": {
+      "dir": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/before",
+      "html": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/before/index.html"
+    },
+    "after": {
+      "dir": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/after",
+      "html": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/failure",
+      "html": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/source",
+      "html": "pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/design-consideration.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "fhir-nl-gf-0-3-0-credential-deziusercredential",
+  "packageId": "fhir.nl.gf#0.3.0",
+  "canonical": "http://nuts-foundation.github.io/nl-generic-functions-ig",
+  "candidateBases": [
+    "http://nuts-foundation.github.io/nl-generic-functions-ig",
+    "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig"
+  ],
+  "fileName": "credential-DeziUserCredential.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/fhir.nl.gf#0.3.0/credential-DeziUserCredential.html",
+  "pagePath": "credential-DeziUserCredential.html",
+  "pageUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/credential-DeziUserCredential.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 573,
+  "totalDiagramLength": 1146,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential",
+    "caseJson": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/case.json",
+    "before": {
+      "dir": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/before",
+      "html": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/before/index.html"
+    },
+    "after": {
+      "dir": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/after",
+      "html": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/failure",
+      "html": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/source",
+      "html": "pages/fhir.nl.gf/0.3.0/credential-DeziUserCredential/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/credential-DeziUserCredential.html",
+  "remoteMermaidUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/assets/js/mermaid-init.js"
+}

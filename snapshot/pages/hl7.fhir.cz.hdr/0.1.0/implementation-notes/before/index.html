@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Implementation notes - HL7 Czech Hospital Discharge Report Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/cqf.css" rel="stylesheet" />
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/css/cz-core.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"23"}
+    h3,h4,h5,h6{--heading-prefix:"23"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="https://www.hl7cr.eu/">
+    <img height="60" alt="Visit the HL7 Czech website" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/images/hl7cz-logo.png" />
+  </a>
+</div>
+<div id="project-nav">
+  <a id="project-logo" no-external="true" href="https://ncez.mzcr.cz/cs/node/573"><img height="60" alt="MZCR"
+      src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/images/NPO_logo.png" /> </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://ncez.mzcr.cz/"><img height="60" alt="NCEZ MZCR"
+      src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/images/logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Czech Hospital Discharge Report Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Czechia flag" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/images/cze.svg" height="16" title="Czechia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/index.html">Home (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/index-cs.html">Home (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/scope-and-content.html">Scope and content (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/scope-and-content-cs.html">Scope and content (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/background.html">Background (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/background-cs.html">Background (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/logical-models.html">Logical models (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/logical-models-cs.html">Logical models (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/model-map.html">Mapping to profiles (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/model-map-cs.html">Mapping to profiles (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/examples.html">Examples (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/examples-cs.html">Examples (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/obligations.html">Obligations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/obligations-cs.html">Obligations (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/implementation-notes.html">Implementation notes (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/implementation-notes-cs.html">Implementation notes (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/authors.html">Authors (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/authors-cs.html">Authors (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/downloads.html">Downloads (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/downloads-cs.html">Downloads (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/dependencies.html">Dependencies (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/dependencies-cs.html">Dependencies (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/copyright.html">Copyright (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/copyright-cs.html">Copyright (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7-cz/hdr/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/hl7-eu/hdr/index.html">IG HDR EU</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7-cz/hdr/toc.html'><b>Table of Contents</b></a></li><li><b>Implementation notes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Czech Hospital Discharge Report Implementation Guide, published by HL7 Czech Republic. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7-cz/hdr/'>https://github.com/HL7-cz/hdr/</a> and changes regularly. See the <a href='https://hl7.cz/fhir/hdr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Implementation notes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#chapter-overview" id="markdown-toc-chapter-overview">Chapter Overview</a></li>
+  <li><a href="#2-logical-model" id="markdown-toc-2-logical-model">2. Logical Model</a></li>
+  <li><a href="#3-mapping-logical-model--fhir" id="markdown-toc-3-mapping-logical-model--fhir">3. Mapping (Logical Model → FHIR)</a>    <ul>
+      <li><a href="#31-purpose" id="markdown-toc-31-purpose">3.1 Purpose</a></li>
+      <li><a href="#32-mapping-principles" id="markdown-toc-32-mapping-principles">3.2 Mapping Principles</a></li>
+      <li><a href="#33-mapping-overview" id="markdown-toc-33-mapping-overview">3.3 Mapping Overview</a></li>
+      <li><a href="#34-notes-on-local-adaptations" id="markdown-toc-34-notes-on-local-adaptations">3.4 Notes on Local Adaptations</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-fhir-profiles" id="markdown-toc-4-fhir-profiles">4. FHIR Profiles</a>    <ul>
+      <li><a href="#41-profile-structure" id="markdown-toc-41-profile-structure">4.1 Profile Structure</a></li>
+      <li><a href="#42-cardinality" id="markdown-toc-42-cardinality">4.2 Cardinality</a></li>
+      <li><a href="#43-terminology-bindings" id="markdown-toc-43-terminology-bindings">4.3 Terminology Bindings</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-obligations" id="markdown-toc-5-obligations">5. Obligations</a>    <ul>
+      <li><a href="#51-overview-and-terminology" id="markdown-toc-51-overview-and-terminology">5.1 Overview and Terminology</a></li>
+      <li><a href="#52-compliance-levels-l1l3" id="markdown-toc-52-compliance-levels-l1l3">5.2 Compliance Levels (L1–L3)</a></li>
+      <li><a href="#53-actors" id="markdown-toc-53-actors">5.3 Actors</a></li>
+      <li><a href="#54-types-of-obligations" id="markdown-toc-54-types-of-obligations">5.4 Types of Obligations</a></li>
+      <li><a href="#55-relation-to-profiles-and-testing" id="markdown-toc-55-relation-to-profiles-and-testing">5.5 Relation to Profiles and Testing</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-example-instances" id="markdown-toc-6-example-instances">6. Example Instances</a>    <ul>
+      <li><a href="#61-example-content-and-structure" id="markdown-toc-61-example-content-and-structure">6.1 Example Content and Structure</a></li>
+      <li><a href="#62-data-structure-maturity-levels" id="markdown-toc-62-data-structure-maturity-levels">6.2 Data Structure Maturity Levels</a></li>
+      <li><a href="#63-typical-resource-set-for-a-discharge-summary-example" id="markdown-toc-63-typical-resource-set-for-a-discharge-summary-example">6.3 Typical Resource Set for a Discharge Summary Example</a></li>
+      <li><a href="#64-example-objectives" id="markdown-toc-64-example-objectives">6.4 Example Objectives</a></li>
+      <li><a href="#65-example-validation" id="markdown-toc-65-example-validation">6.5 Example Validation</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p>On the following page, you will find notes on the implementation of the hospital discharge summary.<br />
+They cover the composition creation and the population of this profile with corresponding data.</p>
+
+<h3 id="overview">Overview</h3>
+
+<pre><code class="language-mermaid">classDiagram
+  direction LR
+  class CZ_BundleHDR{
+    &lt;&lt;Bundle&gt;&gt;
+  }
+  CZ_BundleHDR *-- "1" CZ_CompositionHdr
+  CZ_BundleHDR *-- "1" CZ_PatientCore
+  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
+  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
+  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
+  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
+  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
+  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
+  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
+  CZ_EncounterHdr *-- "1" CZ_PatientCore
+  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
+  
+
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: attester[legalAuthenticator]
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: attester[resultValidator]
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: author
+  CZ_CompositionHdr --&gt; CZ_PatientCore: subject
+  CZ_CompositionHdr --&gt; CZ_EncounterHdr: period [start]
+  CZ_CompositionHdr --&gt; CZ_EncounterHdr: period [end]
+  CZ_EncounterHdr --&gt; CZ_OrganizationCore: serviceProvider
+  CZ_CompositionHdr --&gt; CZ_OrganizationCore: castodian
+
+</code></pre>
+
+<p>The goal is to harmonize the <strong>structuring, validation, and visualization</strong> of healthcare data in FHIR.<br />
+This document serves as a <strong>general template</strong> (e.g., for discharge summaries, referrals, findings) and acts as an <strong>Implementation Guide (IG)</strong>.</p>
+
+<hr />
+
+<h3 id="chapter-overview">Chapter Overview</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chapter</th>
+      <th>Purpose</th>
+      <th>Output / Artifact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Logical Model</strong></td>
+      <td>Clinical structure of the document content</td>
+      <td>Table of elements (CZ/EN)</td>
+    </tr>
+    <tr>
+      <td><strong>Mapping</strong></td>
+      <td>Relationship between logical model and FHIR elements</td>
+      <td>Mapping table</td>
+    </tr>
+    <tr>
+      <td><strong>FHIR Profiles</strong></td>
+      <td>Formal constraints, cardinalities, references, and terminology bindings</td>
+      <td>StructureDefinition</td>
+    </tr>
+    <tr>
+      <td><strong>Obligations</strong></td>
+      <td>Functional and display requirements</td>
+      <td>ObligationDefinition</td>
+    </tr>
+    <tr>
+      <td><strong>Example Instances</strong></td>
+      <td>Reference examples and valid outputs</td>
+      <td>Bundle and linked Resources</td>
+    </tr>
+    <tr>
+      <td><strong>Recommended Procedure</strong></td>
+      <td>Implementation and testing steps</td>
+      <td>Workflow within the IG</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="2-logical-model">2. Logical Model</h2>
+<p><strong>Purpose:</strong> Clinically understandable description of the document content that forms the basis for technical mapping and validation.<br />
+<strong>Languages:</strong> CZ (for readability), EN (authoritative for mapping and profiles).</p>
+
+<p>Each element contains:</p>
+<ul>
+  <li>Element identifier (for mapping)</li>
+  <li>Name (CZ/EN), description</li>
+  <li>Data type / value characteristics</li>
+</ul>
+
+<blockquote>
+  <p>Note: The English version of the logical model is <strong>binding</strong> for mapping and FHIR profiles.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="3-mapping-logical-model--fhir">3. Mapping (Logical Model → FHIR)</h2>
+
+<h3 id="31-purpose">3.1 Purpose</h3>
+<p>Mapping defines relationships between elements of the logical model (e.g., eHN Hospital Discharge Report) and the corresponding FHIR elements in the Czech implementation guide (e.g., HDR CZ).<br />
+It ensures that <strong>each item of the logical model is unambiguously represented</strong> within the FHIR structure (<code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">Bundle</code>, <code class="language-plaintext highlighter-rouge">Section</code>, etc.).</p>
+
+<h3 id="32-mapping-principles">3.2 Mapping Principles</h3>
+<ul>
+  <li>Every element of the logical model must be mapped to a specific FHIR element or group of elements.</li>
+  <li>If direct mapping does not exist, an <code class="language-plaintext highlighter-rouge">Extension</code> or explanatory comment must be provided.</li>
+  <li>Mapping is based on the eHN HDR structure (A.1 – Header, A.2 – Body) and expanded into sections and subsections.</li>
+  <li>Each row in the table must contain either a populated <strong>Target Code</strong> column or a comment explaining the handling.</li>
+  <li>The relationship is expressed in the <strong>Relationship</strong> column, typically as <code class="language-plaintext highlighter-rouge">is related to</code>.</li>
+</ul>
+
+<hr />
+
+<h3 id="33-mapping-overview">3.3 Mapping Overview</h3>
+<p><strong>CZ Hospital Discharge Report Model → CZ FHIR Implementation Guide</strong></p>
+
+<h4 id="group-1--mapping-from-a--hospital-discharge-report-ehn--bundle-hdr-cz">Group 1 – Mapping from A – Hospital Discharge Report (eHN) → Bundle (HDR CZ)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source Code</th>
+      <th>Relationship</th>
+      <th>Target Code</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HospitalDischargeReport.header (A.1 – Hospital Discharge Report header data element)</td>
+      <td>is related to</td>
+      <td>Bundle</td>
+      <td>See the header model and map for details</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="group-2--mapping-from-a--hospital-discharge-report-ehn--composition-hdr-cz">Group 2 – Mapping from A – Hospital Discharge Report (eHN) → Composition (HDR CZ)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source Code</th>
+      <th>Relationship</th>
+      <th>Target Code</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HospitalDischargeReport.body (A.2 – Hospital Discharge Report body data element)</td>
+      <td>is related to</td>
+      <td>Composition</td>
+      <td>See details below</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.presentedForm (A.4 – Hospital Discharge Report in its narrative form)</td>
+      <td>is related to</td>
+      <td>Composition.extension:relatedArtefact.valueRelatedArtefact.document</td>
+      <td>Attachment (e.g., application/pdf) holding the presented form</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.advanceDirectives (A.2.1 – Advance directives)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAdvanceDirectives</td>
+      <td>Advance directives section</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.alerts (A.2.2 – Alerts)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAlert</td>
+      <td>See the Alerts model and map for details</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.encounter (A.2.3 – Encounter)</td>
+      <td>is related to</td>
+      <td>Composition.encounter</td>
+      <td>See the InPatientEncounter model and map for details</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.admissionEvaluation (A.2.4 – Admission evaluation)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAdmissionEvaluation</td>
+      <td>Admission evaluation (with potential subsections)</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.patientHistory (A.2.5 – Patient history)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPatientHx</td>
+      <td>Narrative patient history section</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.hospitalStay (A.2.6 – Course of hospitalisation (Hospital stay))</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionHospitalCourse</td>
+      <td>Hospital course narrative + entries</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails (A.2.7 – Discharge details)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails</td>
+      <td>Container for discharge subsections and narrative</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.objectiveFindings (A.2.7.1 – Objective findings)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.functionalStatus (A.2.7.2 – Functional status)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails.section:sectionFunctionalStatus</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.dischargeNote (A.2.7.3 – Discharge note)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations (A.2.8 – Care plan and other recommendations after discharge)</td>
+      <td>is related to</td>
+      <td>Composition.section</td>
+      <td>Potentially covered by several sections</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations.carePlan (A.2.8.1 – Care plan)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPlanOfCare</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations.medicationSummary (A.2.8.2 – Medication summary)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPharmacotherapy</td>
+      <td>CZ guide uses Pharmacotherapy section; use Discharge Medications if present in jurisdiction</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="34-notes-on-local-adaptations">3.4 Notes on Local Adaptations</h3>
+<ul>
+  <li>The mapping is based on the eHN HDR model (section A.2).</li>
+  <li>The Czech implementation uses named sections according to <code class="language-plaintext highlighter-rouge">Composition.section:sectionXXX</code>.</li>
+  <li>Section names (e.g., <code class="language-plaintext highlighter-rouge">sectionPharmacotherapy</code>, <code class="language-plaintext highlighter-rouge">sectionHospitalCourse</code>) correspond to profiles defined in this implementation guide.</li>
+  <li>If a corresponding FHIR element does not exist, an <code class="language-plaintext highlighter-rouge">Extension</code> may be used, described in the Comment column.</li>
+</ul>
+
+<hr />
+
+<h2 id="4-fhir-profiles">4. FHIR Profiles</h2>
+<p><strong>Purpose:</strong> Refine the use of FHIR resources in the Czech context (restrict optionality, unify practice) and define terminology bindings.</p>
+
+<h3 id="41-profile-structure">4.1 Profile Structure</h3>
+<ul>
+  <li>Base resource (e.g., <code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, …)</li>
+  <li>Cardinalities (e.g., <code class="language-plaintext highlighter-rouge">Composition.author 1..1</code>, <code class="language-plaintext highlighter-rouge">section 1..*</code>)</li>
+  <li>Relationships between profiles (e.g., <code class="language-plaintext highlighter-rouge">Composition.section</code> → <code class="language-plaintext highlighter-rouge">Condition</code>)</li>
+  <li>References to terminology bindings (ValueSet, CodeSystem, Binding strength)</li>
+</ul>
+
+<h3 id="42-cardinality">4.2 Cardinality</h3>
+<ul>
+  <li><strong>Mandatory:</strong> <code class="language-plaintext highlighter-rouge">1..1</code></li>
+  <li><strong>Optional:</strong> <code class="language-plaintext highlighter-rouge">0..1</code></li>
+  <li><strong>Repeatable:</strong> <code class="language-plaintext highlighter-rouge">0..*</code> / <code class="language-plaintext highlighter-rouge">1..*</code>
+    <blockquote>
+      <p>National profiles may be <strong>more restrictive</strong> than European ones.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="43-terminology-bindings">4.3 Terminology Bindings</h3>
+<p>Each profile uses mandatory or recommended code systems:</p>
+<ul>
+  <li><strong>required</strong> – must come from the specified ValueSet,</li>
+  <li><strong>extensible</strong> – primarily from the ValueSet, may extend when justified,</li>
+  <li><strong>preferred</strong> – recommended ValueSet, not mandatory.</li>
+</ul>
+
+<blockquote>
+  <p>Examples: <code class="language-plaintext highlighter-rouge">Composition.type</code> – LOINC <code class="language-plaintext highlighter-rouge">34105-7</code>, <code class="language-plaintext highlighter-rouge">Condition.code</code> – ICD-10/SNOMED CT, <code class="language-plaintext highlighter-rouge">Observation.unit</code> – UCUM.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="5-obligations">5. Obligations</h2>
+
+<blockquote>
+  <p><strong>Informative in this version of the guide</strong><br />
+In this release, binding rules are included only as informative material to collect feedback on their applicability.</p>
+</blockquote>
+
+<h3 id="51-overview-and-terminology">5.1 Overview and Terminology</h3>
+<p>Binding rules (<strong>Obligations</strong>) specify the capabilities and behaviors that defined actors <strong>MAY</strong>, <strong>SHOULD</strong>, or <strong>SHALL</strong> implement within the referenced FHIR profiles.<br />
+Obligations complement cardinalities and terminology bindings wherever structure alone is insufficient (e.g., user interface requirements, workflow logic, or mandatory display of certain data elements).</p>
+
+<h3 id="52-compliance-levels-l1l3">5.2 Compliance Levels (L1–L3)</h3>
+<ul>
+  <li><strong>L1</strong> – <em>Unstructured document</em>: mandatory document metadata + human-readable PDF output.</li>
+  <li><strong>L2</strong> – <em>Structured sections</em>: document divided into identifiable sections, primarily narrative content.</li>
+  <li><strong>L3</strong> – <em>Structured + coded</em>: same sections as L2; selected information <strong>SHALL</strong> be formalized and coded.</li>
+</ul>
+
+<h3 id="53-actors">5.3 Actors</h3>
+<ul>
+  <li><strong>L1 Creator</strong> – creates L1 document (submits to consumer / repository).</li>
+  <li><strong>L1 Consumer</strong> – receives/loads and uses L1 document.</li>
+  <li><strong>L2 Creator</strong> – creates L2 document (sections, narrative).</li>
+  <li><strong>L2 Consumer</strong> – processes L2 document.</li>
+  <li><strong>L3 Creator</strong> – creates L3 document (structured + coded elements).</li>
+  <li><strong>L3 Consumer</strong> – processes L3 document including coded elements.</li>
+</ul>
+
+<blockquote>
+  <p>Actor diagram: <code class="language-plaintext highlighter-rouge">hdr-Actors-cs.svg</code></p>
+</blockquote>
+
+<h3 id="54-types-of-obligations">5.4 Types of Obligations</h3>
+<ul>
+  <li><strong>Creator obligations</strong> – requirements for <strong>document creation</strong> (system/UX behavior).
+    <ul>
+      <li>Example: The creator <strong>SHALL</strong> allow selection and recording of author/attester of the discharge summary.</li>
+    </ul>
+  </li>
+  <li><strong>Consumer obligations</strong> – requirements for <strong>display</strong> in viewers/consumers.
+    <ul>
+      <li>Example: The consumer <strong>SHALL</strong> display <code class="language-plaintext highlighter-rouge">Composition.title</code>, <code class="language-plaintext highlighter-rouge">Composition.date</code>, and <code class="language-plaintext highlighter-rouge">Composition.author</code>; document language <strong>MAY</strong> be omitted.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="55-relation-to-profiles-and-testing">5.5 Relation to Profiles and Testing</h3>
+<p>Each obligation is linked to a specific profile or profile group it extends.<br />
+Obligations are applied in validation test scenarios – e.g., verifying correct section display or the existence of required functions during document creation.</p>
+
+<hr />
+
+<h2 id="6-example-instances">6. Example Instances</h2>
+
+<p><strong>Purpose:</strong><br />
+Examples serve as <strong>reference implementations</strong>, demonstrating what <strong>fully valid outputs</strong> look like for each profile and data structure maturity level (<strong>L1–L3</strong>).<br />
+They represent not only a <code class="language-plaintext highlighter-rouge">Bundle</code> example but a <strong>complete set of interlinked FHIR resources</strong> forming a realistic clinical document with all necessary references.</p>
+
+<h3 id="61-example-content-and-structure">6.1 Example Content and Structure</h3>
+<p>Each example:</p>
+<ul>
+  <li>corresponds to a specific profile (e.g., <code class="language-plaintext highlighter-rouge">CZ_CompositionHdr</code>, <code class="language-plaintext highlighter-rouge">CZ_ConditionHdr</code>, <code class="language-plaintext highlighter-rouge">CZ_PatientCore</code>),</li>
+  <li>reflects defined obligations and profile cardinalities,</li>
+  <li>uses appropriate code systems and terminology bindings (LOINC, SNOMED CT, ICD-10, UCUM),</li>
+  <li>validates successfully against the respective profile within the Implementation Guide.</li>
+</ul>
+
+<h3 id="62-data-structure-maturity-levels">6.2 Data Structure Maturity Levels</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Example Content</th>
+      <th>Structure</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>L1</strong></td>
+      <td>PDF + metadata</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td>Minimal interoperability</td>
+    </tr>
+    <tr>
+      <td><strong>L2</strong></td>
+      <td>Sections + narrative text</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition.section</code></td>
+      <td>Structured narrative</td>
+    </tr>
+    <tr>
+      <td><strong>L3</strong></td>
+      <td>Coded entries</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition.section</code> + <code class="language-plaintext highlighter-rouge">Condition</code>, <code class="language-plaintext highlighter-rouge">Medication</code>, …</td>
+      <td>Machine interoperability</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="63-typical-resource-set-for-a-discharge-summary-example">6.3 Typical Resource Set for a Discharge Summary Example</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Composition</code> – document header and sections</li>
+  <li><code class="language-plaintext highlighter-rouge">Patient</code> – patient identification</li>
+  <li><code class="language-plaintext highlighter-rouge">Encounter</code> – hospitalization episode</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition</code> – diagnoses (including principal diagnosis)</li>
+  <li><code class="language-plaintext highlighter-rouge">Procedure</code> – significant procedures and interventions</li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationStatement</code>, <code class="language-plaintext highlighter-rouge">MedicationRequest</code>, <code class="language-plaintext highlighter-rouge">MedicationDispense</code> – treatment information</li>
+  <li><code class="language-plaintext highlighter-rouge">AllergyIntolerance</code> – allergies and intolerances</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation</code> – key findings, results, physiological measurements</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference</code> – embedded PDF/narrative rendition</li>
+  <li>Additional related resources per profile (e.g., <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Organization</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code>)</li>
+</ul>
+
+<h3 id="64-example-objectives">6.4 Example Objectives</h3>
+<p>Examples are intended to serve:</p>
+<ul>
+  <li><strong>Implementers</strong> – as reference models of valid instances for testing,</li>
+  <li><strong>Creators and Consumers</strong> (L1–L3) – as illustrations of expected data scope,</li>
+  <li><strong>Test Scenarios</strong> – as input for automated validation against profiles and obligations.</li>
+</ul>
+
+<h3 id="65-example-validation">6.5 Example Validation</h3>
+<p>Each example must validate against the corresponding <code class="language-plaintext highlighter-rouge">StructureDefinition</code> and contain correctly linked references among resources.<br />
+Validation can be performed using <strong>FHIR Validator</strong>, IG Publisher, or another validation framework.</p>
+<blockquote>
+  <p>It is recommended to include validation within the test pipeline (e.g., CI/CD) as a compliance check with the profiles.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.cz/">HL7 Czech Republic</a>.  Package hl7.fhir.cz.hdr#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 06:34+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/hdr/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/hdr/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,46 @@
+{
+  "slug": "ch-fhir-ig-ch-epr-fhir-5-0-0-web-iti-mhd",
+  "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
+  "canonical": "http://fhir.ch/ig/ch-epr-fhir",
+  "candidateBases": [
+    "http://fhir.ch/ig/ch-epr-fhir",
+    "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir"
+  ],
+  "fileName": "web__iti-mhd.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/ch.fhir.ig.ch-epr-fhir#5.0.0/web__iti-mhd.html",
+  "pagePath": "iti-mhd.html",
+  "pageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-mhd.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 3,
+  "maxDiagramLength": 417,
+  "totalDiagramLength": 1199,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd",
+    "caseJson": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/case.json",
+    "before": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/before",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/before/index.html"
+    },
+    "after": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/after",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/failure",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/source",
+      "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/web__iti-mhd/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-mhd.html",
+  "remoteMermaidUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid-init.js"
+}

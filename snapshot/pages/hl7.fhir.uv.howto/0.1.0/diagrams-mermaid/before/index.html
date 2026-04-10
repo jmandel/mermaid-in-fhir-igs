@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Adding diagrams (Mermaid) - Guidance for FHIR IG Creation v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guidance for FHIR IG Creation</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="International flag" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/index.html">IG Home</a></li>
+  <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/versions.html">Versions and Dependencies</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/related-igs.html">Related IGs</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/pinning.html">Managing Canonical Versions (pinning)</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html">IG Best Practices</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/maturityprop.html">Maturity Propagation</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/languages.html">Multi-language IGs</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/terminology.html">Working with Terminology</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/vcl.html">VCL: ValueSet Compose Language</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/binaries.html">Working with Binaries</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/narrative.html">Rules about Narrative</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Page Content<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/conformance-statements.html">Conformance Statements</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-mermaid.html">Mermaid Diagrams</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-plantuml.html">PlantUml Diagrams</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/fragments.html">Using Instance Fragments</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/jsonxml.html">Presenting JSON and XML content</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/multi-maps.html">Working with Multiple maps</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/sql.html">Working with SQL</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/uml.html">UML Class Diagrams</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/testing.html">Testing Overview</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/profile-test-cases.html">Testing Profiles</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/matchetypes.html">Using Matchetypes</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/testfactory.html">Using Test Data Factories</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Templates<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html">Using the HL7 Templates</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/template.html">Extending the HL7 IG Templates</a></li>
+      <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/colors.html">Changing colors in the template</a></li>
+    </ul>
+  </li>
+  <li><a href="https://build.fhir.org/ig/FHIR/ig-guidance/artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R5/index.html">FHIR Spec <img src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/FHIR/ig-guidance/downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/FHIR/ig-guidance/toc.html'><b>Table of Contents</b></a></li><li><b>Adding diagrams (Mermaid)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guidance for FHIR IG Creation, published by HL7 International - FHIR Management Group. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/FHIR/ig-guidance/'>https://github.com/FHIR/ig-guidance/</a> and changes regularly. See the <a href='http://hl7.org/fhir/uv/howto/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Adding diagrams (Mermaid)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>Mermaid diagrams can be included by placing diagram code in an element with <code class="language-plaintext highlighter-rouge">class="mermaid"</code>.</p>
+
+<h4 id="introduction-to-mermaid">Introduction to Mermaid</h4>
+
+<p>Mermaid is a versatile scripting language that enables the creation of various types of diagrams through simple text definitions. Mermaid's simplicity and flexibility make it a popular choice for embedding visual representations directly within documentation or web pages.</p>
+
+<p>For more detailed syntax and examples, the Mermaid <a href="https://mermaid.js.org/intro/syntax-reference.html">syntax reference guide</a> and the interactive tool <a href="https://mermaid.live">Mermaid live editor</a> are excellent resources. There are also plugins for popular editors like VS Code.</p>
+
+<h4 id="diagram-types">Diagram Types</h4>
+
+<p>Mermaid supports a range of diagram types, such as:</p>
+
+<ul>
+  <li><strong>Flowcharts:</strong> Visualize logical steps in a process.</li>
+  <li><strong>Sequence Diagrams:</strong> Detail interactions among parts within a system.</li>
+  <li><strong>User Journeys:</strong> Map out the path a user travels through a product.</li>
+  <li><strong>Mindmaps:</strong> Show the branching relationships between concepts or tasks.</li>
+  <li>and many more…</li>
+</ul>
+
+<h4 id="including-mermaid-diagrams-in-your-documentation">Including Mermaid Diagrams in Your Documentation</h4>
+
+<p>To include a Mermaid diagram in your documentation, you simply need to place the diagram code within an HTML element with the class <code class="language-plaintext highlighter-rouge">mermaid</code>. Here is a simple example of an inline Mermaid diagram:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mermaid"</span><span class="nt">&gt;</span>
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>If you're writing markdown, you can use a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> as shown above, or you can use a <code>```mermaid</code> code block like:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">mermaid
+</span><span class="sb">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;</span>
+<span class="p">```</span>
+</code></pre></div></div>
+
+<p>It renders as:</p>
+
+<div class="mermaid">
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</div>
+
+<p>In this example, the <code class="language-plaintext highlighter-rouge">div</code> element can be replaced with any other HTML element, as long as the <code class="language-plaintext highlighter-rouge">mermaid</code> class is included. During the webpage rendering process, any elements with the class <code class="language-plaintext highlighter-rouge">mermaid</code> will be automatically replaced with an SVG of the diagram described by the contained Mermaid code.</p>
+
+<h4 id="practical-implementation">Practical Implementation</h4>
+
+<ol>
+  <li><strong>Create the Diagram Code</strong>: Write your Mermaid diagram code according to the syntax and diagram type you need.</li>
+  <li><strong>Embed in HTML</strong>: Place your diagram code within an HTML element with the class <code class="language-plaintext highlighter-rouge">mermaid</code> as shown in the example above.</li>
+</ol>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.org/Special/committees/fhirmg">HL7 International - FHIR Management Group</a>.  Package hl7.fhir.uv.howto#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Sun, Feb 1, 2026 03:11+0000">2026-02-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/FHIR/ig-guidance/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/FHIR/ig-guidance/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/FHIR/ig-guidance/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

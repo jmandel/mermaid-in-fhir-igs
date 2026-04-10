@@ -1,0 +1,46 @@
+{
+  "slug": "br-go-ses-seguranca-0-1-2-web-index",
+  "packageId": "br.go.ses.seguranca#0.1.2",
+  "canonical": "https://fhir.saude.go.gov.br/r4/seguranca",
+  "candidateBases": [
+    "https://fhir.saude.go.gov.br/r4/seguranca"
+  ],
+  "fileName": "web__index.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/br.go.ses.seguranca#0.1.2/web__index.html",
+  "pagePath": "index.html",
+  "pageUrl": "https://fhir.saude.go.gov.br/r4/seguranca/index.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 643,
+  "totalDiagramLength": 1286,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/br.go.ses.seguranca/0.1.2/web__index",
+    "caseJson": "pages/br.go.ses.seguranca/0.1.2/web__index/case.json",
+    "before": {
+      "dir": "pages/br.go.ses.seguranca/0.1.2/web__index/before",
+      "html": "pages/br.go.ses.seguranca/0.1.2/web__index/before/index.html"
+    },
+    "after": {
+      "dir": "pages/br.go.ses.seguranca/0.1.2/web__index/after",
+      "html": "pages/br.go.ses.seguranca/0.1.2/web__index/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/br.go.ses.seguranca/0.1.2/web__index/failure",
+      "html": "pages/br.go.ses.seguranca/0.1.2/web__index/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/br.go.ses.seguranca/0.1.2/web__index/source",
+      "html": "pages/br.go.ses.seguranca/0.1.2/web__index/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://fhir.saude.go.gov.br/r4/seguranca/index.html",
+  "remoteMermaidUrl": "https://fhir.saude.go.gov.br/r4/seguranca/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://fhir.saude.go.gov.br/r4/seguranca/assets/js/mermaid-init.js"
+}

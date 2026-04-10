@@ -1,0 +1,46 @@
+{
+  "slug": "hl7-fhir-uv-howto-0-1-0-diagrams-mermaid",
+  "packageId": "hl7.fhir.uv.howto#0.1.0",
+  "canonical": "http://hl7.org/fhir/uv/howto",
+  "candidateBases": [
+    "http://hl7.org/fhir/uv/howto",
+    "https://build.fhir.org/ig/FHIR/ig-guidance"
+  ],
+  "fileName": "diagrams-mermaid.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.uv.howto#0.1.0/diagrams-mermaid.html",
+  "pagePath": "diagrams-mermaid.html",
+  "pageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-mermaid.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 53,
+  "totalDiagramLength": 53,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid",
+    "caseJson": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/case.json",
+    "before": {
+      "dir": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/before",
+      "html": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/before/index.html"
+    },
+    "after": {
+      "dir": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/after",
+      "html": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/failure",
+      "html": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/source",
+      "html": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-mermaid.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/assets/js/mermaid-init.js"
+}

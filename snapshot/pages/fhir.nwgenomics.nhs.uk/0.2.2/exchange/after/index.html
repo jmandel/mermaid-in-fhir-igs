@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Exchange - NHS North West Genomics v0.2.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+    
+
+   <!--   <style>
+    svg { background-size: 50% ; }
+    </style> -->
+
+    <!-- Project extras -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/prism.css" rel="stylesheet" />
+
+    <!-- Placeholder for child template CSS declarations -->
+<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/ihe.css" rel="stylesheet"/>
+<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="../../../../../vendor/https/www.googletagmanager.com/gtag/js__q_867e93efd0.js" async> </script> 
+
+
+    <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/favicon.png"/>
+      <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/font-awesome.min.css">
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/prism.js"></script>
+<!--   <script type="text/javascript"src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid.min.js"></script>
+     <script type="text/javascript" src="../../../../../shared/assets/347ab4816feffe8f-mermaid-init.js"></script>
+   <script type="text/javascript"src="../../../../../vendor/https/cdn.jsdelivr.net/npm/mermaid_11.12.0/dist/mermaid.min.js"></script> -->
+   <script type="text/javascript" src="../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+   <script type="text/javascript"src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js"></script>
+
+
+<style type="text/css">h2{--heading-prefix:"35"}
+ h3,h4,h5,h6{--heading-prefix:"35"}</style>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<!-- <div id="family-nav">
+    <a id="iheuk-logo" no-external="true" href="https://ihe-uk.org/"><img height="50" alt="Visit the IHE UK website" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/iheuk-logo.png"/> </a>
+</div> -->
+<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="nhse-logo" no-external="true" href="https://www.nw-gmsa.nhs.uk/"><img height="50" alt="MFT Logo" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/nwgmsa-logo.svg"/></a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NHS North West Genomics</span>
+            <br/>
+            <span style="display:inline-block;">0.2.2 - ci-build
+
+
+
+  <img alt="United Kingdom flag" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/gbr.svg" height="16" title="United Kingdom"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Analysis and Design (Volume 1)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html">Design Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">Laboratory Testing Workflow (LTW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/ILW.html">Inter-Laboratory Workflow (ILW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/SET.html">Specimen Event Tracking (SET)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Health Information Exchange (HIE)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mCSD.html">Care Services Discovery (mCSD)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PAM.html">Patient Administration (PAM)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/api-security.html">API Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interfaces (Volume 2)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/exchange.html">Exchange Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-1.html">Placer Order Management [LAB-1] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-3.html">Order Results Management [LAB-3] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PDQm.html">Patient Matching [PDQm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/MHD.html">Document Exchange [MHD]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/QEDm.html">Resource Access [QEDm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/IUA.html">Authorisation [IUA]</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models (Volume 3)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/data-intro.html">Data Contracts and Issue Reporting</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html">Genomic Test Order (Template)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html">Genomic Test Report (Template)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefacts (Volume 4)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/artifacts.html">HL7 FHIR R4</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html">HL7 v2.5.1</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Development
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/testing.html">Environments and Testing</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/support.html">Support</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/architecture.html">Architecture</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html'><b>Table of Contents</b></a></li><li><b>Exchange</b></li>
+
+          <span style="float:right;">
+
+            <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/artifacts.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NHS North West Genomics, published by NHS North West Genomics. This guide is not an authorized publication; it is the continuous build for version 0.2.2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/nw-gmsa/nw-gmsa.github.com/'>https://github.com/nw-gmsa/nw-gmsa.github.com/</a> and changes regularly. See the <a href='https://fhir.nwgenomics.nhs.uk/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Exchange</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#genomic-data-exchange-overview" id="markdown-toc-genomic-data-exchange-overview">Genomic Data Exchange Overview</a></li>
+  <li><a href="#traditional-integration-model" id="markdown-toc-traditional-integration-model">Traditional Integration Model</a></li>
+  <li><a href="#rie-integration-model" id="markdown-toc-rie-integration-model">RIE Integration Model</a></li>
+  <li><a href="#architectural-principles" id="markdown-toc-architectural-principles">Architectural Principles</a>    <ul>
+      <li><a href="#hub-and-spoke-integration" id="markdown-toc-hub-and-spoke-integration">Hub-and-Spoke Integration</a></li>
+      <li><a href="#standards-based-interoperability" id="markdown-toc-standards-based-interoperability">Standards-Based Interoperability</a></li>
+      <li><a href="#event-driven-workflow" id="markdown-toc-event-driven-workflow">Event-Driven Workflow</a></li>
+      <li><a href="#separation-of-messaging-and-data-access" id="markdown-toc-separation-of-messaging-and-data-access">Separation of Messaging and Data Access</a></li>
+    </ul>
+  </li>
+  <li><a href="#hl7-v2-and-fhir-exchange" id="markdown-toc-hl7-v2-and-fhir-exchange">HL7 v2 and FHIR Exchange</a>    <ul>
+      <li><a href="#event-message--hl7-v2-event-message-and-fhir-message-event-and-subscription" id="markdown-toc-event-message--hl7-v2-event-message-and-fhir-message-event-and-subscription">Event Message – HL7 v2 Event Message and FHIR Message (Event) and Subscription</a></li>
+      <li><a href="#document-message---hl7-v2-document-message-and-fhir-message-document" id="markdown-toc-document-message---hl7-v2-document-message-and-fhir-message-document">Document Message - HL7 v2 Document Message and FHIR Message (Document)</a></li>
+      <li><a href="#documentevent-message---fhir-restful-putpost-and-transaction" id="markdown-toc-documentevent-message---fhir-restful-putpost-and-transaction">Document/Event Message - FHIR RESTful (PUT/POST) and Transaction</a></li>
+      <li><a href="#data-and-document-sharing---fhir-restful-get" id="markdown-toc-data-and-document-sharing---fhir-restful-get">Data and Document Sharing - FHIR RESTful (GET)</a></li>
+      <li><a href="#document-sharing-format---clinical-documents-fhir-document" id="markdown-toc-document-sharing-format---clinical-documents-fhir-document">Document Sharing Format - Clinical Documents (FHIR Document)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="genomic-data-exchange-overview">Genomic Data Exchange Overview</h2>
+
+<p>The North West Genomics data exchange architecture enables secure and
+standardised communication between NHS Trust clinical systems and
+regional genomic laboratory services.</p>
+
+<p>The architecture consists of three primary components:</p>
+
+<ol>
+  <li>
+    <p><strong>Regional Orchestration Engine (RIE)</strong><br />
+Routes and standardises messaging between organisations.</p>
+  </li>
+  <li>
+    <p><strong>Genomic Data Repository (GDR)</strong><br />
+A central read-only repository for genomic data and reports. Also known as a <strong>Data Platform</strong></p>
+  </li>
+  <li>
+    <p><strong>API Gateway (APIG)</strong><br />
+Provides external data access to the GDR and also provides <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/api-security.html">API Security</a>.</p>
+  </li>
+</ol>
+
+<p>Together these components form the <strong>Health Information Exchange (HIE)</strong>
+for the North West Genomic Medicine Service Alliance.</p>
+
+<p>Key goals:</p>
+
+<ul>
+  <li>Reduce point-to-point integrations</li>
+  <li>Standardise HL7 and FHIR interactions</li>
+  <li>Enable cross-organisation genomic data sharing</li>
+  <li>Support modern event-driven workflows</li>
+</ul>
+
+<h2 id="traditional-integration-model">Traditional Integration Model</h2>
+
+<p>Historically, each NHS Trust integrated directly with laboratory systems.
+This resulted in multiple bespoke integrations.</p>
+
+<p>Problems:</p>
+
+<ul>
+  <li>High maintenance cost</li>
+  <li>Complex transformation logic</li>
+  <li>Challenging onboarding of new systems</li>
+  <li>Limited use clinical terminology</li>
+</ul>
+
+<h2 id="rie-integration-model">RIE Integration Model</h2>
+
+<p>The Regional Orchestration Engine introduces a <strong>hub-and-spoke model</strong>.</p>
+
+<p>Each participant integrates once with the RIE.</p>
+
+<p>Benefits:</p>
+
+<ul>
+  <li>Reduced integration complexity</li>
+  <li>Centralised routing and ordchestration</li>
+  <li>Standardised message formats and data standards</li>
+</ul>
+
+<h2 id="architectural-principles">Architectural Principles</h2>
+
+<p>The exchange architecture is based on several core principles.</p>
+
+<h3 id="hub-and-spoke-integration">Hub-and-Spoke Integration</h3>
+
+<p>All participating organisations integrate with a Regional Orchestration Engine (RIE) rather than building direct integrations with each other.</p>
+
+<p>This approach:</p>
+<ul>
+  <li>reduces integration complexity</li>
+  <li>centralises routing and transformation</li>
+  <li>simplifies onboarding of new systems</li>
+</ul>
+
+<h3 id="standards-based-interoperability">Standards-Based Interoperability</h3>
+
+<p>The exchange uses widely adopted healthcare interoperability standards including:</p>
+
+<ul>
+  <li>HL7 v2 messaging</li>
+  <li>HL7 FHIR APIs</li>
+  <li>SNOMED CT terminology</li>
+  <li>IHE interoperability profiles</li>
+</ul>
+
+<h3 id="event-driven-workflow">Event-Driven Workflow</h3>
+
+<p>Modern workflows are supported through:</p>
+
+<ul>
+  <li>FHIR Tasks</li>
+  <li>event notifications</li>
+  <li>workflow status updates</li>
+</ul>
+
+<p>This enables clinical systems to respond dynamically to laboratory workflow events.</p>
+
+<h3 id="separation-of-messaging-and-data-access">Separation of Messaging and Data Access</h3>
+
+<p>Two complementary exchange patterns are used:</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Messaging</td>
+      <td>Operational workflow communication</td>
+    </tr>
+    <tr>
+      <td>APIs</td>
+      <td>Access to structured genomic data</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+<img style="padding:3px;width:80%;" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.png" alt="NHS England NRL Design"/>
+<br clear="all">
+-->
+
+<pre><code class="language-mermaid">graph TD
+
+EPR[EPR / Order Placer]
+TIE["Trust Integration Engine (TIE)"]
+
+subgraph HIE["Health Information Exchange (HIE)"]
+    RIE["Regional Orchestration Engine (RIE)"]
+    GDR["Genomic Data Repository (GDR)"]
+   APIG["API Gateway (APIG)"]
+end
+
+subgraph APIM[API Gateway to NHS England APIM]
+    PDS["Personnel Demographic Service (PDS)"]
+    ODS["Organisation Terminology Service (ODS)"]
+    NRL["Nationa Record Locator Service (NRL)"]
+end 
+
+LIMS[LIMS / Order Filler]
+DC["Data and Document Consumer"]
+
+
+EPR --&gt; |Document Messaging| TIE
+TIE --&gt; RIE
+RIE --&gt; |Document Messaging| LIMS
+RIE --&gt; |"RESTful API (GET/PUT/POST/DELETE)"| GDR
+RIE --&gt; |Event Messaging| EPR
+EPR --&gt; |"RESTful API (GET)"| APIG
+DC --&gt; |"RESTful API (GET)"| APIG
+APIG --&gt; |"RESTful API (GET)"| GDR
+RIE --&gt; |RESTful API| APIM
+
+classDef purple fill:#E1D5E7;
+class EPR,TIE,LIMS,DC purple
+</code></pre>
+
+<h2 id="hl7-v2-and-fhir-exchange">HL7 v2 and FHIR Exchange</h2>
+
+<p>Exhange has two high-level styles:</p>
+
+<ul>
+  <li>Messaging which sends data between applications/organisations. This breaks down into two sub-styles:
+    <ul>
+      <li>Event Messaging which sends asynchronous event notifications between applications</li>
+      <li>Document Messaging which sends structured clinical data between applications</li>
+    </ul>
+  </li>
+  <li>Data Sharing which shares data between applications/organisations</li>
+</ul>
+
+<p>The general trend is to use FHIR RESTful (GET) for data sharing.</p>
+
+<p>HL7 v2 is the most common exchange format for healthcare data. It has two basic interaction styles:</p>
+
+<ul>
+  <li><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/EventMessage.html">V2 Event Message</a> for reliable, asynchronous event notification between applications e.g. ADT and MDM_T01 events</li>
+  <li><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/DocumentMessage.html">V2 Document Message</a> to reliably transfer a data structure (orders and reports) between applications, e.g.ORM_O01, OML_O21, ORU_R01 and MDM_T02</li>
+</ul>
+
+<p>HL7 FHIR has several interaction styles which can replace HL7 v2.</p>
+
+<ul>
+  <li><a href="https://hl7.org/fhir/R4/messaging.html">FHIR Message (Document)</a> which for orders and report messaging, is a direct replacement of HL7 v2.</li>
+  <li><a href="https://hl7.org/fhir/R4/http.html">FHIR RESTful (GET)</a> which provides a read only API to the source data. This is one of the most common interaction style using FHIR.</li>
+  <li><a href="https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/">FHIR Message (Event) and Subscription</a> is a modernised version of HL7 v2 which focuses on event notifications only similar to HL7 v2 ADT and MDM_T01 events (but not orders and reports).</li>
+  <li><a href="https://hl7.org/fhir/R4/http.html">FHIR RESTful (PUT/POST)</a> which provides a read and write API to the desintiation data. Note this moves the consumer business logic to the consumer and so can be considered an anti-pattern for enterprise level exchanges.</li>
+  <li><a href="https://hl7.org/fhir/R4/documents.html">FHIR Document</a> Clinical documents are the FHIR version of HL7 v3 Clinical Document Architecture (CDA).</li>
+</ul>
+
+<h3 id="event-message--hl7-v2-event-message-and-fhir-message-event-and-subscription">Event Message – HL7 v2 Event Message and FHIR Message (Event) and Subscription</h3>
+
+<h4 id="advantages">Advantages</h4>
+
+<ul>
+  <li>High level of support in secondary care</li>
+  <li>Scales well in large enterprise environments and has proven to be reliable for health administration events.</li>
+  <li>Business logic is in the consumer</li>
+  <li>Can be extended to support publish/subscribe messaging via FHIR Subscription</li>
+</ul>
+
+<h4 id="disadvantages">Disadvantages</h4>
+
+<ul>
+  <li>Not supported in primary care</li>
+  <li>Use of FHIR is currently low, as HL7 v2 events use is high.</li>
+</ul>
+
+<h4 id="examples">Examples</h4>
+
+<ul>
+  <li>NHS England ADT Messsaging Specification.</li>
+</ul>
+
+<pre><code class="language-mermaid">graph LR;
+
+subgraph Producer;
+    s[Data Source]
+    s --&gt; v2E
+
+    v2E["HL7 v2 Event Message"]
+    s --&gt; fEvent["FHIR Message (Event) and Subscription"]
+end 
+
+subgraph Consumer
+    B[Business Logic]
+    d[Data Consumer]
+    B --&gt; d
+end 
+
+v2E --&gt; B
+fEvent --&gt; B
+
+
+classDef pink fill:#F8CECC
+classDef green fill:#D5E8D4;
+
+
+class restC,v2E,fEvent,Agg green
+</code></pre>
+
+<h3 id="document-message---hl7-v2-document-message-and-fhir-message-document">Document Message - HL7 v2 Document Message and FHIR Message (Document)</h3>
+
+<h4 id="advantages-1">Advantages</h4>
+
+<ul>
+  <li>High level of support in secondary and primary care</li>
+  <li>Business logic is in the consumer</li>
+</ul>
+
+<h4 id="disadvantages-1">Disadvantages</h4>
+
+<ul>
+  <li>Only supports data sharing via point-to-point messaging</li>
+  <li>Does not scale well in large enterprise environments</li>
+  <li>Clinical data standards tend to be weak</li>
+</ul>
+
+<h4 id="examples-1">Examples</h4>
+
+<ul>
+  <li>NHS England Transfer of Care</li>
+  <li>NHS England National Event Management System</li>
+  <li>HL7 v2 ORU_R01</li>
+  <li>NHS England Pathology</li>
+  <li>NHS England Electronic Prescription Service</li>
+  <li>NHS England Booking and Referral System (referrals)</li>
+</ul>
+
+<pre><code class="language-mermaid">graph LR;
+
+subgraph Producer;
+    s[Data Source]
+    v2D["HL7 v2 Document Message"]
+    s --&gt; v2D
+    s --&gt; fMessage["FHIR Message (Document)"]
+ 
+end 
+
+subgraph Consumer
+    B[Business Logic]
+    d[Data Consumer]
+    B --&gt; d
+end 
+
+v2D --&gt; B
+fMessage --&gt; B
+
+
+classDef yellow fill:#FFF2CC;
+
+class v2D,fMessage yellow
+</code></pre>
+
+<h3 id="documentevent-message---fhir-restful-putpost-and-transaction">Document/Event Message - FHIR RESTful (PUT/POST) and Transaction</h3>
+
+<h4 id="advantages-2">Advantages</h4>
+
+<ul>
+  <li>Modern API restful API to populate a database/EHR</li>
+  <li>Suitable for internal data engineering</li>
+</ul>
+
+<h4 id="disadvantages-2">Disadvantages</h4>
+
+<ul>
+  <li>Data Consumer Business logic plus data rules are placed with the Data Source; this can be challenging to manage.</li>
+  <li>The number of RESTful API interacctions can be quite high</li>
+  <li>Does not scale in large enterprise environments</li>
+</ul>
+
+<pre><code class="language-mermaid">
+graph LR;
+
+subgraph Producer;
+    s[Data Source]
+     s --&gt; rest["FHIR RESTful (PUT/POST) and Transaction"]
+    rB[Business Logic]
+
+    rest --&gt; rB
+ 
+end 
+
+subgraph Consumer
+
+    d[Data Consumer]
+end 
+
+rB --&gt; d
+
+classDef pink fill:#F8CECC
+
+class rest,rB pink
+</code></pre>
+
+<h3 id="data-and-document-sharing---fhir-restful-get">Data and Document Sharing - FHIR RESTful (GET)</h3>
+
+<h4 id="advantages-3">Advantages</h4>
+
+<ul>
+  <li>Modern API restful API to access EHR data</li>
+  <li>Scales well in large enterprise environments</li>
+  <li>Is the default exchange format for FHIR</li>
+  <li>Can be reused for data engineering purposes (e.g. analytics and AI)</li>
+</ul>
+
+<h4 id="disadvantages-3">Disadvantages</h4>
+
+<ul>
+  <li>Does not support event notifications (see above).</li>
+</ul>
+
+<h4 id="examples-2">Examples</h4>
+
+<ul>
+  <li>NHS England COVID-19 API's</li>
+  <li>Yorkshire and Humberside Care Record</li>
+  <li>North West Genomics FHIR Repository</li>
+  <li>NHS England National Record Locator Service (NRL) and National Imaging Registry (NIR)</li>
+  <li>NHS England Booking and Referral System (appointments)</li>
+  <li>HL7 + IHE Europe <a href="https://euridice.org/eu-health-data-api/">EU Health Data API</a></li>
+</ul>
+
+<pre><code class="language-mermaid">
+graph LR;
+
+subgraph Consumer
+
+    d[Data Consumer]
+    d --&gt; restC["FHIR RESTful (GET)"]
+
+end 
+subgraph Source;
+    s[Data Source]
+end 
+
+restC --&gt; s
+
+classDef green fill:#D5E8D4;
+
+class restC,v2E,fEvent,Agg green
+
+</code></pre>
+
+<h3 id="document-sharing-format---clinical-documents-fhir-document">Document Sharing Format - Clinical Documents (FHIR Document)</h3>
+
+<h4 id="advantages-4">Advantages</h4>
+
+<ul>
+  <li>Supports data sharing in environments where direct exchange of clinical data is not possible.</li>
+  <li>Support international document sharing and is <em>probably</em> the UK home nations' preferred format.</li>
+  <li>Replaces PDF formats.</li>
+  <li>Can be used by consumers as structured or unstructured data.</li>
+  <li>Can be implemented as an Aggregation Layer on top of FHIR RESTful (GET).</li>
+</ul>
+
+<h4 id="disadvantages-4">Disadvantages</h4>
+
+<ul>
+  <li>Can be an anti-pattern when used on the wrong enviroment.</li>
+  <li>Analytics and AI is more complex than FHIR RESTful (GET).</li>
+</ul>
+
+<h4 id="examples-3">Examples</h4>
+
+<ul>
+  <li><a href="https://euridice.org/specifications-eu-patient-summary/">International Patient Summary</a></li>
+  <li>HL7 Europe <a href="https://euridice.org/specifications-eu-laboratory-report-specification/">Laboratory Report</a></li>
+</ul>
+
+<pre><code class="language-mermaid">graph LR;
+
+subgraph Consumer
+
+    d[Data Consumer]
+    d --&gt; restC["FHIR RESTful (GET)"]
+
+end
+subgraph Source;
+s[Data Source]
+Agg["FHIR Document&lt;br/&gt;(Aggregation Layer)"]
+Agg --&gt; s
+end
+
+restC --&gt; Agg
+
+classDef green fill:#D5E8D4;
+
+class restC,v2E,fEvent,Agg green
+</code></pre>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/artifacts.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nwgenomics.nhs.uk/contact-us">NHS North West Genomics</a>.  Package fhir.nwgenomics.nhs.uk#0.2.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:11+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://fhir.nwgenomics.nhs.uk/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/external.png"/></a>
+                 <script type="text/javascript" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/.assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

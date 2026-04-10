@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>General Guidance - AI Transparency on FHIR v1.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/hl7.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="https://build.fhir.org/ig/HL7/aitransparency-ig/searchform.html"><img alt="Search FHIR" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AI Transparency on FHIR</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot - STU1 Ballot
+
+
+
+  <img alt="International flag" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/general_guidance.html">General</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/use_cases.html">Use Cases</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7/aitransparency-ig/toc.html'><b>Table of Contents</b></a></li><li><b>General Guidance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">AI Transparency on FHIR, published by HL7 International / Electronic Health Records. This guide is not an authorized publication; it is the continuous build for version 1.0.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7/aitransparency-ig/'>https://github.com/HL7/aitransparency-ig/</a> and changes regularly. See the <a href='http://hl7.org/fhir/uv/aitransparency/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>General Guidance</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ai-observability-factors" id="markdown-toc-ai-observability-factors">AI Observability Factors</a></li>
+  <li><a href="#tagging" id="markdown-toc-tagging">Tagging</a></li>
+  <li><a href="#defining-the-ai-model" id="markdown-toc-defining-the-ai-model">Defining the AI Model</a></li>
+  <li><a href="#context-of-ai-usage" id="markdown-toc-context-of-ai-usage">Context of AI Usage</a></li>
+  <li><a href="#process-utilizing-ai" id="markdown-toc-process-utilizing-ai">Process Utilizing AI</a></li>
+  <li><a href="#pdf-interpreted-by-ai-into-fhir" id="markdown-toc-pdf-interpreted-by-ai-into-fhir">PDF interpreted by AI into FHIR</a></li>
+</ul>
+
+</div>
+
+<p>The goal of this implementation guide is to provide observability of the use of AI in the production or manipulation of health data. To the end user, this means that in some way they can determine first that AI was involved and then discover more information about the AI and its usage. From this, we can understand that there are two levels of observability and multiple factors that can be observed within the second level.</p>
+
+<ul>
+  <li>1st Level Observability: <strong>Tagging</strong> - this provides the indication that AI was involved in some way with the data. It provides no details about AI's involvement, but gives an indication that the end user may wish to investigate further. This level is intended to be lightweight, not adding significant bloat to the payload or requiring additional lookups on the part of the client system. For this, this guide details the use of Security Labels (see <a href="#tagging">Tagging</a> below).</li>
+  <li>2nd Level Observability: <strong>AI Observability Factors</strong> - there are a number of details that may be of interest to the end user about what and how AI was used. The factors covered in this IG are introduced <a href="#ai-observability-factors">below</a> and then explained in the rest of this page. To provide observability into these factors, this guide details the use of the Provenance resource.</li>
+</ul>
+
+<p><strong>Note:</strong> that both Security Labels and Provenance can be applied at the whole Resource level or at the Element level within a resource.</p>
+
+<div class="stu-note">
+The use of tagging to achieve 1st level observability provides the end user or client system with a useful indicator of AI involvement without resulting in significant bloat in the payload. The presence of a tag can tell the user or system that they may want to look for a Provenance resource that will provide more details. <br /><br />
+
+It is possible to achieve both levels of observability by using only Provenance. In some use cases, the presence of tags may have adverse effects, so this guide does not enforce tagging. However, doing this is less interoperable because it depends on the end user or client system always checking for Provenance. <br /><br />
+
+The presence of both tags and Provenance provides for the best interoperability because the end user or client system does not need to do an extra lookup for Provenance on every resource. This is strongly recommended by this guide.
+</div>
+
+<h3 id="ai-observability-factors">AI Observability Factors</h3>
+<p>Beyond 1st level observability, there are a number of factors that the end user or client system may be interested in knowing about. These factors can be broken down into 3 categories:</p>
+
+<ol>
+  <li>Model(s) - definition of the AI(s) used (see <a href="#defining-the-ai-model">Defining the AI</a>)
+    <ul>
+      <li>Name and version of the AI algorithm / model</li>
+      <li>Ogranization that produced the model</li>
+      <li>Is the algorithm deterministic or non-deterministic</li>
+      <li>Data set used in training the model(s)</li>
+      <li>…</li>
+    </ul>
+  </li>
+  <li>Context - input data provided to the AI to produce or manipulate outputs (see <a href="#context-of-ai-usage">Context of AI Usage</a>)
+    <ul>
+      <li>Prompts, including system and user prompts</li>
+      <li>Patient data, such as health records</li>
+      <li>Reference input, such as clinical practice guidelines</li>
+      <li>…</li>
+    </ul>
+  </li>
+  <li>Process - the interactions between AI(s), human(s), and system(s) (see <a href="#process-utilizing-ai">Process Utilizing AI</a>)
+    <ul>
+      <li>Human reviews (human-in-the-loop)</li>
+      <li>Multi-agent interactions, such as use of Agent-to-Agent protocol (A2A)</li>
+      <li>Tool calling, such as use of Model Context Protocol (MCP)</li>
+      <li>Guardrails for bias reduction, inappropriate responses, undesired actions, …</li>
+      <li>…</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="tagging">Tagging</h3>
+<p>The use of tagging enables distinguishing data that has not been influenced by AI from data that has been influenced by AI. The level of influence and the details about how the AI was used are not provided by simple tagging. However, tagging is very light weight and does not add significant bloat to the payload or additional lookups. Tagging can be used as an indicator that AI was used in the creation or updating of the given resource and that a client system may wish to investigate further by fetching the Resource's Provenance.</p>
+
+<blockquote>
+  <p>💡 Tip</p>
+
+  <p>Use when one needs to quickly and easily identify Resources or elements inside a Resource that have been influenced by AI.</p>
+</blockquote>
+
+<p>Tagging (also called <a href="https://hl7.org/fhir/security-labels.html">Security Labels</a>) uses the FHIR <a href="https://hl7.org/fhir/resource.html">Resource definition</a> <code class="language-plaintext highlighter-rouge">.meta.security</code> element that is at the top of all Resources, and as such can be found without Resource type specific processing. The use of security tagging follows the purpose for security tagging, as the domain of security covers protections against risks to Confidentiality, Availability, and Integrity (see <a href="https://hl7.org/fhir/security-labels.html#hcs">Healthcare Privacy and Security Classification System (HCS) vocabulary</a>). In this case focusing on <a href="https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityObservationValue.html">Integrity</a> is defined as completeness, veracity, reliability, trustworthiness, and provenance. In the case of AI Transparency we want to mark the AI participation to convey reliability, trustworthiness, and provenance.</p>
+
+<p>Within the <a href="https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityObservationValue.html">Integrity Security Tags Vocabulary</a> is <a href="https://terminology.hl7.org/CodeSystem-v3-ObservationValue.html#v3-ObservationValue-AIAST">AIAST - Artificial Intelligence Asserted</a> as a broad concept of any infuence by any kind of artificial intelligence. There is also <a href="https://terminology.hl7.org/CodeSystem-v3-ObservationValue.html#v3-ObservationValue-DICTAST">DICTAST - Dictation asserted</a> for when dictation, which might be AI driven, has been involved in translating dictation to data.</p>
+
+<pre><code class="language-mermaid">classDiagram
+    class Resource {
+        &lt;&lt;FHIR Resource&gt;&gt;
+        id
+        meta.security = AIAIST
+        ...
+    }
+</code></pre>
+
+<!---
+The following link was included in the Tagging Explainer but links to provenance. Not sure if this is correct.
+We include a [valueSet](ValueSet-ProvenanceVS.html) that assembles our codes and those defined elsewhere.
+
+Consider finding more descriptive label
+-->
+
+<p><strong>Resource tag</strong></p>
+
+<p>A Resource tag indicates that the whole Resource is influenced by the code assigned.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-data.html">Profile on ANY resource that is tagged with AI involvement</a></li>
+</ul>
+
+<p>Use when an example is completely authored by an AI.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Observation-glasgow.html">Example Observation with AI Assisted security labels</a></li>
+</ul>
+
+<p>The key portion of that Resource is the following meta.security element holding the <code class="language-plaintext highlighter-rouge">AIAST</code> code. <code class="language-plaintext highlighter-rouge">AIAST</code> is an HL7 Observation value for metadata that indicates that AI was invovled in producing the data or information.</p>
+
+<!---
+Note, I don't think the description I added for AIAST is the best so including it more as a placeholder for now.
+-->
+
+<p>Discussion has indicated that a few more codes might be useful. For this we create a local <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/CodeSystem-AddedProvenanceCS.html">codeSystem</a> to allow us to experiment. Eventually useful codes would be proposed to HL7 Terminology (THO). For example <code class="language-plaintext highlighter-rouge">AIAST</code> does not indicate if a clinician was involved in the use of the AI, or reviewed the output of the AI.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Observation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"glasgow"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"security"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ObservationValue"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"AIAST"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Artificial Intelligence asserted"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Element tag within a Resource</strong></p>
+
+<p>An Element tag will indicate that an element or a few elements within a Resource were influenced by AI, but not the whole Resource.
+Use when components of an example were authored by AI, but not the whole Resource.</p>
+
+<p>meta.security holds a code defined in <a href="http://hl7.org/fhir/uv/security-label-ds4p/inline_security_labels.html">DS4P Inline Security Labels</a> - <code class="language-plaintext highlighter-rouge">PROCESSINLINE</code>, and the <code class="language-plaintext highlighter-rouge">inline-sec-label</code> extension is on each element that was influenced by AI to indicate it is an AI asserted value.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DiagnosticReport-f202.html">DiagnosticReport with Inline AI Security Labels</a></li>
+</ul>
+
+<p>One of the key portions of that Resource is</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"conclusionCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"extension"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-inline-sec-label"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"valueCoding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ObservationValue"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"AIAST"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Artificial Intelligence asserted"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"428763004"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Staphylococcus aureus bacteraemia"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="defining-the-ai-model">Defining the AI Model</h3>
+<p>There are a number of observability factors beyond simple tagging that are of interest to end users and downstream systems. Cheif among these is the nature of the AI itself. The user would like to understand what algorythm / model was used, who developed it, how it was trained, any certifications it has, and so on… To do this, the guide outlines the use of the Provenance resource, which can then be linked to Device and DocumentReference to point to a Model-Card.</p>
+
+<blockquote>
+  <p>💡 Tip</p>
+
+  <p>Use when the AI model is important to the use-cases, such as when it may be important to understand which AI model was used.</p>
+</blockquote>
+
+<p>The industry is converging around standards for providing this information, generally called Model-Cards. Several different standards are emerging, including <a href="#hugging-face-markdown">Hugging Face</a> and <a href="#chai-applied-model-cards-xml">CHAI Model Cards</a>. This guide does not enforce any particular Model-Card, but does show how to encode any Model-Card in a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-ModelCard.html">AI Model-Card profiled DocumentReference</a>, and these would be referenced in a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-Device.html">AI profiled Device</a> or within the <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-Provenance.html">Provenance describing the AI involvement</a>. This looks like:</p>
+
+<pre><code class="language-mermaid">classDiagram
+    direction LR
+    class Resource {
+        &lt;&lt;FHIR Resource&gt;&gt;
+        id
+        meta.security = AIAIST
+        ...
+    }
+
+    class Provenance {
+        &lt;&lt;FHIR Resource&gt;&gt;
+        target : Reference resource created/updated
+        occurred : When
+        reason : `AIAST`
+        agent : Reference to AI Device
+        agent : References to other agents involved
+        entity : References to Model-Card DocumentReference
+        entity : References to other data used
+    }
+
+    class Device {
+        &lt;&lt;FHIR Resource&gt;&gt;
+        id
+        identifier
+        type = "AI"
+        extension : Specific kind of AI
+        modelNumber
+        manufacturer
+        manufactureDate
+        deviceName
+        version
+        owner
+        contact
+        url
+        note
+        safety
+        extension : model-card
+    }
+
+    class DocumentReference {
+        &lt;&lt;FHIR Resource&gt;&gt;
+        id
+        type = AImodelCard
+        category = AImodelCardMarkdownFormat | AImodelCardCHAIformat
+        description
+        version
+        data / url = codeable model-card details
+        data / url = pdf rendering
+    }
+
+    Resource "1..*" &lt;-- Provenance : "Provenance.target"
+    Provenance --&gt; Device : "Provenance.agent.who"
+    Provenance --&gt; DocumentReference : "Provenance.entity.what"
+</code></pre>
+
+<p>Examples:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-Provenance.html">Profile of Provenance describing AI as involved</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Device-TheAI.html">The AI System as a Device</a></li>
+</ul>
+
+<h4 id="hugging-face-markdown">Hugging Face Markdown</h4>
+
+<p>The Hugging Face Model-Card is a combination of YAML that defines in codeable terms the details, and a Markdown that describes it in narrative. Given that Markdown can carry YAML, the overall object is Markdown.</p>
+
+<p>Example Model-Card from https://github.com/huggingface/huggingface_hub/tree/main/tests/fixtures/cards</p>
+
+<p>Here is an example given:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">language</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">en</span>
+<span class="na">license</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">bsd-3-clause</span>
+<span class="na">annotations_creators</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">crowdsourced</span>
+<span class="pi">-</span> <span class="s">expert-generated</span>
+<span class="na">language_creators</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">found</span>
+<span class="na">multilinguality</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">monolingual</span>
+<span class="na">size_categories</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">n&lt;1K</span>
+<span class="na">task_categories</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">image-segmentation</span>
+<span class="na">task_ids</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">semantic-segmentation</span>
+<span class="na">pretty_name</span><span class="pi">:</span> <span class="s">Sample Segmentation</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>The example above is encoded in a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-ModelCard-sample-huggingface-attached.html">DocumentReference with Model-Card encoded inside</a></p>
+
+<h4 id="chai-applied-model-cards-xml">CHAI Applied Model-Cards XML</h4>
+
+<p>The <a href="https://www.chai.org/workgroup/applied-model">Coalition for Health AI (CHAI) Applied Model Card</a> utilizes XML encoding and PDF rendering.</p>
+
+<p>An example from the <a href="https://github.com/coalition-for-health-ai/mc-schema">CHAI Github Examples</a> is included here in multiple DocumentReference formats:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-ModelCard-sample-CHAI-web.html">DocumentReference linked to a web respository where the Model-Cards exist</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-ModelCard-sample-CHAI-binary.html">DocumentReference with Model-Card encoded using FHIR Binary resources</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-ModelCard-sample-CHAI-attached.html">DocumentReference with Model-Card encoded inside</a></li>
+</ul>
+
+<p>Note that these are all the same example Model-Card, just encoded different ways depending on the needs. These three encoding methods are available for the HuggingFace format as well. Note that in the case of CHAI format, these examples include both the XML and the PDF rendering of the same as different .content entries.</p>
+
+<h5 id="r5r6">R5/R6</h5>
+
+<p>In R5/R6 of FHIR core the Device resource has a <code class="language-plaintext highlighter-rouge">.property</code> element with a <code class="language-plaintext highlighter-rouge">.property.type</code> we can use to indicate the model-card, and place the model-card markdown into <code class="language-plaintext highlighter-rouge">.property.valueAttachment</code> as markdown string. (It could go into <code class="language-plaintext highlighter-rouge">.valueString</code> if we know it will be markdown, but that is not strongly clear.)</p>
+
+<h5 id="r4-simply-put-the-model-card-markdown-into-the-notetext-of-the-device">R4 Simply put the Model-Card markdown into the note.text of the Device</h5>
+
+<p>One choice is to just put that Markdown Model-Card into the Device.note.text element. This is not wrong from the definition of that element, but it may not be obvious to one looking at the Device resource that there is meaning to the markdown given.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Device-Note-ModelCard.html">Device with Model-Card in Device.note.text</a></li>
+</ul>
+
+<h5 id="attachment-for-the-model-card">Attachment for the Model-Card</h5>
+
+<p>One could encode the Model-Card in a resource designed for carrying any mime-type, the DocumentReference. To make this more clear and searchable we define a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/CodeSystem-AImodelCardCS.html">codeSystem</a> that has some codes to be used to identify that the DocumentReference is specifically an AI Model-Card or an AI Input Prompt</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-AI-ModelCard.html">Profile of DocumentReference to carry a Model-Card</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-ModelCard-sample-huggingface-attached.html">DocumentReference Hugging Face Model-Card</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/StructureDefinition-aitransparency.modelCardDescription.html">Extension for including the Model-Card in a Device</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Device-Attached-ModelCard.html">Device with attached Model-Card</a></li>
+</ul>
+
+<h3 id="context-of-ai-usage">Context of AI Usage</h3>
+<p>When using an AI it is necessary to supply it with certain inputs. These inputs very based on the AI involved, but the industry generally refers to these inputs as the "prompt" (especially in the case of Generative AI).</p>
+
+<blockquote>
+  <p>💡 Tip</p>
+
+  <p>Use when the record needs to show the data inputs, such as to understand what data the AI had to inference on, vs what data was not provided.</p>
+</blockquote>
+
+<p>There are different kinds of prompts supplied, including but not limited to:</p>
+
+<ul>
+  <li><strong>System Prompt:</strong> Instructions to the AI on what to do and how to handle user inputs. These can also include reference information, such as clinical practice guidelines, drug interaction databases, treatment protocols, and evidence-based medicine resources that will enhance the AI decision-making.</li>
+  <li><strong>User Prompt:</strong> Input from the user. This often includes the question to answer or problem to solve. In many cases this is a templated text that allows for the inserting of additional data (note some systems allow other prompt types to include files as additional data). This additional data can include patient demographics, clinical notes, laboratory results, imaging data, and other health data that will be useful to the AI decision-making.</li>
+</ul>
+
+<p>In general, inputs should be captured using a DocumentReference linked through the Provenance, but when specific clinical data is involved a FHIR Bundle or other resource maybe linked.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>There is significant variation in what and how AI systems inputs are supplied, however capturing those inputs should remain relatively consistent.</p>
+</blockquote>
+
+<h4 id="context-examples">Context Examples</h4>
+
+<p>The context documents all inputs involved in AI processing.</p>
+
+<p>One useful thing to record is the prompt(s) given to the AI. This prompt(s) can be very important to the output, and the interpretation of the output. The prompt(s) is recorded as an attachment, using the DocumentReference, and using a code as defined above</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-Input-Prompt-lorem-ipsum.html">Input Prompt lorem ipsum</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-Input-Prompt-create-patient.html">Input Prompt to create a Patient</a></li>
+</ul>
+
+<p>The first example is just showing the encapsulating mechanism. The Second example is a prompt that might be used to have the AI create a given Patient resource that meets the input requirements.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Provenance-AI-generated-patient-resource.html">Provenance of creating a Patient from Input Prompt</a></li>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Patient-a1b2c3d4-e5f6-7890-abcd-ef1234567890.html">Patient resource created</a></li>
+</ul>
+
+<h3 id="process-utilizing-ai">Process Utilizing AI</h3>
+
+<p>AI Models do not exist in a vacuum, in addition to the context / inputs, there needs to be a system that calls the AI, supplies the inputs, and gets the result. This result may then be used as-is, supplied to another AI, varified by an automated system, varified by a human, or any number of other activities. Understanding this process may be very important to end users and downstream systems. For example, if the results of the AI were verified by a human (human-in-the-loop) then an end user may be able to rely on the results with less scrutiny.</p>
+
+<blockquote>
+  <p>💡 Tip</p>
+
+  <p>Use when all possible factors are important to record. This level of Observability Factor is very comprehensive, and as such is very verbose. This level of Observability Factor capturing may not be justified beyond initial model use, while shaking out the use.</p>
+</blockquote>
+
+<p>Some of the process elements that may be captured are:</p>
+<ul>
+  <li><strong>Human-in-the-loop:</strong> This is when a human verifies the results of an AI output. This can add validity to those results. It can be captured in Provenace as that person is another author of the resulting resource or element.</li>
+  <li><strong>Guardrails:</strong> An automated system is engaged to check the results of the AI. This system can take many different forms. It is often intended to reduce bias, ensure more equitable healthcare outcomes, catch unacceptable outputs, such as inappropriate word usage, or do general validation, such as running a FHIR validator on the resource to ensure conformaty. This can be captured as additional Devices as authors on the Provenance.</li>
+  <li><strong>Other AI or Systems:</strong> Sometimes the AI may call subroutines called tools. These tools may do things like simple math, API calls, or web searches. This is often done using MCP. Additional, multiple AI systems maybe involved. Agentic systems often involve multiple AI Agents who call each other using protocols like A2A. These workflows are complex to capture, but one suggestion is to use BPMN contained in DocumentReferences linked to the Provenance (example coming…).</li>
+</ul>
+
+<h4 id="process-examples">Process Examples</h4>
+
+<h5 id="resource-level">Resource-level</h5>
+
+<p>As with tagging, a Provenance can point at a whole Resource. In this way one can carry details in the Provenance, such as what AI was used and how.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Provenance-AI-Contributed.html">Provenance of AI authored Lab Observation</a></li>
+</ul>
+
+<h5 id="element-level">Element-level</h5>
+
+<p>Provenance can be just about some elements within a Resource. This is a normal part of Provenance, but it is important for AI use-cases.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Provenance-AI-Authored-Element.html">Provenance of AI Authored Procedure.followup.text</a></li>
+</ul>
+
+<h5 id="full-process-example">Full Process example</h5>
+
+<p><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Provenance-AI-full-lorem-ipsum.html">This is a full example</a> of how to capture the AI process in FHIR.</p>
+
+<ul>
+  <li>Two outputs that this Provenance resource is documenting:
+    <ul>
+      <li>an Observation resource (e.g., lab result)
+        <ul>
+          <li>with Observation.interpretation being attributed to this Provenance</li>
+        </ul>
+      </li>
+      <li>a CarePlan resource (e.g., follow-up care plan)</li>
+    </ul>
+  </li>
+  <li>Two agents
+    <ul>
+      <li>a verifier (human) who verifies the AI output</li>
+      <li>an author (AI system) who generated the output</li>
+    </ul>
+  </li>
+  <li>Two entities that were clinical resources provided to the AI system
+    <ul>
+      <li>a DocumentReference resource (e.g., patient summary)</li>
+      <li>an Observation resource (e.g., lab result)</li>
+    </ul>
+  </li>
+  <li>One entity that is a PlanDefinition resource (e.g., care plan definition)</li>
+  <li>One entity that is the AI Input Prompt
+    <ul>
+      <li>Where the Input Prompt is a DocumentReference resource that contains the input prompt provided to the AI system.</li>
+      <li>Where the Input Prompt is a contained resource in the Provenance resource.</li>
+      <li>Where the Input Prompt is associated with the clinician which provided it</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="pdf-interpreted-by-ai-into-fhir">PDF interpreted by AI into FHIR</h3>
+<p>This is an additional example provided that shows how this IG can be applied.</p>
+
+<p>Use Case: A provider receives a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/DocumentReference-Lab-Results-PDF.html">PDF of lab result(s)</a> for a patient. This PDF is examined by an AI which generates a <a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Bundle-b3c1f2d4-5c8e-4b0a-9f6d-7c8e1f2d4b5c.html">Bundle with a Patient resource and Observation resource(s)</a>.</p>
+
+<p>In the attached example the patient's name is Alton Walsh and the lab test is an HbA1C. All the FHIR resources in the bundle have been created by the AI, so they should be tagged accordingly.</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/Provenance-AI-Generated-Lab-Results.html">Provenance of AI Generated Lab Results</a></li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/ehr">HL7 International / Electronic Health Records</a>.  Package hl7.fhir.uv.aitransparency#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 21:16+0000">2026-03-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7/aitransparency-ig/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7/aitransparency-ig/qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/aitransparency/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/HL7/aitransparency-ig/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Data Contracts and Issue Reporting - NHS North West Genomics v0.2.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/bootstrap-fhir.css"/>
+    
+
+     <!-- <style>
+    svg { background-size: 50% ; }
+    </style> -->
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/project.css"/>
+    <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/prism.css"/>
+
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/ihe.css"/>
+<link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/nonum.css"/>
+<script async="null" src="../../../../../vendor/https/www.googletagmanager.com/gtag/js__q_867e93efd0.js" type="text/javascript"> </script> 
+
+
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/favicon.png"/>
+      <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/font-awesome.min.css">
+  
+  <body onload="document.body.style.opacity='1'">
+
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/prism.js"></script>
+  <!-- <script type="text/javascript"src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid.min.js"></script>
+     <script type="text/javascript" src="../../../../../shared/assets/347ab4816feffe8f-mermaid-init.js"></script>
+   <script type="text/javascript"src="../../../../../vendor/https/cdn.jsdelivr.net/npm/mermaid_11.12.0/dist/mermaid.min.js"></script> -->
+   <script src="../../../../../shared/assets/61b335a46df05a7c-mermaid.js" type="text/javascript"></script>
+   <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js" type="text/javascript"></script>
+
+
+<style type="text/css">h2{--heading-prefix:"28"}
+ h3,h4,h5,h6{--heading-prefix:"28"}</style>
+ <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+  <!-- <div id="family-nav">
+    <a id="iheuk-logo" no-external="true" href="https://ihe-uk.org/"><img height="50" alt="Visit the IHE UK website" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/iheuk-logo.png"/> </a>
+</div> -->
+<div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a no-external="true" id="nhse-logo" href="https://www.nw-gmsa.nhs.uk/"><img src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/nwgmsa-logo.svg" alt="MFT Logo" height="50"/></a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NHS North West Genomics</span>
+            <br/>
+            <span style="display:inline-block;">0.2.2 - ci-build
+
+
+
+  <img src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/gbr.svg" alt="United Kingdom flag" title="United Kingdom" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Analysis and Design (Volume 1)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html">Design Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">Laboratory Testing Workflow (LTW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/ILW.html">Inter-Laboratory Workflow (ILW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/SET.html">Specimen Event Tracking (SET)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Health Information Exchange (HIE)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mCSD.html">Care Services Discovery (mCSD)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PAM.html">Patient Administration (PAM)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/api-security.html">API Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interfaces (Volume 2)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/exchange.html">Exchange Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-1.html">Placer Order Management [LAB-1] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-3.html">Order Results Management [LAB-3] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PDQm.html">Patient Matching [PDQm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/MHD.html">Document Exchange [MHD]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/QEDm.html">Resource Access [QEDm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/IUA.html">Authorisation [IUA]</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models (Volume 3)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/data-intro.html">Data Contracts and Issue Reporting</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html">Genomic Test Order (Template)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html">Genomic Test Report (Template)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefacts (Volume 4)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/artifacts.html">HL7 FHIR R4</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html">HL7 v2.5.1</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Development
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/testing.html">Environments and Testing</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/support.html">Support</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/architecture.html">Architecture</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html"><b>Table of Contents</b></a></li><li><b>Data Contracts and Issue Reporting</b></li>
+
+          <span style="float:right;">
+
+            <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/identifiers.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mCSD.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">NHS North West Genomics, published by NHS North West Genomics. This guide is not an authorized publication; it is the continuous build for version 0.2.2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/nw-gmsa/nw-gmsa.github.com/">https://github.com/nw-gmsa/nw-gmsa.github.com/</a> and changes regularly. See the <a href="https://fhir.nwgenomics.nhs.uk/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Data Contracts and Issue Reporting</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#archetypes-entities-and-events" id="markdown-toc-archetypes-entities-and-events">Archetypes, Entities, and Events</a></li>
+  <li><a href="#data-contracts" id="markdown-toc-data-contracts">Data Contracts</a>    <ul>
+      <li><a href="#key-differences-from-base-hl7-fhir-hl7-v2-standards-and-hl7-uk-core" id="markdown-toc-key-differences-from-base-hl7-fhir-hl7-v2-standards-and-hl7-uk-core">Key Differences from base HL7 FHIR, HL7 V2 standards, and HL7 UK Core</a></li>
+      <li><a href="#key-data-contracts" id="markdown-toc-key-data-contracts">Key Data Contracts</a></li>
+      <li><a href="#data-contract-issues-and-change-process" id="markdown-toc-data-contract-issues-and-change-process">Data Contract Issues and Change Process</a></li>
+    </ul>
+  </li>
+  <li><a href="#relationship-to-other-guides" id="markdown-toc-relationship-to-other-guides">Relationship to Other Guides</a></li>
+</ul>
+
+</div>
+
+<p>This implementation guide primarily focuses on the <strong>Diagnostic Workflow</strong> and how it integrates within the broader <strong>health data model</strong>, as illustrated in the diagram above.</p>
+<ul>
+  <li><strong>Patient Care</strong> and <strong>Patient Administration</strong> are typically found in NHS providers <strong>Electronic Patient Record</strong> systems</li>
+  <li><strong>Care Directory Service</strong> on the other hand, are centrally defined by NHS England, with supporting APIs also provided by NHS England (for example, the ODS API).</li>
+</ul>
+
+<p>In software design, these areas are often referred to as <a href="https://en.wikipedia.org/wiki/Domain-driven_design">domains</a>. The <strong>Genomic Diagnostic Workflow</strong> operates across several of these domains — in software architecture terms, this is known as a <a href="https://martinfowler.com/bliki/BoundedContext.html">bounded context</a>.</p>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 759 577" zoomAndPan="magnify" data-diagram-type="MINDMAP" preserveAspectRatio="none" width="759px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:759px;height:577px;background:#FFFFFF;" version="1.1" height="577px"><defs></defs><g><a name="l530">​</a><rect rx="12.5" ry="12.5" width="183.1875" x="10" y="128.8906" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="20" font-size="14" textLength="163.1875" y="151.8857" font-family="sans-serif" fill="#000000">Diagnostic Workflow</text><rect rx="12.5" ry="12.5" width="257.248" x="243.1875" y="20" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="52.5938"></rect><a xlink:type="simple" xlink:show="new" xlink:title="Questionnaire-GenomicTestOrder.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html" xlink:actuate="onRequest" title="Questionnaire-GenomicTestOrder.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="253.1875" font-size="14" textLength="237.248" y="42.9951" font-family="sans-serif" fill="#0000FF">Laboratory Test Order (OML_O21)</text></a><a xlink:type="simple" xlink:show="new" xlink:title="Questionnaire-GenomicTestOrder.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html" xlink:actuate="onRequest" title="Questionnaire-GenomicTestOrder.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="253.1875" font-size="14" textLength="141.0049" y="59.292" font-family="sans-serif" fill="#0000FF">Genomic Test Order</text></a><rect rx="12.5" ry="12.5" width="179.585" x="550.4355" y="28.1484" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-ServiceRequest.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-ServiceRequest.html" xlink:actuate="onRequest" title="StructureDefinition-ServiceRequest.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-ServiceRequest.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="560.4355" font-size="14" textLength="159.585" y="51.1436" font-family="sans-serif" fill="#0000FF">Service Request (ORC)</text></a><path d="M500.4355,46.2969 L510.4355,46.2969 C525.4355,46.2969 525.4355,46.2969 540.4355,46.2969 L550.4355,46.2969" style="stroke:#181818;stroke-width:1;" fill="none"></path><path d="M193.1875,147.0391 L203.1875,147.0391 C218.1875,147.0391 218.1875,46.2969 233.1875,46.2969 L243.1875,46.2969" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="263.0586" x="243.1875" y="92.5938" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="52.5938"></rect><a xlink:type="simple" xlink:show="new" xlink:title="Questionnaire-GenomicTestReport.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html" xlink:actuate="onRequest" title="Questionnaire-GenomicTestReport.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="253.1875" font-size="14" textLength="243.0586" y="115.5889" font-family="sans-serif" fill="#0000FF">Laboratory Test Report (ORU_R01)</text></a><a xlink:type="simple" xlink:show="new" xlink:title="Questionnaire-GenomicTestReport.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html" xlink:actuate="onRequest" title="Questionnaire-GenomicTestReport.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="253.1875" font-size="14" textLength="148.0117" y="131.8857" font-family="sans-serif" fill="#0000FF">Genomic Test Report</text></a><rect rx="12.5" ry="12.5" width="191.1582" x="556.2461" y="100.7422" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-DiagnosticReport.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DiagnosticReport.html" xlink:actuate="onRequest" title="StructureDefinition-DiagnosticReport.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DiagnosticReport.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="566.2461" font-size="14" textLength="171.1582" y="123.7373" font-family="sans-serif" fill="#0000FF">Diagnostic Report (OBR)</text></a><path d="M506.2461,118.8906 L516.2461,118.8906 C531.2461,118.8906 531.2461,118.8906 546.2461,118.8906 L556.2461,118.8906" style="stroke:#181818;stroke-width:1;" fill="none"></path><path d="M193.1875,147.0391 L203.1875,147.0391 C218.1875,147.0391 218.1875,118.8906 233.1875,118.8906 L243.1875,118.8906" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="198.4453" x="243.1875" y="165.1875" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="52.5938"></rect><text lengthAdjust="spacing" x="253.1875" font-size="14" textLength="149.167" y="188.1826" font-family="sans-serif" fill="#000000">Sample Management</text><text lengthAdjust="spacing" x="253.1875" font-size="14" textLength="178.4453" y="204.4795" font-family="sans-serif" fill="#000000">Specimen Event Tracking</text><rect rx="12.5" ry="12.5" width="133.8799" x="491.6328" y="173.3359" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-Specimen" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Specimen" xlink:actuate="onRequest" title="StructureDefinition-Specimen" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Specimen" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="501.6328" font-size="14" textLength="113.8799" y="196.3311" font-family="sans-serif" fill="#0000FF">Specimen (SPM)</text></a><path d="M441.6328,191.4844 L451.6328,191.4844 C466.6328,191.4844 466.6328,191.4844 481.6328,191.4844 L491.6328,191.4844" style="stroke:#181818;stroke-width:1;" fill="none"></path><path d="M193.1875,147.0391 L203.1875,147.0391 C218.1875,147.0391 218.1875,191.4844 233.1875,191.4844 L243.1875,191.4844" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="113.5635" x="243.1875" y="237.7813" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-Task.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Task.html" xlink:actuate="onRequest" title="StructureDefinition-Task.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Task.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="253.1875" font-size="14" textLength="93.5635" y="260.7764" font-family="sans-serif" fill="#0000FF">Task (Future)</text></a><path d="M193.1875,147.0391 L203.1875,147.0391 C218.1875,147.0391 218.1875,255.9297 233.1875,255.9297 L243.1875,255.9297" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="176.5156" x="10" y="378.5234" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><text lengthAdjust="spacing" x="20" font-size="14" textLength="156.5156" y="401.5186" font-family="sans-serif" fill="#000000">Patient Administration</text><rect rx="12.5" ry="12.5" width="108.1016" x="236.5156" y="294.0781" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-Patient.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Patient.html" xlink:actuate="onRequest" title="StructureDefinition-Patient.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Patient.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="246.5156" font-size="14" textLength="88.1016" y="317.0732" font-family="sans-serif" fill="#0000FF">Patient (PID)</text></a><path d="M186.5156,396.6719 L196.5156,396.6719 C211.5156,396.6719 211.5156,312.2266 226.5156,312.2266 L236.5156,312.2266" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="238.791" x="236.5156" y="350.375" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-HospitalSpell.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-HospitalSpell.html" xlink:actuate="onRequest" title="StructureDefinition-HospitalSpell.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-HospitalSpell.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="246.5156" font-size="14" textLength="218.791" y="373.3701" font-family="sans-serif" fill="#0000FF">Encounter/Hospital Spell  (PV1)</text></a><path d="M186.5156,396.6719 L196.5156,396.6719 C211.5156,396.6719 211.5156,368.5234 226.5156,368.5234 L236.5156,368.5234" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="122.0059" x="236.5156" y="434.8203" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><text lengthAdjust="spacing" x="246.5156" font-size="14" textLength="102.0059" y="457.8154" font-family="sans-serif" fill="#000000">Care Directory</text><rect rx="12.5" ry="12.5" width="109.6943" x="408.5215" y="406.6719" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-Organization.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Organization.html" xlink:actuate="onRequest" title="StructureDefinition-Organization.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Organization.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="418.5215" font-size="14" textLength="89.6943" y="429.667" font-family="sans-serif" fill="#0000FF">Organisation</text></a><path d="M358.5215,452.9688 L368.5215,452.9688 C383.5215,452.9688 383.5215,424.8203 398.5215,424.8203 L408.5215,424.8203" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="101.04" x="408.5215" y="462.9688" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-Practitioner.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Practitioner.html" xlink:actuate="onRequest" title="StructureDefinition-Practitioner.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Practitioner.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="418.5215" font-size="14" textLength="81.04" y="485.9639" font-family="sans-serif" fill="#0000FF">Practitioner</text></a><path d="M358.5215,452.9688 L368.5215,452.9688 C383.5215,452.9688 383.5215,481.1172 398.5215,481.1172 L408.5215,481.1172" style="stroke:#181818;stroke-width:1;" fill="none"></path><path d="M186.5156,396.6719 L196.5156,396.6719 C211.5156,396.6719 211.5156,452.9688 226.5156,452.9688 L236.5156,452.9688" style="stroke:#181818;stroke-width:1;" fill="none"></path><rect rx="12.5" ry="12.5" width="150.2451" x="10" y="519.2656" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><text lengthAdjust="spacing" x="20" font-size="14" textLength="130.2451" y="542.2607" font-family="sans-serif" fill="#000000">Health Documents</text><rect rx="12.5" ry="12.5" width="397.1797" x="210.2451" y="519.2656" style="stroke:#181818;stroke-width:1.5;" fill="#F1F1F1" height="36.2969"></rect><a xlink:type="simple" xlink:show="new" xlink:title="StructureDefinition-DocumentReference.html" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DocumentReference.html" xlink:actuate="onRequest" title="StructureDefinition-DocumentReference.html" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DocumentReference.html" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="220.2451" font-size="14" textLength="377.1797" y="542.2607" font-family="sans-serif" fill="#0000FF">Document Reference (OBX and XDS Document Entry)</text></a><path d="M160.2451,537.4141 L170.2451,537.4141 C185.2451,537.4141 185.2451,537.4141 200.2451,537.4141 L210.2451,537.4141" style="stroke:#181818;stroke-width:1;" fill="none"></path></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Diagnostic Workflow - MindMap</p>
+</figure>
+<p><br clear="all"/></p>
+
+<h2 id="archetypes-entities-and-events">Archetypes, Entities, and Events</h2>
+
+<p>This guide uses the following concepts:</p>
+
+<ul>
+  <li>Health Informatics <a href="https://en.wikipedia.org/wiki/Archetype_(information_science)">Archetype</a>, this is model associated with messaging.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entities</a> such as HL7 v2 segments and FHIR resources.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Event_(computing)">Events</a> such as HL7 v2 ADT and SET event feeds.</li>
+</ul>
+
+<p>To align these perspectives, this guide defines the following relationship:</p>
+
+<pre><code class="language-mermaid">---
+title: Archetype, Entities and Events
+---
+erDiagram 
+    Archetype ||--|{ Entity : hasMany
+    Archetype }|--|| Event : hasMany
+    Event ||--|| Entity : oftenOne2One
+</code></pre>
+
+<p>The <strong>Archetype</strong> follows the <strong>Domain Archetype</strong> concept from <a href="https://en.wikipedia.org/wiki/Data_mesh">Data Mesh</a> principles and serves as a bridge between data architecture and software engineering.</p>
+
+<ul>
+  <li><strong>Domain Archetype</strong> may encompass multiple <strong>Entities</strong> and <strong>Events</strong>.</li>
+  <li><strong>Entities</strong> and a <strong>Events</strong> can have the same content and may be used interchangeably.</li>
+</ul>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Domain Archetype</th>
+      <th>Archetype Examples</th>
+      <th>Entity Examples</th>
+      <th>Event Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Laboratory Order</td>
+      <td>HL7 v2 OML_O21</td>
+      <td>HL7 v2 Segment</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Laboratory Report</td>
+      <td>HL7 Lab Results Interface (extends HL7 v2 ORU_R01)</td>
+      <td>HL7 v2 Segment</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Genomic Reporting - HL7 FHIR Profile</td>
+      <td>HL7 FHIR Resource</td>
+      <td>FHIR Workflow</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>openEHR Genomic Module Archetypes</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Health Document</td>
+      <td>IHE XDS Submission Set</td>
+      <td>&nbsp;</td>
+      <td>HL7 v2 MDM_T01</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This domain focuses on genomic and molecular diagnostics, and the main <strong>Archetypes</strong> are:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html">Genomic Test Order</a></li>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html">Genomic Test Report</a> – Summarizes genomic testing results.
+    <ul>
+      <li>Variant – Represents a specific genetic variant or mutation.</li>
+      <li>Diagnostic Implication – Links variants to clinical significance (e.g., pathogenicity, treatment implications).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="data-contracts">Data Contracts</h2>
+
+<p>Data contracts govern all interactions defined within this implementation guide and apply to all entities, messages (archetypes), and events. They are primarily specified using HL7 FHIR; where appropriate, mappings to HL7 v2 and IHE XDS are also provided.</p>
+<div role="alert" class="alert alert-info">
+Although this guide primarily uses HL7 FHIR and HL7 v2 to support interactions between health providers, it does not mandate or promote the use of these technical standards for data persistence within EHR, LIMS, or analytics systems. Suppliers may adopt alternative standards where more appropriate, such as <a href="https://openehr.org/" target="_blank">openEHR</a> for electronic health record systems or the <a href="https://www.ga4gh.org/" target="_blank">Global Alliance for Genomics and Health (GA4GH)</a> standards for research and system databases.
+</div>
+
+<pre><code class="language-mermaid">graph TD
+    EHR[EPR] &lt;--&gt; |HL7 v2&lt;br/&gt;Orders &amp; Reports| RIE
+    LIMS[LIMS] &lt;--&gt; |HL7 v2&lt;br/&gt;Orders &amp; Reports| RIE
+
+    subgraph HIE["Health Information Exchange"]
+        RIE[Regional Orchestration Engine] --&gt; |Store&lt;br/&gt;HL7 FHIR| CDR[Genomic Data Repository]
+    end
+    Clinician[Data Sharing&lt;br/&gt;Clinical Apps&lt;br/&gt;Single Patient Record] --&gt; |Read&lt;br/&gt;HL7 FHIR| CDR
+    AI[Operational AI] --&gt; |Read&lt;br/&gt;HL7 FHIR| CDR
+    Ops["Operations Monitoring (Real Time Analytics)"] --&gt; |Read&lt;br/&gt;HL7 FHIR| CDR
+
+    CDR --&gt; OLAP[Data Warehouse]
+    A[Analytics and AI] --&gt; OLAP
+    OLAP --&gt; FDP[Federated Data Platform]
+    A --&gt; FDP
+
+    classDef green fill:#D5E8D4;
+
+    class FDP,OLAP,CDR,LIMS,EHR green
+</code></pre>
+
+<p>The diagram above illustrates the scope of the data contracts covered by this guide. Specifically, it <strong>excludes</strong> the definition of data contracts for the following systems and domains:</p>
+
+<ul>
+  <li>EPR (Electronic Patient Record) systems (e.g. <a href="https://ckm.openehr.org/ckm/projects/1013.30.50">openEHR Genomics</a> )</li>
+  <li>Genomic Applications (e.g. <a href="https://www.ga4gh.org/">Global Alliance for Genomics and Health</a>)</li>
+  <li>LIMS</li>
+  <li>OLAP (Online Analytical Processing) and FDP (Federated Data Platform)</li>
+</ul>
+
+<p>This guide <strong>includes</strong> the definition of data contracts for:</p>
+
+<ul>
+  <li><strong>Business-to-Business (B2B):</strong> Use of HL7 FHIR to read data from the Clinical Data Repository.</li>
+  <li><strong>Data Pipeline:</strong> Internal use of HL7 FHIR for data exchange between the Regional Orchestration Engine and the Clinical Data Repository.</li>
+  <li><strong>Business-to-Business (B2B):</strong> Use of HL7 v2 and HL7 FHIR for interactions between LIMS and EPR systems.</li>
+  <li><strong>Data Pipeline:</strong> Use of HL7 v2, HL7 FHIR and IHE XDS for data exchange between the CDR and Regional Document Sharing systems such as IHE XDS, GMCR and National Record Locator. Note: data contract downgrades will be present in these pipelines.</li>
+</ul>
+
+<h3 id="key-differences-from-base-hl7-fhir-hl7-v2-standards-and-hl7-uk-core">Key Differences from base HL7 FHIR, HL7 V2 standards, and HL7 UK Core</h3>
+
+<p>This model requires coordination between NHS Trusts and regional standardisation of HL7 (v2 and FHIR). Key changes include:</p>
+
+<ul>
+  <li><strong>Patient Identifiers: Medical Record Number (MRN):</strong> MRNs may overlap across Trusts, so they are augmented with the ODS code of the originating NHS organisation (assigning authority).</li>
+  <li><strong>Patient Identifiers: NHS Number, CHI Number, and HSNI</strong> become the primary patient identifiers. NHS Numbers must be verified against national demographic services. Patients may have multiple NHS identifiers.</li>
+  <li><strong>Order and Report Numbers:</strong>: Must indicate type (e.g. placer or filler) and originating NHS provider (assigning authority).</li>
+  <li><strong>Clinical Coding: SNOMED CT and LOINC</strong> are used for OBX segments and observations. The use of LOINC in genomics is a key requirement for cross-standard (HL7 v2, FHIR and openEHR) transformations, UK SNOMED CT will be added when supported at a national level. Local codes may still be included where required.</li>
+  <li><strong>Specimen:</strong> Specimen identifiers must be included in orders, requiring the use of HL7 v2.5.1 OML_O21 (rather than ORM_O01) and ORU_R01. This supports distributed genomic testing, where multiple tests may be performed on a single specimen across several laboratories.</li>
+</ul>
+
+<div role="alert" class="alert alert-success">
+These data contracts are based on the following UK HL7, NHS and IHE standards:<br/>
+<ul>
+  <li>Laboratory reporting:
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/DHCW-HL7-v2-5-1-ORUR01-Specification.pdf" target="_blank">
+      Digital Health and Care Wales – HL7 ORU_R01 v2.5.1 Implementation Guide
+    </a>
+  </li>
+  <li>Laboratory reporting:
+    <a href="https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf" target="_blank">
+      Royal College of Radiologists HL7 Guide
+    </a>
+  </li>
+  <li>Patient administration:
+    <a href="https://drive.google.com/drive/folders/1FRkyZvWpZB1nCKbvQbo-eW_q9VtlR3Ws" target="_blank">
+      NHS England HL7 v2 ADT Message Specification
+    </a>
+  </li>
+  <li>Document metadata:
+    <a href="https://www.ihe-europe.net/sites/default/files/2017-11/IHE_ITI_XDS_Metadata_Guidelines_v1.0.pdf" target="_blank">
+      IHE Europe Document Metadata Guidelines
+    </a>
+  </li>
+  <li>Document type classification:
+    <a href="https://www.digihealthcare.scot/app/uploads/2024/05/CDI-Standard-V4.5-FINAL.pdf" target="_blank">
+      Digital Health and Care Scotland (EH4001) Clinical Document Indexing Standards
+    </a>
+  </li>
+</ul>
+</div>
+
+<p>The <strong>RIE will not undertake any transformation of HL7 messages to meet external system or individual NHS Trust requirements</strong>. Responsibility for transforming messages for supplier systems remains with each NHS Trust’s TIE. It is therefore the responsibility of the NHS Trust TIE to ensure that data is provided in the correct format for its system suppliers. Any amendments to this arrangement may be requested through the <a href="#data-contract-issues-and-change-process">change process</a>.</p>
+
+<div role="alert" class="alert alert-success">
+Data contracts are expected to apply across all message and payload formats used at a regional level, including HL7 v2, FHIR, DICOM, and IHE XDS.
+</div>
+
+<h3 id="key-data-contracts">Key Data Contracts</h3>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Data Contract</th>
+      <th>Type</th>
+      <th>HL7 FHIR</th>
+      <th>HL7 v2 Segment</th>
+      <th>IHE XDS</th>
+      <th>HL7 v2 Message</th>
+      <th>FHIR Message/Transaction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html">Genomic Test Order</a></td>
+      <td>Message/Archetype</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#oml_o21-laboratory-order">OML_O21</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/MessageDefinition-laboratory-order.html">Message Definition - Laboratory Order</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html">Genomic Test Report</a></td>
+      <td>Message/Archetype</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#oru_r01-unsolicited-transmission-of-an-observation-message">ORU_R01</a></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Patient</td>
+      <td>Entity &amp; Event</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Patient.html">Patient</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#pid">PID</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Organisation</td>
+      <td>Entity</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Organization.html">Organization</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Service Request</td>
+      <td>Entity</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-ServiceRequest.html">ServiceRequest</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#orc">ORC</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Diagnostic Report</td>
+      <td>Entity</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DiagnosticReport.html">DiagnosticReport</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#obr">OBR</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Specimen</td>
+      <td>Entity</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Specimen.html">Specimen</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#spm">SPM</a></td>
+      <td>&nbsp;</td>
+      <td>See <a href="https://wiki.ihe.net/index.php/Specimen_Event_Tracking">IHE Specimen Event Tracking</a> (HL7 v2 SET)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>Entity</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-Observation.html">Observation</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#obx">OBX</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Document Metadata</td>
+      <td>Entity &amp; Event</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DocumentReference.html">DocumentReference</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#txa">TXA</a> and <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#obx-type--ed">OBX</a></td>
+      <td>Document Entry - <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/StructureDefinition-DocumentReference.html">DocumentReference</a></td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html#mdm_t02-original-document-notification-and-content">MDM_T02</a></td>
+      <td>See <a href="https://profiles.ihe.net/ITI/MHD/ITI-105.html">IHE MHD ITI-105</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-contract-issues-and-change-process">Data Contract Issues and Change Process</h3>
+
+<ol>
+  <li>Data consumers identify data constraints or issues.</li>
+  <li>Requirements or issues are logged in the <a href="https://github.com/nw-gmsa/nw-gmsa.github.com/issues">NH Genomics IG issues</a></li>
+  <li>Business stakeholders, suppliers, and integration partners (collectively, the <code class="language-plaintext highlighter-rouge">NW Genomics Data Team</code>) review the item and assess its feasibility.</li>
+  <li>The data contract is created or updated within this implementation guide (for example, via a pull request).</li>
+  <li>The proposed change is reviewed and approved by the <code class="language-plaintext highlighter-rouge">NW Genomics Data Team</code>.</li>
+  <li>Once approved, the change is released.</li>
+</ol>
+
+<pre><code class="language-mermaid">flowchart TD
+    A[Data Consumer&lt;br/&gt;Identifies Issue or New Constraint]
+    B[Log Requirement / Issue&lt;br/&gt;NH Genomics IG Issues]
+    C[NW Genomics Data Team&lt;br/&gt;Review &amp; Feasibility Assessment]
+    D["Create or Update&lt;br/&gt;Data Contract&lt;br/&gt;Implementation Guide (PR)"]
+    E[NW Genomics Data Team&lt;br/&gt;Review &amp; Approval]
+    F[Release Change]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F
+</code></pre>
+
+<h2 id="relationship-to-other-guides">Relationship to Other Guides</h2>
+
+<p>The data model used in this guide is a combination of data and workflow requirements from a variety of other guides.</p>
+
+<p><img src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/GenomicsIG.drawio.png" alt="North West Genomics IG" style="padding:3px;width:70%;"/>
+<br clear="all"/></p>
+<p class="figureTitle">North West Genomics IG</p>
+<p><br clear="all"/></p>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/identifiers.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mCSD.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nwgenomics.nhs.uk/contact-us">NHS North West Genomics</a>.  Package fhir.nwgenomics.nhs.uk#0.2.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:11+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/IHE/supplement-template/issues/new/choose" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/IHE/supplement-template/issues" target="_blank">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://fhir.nwgenomics.nhs.uk/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: var(--footer-hyperlink-text-color)" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/cc-by.png" alt="CC0" style="border-style: none;" height="17"/></a> |
+                  <!-- <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://www.ihe.net/resources/public_comment/" target="_blank">Propose a change<img src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/external.png" alt="external" style="vertical-align: baseline"/></a>
+                 <script src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/.assets/js/google-analytics.js" type="text/javascript"> </script>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+
+
+</link></head></html>

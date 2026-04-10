@@ -1,0 +1,47 @@
+{
+  "slug": "fhir-nwgenomics-nhs-uk-0-2-2-data-intro",
+  "packageId": "fhir.nwgenomics.nhs.uk#0.2.2",
+  "canonical": "https://fhir.nwgenomics.nhs.uk",
+  "candidateBases": [
+    "https://fhir.nwgenomics.nhs.uk",
+    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com"
+  ],
+  "fileName": "data-intro.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/fhir.nwgenomics.nhs.uk#0.2.2/data-intro.html",
+  "pagePath": "data-intro.html",
+  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/data-intro.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "mermaid-init.js"
+  },
+  "diagramCount": 6,
+  "maxDiagramLength": 698,
+  "totalDiagramLength": 2492,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro",
+    "caseJson": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/case.json",
+    "before": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/before",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/before/index.html"
+    },
+    "after": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/after",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/failure",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/source",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/data-intro.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js"
+}

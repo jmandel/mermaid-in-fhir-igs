@@ -1,0 +1,47 @@
+{
+  "slug": "hl7-fhir-uv-aitransparency-1-0-0-ballot-general-guidance",
+  "packageId": "hl7.fhir.uv.aitransparency#1.0.0-ballot",
+  "canonical": "http://hl7.org/fhir/uv/aitransparency",
+  "candidateBases": [
+    "http://hl7.org/fhir/uv/aitransparency",
+    "https://build.fhir.org/ig/HL7/aitransparency-ig"
+  ],
+  "fileName": "general_guidance.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.uv.aitransparency#1.0.0-ballot/general_guidance.html",
+  "pagePath": "general_guidance.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/general_guidance.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 4,
+  "maxDiagramLength": 1297,
+  "totalDiagramLength": 2832,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance",
+    "caseJson": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/case.json",
+    "before": {
+      "dir": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/before",
+      "html": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/before/index.html"
+    },
+    "after": {
+      "dir": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/after",
+      "html": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/failure",
+      "html": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/source",
+      "html": "pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/general_guidance.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/assets/js/mermaid-init.js"
+}

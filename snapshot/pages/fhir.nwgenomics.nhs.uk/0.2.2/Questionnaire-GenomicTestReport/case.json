@@ -1,0 +1,47 @@
+{
+  "slug": "fhir-nwgenomics-nhs-uk-0-2-2-questionnaire-genomictestreport",
+  "packageId": "fhir.nwgenomics.nhs.uk#0.2.2",
+  "canonical": "https://fhir.nwgenomics.nhs.uk",
+  "candidateBases": [
+    "https://fhir.nwgenomics.nhs.uk",
+    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com"
+  ],
+  "fileName": "Questionnaire-GenomicTestReport.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/fhir.nwgenomics.nhs.uk#0.2.2/Questionnaire-GenomicTestReport.html",
+  "pagePath": "Questionnaire-GenomicTestReport.html",
+  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 594,
+  "totalDiagramLength": 1188,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport",
+    "caseJson": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/case.json",
+    "before": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/before",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/before/index.html"
+    },
+    "after": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/after",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/failure",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/source",
+      "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js"
+}

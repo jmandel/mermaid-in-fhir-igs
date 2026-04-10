@@ -1,0 +1,47 @@
+{
+  "slug": "shift-task-force-sls-valuesets-0-1-0-ab352",
+  "packageId": "SHIFT-Task-Force.SLS-ValueSets#0.1.0",
+  "canonical": "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
+  "candidateBases": [
+    "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
+    "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets"
+  ],
+  "fileName": "ab352.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/SHIFT-Task-Force.SLS-ValueSets#0.1.0/ab352.html",
+  "pagePath": "ab352.html",
+  "pageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/ab352.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 6,
+  "maxDiagramLength": 1304,
+  "totalDiagramLength": 6658,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352",
+    "caseJson": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/case.json",
+    "before": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/before",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/before/index.html"
+    },
+    "after": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/after",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/failure",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/source",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/ab352.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid-init.js"
+}

@@ -1,4 +1,4 @@
-name: Deploy catalog to GitHub Pages
+name: Deploy Mermaid snapshot to GitHub Pages
 
 on:
   push:
@@ -26,7 +26,9 @@ jobs:
       - name: Prepare pages artifact
         run: |
           mkdir _site
-          cp catalog.html _site/index.html
+          cp -R snapshot/. _site/
+          cp catalog.html _site/catalog.html
+          cp catalog.md _site/catalog.md
 
       - uses: actions/configure-pages@v5
         with:

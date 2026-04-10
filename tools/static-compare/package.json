@@ -1,0 +1,13 @@
+{
+  "name": "mermaid-static-compare",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "playwright-core": "^1.55.0",
+    "pngjs": "^7.0.0"
+  },
+  "scripts": {
+    "compare": "node compare.mjs",
+    "backfill": "node backfill_failure_pages.mjs"
+  }
+}

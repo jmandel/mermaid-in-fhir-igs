@@ -1,0 +1,47 @@
+{
+  "slug": "shift-task-force-sls-valuesets-0-1-0-sls",
+  "packageId": "SHIFT-Task-Force.SLS-ValueSets#0.1.0",
+  "canonical": "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
+  "candidateBases": [
+    "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
+    "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets"
+  ],
+  "fileName": "sls.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/SHIFT-Task-Force.SLS-ValueSets#0.1.0/sls.html",
+  "pagePath": "sls.html",
+  "pageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/sls.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 366,
+  "totalDiagramLength": 732,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls",
+    "caseJson": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/case.json",
+    "before": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/before",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/before/index.html"
+    },
+    "after": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/after",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/failure",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/source",
+      "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/sls.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid-init.js"
+}

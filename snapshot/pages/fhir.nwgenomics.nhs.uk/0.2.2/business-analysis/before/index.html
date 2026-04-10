@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Business Analysis - NHS North West Genomics v0.2.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+    
+
+   <!--   <style>
+    svg { background-size: 50% ; }
+    </style> -->
+
+    <!-- Project extras -->
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/prism.css" rel="stylesheet" />
+
+    <!-- Placeholder for child template CSS declarations -->
+<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/ihe.css" rel="stylesheet"/>
+<link href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="../../../../../vendor/https/www.googletagmanager.com/gtag/js__q_867e93efd0.js" async> </script> 
+
+
+    <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/html5shiv.js"></script>
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/favicon.png"/>
+      <link rel="stylesheet" href="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/font-awesome.min.css">
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+    <script src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/prism.js"></script>
+<!--   <script type="text/javascript"src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid.min.js"></script>
+     <script type="text/javascript" src="../../../../../shared/assets/347ab4816feffe8f-mermaid-init.js"></script>
+   <script type="text/javascript"src="../../../../../vendor/https/cdn.jsdelivr.net/npm/mermaid_11.12.0/dist/mermaid.min.js"></script> -->
+   <script type="text/javascript" src="../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+   <script type="text/javascript"src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js"></script>
+
+
+<style type="text/css">h2{--heading-prefix:"2"}
+ h3,h4,h5,h6{--heading-prefix:"2"}</style>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<!-- <div id="family-nav">
+    <a id="iheuk-logo" no-external="true" href="https://ihe-uk.org/"><img height="50" alt="Visit the IHE UK website" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/iheuk-logo.png"/> </a>
+</div> -->
+<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="nhse-logo" no-external="true" href="https://www.nw-gmsa.nhs.uk/"><img height="50" alt="MFT Logo" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/nwgmsa-logo.svg"/></a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NHS North West Genomics</span>
+            <br/>
+            <span style="display:inline-block;">0.2.2 - ci-build
+
+
+
+  <img alt="United Kingdom flag" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/gbr.svg" height="16" title="United Kingdom"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Analysis and Design (Volume 1)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html">Design Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">Laboratory Testing Workflow (LTW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/ILW.html">Inter-Laboratory Workflow (ILW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/SET.html">Specimen Event Tracking (SET)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Health Information Exchange (HIE)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mCSD.html">Care Services Discovery (mCSD)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PAM.html">Patient Administration (PAM)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/api-security.html">API Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interfaces (Volume 2)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/exchange.html">Exchange Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-1.html">Placer Order Management [LAB-1] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LAB-3.html">Order Results Management [LAB-3] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/PDQm.html">Patient Matching [PDQm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/MHD.html">Document Exchange [MHD]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/QEDm.html">Resource Access [QEDm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/IUA.html">Authorisation [IUA]</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models (Volume 3)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/data-intro.html">Data Contracts and Issue Reporting</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestOrder.html">Genomic Test Order (Template)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Questionnaire-GenomicTestReport.html">Genomic Test Report (Template)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefacts (Volume 4)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/artifacts.html">HL7 FHIR R4</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/hl7v2.html">HL7 v2.5.1</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Development
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/testing.html">Environments and Testing</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/support.html">Support</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/architecture.html">Architecture</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html'><b>Table of Contents</b></a></li><li><b>Business Analysis</b></li>
+
+          <span style="float:right;">
+
+            <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/index.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NHS North West Genomics, published by NHS North West Genomics. This guide is not an authorized publication; it is the continuous build for version 0.2.2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/nw-gmsa/nw-gmsa.github.com/'>https://github.com/nw-gmsa/nw-gmsa.github.com/</a> and changes regularly. See the <a href='https://fhir.nwgenomics.nhs.uk/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Business Analysis</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#clinical-overview" id="markdown-toc-clinical-overview">Clinical Overview</a>    <ul>
+      <li><a href="#clinical-process" id="markdown-toc-clinical-process">Clinical Process</a></li>
+    </ul>
+  </li>
+  <li><a href="#use-case-childrens-cancer-and-genomics-north-west-children-cancer" id="markdown-toc-use-case-childrens-cancer-and-genomics-north-west-children-cancer">Use Case: Childrens Cancer and Genomics (North West Children Cancer)</a>    <ul>
+      <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+      <li><a href="#use-case" id="markdown-toc-use-case">Use case</a></li>
+    </ul>
+  </li>
+  <li><a href="#use-case-colorectal-diagnostic-pathway-derby--nottingham-university-hospitals-nhs-trust--north-west-genomics" id="markdown-toc-use-case-colorectal-diagnostic-pathway-derby--nottingham-university-hospitals-nhs-trust--north-west-genomics">Use Case: Colorectal Diagnostic Pathway (Derby → Nottingham University Hospitals NHS Trust → North West Genomics)</a>    <ul>
+      <li><a href="#patient-profile" id="markdown-toc-patient-profile">Patient Profile</a></li>
+      <li><a href="#step-by-step-pathway-in-line-with-best-practice-timed-diagnostic-guidance" id="markdown-toc-step-by-step-pathway-in-line-with-best-practice-timed-diagnostic-guidance">Step-by-Step Pathway in Line with Best Practice Timed Diagnostic Guidance</a></li>
+    </ul>
+  </li>
+  <li><a href="#genomic-orders-and-reports" id="markdown-toc-genomic-orders-and-reports">Genomic Orders and Reports</a></li>
+  <li><a href="#usecase-haematological-malignancy-diagnostic-services" id="markdown-toc-usecase-haematological-malignancy-diagnostic-services">Usecase: Haematological Malignancy Diagnostic Services</a>    <ul>
+      <li><a href="#cheshire-and-mersey-test-distribution" id="markdown-toc-cheshire-and-mersey-test-distribution">Cheshire and Mersey Test Distribution</a></li>
+      <li><a href="#technical-implementation-option" id="markdown-toc-technical-implementation-option">Technical Implementation Option</a></li>
+    </ul>
+  </li>
+  <li><a href="#technical-workflow-overview" id="markdown-toc-technical-workflow-overview">Technical Workflow Overview</a>    <ul>
+      <li><a href="#laboratory-workflow-ltw" id="markdown-toc-laboratory-workflow-ltw">Laboratory Workflow (LTW)</a></li>
+      <li><a href="#inter-laboratory-workflow-ilw" id="markdown-toc-inter-laboratory-workflow-ilw">Inter Laboratory Workflow (ILW)</a></li>
+      <li><a href="#specimen-event-tracking-set" id="markdown-toc-specimen-event-tracking-set">Specimen Event Tracking (SET)</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<p>This guide is to support Genomic Testing Workflow at a regional level and is designed to be compatible with:</p>
+
+<ul>
+  <li><a href="https://simplifier.net/guide/fhir-genomics-implementation-guide/Home">NHS England - FHIR Genomics Implementation Guide</a> which defines the conformance requirements for Genomics in England</li>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/genomic-order-management-service-fhir">NHS England - Genomic Order Management Service FHIR API</a> a <a href="https://hl7.org/fhir/R4/workflow.html">FHIR Workflow</a> based service for managing orders and results at a national level.</li>
+</ul>
+
+<p>The general workflow is based on IHE LTW profiles and HL7 v2 OML and ORU.</p>
+
+<h2 id="clinical-overview">Clinical Overview</h2>
+
+<h3 id="clinical-process">Clinical Process</h3>
+
+<p>Genomic Testing Workflow is part of Diagnostic Testing, which is also part of the general clinical process.</p>
+
+<pre><code class="language-mermaid">graph TD;
+
+    A[Assessment]--&gt;|Creates Observations| B;
+    A--&gt; |Needs Diagnostic Testing and Completes| T;
+    B[Diagnosis]--&gt;|Creates Condition| C;
+    T[&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;Genomics Test Order]--&gt; |"Sends Laboratory Order&lt;br/&gt;LAB-1 FHIR Message O21"| AN;
+    T --&gt; |Asks for| S
+    S[Specimen Collection] --&gt; |Sends Specimen| AN;
+    AN["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;Diagnostic Testing"] --&gt; |"Requests further tests &lt;br/&gt;(reflex order)"| T;
+    AN --&gt; |Sends Laboratory Report&lt;br/&gt;LAB-3 HL7 v2 ORU_R01| A;
+    C[Plan]--&gt;|Creates Goals and Tasks| D;
+    D[Implement/Interventions]--&gt;|Actions Tasks| E;
+    E[Evaluate]--&gt; |Reviews Care| A;
+    
+    click T Questionnaire-GenomicTestOrder.html
+    click AN Questionnaire-GenomicTestReport.html
+    click S ExampleScenario-BiopsyProcedure.html
+
+    classDef purple fill:#E1D5E7;
+
+    classDef yellow fill:#FFF2CC;
+    classDef pink fill:#F8CECC
+    classDef green fill:#D5E8D4;
+    classDef blue fill:#DAE8FC;
+    classDef orange fill:#FFE6CC;
+
+    class A pink
+    class B yellow
+    class C green
+    class D blue
+    class E orange
+
+    class O,S,T,AN purple
+</code></pre>
+
+<p>Genomic diagnostic testing follows the same standardized process defined by the <a href="https://wiki.ihe.net/index.php/Laboratory_Testing_Workflow">IHE Laboratory Testing Workflow</a> used in traditional laboratory testing.
+This workflow has been enhanced to support the sharing of laboratory reports (documents) through Integrated Care Systems (ICS). In addition, a new mechanism for sharing laboratory reports has been introduced to establish a regional genomic data repository.</p>
+
+<h2 id="use-case-childrens-cancer-and-genomics-north-west-children-cancer">Use Case: Childrens Cancer and Genomics (North West Children Cancer)</h2>
+
+<div class="alert alert-danger" role="alert">
+THIS HAS NOT BEEN CLINICALLY VALIDATED 
+</div>
+
+<p><img style="padding:3px;width:60%;" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Cancer-NWCC.png" />
+<br clear="all" /></p>
+
+<h3 id="actors">Actors</h3>
+
+<ul>
+  <li>PTC: A Principal Treatment Centre (PTC) is a specialized hospital unit, primarily in the UK, responsible for the comprehensive diagnosis, treatment planning, and management of cancer in children, teenagers, and young adults (0–24 years).</li>
+  <li>POSCU: A Paediatric Oncology Shared Care Unit (POSCU) is a specialized unit within a local hospital in the UK that works alongside principal treatment centres to deliver care for children with cancer closer to home. POSCUs,, such as those within the NHS, manage treatment protocols, support services, and coordinate care for patients, often involving chemotherapy or management of complications.</li>
+</ul>
+
+<h3 id="use-case">Use case</h3>
+
+<hr />
+<ol>
+  <li>Test Request Initiation
+    <ul>
+      <li>PTC identifies the need for genomic testing (e.g. somatic mutation analysis, cytogenetics, NGS panels, minimal residual disease testing) as part of haematology oncology diagnosis, risk stratification, or treatment planning.</li>
+      <li>Genomic test request may be initiated:
+        <ul>
+          <li>At diagnosis</li>
+          <li>At relapse</li>
+          <li>During treatment response monitoring</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Consent and Clinical Information Capture
+    <ul>
+      <li>Explicit patient/guardian consent for genomic testing is confirmed and recorded (where required).</li>
+      <li>Additional clinical context is documented to support interpretation, including:
+        <ul>
+          <li>Diagnosis and disease phase</li>
+          <li>Prior therapies</li>
+          <li>Relevant phenotypic findings</li>
+          <li>Family history (if applicable)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Sample Collection
+    <ul>
+      <li>Sample type may include:
+        <ul>
+          <li>Peripheral blood</li>
+          <li>Bone marrow aspirate</li>
+          <li>Tissue biopsy</li>
+        </ul>
+      </li>
+      <li>Sample collected by Community Nurse, POSCU, or hospital-based clinical team.</li>
+      <li>Specimen details recorded, including:
+        <ul>
+          <li>Sample type and volume</li>
+          <li>Collection time</li>
+          <li>Handling and storage requirements specific to genomic assays</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Genomic Laboratory Order Creation
+    <ul>
+      <li>A <strong>genomic laboratory order</strong> is created and sent to the designated genomic or specialist haematology oncology laboratory.</li>
+      <li>Order includes:
+        <ul>
+          <li>Requested genomic assay(s)</li>
+          <li>Clinical indication</li>
+          <li>Urgency (routine vs urgent)</li>
+          <li>Linked phenotypic laboratory results (if available)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Sample Transport and Accessioning
+    <ul>
+      <li>Specimen is transported according to genomic testing requirements.</li>
+      <li>Receiving laboratory performs:
+        <ul>
+          <li>Sample accessioning</li>
+          <li>Quality and suitability checks (e.g. DNA/RNA integrity, tumour content)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Genomic Testing and Analysis
+    <ul>
+      <li>Laboratory performs genomic testing (e.g. sequencing, cytogenetic analysis, bioinformatics processing).</li>
+      <li>Results undergo:
+        <ul>
+          <li>Technical validation</li>
+          <li>Clinical interpretation by qualified molecular pathologists or scientists</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Genomic Results Reporting
+    <ul>
+      <li>Laboratory produces a genomic diagnostic report, which may include:
+        <ul>
+          <li>Identified variants or abnormalities</li>
+          <li>Clinical significance and classification</li>
+          <li>Diagnostic, prognostic, or therapeutic implications</li>
+          <li>Limitations of testing</li>
+        </ul>
+      </li>
+      <li>Report is issued electronically where possible.</li>
+    </ul>
+  </li>
+  <li>Distribution of Genomic Results
+    <ul>
+      <li>Genomic report is sent to:
+        <ul>
+          <li>PTC</li>
+          <li>POSCU or Community Nurse (if involved in shared care)</li>
+          <li>Where systems are not interoperable, results may be supplemented via secure messaging or agreed alternative formats.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Communication and Acknowledgement
+    <ul>
+      <li>POSCU or Community Nurse notifies PTC that genomic results have been sent and confirms receipt (mirroring the existing blood test process).</li>
+      <li>Any issues with report readability, format, or completeness are escalated.</li>
+    </ul>
+  </li>
+  <li>Clinical Review and Multidisciplinary Interpretation
+    <ul>
+      <li>PTC reviews genomic results, often within a:
+        <ul>
+          <li>Multidisciplinary Team (MDT)</li>
+          <li>Molecular Tumour Board (if applicable)</li>
+        </ul>
+      </li>
+      <li>Genomic findings are interpreted alongside existing laboratory and clinical data.</li>
+    </ul>
+  </li>
+  <li>Clinical Decision Making
+    <ul>
+      <li>PTC may:
+        <ul>
+          <li>Confirm or refine diagnosis</li>
+          <li>Adjust risk stratification</li>
+          <li>Amend treatment regimen (e.g. targeted therapy eligibility)</li>
+          <li>Request additional genomic or phenotypic tests</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Patient Recall and Follow-Up
+    <ul>
+      <li>If genomic findings necessitate action:
+        <ul>
+          <li>Patient may be recalled for additional testing or treatment changes.</li>
+        </ul>
+      </li>
+      <li>Any prescription or care plan changes are communicated to POSCU.</li>
+    </ul>
+  </li>
+  <li>Ongoing Data Use and Re-analysis (Where Applicable)
+    <ul>
+      <li>Genomic data may be:
+        <ul>
+          <li>Re-interpreted as knowledge evolves</li>
+          <li>Referenced for future treatment decisions</li>
+        </ul>
+      </li>
+      <li>PTC may request amended reports if variant classification changes</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="use-case-colorectal-diagnostic-pathway-derby--nottingham-university-hospitals-nhs-trust--north-west-genomics">Use Case: Colorectal Diagnostic Pathway (Derby → Nottingham University Hospitals NHS Trust → North West Genomics)</h2>
+
+<div class="alert alert-danger" role="alert">
+THIS HAS NOT BEEN CLINICALLY VALIDATED 
+</div>
+
+<p>Ref: <a href="https://gettingitrightfirsttime.co.uk/wp-content/uploads/2024/03/BestPracticeTimedDiagnosticCancerPathwayssummary-guide-March-24-V3.pdf">NHS Impact - Best Practice Timed Diagnostic Cancer pathways</a></p>
+
+<p><img style="padding:3px;width:60%;" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/Cancer-Colorectal.png" />
+<br clear="all" /></p>
+
+<hr />
+<h3 id="patient-profile">Patient Profile</h3>
+
+<ul>
+  <li>Name: Mr. Kumar (example)</li>
+  <li>Location: Derby, UK</li>
+  <li>Age: 62</li>
+  <li>Symptoms: Persistent change in bowel habits, intermittent rectal bleeding, unexplained weight loss</li>
+  <li>GP Registered With: Derby GP Practice</li>
+  <li>Referring NHS Trust: Derbyshire (primary care)</li>
+  <li>Receiving NHS Trust: Nottingham University Hospitals NHS Trust (NUH)</li>
+  <li>Genomics Laboratory Hub (GLH): North West Genomics for any advanced molecular/genomic testing</li>
+</ul>
+
+<h3 id="step-by-step-pathway-in-line-with-best-practice-timed-diagnostic-guidance">Step-by-Step Pathway in Line with Best Practice Timed Diagnostic Guidance</h3>
+
+<p>(Based on the 28-day Faster Diagnosis Standard and best practice principles summarised in the GIRFT 2024 guide.)</p>
+
+<h4 id="day-0--gp-referral-urgent-suspected-cancer">Day 0 — GP Referral (Urgent Suspected Cancer)</h4>
+
+<ul>
+  <li>Mr. Kumar visits his GP in Derby with symptoms matching NG12 suspected colorectal cancer criteria (weight loss, bleeding, change in bowel habits).</li>
+  <li>GP performs initial assessments including FIT (Faecal Immunochemical Test) and basic blood tests (FBC, iron studies).</li>
+  <li>Based on high-risk FIT results, the GP makes an urgent suspected cancer referral to Nottingham University Hospitals NHS Trust via e-Referral Service (eRS).</li>
+  <li>Referral includes minimum dataset: symptoms, FIT result, bloods, family history, medications, performance status, and communication preferences.</li>
+</ul>
+
+<p><strong>Goal:</strong> Enable straight to test routing where possible.</p>
+
+<h4 id="day-17--triage--navigation">Day 1–7 — Triage &amp; Navigation</h4>
+
+<ul>
+  <li>NUH cancer services receive the referral and initiate clinical triage within 7 days:</li>
+  <li>Review of referral data by a clinical nurse specialist (CNS) and colorectal team.</li>
+  <li>Determine the most appropriate diagnostic route (e.g., colonoscopy, CT colonography, flexible sigmoidoscopy).</li>
+  <li>A cancer navigator is assigned to coordinate all appointments, track progress, and communicate with the patient.</li>
+</ul>
+
+<p><strong>Goal:</strong> Efficient prioritisation and sequencing to support rapid diagnostics and minimise wasted clinic waits.</p>
+
+<h4 id="day-714--diagnostic-testing">Day 7–14 — Diagnostic Testing</h4>
+
+<ul>
+  <li>Mr. Kumar is scheduled for:
+    <ul>
+      <li>Colonoscopy (primary definitive test)</li>
+      <li>CT colonography if incomplete colonoscopy or contraindications</li>
+    </ul>
+  </li>
+  <li>Parallel pathology work (e.g., biopsy testing) is initiated if suspicious lesions are found.</li>
+  <li>Test reports are expedited back to the colorectal MDT and referring clinician.</li>
+</ul>
+
+<p><strong>Goal:</strong> Complete key diagnostic investigations early in pathway to support 28-day standard.</p>
+
+<h4 id="day-1421--multidisciplinary-team-mdt-review">Day 14–21 — Multidisciplinary Team (MDT) Review</h4>
+
+<ul>
+  <li>If cancer is confirmed on biopsy, NUH MDT review diagnosis, stage, and immediate next steps.</li>
+  <li>Genomic profiling may be indicated (e.g., if advanced disease or targeted therapy considerations). Here, <strong>North West Genomics</strong> GLH receives tumour samples or sequencing requests for actionable genomic tests.
+    <ul>
+      <li>Example work: mismatch repair (MMR) status, RAS/BRAF profiling (if colorectal cancer confirmed) as per clinical indications.</li>
+    </ul>
+  </li>
+  <li>Genomics results are expected shortly after initial pathology to inform precision treatment planning.</li>
+</ul>
+
+<p><strong>Goal:</strong> Early integration of genomics into treatment planning where indicated.</p>
+
+<h4 id="day-2128--communication--decision-to-treat">Day 21–28 — Communication &amp; Decision to Treat</h4>
+
+<ul>
+  <li>The diagnosis (cancer confirmed or ruled out) is communicated to Mr. Kumar within 28 days of referral — meeting the Faster Diagnosis Standard.</li>
+  <li>If cancer: a decision to treat is made, and care planning begins (surgical referral, oncology, or multidisciplinary care).</li>
+  <li>If no cancer: Mr. Kumar receives a non-cancer diagnosis and appropriate routing back to primary care or symptomatic management.</li>
+</ul>
+
+<h4 id="outcomes--benefits-of-following-the-best-practice-timed-pathway">Outcomes &amp; Benefits of Following the Best Practice Timed Pathway</h4>
+
+<ul>
+  <li>✔ Reduces waiting time from referral to diagnosis to within 28 days.</li>
+  <li>✔ Prioritises high-risk patients for early, appropriate diagnostics (e.g., straight to test).</li>
+  <li>✔ Supports coordinated care across primary care, secondary care, MDT, and genomics services.</li>
+  <li>✔ Improves patient experience with earlier communication and streamlined navigation.</li>
+  <li>✔ Aligns with national quality standards and GIRFT-endorsed best practice.</li>
+</ul>
+
+<hr />
+
+<h2 id="genomic-orders-and-reports">Genomic Orders and Reports</h2>
+
+<pre><code class="language-mermaid">graph TD;
+
+    subgraph NHSTrust[NHS Trust]
+        T[&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;EPR]--&gt; |"1a. Sends Laboratory Order&lt;br&gt;LAB-1 HL7v2 ORM_O01/OML_O21"| TIE;
+        TIE[Trust Integration Engine] 
+        TIE--&gt; |4c. Sends Laboratory Report&lt;br/&gt;LAB-3 HL7 v2 ORU_R01| T;
+    end
+    TIE --&gt; |"1b. Sends Laboratory Order&lt;br&gt;LAB-1 FHIR Message O21"| RIE;
+    T --&gt; |2. Asks for| S
+    S[Specimen Collection] --&gt; |3. Sends Specimen| AN;
+    subgraph NWGenomics[North West Genomics]
+        RIE --&gt; |"1c. Sends Laboratory Order&lt;br&gt;LAB-1 HL7 v2 OML_O21"| AN;
+        AN["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;Diagnostic Testing&lt;br/&gt;LIMS iGene"] --&gt; |4a. Sends Laboratory Report&lt;br/&gt;LAB-3 HL7 v2 ORU_R01| RIE;
+        RIE[Regional Orchestration Engine] --&gt; |4b. Sends Laboratory Report&lt;br/&gt;LAB-3 HL7 v2 ORU_R01| TIE;
+    end 
+    click T Questionnaire-GenomicTestOrder.html
+    click AN Questionnaire-GenomicTestReport.html
+    click S ExampleScenario-BiopsyProcedure.html
+
+    classDef purple fill:#E1D5E7;
+
+    classDef yellow fill:#FFF2CC;
+    classDef pink fill:#F8CECC
+    classDef green fill:#D5E8D4;
+    classDef blue fill:#DAE8FC;
+    classDef orange fill:#FFE6CC;
+
+    class A pink
+    class B yellow
+    class C green
+    class D blue
+    class E orange
+
+    class O,S,T,AN purple
+</code></pre>
+
+<h2 id="usecase-haematological-malignancy-diagnostic-services">Usecase: Haematological Malignancy Diagnostic Services</h2>
+
+<pre><code class="language-mermaid">graph TD
+
+    subgraph Trust[NHS Trust]
+        EPR[&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;EPR]
+        TIE[Trust Integration Engine]
+    end 
+    HODS["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;HODS&lt;br/&gt;&lt;b&gt;Order Placer&lt;/b&gt;"]
+    
+    EPR --&gt; |"1. Create Laboratory Order&lt;br/&gt;Manual entry"| HODS
+    HODS --&gt; |"2. Send Laboratory Order (Immunology and/or Genomics) + Specimen&lt;br/&gt;"| MFTReception[Specimen Reception]
+    MFTReception --&gt; |"3a. (Manual) Immunology Laboratory Order + Specimen"| LIMS["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;Immunology LIMS"]
+   
+    subgraph Laboratory["Laboratory at NHS Trust"]
+        LIMS --&gt; |3b. Send Laboratory Report&lt;br/&gt;HL7 v2 ORU_R01| LIE[Laboratory&lt;br/&gt;Trust Integration Engine]
+    end 
+
+    LIE --&gt; |3c. Send Laboratory Report&lt;br/&gt;HL7 v2 ORU_R01| HODS
+    RIE --&gt; |4d. Send Laboratory Report&lt;br/&gt;HL7 v2 ORU_R01| HODS
+    MFTReception --&gt; |"4a. Genomics Laboratory Order &lt;br/&gt; Specimen most often entered into iGene"| TestType
+    
+    subgraph NWGenomics[North West Genomics]
+        RIE["Regional Orchestration Engine"]
+    
+        TestType[Test Distribution&lt;br/&gt;By Test Type to a LIMS] --&gt; |4b. Tests A, B, C, etc| GLH
+        GLH["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;LIMS Shire/iGene/StarLims"]
+        GLH --&gt; |4c. Send Laboratory Report&lt;br/&gt;HL7 v2 ORU_R01| RIE     
+    end
+    
+    HODS --&gt; |5. Write Consolidated Report| HODS
+    HODS --&gt; |"6. Send Consolidated Laboratory Report&lt;br/&gt;Email or HL7 ORU_R01"| TIE
+
+    TIE --&gt; |Laboratory Report| EPR 
+
+    classDef purple fill:#E1D5E7;
+
+    class EPR,HODS,GLH,LIMS purple
+</code></pre>
+
+<ul>
+  <li>Trusts will place their orders directly in HODS (1). HODS prints a request form, this is sent with the samples to Central specimen reception at MFT (2a).</li>
+  <li>Specimen reception then route the samples to the appropriate labs for testing, e.g. Genomics (4a), Immunology (3a), Christie via transport, etc.</li>
+  <li>The orders are manually booked into LIMS (Beaker (3a), iGene (4a + 4b), Shire (4a + 4b), etc). Which Genomic LIMS is used is determined by Genomic Test Type.</li>
+  <li>Results are sent electronically from LIMS (3b and 4c) to HODS (with exception of iGene PDFs, these are manually uploaded)</li>
+  <li>Reporting consultant writes the final combined report within HODS itself when all results are in (5)</li>
+  <li>When report is marked Closed , requesting clinicians are alerted by email (6) to log into HODS and view/export the PDF of the final report</li>
+</ul>
+
+<h3 id="cheshire-and-mersey-test-distribution">Cheshire and Mersey Test Distribution</h3>
+
+<p>For information purposes only. This is a more detailed breakdown of the Genomic Tests are distributed.</p>
+
+<p><img style="padding:3px;width:60%;" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HODS-MerseyAndCheshire.png" alt="HODS Genomic Tests - Mersey and Cheshire GLH" />
+<br clear="all" /></p>
+<p class="figureTitle">HODS Genomic Tests - Mersey and Cheshire GLH</p>
+<p><br clear="all" /></p>
+
+<h3 id="technical-implementation-option">Technical Implementation Option</h3>
+
+<p>This relates to points 4a-&gt;4d in the diagram above.</p>
+
+<pre><code class="language-mermaid">graph LR
+    IGene[iGene] --&gt; |"1. (New HL7 v2 OML_O21 feed from iGene)"| RIE[Regional Orchestration Engine] 
+    RIE --&gt; |"2. Stores a copies of orders"| CDR[Genomic Data Repository]
+    StarLimsMiddleware["StarLims Middleware &lt;br/&gt;(May be RIE)"] --&gt; |"3. Polls for (starlims) orders from CDR (FHIR RESTful)"| CDR
+    StarLimsMiddleware --&gt; |"4. Stores starlims order"| StarLims
+    StarLimsMiddleware --&gt; |"5. Gets Reports (poll?)"| StarLims
+    StarLimsMiddleware --&gt; |"6. Stores report"| CDR
+    RIE --&gt; |"7. Gets Reports (poll?)"| CDR
+    RIE --&gt; |"8. Distributes Reports (HL7 v2 ORU_R01)"| HODS[HODS etc]
+
+    classDef purple fill:#E1D5E7;
+    class OrderPlacer,OrderFiller purple
+</code></pre>
+
+<p>This infers automated order distribution between LIMS. This has questions around genomic specimen management, if the specimen management for genomics is going to be iGene, then orders to others LIMS are more accurately described as subcontracted orders.</p>
+
+<h4 id="subcontracted-orders">Subcontracted Orders</h4>
+
+<p>The RIE routes orders to a master LIMS (assumed to be iGene), which then subcontracts them to the other LIMS.</p>
+
+<p>See also <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/ILW.html">Inter Laboratory Workflow (ILW)</a></p>
+
+<pre><code class="language-mermaid">graph TD;
+    subgraph NHSTrustA[NHS Trust]
+        EPRA[&lt;b&gt;Order Placer&lt;/b&gt;] --&gt; |Asks For| SpecimenA[Sample Collection]
+        EPRA --&gt; |1a. Laboratory Order| TIE[Trust Integration Engine]
+    end
+ 
+    SpecimenA --&gt; |2 Send Specimen| LIMSA
+
+
+    TIE --&gt; |1b. Laboratory Order&lt;br/&gt;LAB-1| RIE 
+    subgraph NWGenomics[NW Genomics]
+        RIE --&gt; |1c. Laboratory Order&lt;br/&gt;LAB-1| LIMSA[&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;LIMS iGene]
+        
+        LIMSA --&gt; |1d. Subcontracted Laboratory Order&lt;br/&gt;LAB-35| LIMSB[&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;LIMS Starlims]
+        LIMSA --&gt; |1d. Subcontracted Laboratory Order&lt;br/&gt;LAB-35| LIMSC[&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;LIMS Shire]
+
+        
+        LIMSA --&gt; |4a. Laboratory Report| RIE[Regional Orchestration Engine]
+        LIMSB --&gt; |4a. Laboratory Report| RIE
+        LIMSC --&gt; |4a. Laboratory Report| RIE
+
+    end
+    RIE --&gt; |4b. Laboratory Report| TIE
+    TIE --&gt; |4c. Laboratory Report| EPRA
+    
+    classDef purple fill:#E1D5E7;
+    class EPRA,SpecimenA,LIMSA,LIMSB,LIMSC purple;
+</code></pre>
+
+<h2 id="technical-workflow-overview">Technical Workflow Overview</h2>
+
+<h3 id="laboratory-workflow-ltw">Laboratory Workflow (LTW)</h3>
+
+<h4 id="test-order">Test Order</h4>
+
+<pre><code class="language-mermaid">graph TD;
+    subgraph NHSTrust[NHS Trust]
+        Practitioner[fas:fa-user-md Practitioner] --&gt; |1. Selects Order Form| FormManager
+        FormManager --&gt; OrderEntry
+        Practitioner --&gt; |3. Completes| OrderEntry[Order Form]
+        EPR[&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;fas:fa-database Electronic Patient Record] --&gt; |2. Pre Populates with existing data| OrderEntry 
+        OrderEntry --&gt; |4. Submits Order| EPR
+
+        Practitioner --&gt; |6. Asks for|Sample[Sample Collection]
+    end
+    EPR --&gt; |5. Sends Laboratory Order&lt;br/&gt;LAB-1 HL7 FHIR Message O21| DiagnosticTesting[&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;fas:fa-stethoscope Diagnostic Testing]
+    Sample --&gt; DiagnosticTesting
+</code></pre>
+
+<p>For more details see:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">Send Laboratory Order (IHE LTW)</a> NHS Trust</li>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Read &amp; Search Laboratory Order (HIE)</a></li>
+</ul>
+
+<h4 id="diagnostic-testing">Diagnostic Testing</h4>
+
+<pre><code class="language-mermaid">graph TD;
+    Sample[Sample Collection] --&gt; EXT
+    Order --&gt; EXT
+    subgraph OrderFiller[&lt;b&gt;Order Filler&lt;/b&gt; North West Genomics]
+        EXT[DNA Extraction] --&gt; SEQ[DNA Sequencing]
+        SEQ --&gt; AN[Mapping &amp; Analysis]
+        AN --&gt; INT[Interpretation]
+    end 
+    INT --&gt; |Send Laboratory Report&lt;br/&gt;LAB-3 HL7 v2 ORU_R01| Practitioner[&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;EPR]
+</code></pre>
+
+<ul>
+  <li>Sample Collection: A sample of blood, saliva, skin, or tumor tissue is collected.</li>
+  <li>DNA Extraction: In a lab, DNA is separated from the cells in the sample.</li>
+  <li>DNA Sequencing: The DNA is broken into small pieces, copied, and then "read" by a machine, revealing the order of its building blocks (bases).</li>
+  <li>Mapping &amp; Analysis: Powerful computers match these short DNA "reads" to a reference genome (mapping) and then identify any variations or mutations.</li>
+  <li>Interpretation: Expert scientists analyze these variants to understand their potential impact on health, looking for links to diseases or responses to treatment.</li>
+</ul>
+
+<p>For more details see:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">Send Laboratory Report Data (IHE LTW)</a> - NHS Trust</li>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html#publish-a-document">Send Laboratory Report Document (HIE)</a> - ICS/ICB</li>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Read &amp; Search Laboratory Report Data (HIE)</a></li>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/HIE.html">Read &amp; Seerch Laboratory Report Documents (HIE)</a></li>
+</ul>
+
+<h3 id="inter-laboratory-workflow-ilw">Inter Laboratory Workflow (ILW)</h3>
+
+<p>For illustration purposes only, see <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/ILW.html">Inter Laboratory Workflow</a></p>
+
+<h3 id="specimen-event-tracking-set">Specimen Event Tracking (SET)</h3>
+
+<p>For illustration purposes only, see <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/SET.html">Specimen Event Tracking</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/index.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/LTW.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nwgenomics.nhs.uk/contact-us">NHS North West Genomics</a>.  Package fhir.nwgenomics.nhs.uk#0.2.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:11+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://fhir.nwgenomics.nhs.uk/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/external.png"/></a>
+                 <script type="text/javascript" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/.assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

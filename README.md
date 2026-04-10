@@ -1,8 +1,8 @@
 # Mermaid Diagrams in FHIR Implementation Guides
 
-A catalog of [Mermaid](https://mermaid.js.org/) diagrams found across FHIR Implementation Guides published on [build.fhir.org](https://build.fhir.org).
+A catalog of [Mermaid](https://mermaid.js.org/) diagrams found across FHIR Implementation Guides published on [build.fhir.org](https://build.fhir.org), plus a frozen before/after comparison snapshot for the Mermaid sandbox iframe sizing work.
 
-**[Browse the catalog](https://jmandel.github.io/mermaid-in-fhir-igs/)** — live-rendered diagrams with links back to each source IG.
+**[Browse the snapshot + catalog](https://jmandel.github.io/mermaid-in-fhir-igs/)**.
 
 ## What's here
 
@@ -13,6 +13,9 @@ A catalog of [Mermaid](https://mermaid.js.org/) diagrams found across FHIR Imple
 | [`diagrams.jsonl`](diagrams.jsonl) | One JSON line per extracted diagram (package, file, type, code) |
 | [`mermaid_igs.jsonl`](mermaid_igs.jsonl) | Index of IGs that use Mermaid (with build/GitHub/canonical URLs) |
 | [`build_catalog.mjs`](build_catalog.mjs) | The script that generates everything |
+| [`snapshot/`](snapshot/) | Frozen, shareable before/after site with vendored assets for local browsing and GitHub Pages |
+| [`build_snapshot_site.mjs`](build_snapshot_site.mjs) | Freezes a static-compare artifact tree into a self-contained snapshot |
+| [`tools/static-compare/`](tools/static-compare/) | The comparison harness source used to generate the before/after artifacts |
 
 ## How it works
 
@@ -41,6 +44,47 @@ node build_catalog.mjs --days 365
 ```
 
 Requires Node.js 18+ (uses native `fetch`). No `npm install` needed.
+
+## Frozen Before/After Snapshot
+
+The `snapshot/` tree is intended for sharing and review:
+
+- root `index.html`: review-oriented summary of before/after cases
+- `pages/.../before` and `pages/.../after`: frozen page fixtures
+- `report.json`: compare metrics and per-case flags
+- `warnings.json`: asset-freezing warnings from the vendoring pass
+
+Status labels in the snapshot are intentionally conservative:
+
+- `Clean`: no notable change detected
+- `Needs render review`: likely blank or missing render after the swap
+- `Needs layout review`: rendered, but page-height growth or downstream shift is large enough to inspect
+- `Check geometry`: measurable size/fill change without a proved render loss
+- `Fixture failures`: the harness could not prepare or replay the case cleanly
+
+Refresh the snapshot from an existing static-compare artifact directory:
+
+```bash
+node build_snapshot_site.mjs --source /path/to/static-compare/artifacts --out snapshot
+```
+
+Re-run the compare harness itself from harvested IG content plus a Mermaid bundle under test:
+
+```bash
+cd tools/static-compare
+npm install
+npm run compare -- \
+  --content /path/to/content \
+  --packages /path/to/packages \
+  --mermaid /path/to/mermaid.js \
+  --out ./artifacts
+
+node backfill_failure_pages.mjs --content /path/to/content --out ./artifacts
+cd ../..
+node build_snapshot_site.mjs --source tools/static-compare/artifacts --out snapshot
+```
+
+The GitHub Pages workflow publishes the committed `snapshot/` tree as the site root and keeps `catalog.html` available alongside it.
 
 ## Attribution
 

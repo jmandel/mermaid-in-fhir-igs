@@ -1,0 +1,47 @@
+{
+  "slug": "ch-fhir-ig-ch-umzh-connect-1-0-0-cibuild-security",
+  "packageId": "ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild",
+  "canonical": "http://fhir.ch/ig/ch-umzh-connect",
+  "candidateBases": [
+    "http://fhir.ch/ig/ch-umzh-connect",
+    "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig"
+  ],
+  "fileName": "security.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild/security.html",
+  "pagePath": "security.html",
+  "pageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/security.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 6,
+  "maxDiagramLength": 1268,
+  "totalDiagramLength": 3270,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security",
+    "caseJson": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/case.json",
+    "before": {
+      "dir": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/before",
+      "html": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/before/index.html"
+    },
+    "after": {
+      "dir": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/after",
+      "html": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/failure",
+      "html": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/source",
+      "html": "pages/ch.fhir.ig.ch-umzh-connect/1.0.0-cibuild/security/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/security.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/assets/js/mermaid-init.js"
+}

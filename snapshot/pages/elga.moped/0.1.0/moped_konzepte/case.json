@@ -1,0 +1,46 @@
+{
+  "slug": "elga-moped-0-1-0-moped-konzepte",
+  "packageId": "elga.moped#0.1.0",
+  "canonical": "https://elga.moped.at",
+  "candidateBases": [
+    "https://elga.moped.at",
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5"
+  ],
+  "fileName": "moped_konzepte.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/elga.moped#0.1.0/moped_konzepte.html",
+  "pagePath": "moped_konzepte.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/moped_konzepte.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 853,
+  "totalDiagramLength": 1097,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/elga.moped/0.1.0/moped_konzepte",
+    "caseJson": "pages/elga.moped/0.1.0/moped_konzepte/case.json",
+    "before": {
+      "dir": "pages/elga.moped/0.1.0/moped_konzepte/before",
+      "html": "pages/elga.moped/0.1.0/moped_konzepte/before/index.html"
+    },
+    "after": {
+      "dir": "pages/elga.moped/0.1.0/moped_konzepte/after",
+      "html": "pages/elga.moped/0.1.0/moped_konzepte/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/elga.moped/0.1.0/moped_konzepte/failure",
+      "html": "pages/elga.moped/0.1.0/moped_konzepte/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/elga.moped/0.1.0/moped_konzepte/source",
+      "html": "pages/elga.moped/0.1.0/moped_konzepte/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/moped_konzepte.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/assets/js/mermaid-init.js"
+}

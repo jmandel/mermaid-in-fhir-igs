@@ -1,0 +1,47 @@
+{
+  "slug": "hl7-fhir-cz-hdr-0-1-0-implementation-notes",
+  "packageId": "hl7.fhir.cz.hdr#0.1.0",
+  "canonical": "https://hl7.cz/fhir/hdr",
+  "candidateBases": [
+    "https://hl7.cz/fhir/hdr",
+    "https://build.fhir.org/ig/HL7-cz/hdr"
+  ],
+  "fileName": "implementation-notes.html",
+  "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.cz.hdr#0.1.0/implementation-notes.html",
+  "pagePath": "implementation-notes.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7-cz/hdr/implementation-notes.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 1030,
+  "totalDiagramLength": 2060,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes",
+    "caseJson": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/case.json",
+    "before": {
+      "dir": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/before",
+      "html": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/before/index.html"
+    },
+    "after": {
+      "dir": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/after",
+      "html": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/failure",
+      "html": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/source",
+      "html": "pages/hl7.fhir.cz.hdr/0.1.0/implementation-notes/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/hdr/implementation-notes.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/hdr/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/hdr/assets/js/mermaid-init.js"
+}
