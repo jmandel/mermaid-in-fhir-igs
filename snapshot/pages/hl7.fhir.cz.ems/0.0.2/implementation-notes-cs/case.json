@@ -1,15 +1,24 @@
 {
   "slug": "hl7-fhir-cz-ems-0-0-2-implementation-notes-cs",
   "packageId": "hl7.fhir.cz.ems#0.0.2",
-  "canonical": "https://hl7.cz/fhir/cz-ems",
+  "package": "hl7.fhir.cz.ems",
+  "version": "0.0.2",
+  "title": "HL7 Czech EMS Implementation Guide",
+  "repo": "HL7-cz/cz-ems/branches/master/qa.json",
+  "repoPath": "HL7-cz/cz-ems",
+  "buildUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/HL7-cz/cz-ems/tree/master",
+  "canonicalUrl": "https://hl7.cz/fhir/cz-ems/ImplementationGuide/hl7.fhir.cz.ems",
+  "canonical": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master",
   "candidateBases": [
-    "https://hl7.cz/fhir/cz-ems",
-    "https://build.fhir.org/ig/HL7-cz/cz-ems"
+    "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master"
   ],
   "fileName": "implementation-notes-cs.html",
+  "originalFileName": "implementation-notes-cs.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.cz.ems#0.0.2/implementation-notes-cs.html",
   "pagePath": "implementation-notes-cs.html",
-  "pageUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/implementation-notes-cs.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes-cs.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "assets/js/mermaid-init.js"
@@ -41,7 +50,7 @@
       "html": "pages/hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/source/index.html"
     }
   },
-  "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/implementation-notes-cs.html",
-  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/assets/js/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes-cs.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/assets/js/mermaid-init.js"
 }

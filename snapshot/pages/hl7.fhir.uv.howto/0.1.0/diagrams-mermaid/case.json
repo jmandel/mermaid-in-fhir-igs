@@ -1,15 +1,24 @@
 {
   "slug": "hl7-fhir-uv-howto-0-1-0-diagrams-mermaid",
   "packageId": "hl7.fhir.uv.howto#0.1.0",
-  "canonical": "http://hl7.org/fhir/uv/howto",
+  "package": "hl7.fhir.uv.howto",
+  "version": "0.1.0",
+  "title": "Guidance for FHIR IG Creation",
+  "repo": "FHIR/ig-guidance/branches/master/qa.json",
+  "repoPath": "FHIR/ig-guidance",
+  "buildUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/FHIR/ig-guidance/tree/master",
+  "canonicalUrl": "http://hl7.org/fhir/uv/howto/ImplementationGuide/hl7.fhir.uv.howto",
+  "canonical": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master",
   "candidateBases": [
-    "http://hl7.org/fhir/uv/howto",
-    "https://build.fhir.org/ig/FHIR/ig-guidance"
+    "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master"
   ],
   "fileName": "diagrams-mermaid.html",
+  "originalFileName": "diagrams-mermaid.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/hl7.fhir.uv.howto#0.1.0/diagrams-mermaid.html",
   "pagePath": "diagrams-mermaid.html",
-  "pageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-mermaid.html",
+  "pageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "assets/js/mermaid-init.js"
@@ -40,7 +49,7 @@
       "html": "pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/source/index.html"
     }
   },
-  "resolvedPageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/diagrams-mermaid.html",
-  "remoteMermaidUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/assets/js/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid-init.js"
 }

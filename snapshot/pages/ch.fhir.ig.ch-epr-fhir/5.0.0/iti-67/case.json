@@ -1,15 +1,24 @@
 {
   "slug": "ch-fhir-ig-ch-epr-fhir-5-0-0-iti-67",
   "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
-  "canonical": "http://fhir.ch/ig/ch-epr-fhir",
+  "package": "ch.fhir.ig.ch-epr-fhir",
+  "version": "5.0.0",
+  "title": "CH EPR FHIR (R4)",
+  "repo": "ehealthsuisse/ch-epr-fhir/branches/master/qa.json",
+  "repoPath": "ehealthsuisse/ch-epr-fhir",
+  "buildUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/ehealthsuisse/ch-epr-fhir/tree/master",
+  "canonicalUrl": "http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir",
+  "canonical": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master",
   "candidateBases": [
-    "http://fhir.ch/ig/ch-epr-fhir",
-    "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir"
+    "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master"
   ],
   "fileName": "iti-67.html",
+  "originalFileName": "iti-67.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/ch.fhir.ig.ch-epr-fhir#5.0.0/iti-67.html",
   "pagePath": "iti-67.html",
-  "pageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-67.html",
+  "pageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "assets/js/mermaid-init.js"
@@ -40,7 +49,7 @@
       "html": "pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/source/index.html"
     }
   },
-  "resolvedPageUrl": "http://fhir.ch/ig/ch-epr-fhir/iti-67.html",
-  "remoteMermaidUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "http://fhir.ch/ig/ch-epr-fhir/assets/js/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid-init.js"
 }

@@ -75,7 +75,7 @@ cd tools/static-compare
 npm install
 npm run compare -- \
   --content /path/to/content \
-  --packages /path/to/packages \
+  --igs /path/to/mermaid_igs.jsonl \
   --mermaid /path/to/mermaid.js \
   --out ./artifacts
 
@@ -83,6 +83,12 @@ node backfill_failure_pages.mjs --content /path/to/content --out ./artifacts
 cd ../..
 node build_snapshot_site.mjs --source tools/static-compare/artifacts --out snapshot
 ```
+
+When `--igs` points at `mermaid_igs.jsonl`, the compare harness uses the exact CI build URL from `build.fhir.org/ig/qas.json` as the authoritative page base. That is the normal path for this repo.
+
+Package metadata is only used as a fallback if you run the harness without `mermaid_igs.jsonl` and ask it to infer cases directly from harvested content.
+
+The comparison tables include the GitHub `org/repo` path and branch so each case can be traced back directly to the corresponding `build.fhir.org/ig/:org/:repo/branches/:branch/...` CI build.
 
 The GitHub Pages workflow publishes the committed `snapshot/` tree as the site root and keeps `catalog.html` available alongside it.
 

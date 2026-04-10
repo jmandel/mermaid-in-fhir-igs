@@ -86,6 +86,8 @@ async function writeFailureFixture(item) {
 function buildPagesManifest(report) {
   const okEntries = report.cases.map((item) => ({
     slug: item.slug || slugify(`${item.packageId}--${item.fileName.replace(/\.html$/i, '')}`),
+    repoPath: item.repoPath || null,
+    branch: item.branch || null,
     packageId: item.packageId,
     fileName: item.fileName,
     ...summarizeCaseForIndex(item),
@@ -101,6 +103,8 @@ function buildPagesManifest(report) {
 
   const failedEntries = report.skipped.map((item) => ({
     slug: slugify(`${item.packageId}--${item.fileName.replace(/\.html$/i, '')}`),
+    repoPath: item.repoPath || null,
+    branch: item.branch || null,
     packageId: item.packageId,
     fileName: item.fileName,
     status: 'failure',
@@ -134,6 +138,8 @@ function renderPagesIndex(report) {
     .map(
       (entry) => `
       <tr>
+        <td>${escapeHtml(entry.repoPath || '')}</td>
+        <td>${escapeHtml(entry.branch || '')}</td>
         <td>${escapeHtml(entry.packageId)}</td>
         <td>${escapeHtml(entry.fileName)}</td>
         <td class="${escapeHtml(entry.status)}">${escapeHtml(entry.status)}</td>
@@ -178,6 +184,8 @@ function renderPagesIndex(report) {
     <table>
       <thead>
         <tr>
+          <th>Repo</th>
+          <th>Branch</th>
           <th>Package</th>
           <th>File</th>
           <th>Status</th>

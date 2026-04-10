@@ -1,15 +1,24 @@
 {
   "slug": "johnmoehrke-xacml-consent-example-0-1-0-generic",
   "packageId": "johnmoehrke.xacml-consent.example#0.1.0",
-  "canonical": "http://johnmoehrke.github.io/xacml-consent",
+  "package": "johnmoehrke.xacml-consent.example",
+  "version": "0.1.0",
+  "title": "John Moehrke XACML Consent Example",
+  "repo": "JohnMoehrke/xacml-consent/branches/main/qa.json",
+  "repoPath": "JohnMoehrke/xacml-consent",
+  "buildUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/JohnMoehrke/xacml-consent/tree/main",
+  "canonicalUrl": "http://johnmoehrke.github.io/xacml-consent/ImplementationGuide/johnmoehrke.xacml-consent.example",
+  "canonical": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main",
   "candidateBases": [
-    "http://johnmoehrke.github.io/xacml-consent",
-    "https://build.fhir.org/ig/JohnMoehrke/xacml-consent"
+    "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main"
   ],
   "fileName": "generic.html",
+  "originalFileName": "generic.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/johnmoehrke.xacml-consent.example#0.1.0/generic.html",
   "pagePath": "generic.html",
-  "pageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/generic.html",
+  "pageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "assets/js/mermaid-init.js"
@@ -41,7 +50,7 @@
       "html": "pages/johnmoehrke.xacml-consent.example/0.1.0/generic/source/index.html"
     }
   },
-  "resolvedPageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/generic.html",
-  "remoteMermaidUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/assets/js/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid-init.js"
 }

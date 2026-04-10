@@ -540,6 +540,8 @@ async function buildSnapshotIndex() {
     <table>
       <thead>
         <tr>
+          <th>Repo</th>
+          <th>Branch</th>
           <th>Package</th>
           <th>File</th>
           <th>Status</th>
@@ -569,6 +571,8 @@ function buildIndexItemsFromReport(report) {
   for (const testCase of report.cases || []) {
     const summary = summarizeCaseForIndex(testCase);
     items.push({
+      repoPath: testCase.repoPath || null,
+      branch: testCase.branch || null,
       packageId: testCase.packageId,
       fileName: testCase.fileName,
       status: summary.status,
@@ -589,6 +593,8 @@ function buildIndexItemsFromReport(report) {
   }
   for (const skipped of report.skipped || []) {
     items.push({
+      repoPath: skipped.repoPath || null,
+      branch: skipped.branch || null,
       packageId: skipped.packageId,
       fileName: skipped.fileName,
       status: 'failure',
@@ -668,6 +674,8 @@ function summarizeIndexItems(items) {
 function renderIndexRow(item) {
   return `
       <tr>
+        <td>${escapeHtml(item.repoPath || '')}</td>
+        <td>${escapeHtml(item.branch || '')}</td>
         <td>${escapeHtml(item.packageId)}</td>
         <td>${escapeHtml(item.fileName)}</td>
         <td class="${escapeHtml(item.status || 'pass')}">${escapeHtml(item.status || 'pass')}</td>

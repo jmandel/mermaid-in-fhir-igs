@@ -2,9 +2,9 @@
 // build_catalog.mjs — End-to-end mermaid diagram catalog generator for FHIR IGs
 //
 // Usage:
-//   node mermaid/build_catalog.mjs                  # default: 90 days lookback
-//   node mermaid/build_catalog.mjs --days 30        # last 30 days
-//   node mermaid/build_catalog.mjs --days 365       # last year
+//   node build_catalog.mjs                  # default: 90 days lookback
+//   node build_catalog.mjs --days 30        # last 30 days
+//   node build_catalog.mjs --days 365       # last year
 //
 // Pipeline:
 //   1. Fetch build.fhir.org/ig/qas.json
@@ -15,12 +15,13 @@
 //   6. Write data files  (mermaid_igs.jsonl, diagrams.jsonl)
 //   7. Generate catalog  (catalog.md, catalog.html)
 //
-// Output (all in mermaid/):
+// Output (all in repo root):
 //   mermaid_igs.jsonl     — one JSON line per IG that uses mermaid
 //   mermaid_skipped.jsonl — IGs checked but no mermaid found
 //   diagrams.jsonl        — one JSON line per extracted diagram
 //   catalog.md            — markdown catalog (fenced mermaid blocks)
 //   catalog.html          — self-contained HTML with live-rendered diagrams
+//   content/              — saved Mermaid-containing pages fetched from build.fhir.org
 
 import { writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -35,8 +36,8 @@ const LOOKBACK_DAYS = daysFlag >= 0 && args[daysFlag + 1]
   ? parseInt(args[daysFlag + 1], 10)
   : 90;
 
-const ROOT = path.resolve(import.meta.dirname, '..');
-const OUT = path.join(ROOT, 'mermaid');
+const ROOT = path.resolve(import.meta.dirname);
+const OUT = ROOT;
 const CONTENT_DIR = path.join(OUT, 'content');
 
 const TARGET = 200;           // max IGs to collect (most lookbacks won't hit this)
@@ -161,8 +162,8 @@ async function main() {
   console.error(`Found:      ${kept.length} IGs with Mermaid`);
   console.error(`Diagrams:   ${allDiagrams.length}`);
   console.error(`Skipped:    ${skipped.length}`);
-  console.error(`Output:     mermaid/catalog.html, mermaid/catalog.md`);
-  console.error(`Data:       mermaid/mermaid_igs.jsonl, mermaid/diagrams.jsonl`);
+  console.error(`Output:     catalog.html, catalog.md`);
+  console.error(`Data:       mermaid_igs.jsonl, diagrams.jsonl, content/`);
 }
 
 // ================================================================

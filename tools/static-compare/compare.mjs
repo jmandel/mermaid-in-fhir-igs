@@ -18,12 +18,15 @@ import playwright from 'playwright-core';
 import { PNG } from 'pngjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const args = process.argv.slice(2);
-const CONTENT_DIR = path.resolve(process.cwd(), readFlag('--content') || path.join(__dirname, 'content'));
-const PACKAGES_DIR = path.resolve(process.cwd(), readFlag('--packages') || path.join(__dirname, 'packages'));
+const CONTENT_DIR = path.resolve(process.cwd(), readFlag('--content') || path.join(REPO_ROOT, 'content'));
+const PACKAGES_DIR = path.resolve(process.cwd(), readFlag('--packages') || path.join(REPO_ROOT, 'packages'));
+const IG_INDEX_PATH = path.resolve(process.cwd(), readFlag('--igs') || path.join(REPO_ROOT, 'mermaid_igs.jsonl'));
 const OUTPUT_DIR = path.resolve(process.cwd(), readFlag('--out') || path.join(__dirname, 'artifacts'));
 const PATCHED_MERMAID = path.resolve(process.cwd(), readFlag('--mermaid') || path.join(__dirname, 'mermaid.js'));
 const CHROMIUM_PATH = path.resolve(process.cwd(), readFlag('--chromium') || process.env.CHROMIUM || '/usr/bin/chromium');
+const BRANCH_FILTER = parseCsvFlag(readFlag('--branches') || 'main,master');
 const VIEWPORT = { width: 1440, height: 1400 };
 const SCREENSHOT_WAIT_MS = 1500;
 const COLOR_THRESHOLD = 18;
@@ -120,6 +123,13 @@ function readFlag(name) {
   return args[index + 1] || null;
 }
 
+function parseCsvFlag(value) {
+  return (value || '')
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 async function ensurePatchedBundle() {
   try {
     await stat(PATCHED_MERMAID);
@@ -132,6 +142,151 @@ async function ensurePatchedBundle() {
 }
 
 async function collectCases() {
+  if (await hasIgIndex()) {
+    return await collectCasesFromIgIndex();
+  }
+
+  return await collectCasesFromContentInference();
+}
+
+async function hasIgIndex() {
+  try {
+    await stat(IG_INDEX_PATH);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function collectCasesFromIgIndex() {
+  const cases = [];
+  const skipped = [];
+  const rows = await loadIgIndexRows();
+
+  for (const row of rows) {
+    const packageId = row.safe || `${row.package}#${row.version || 'latest'}`;
+    const packageDir = path.join(CONTENT_DIR, packageId);
+
+    for (const originalFileName of row.mermaidFiles || []) {
+      const storedFileName = originalFileName.replace(/[/\\]/g, '__');
+      const fullPath = path.join(packageDir, storedFileName);
+      const fixturePaths = buildFixturePaths(packageId, storedFileName);
+      const pagePath = originalFileName.replace(/^web__/, '');
+
+      let html;
+      try {
+        html = await readFile(fullPath, 'utf8');
+      } catch (error) {
+        skipped.push({
+          packageId,
+          repo: row.repo || null,
+          repoPath: row.repoPath || null,
+          fileName: storedFileName,
+          originalFileName,
+          fullPath,
+          pagePath,
+          pageUrl: new URL(pagePath, ensureTrailingSlash(row.buildUrl)).href,
+          buildUrl: row.buildUrl,
+          branch: row.branch || null,
+          fixturePaths,
+          reason: `harvested page missing from content tree: ${error.message}`,
+        });
+        continue;
+      }
+
+      const diagrams = extractDiagrams(html);
+      if (!diagrams.length) continue;
+
+      const pageUrl = new URL(pagePath, ensureTrailingSlash(row.buildUrl)).href;
+      const scriptPaths = extractMermaidScriptPaths(html);
+      if (!scriptPaths.mermaidPath || !scriptPaths.mermaidInitPath) {
+        skipped.push({
+          packageId,
+          repo: row.repo || null,
+          repoPath: row.repoPath || null,
+          fileName: storedFileName,
+          originalFileName,
+          fullPath,
+          pagePath,
+          pageUrl,
+          buildUrl: row.buildUrl,
+          branch: row.branch || null,
+          fixturePaths,
+          scriptPaths,
+          reason: 'could not find Mermaid script references in harvested HTML',
+        });
+        continue;
+      }
+
+      cases.push({
+        slug: slugify(`${packageId}--${storedFileName.replace(/\.html$/i, '')}`),
+        packageId,
+        package: row.package || null,
+        version: row.version || null,
+        title: row.title || null,
+        repo: row.repo || null,
+        repoPath: row.repoPath || null,
+        buildUrl: row.buildUrl,
+        branch: row.branch || null,
+        githubUrl: row.githubUrl || null,
+        canonicalUrl: row.url || null,
+        canonical: row.buildUrl,
+        candidateBases: [row.buildUrl],
+        fileName: storedFileName,
+        originalFileName,
+        fullPath,
+        pagePath,
+        pageUrl,
+        scriptPaths,
+        diagramCount: diagrams.length,
+        maxDiagramLength: Math.max(...diagrams.map((diagram) => diagram.length)),
+        totalDiagramLength: diagrams.reduce((sum, diagram) => sum + diagram.length, 0),
+        diagramKinds: [...new Set(diagrams.map((diagram) => diagram.kind))],
+        fixturePaths,
+      });
+    }
+  }
+
+  cases.sort((a, b) => {
+    if (a.packageId !== b.packageId) return a.packageId.localeCompare(b.packageId);
+    return a.fileName.localeCompare(b.fileName);
+  });
+
+  return { cases, skipped };
+}
+
+async function loadIgIndexRows() {
+  const lines = (await readFile(IG_INDEX_PATH, 'utf8'))
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const rows = lines.map((line) => JSON.parse(line));
+  const filtered = rows.filter((row) => {
+    if (!row.buildUrl || !row.safe || !Array.isArray(row.mermaidFiles)) return false;
+    if (!BRANCH_FILTER.length) return true;
+    const branch = extractRepoBranch(row.repo || '');
+    return branch ? BRANCH_FILTER.includes(branch) : false;
+  });
+
+  return filtered.map((row) => ({
+    ...row,
+    repoPath: extractRepoPath(row.repo || ''),
+    branch: extractRepoBranch(row.repo || ''),
+  }));
+}
+
+function extractRepoBranch(repo) {
+  const match = repo.match(/\/branches\/([^/]+)\//);
+  return match ? match[1] : null;
+}
+
+function extractRepoPath(repo) {
+  const match = repo.match(/^([^/]+\/[^/]+)\/branches\//);
+  return match ? match[1] : null;
+}
+
+async function collectCasesFromContentInference() {
   const cases = [];
   const skipped = [];
   const entries = await readdir(CONTENT_DIR, { withFileTypes: true });
@@ -984,10 +1139,12 @@ function renderReportHtml(report) {
 }
 
 function renderPagesIndex(report) {
-  const rows = buildPagesManifest(report)
+      const rows = buildPagesManifest(report)
     .map(
       (entry) => `
       <tr>
+        <td>${escapeHtml(entry.repoPath || '')}</td>
+        <td>${escapeHtml(entry.branch || '')}</td>
         <td>${escapeHtml(entry.packageId)}</td>
         <td>${escapeHtml(entry.fileName)}</td>
         <td class="${escapeHtml(entry.status)}">${escapeHtml(entry.status)}</td>
@@ -1032,6 +1189,8 @@ function renderPagesIndex(report) {
     <table>
       <thead>
         <tr>
+          <th>Repo</th>
+          <th>Branch</th>
           <th>Package</th>
           <th>File</th>
           <th>Status</th>
@@ -1258,6 +1417,8 @@ function failureLocalPages(fixturePaths, sourceCopied) {
 function buildPagesManifest(report) {
   const okEntries = report.cases.map((testCase) => ({
     slug: testCase.slug,
+    repoPath: testCase.repoPath || null,
+    branch: testCase.branch || null,
     packageId: testCase.packageId,
     fileName: testCase.fileName,
     ...summarizeCaseForIndex(testCase),
@@ -1273,6 +1434,8 @@ function buildPagesManifest(report) {
 
   const failedEntries = report.skipped.map((item) => ({
     slug: slugify(`${item.packageId}--${item.fileName.replace(/\.html$/i, '')}`),
+    repoPath: item.repoPath || null,
+    branch: item.branch || null,
     packageId: item.packageId,
     fileName: item.fileName,
     status: 'failure',

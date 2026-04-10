@@ -1,15 +1,24 @@
 {
   "slug": "shift-task-force-sls-valuesets-0-1-0-ab352",
   "packageId": "SHIFT-Task-Force.SLS-ValueSets#0.1.0",
-  "canonical": "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
+  "package": "SHIFT-Task-Force.SLS-ValueSets",
+  "version": "0.1.0",
+  "title": "SHIFT SLS ValueSets Implementation Guide",
+  "repo": "SHIFT-Task-Force/SLS-ValueSets/branches/main/qa.json",
+  "repoPath": "SHIFT-Task-Force/SLS-ValueSets",
+  "buildUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/SHIFT-Task-Force/SLS-ValueSets/tree/main",
+  "canonicalUrl": "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ImplementationGuide/SHIFT-Task-Force.SLS-ValueSets",
+  "canonical": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main",
   "candidateBases": [
-    "http://SHIFT-Task-Force.github.io/SLS-ValueSets",
-    "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets"
+    "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main"
   ],
   "fileName": "ab352.html",
+  "originalFileName": "ab352.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/SHIFT-Task-Force.SLS-ValueSets#0.1.0/ab352.html",
   "pagePath": "ab352.html",
-  "pageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/ab352.html",
+  "pageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "assets/js/mermaid-init.js"
@@ -41,7 +50,7 @@
       "html": "pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/source/index.html"
     }
   },
-  "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/ab352.html",
-  "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/assets/js/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/assets/js/mermaid-init.js"
 }

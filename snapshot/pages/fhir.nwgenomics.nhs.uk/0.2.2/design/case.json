@@ -1,15 +1,24 @@
 {
   "slug": "fhir-nwgenomics-nhs-uk-0-2-2-design",
   "packageId": "fhir.nwgenomics.nhs.uk#0.2.2",
-  "canonical": "https://fhir.nwgenomics.nhs.uk",
+  "package": "fhir.nwgenomics.nhs.uk",
+  "version": "0.2.2",
+  "title": "NHS North West Genomics",
+  "repo": "nw-gmsa/nw-gmsa.github.com/branches/main/qa.json",
+  "repoPath": "nw-gmsa/nw-gmsa.github.com",
+  "buildUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/nw-gmsa/nw-gmsa.github.com/tree/main",
+  "canonicalUrl": "https://fhir.nwgenomics.nhs.uk/ImplementationGuide/fhir.nwgenomics.nhs.uk",
+  "canonical": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
   "candidateBases": [
-    "https://fhir.nwgenomics.nhs.uk",
-    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com"
+    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main"
   ],
   "fileName": "design.html",
+  "originalFileName": "design.html",
   "fullPath": "/home/jmandel/hobby/fhirpath-perf-claude-repo/mermaid/content/fhir.nwgenomics.nhs.uk#0.2.2/design.html",
   "pagePath": "design.html",
-  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html",
+  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html",
   "scriptPaths": {
     "mermaidPath": "assets/js/mermaid.js",
     "mermaidInitPath": "mermaid-init.js"
@@ -41,7 +50,7 @@
       "html": "pages/fhir.nwgenomics.nhs.uk/0.2.2/design/source/index.html"
     }
   },
-  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/design.html",
-  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/assets/js/mermaid.js",
-  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/mermaid-init.js"
+  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"
 }
