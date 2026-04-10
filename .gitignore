@@ -1,0 +1,5 @@
+# Intermediate / large files from build_catalog.mjs
+qas.json
+content/
+packages/
+mermaid_skipped.jsonl
