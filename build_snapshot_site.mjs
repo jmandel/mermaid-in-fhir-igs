@@ -15,6 +15,7 @@ import {
 } from 'node:fs/promises';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REVIEW_OVERRIDES_PATH = path.join(__dirname, 'review_overrides.json');
 
 const args = process.argv.slice(2);
 const sourceArg = readFlag('--source');
@@ -36,6 +37,7 @@ const USER_AGENT = 'mermaid-in-fhir-igs-snapshot/1.0';
 const resourceCache = new Map();
 const warnings = [];
 const localSharedAssets = new Map();
+const reviewOverrides = await loadReviewOverrides();
 
 await main();
 
@@ -47,9 +49,19 @@ async function main() {
 
   await rm(OUT_DIR, { recursive: true, force: true });
   await mkdir(OUT_DIR, { recursive: true });
+  let report = null;
   await cp(SOURCE_PAGES_DIR, OUT_PAGES_DIR, { recursive: true });
+  if (await exists(path.join(SOURCE_DIR, 'vendor'))) {
+    await cp(path.join(SOURCE_DIR, 'vendor'), VENDOR_DIR, { recursive: true });
+  }
+  if (await exists(path.join(SOURCE_DIR, 'shared'))) {
+    await cp(path.join(SOURCE_DIR, 'shared'), SHARED_DIR, { recursive: true });
+  }
   if (await exists(path.join(SOURCE_DIR, 'report.json'))) {
-    await writeFile(path.join(OUT_DIR, 'report.json'), await readFile(path.join(SOURCE_DIR, 'report.json')));
+    report = JSON.parse(await readFile(path.join(SOURCE_DIR, 'report.json'), 'utf8'));
+    applyReviewOverrides(report);
+    report.summary = recomputeReportSummary(report);
+    await writeFile(path.join(OUT_DIR, 'report.json'), JSON.stringify(report, null, 2));
   }
   await hoistSharedLocalAssets();
 
@@ -67,6 +79,12 @@ async function main() {
 
   await cleanupHoistedLocalAssets();
 
+  if (report) {
+    await applyOverridesToCaseJson(report);
+    await writeFile(path.join(OUT_PAGES_DIR, 'manifest.json'), JSON.stringify(buildIndexItemsFromReport(report), null, 2));
+    await writeFile(path.join(OUT_PAGES_DIR, 'index.html'), renderFixtureIndex(report));
+  }
+
   for (const extraFile of ['catalog.html', 'catalog.md']) {
     const extraSource = path.resolve(process.cwd(), extraFile);
     if (await exists(extraSource)) {
@@ -81,6 +99,67 @@ async function main() {
   console.error(`Vendored resources: ${resourceCache.size}`);
   console.error(`Warnings: ${warnings.length}`);
   console.error(`Snapshot ready: ${OUT_DIR}`);
+}
+
+async function loadReviewOverrides() {
+  if (!(await exists(REVIEW_OVERRIDES_PATH))) return new Map();
+  const raw = JSON.parse(await readFile(REVIEW_OVERRIDES_PATH, 'utf8'));
+  const items = Array.isArray(raw) ? raw : raw.overrides || [];
+  const map = new Map();
+  for (const item of items) {
+    if (!item.packageId || !item.fileName) continue;
+    map.set(makeReviewOverrideKey(item.packageId, item.fileName), item);
+  }
+  return map;
+}
+
+function makeReviewOverrideKey(packageId, fileName) {
+  return `${packageId}::${fileName}`;
+}
+
+function findReviewOverride(testCase) {
+  return reviewOverrides.get(makeReviewOverrideKey(testCase.packageId, testCase.fileName)) || null;
+}
+
+function applyReviewOverrides(report) {
+  for (const testCase of report.cases || []) {
+    const override = findReviewOverride(testCase);
+    if (!override) continue;
+    testCase.manualReview = override;
+    testCase.status = override.caseStatus || testCase.status;
+    if (override.regressionFlagsAppend?.length) {
+      testCase.regressionFlags = [...new Set([...(testCase.regressionFlags || []), ...override.regressionFlagsAppend])];
+    }
+  }
+}
+
+function recomputeReportSummary(report) {
+  const failedCases = (report.cases || []).filter((testCase) => testCase.status === 'fail').length;
+  const passedCases = (report.cases || []).filter((testCase) => testCase.status !== 'fail').length;
+  return {
+    totalCases: (report.cases || []).length,
+    failedCases,
+    passedCases,
+    skippedCases: (report.skipped || []).length,
+  };
+}
+
+async function applyOverridesToCaseJson(report) {
+  for (const testCase of report.cases || []) {
+    const caseJsonPath = testCase.localPages?.caseJson ? path.join(OUT_DIR, testCase.localPages.caseJson) : null;
+    if (!caseJsonPath || !(await exists(caseJsonPath))) continue;
+    const data = JSON.parse(await readFile(caseJsonPath, 'utf8'));
+    if (testCase.manualReview) {
+      data.manualReview = testCase.manualReview;
+      data.status = testCase.manualReview.caseStatus || data.status;
+      data.reviewLevel = testCase.manualReview.reviewLevel || data.reviewLevel || null;
+      data.reason = testCase.manualReview.reason || data.reason || null;
+      if (testCase.manualReview.regressionFlagsAppend?.length) {
+        data.regressionFlags = [...new Set([...(data.regressionFlags || []), ...testCase.manualReview.regressionFlagsAppend])];
+      }
+    }
+    await writeFile(caseJsonPath, JSON.stringify(data, null, 2));
+  }
 }
 
 function readFlag(name) {
@@ -617,6 +696,20 @@ function buildIndexItemsFromReport(report) {
 }
 
 function summarizeCaseForIndex(testCase) {
+  if (testCase.manualReview) {
+    return {
+      status: testCase.manualReview.status || 'review',
+      reviewLevel: testCase.manualReview.reviewLevel || 'render',
+      reviewSummary: testCase.manualReview.reason || '',
+      blocksBefore: testCase.before?.renderedMermaidBlockCount ?? null,
+      blocksAfter: testCase.after?.renderedMermaidBlockCount ?? null,
+      pageHeightDelta: diff(testCase.after?.documentHeight, testCase.before?.documentHeight),
+      maxHeightIncrease: maxPositive((testCase.blockComparisons || []).map((comparison) => comparison.heightDelta)),
+      maxTopShift: maxPositive((testCase.blockComparisons || []).map((comparison) => comparison.topShift)),
+      worstFillDrop: minNegative((testCase.blockComparisons || []).map((comparison) => comparison.fillDelta)),
+    };
+  }
+
   const comparisons = testCase.blockComparisons || [];
   const before = testCase.before || null;
   const after = testCase.after || null;
@@ -715,6 +808,88 @@ function reviewSortValue(item) {
     default:
       return 1;
   }
+}
+
+function renderFixtureIndex(report) {
+  const relFromPages = (href) => {
+    if (!href) return href;
+    return href.startsWith('pages/') ? href.slice('pages/'.length) : href;
+  };
+  const linkFromPages = (href, label) => linkOrEmpty(relFromPages(href), label);
+  const rows = buildIndexItemsFromReport(report)
+    .map(
+      (item) => `
+      <tr>
+        <td>${escapeHtml(item.repoPath || '')}</td>
+        <td>${escapeHtml(item.branch || '')}</td>
+        <td>${escapeHtml(item.packageId)}</td>
+        <td>${escapeHtml(item.fileName)}</td>
+        <td class="${escapeHtml(item.status)}">${escapeHtml(item.status)}</td>
+        <td class="${escapeHtml(item.reviewLevel || 'none')}">${escapeHtml(item.reviewLevel || '')}</td>
+        <td>${escapeHtml(item.blocksLabel || '')}</td>
+        <td>${formatSignedCell(item.pageHeightDelta)}</td>
+        <td>${formatSignedCell(item.maxHeightIncrease)}</td>
+        <td>${formatSignedCell(item.maxTopShift)}</td>
+        <td>${formatSignedRatioCell(item.worstFillDrop)}</td>
+        <td>${linkFromPages(item.before, 'before')}</td>
+        <td>${linkFromPages(item.after, 'after')}</td>
+        <td>${linkFromPages(item.failure, 'failure')}</td>
+        <td>${linkFromPages(item.source, 'source')}</td>
+        <td>${linkFromPages(item.caseJson, 'case.json')}</td>
+        <td>${item.pageUrl ? `<a href="${escapeHtml(item.pageUrl)}">published</a>` : ''}</td>
+        <td>${escapeHtml(item.reason || '')}</td>
+      </tr>`,
+    )
+    .join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mermaid page fixtures</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 24px; line-height: 1.4; background: #fff; color: #111; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+      td.pass { background: #eaf7ea; font-weight: 600; }
+      td.review { background: #fff6dd; font-weight: 600; }
+      td.failure { background: #fdeaea; font-weight: 600; }
+      td.render { background: #fdeaea; }
+      td.layout { background: #fff0d9; }
+      td.check { background: #fff9e8; }
+      td.none { background: #eef8ee; }
+    </style>
+  </head>
+  <body>
+    <h1>Mermaid page fixtures</h1>
+    <p><a href="../index.html">Snapshot index</a> | <a href="../report.json">report.json</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Repo</th>
+          <th>Branch</th>
+          <th>Package</th>
+          <th>File</th>
+          <th>Status</th>
+          <th>Review</th>
+          <th>Blocks</th>
+          <th>Page Δ</th>
+          <th>Max Height Δ</th>
+          <th>Max Top Shift</th>
+          <th>Worst Fill Δ</th>
+          <th>Before</th>
+          <th>After</th>
+          <th>Failure</th>
+          <th>Source</th>
+          <th>Case</th>
+          <th>Published</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </body>
+</html>`;
 }
 
 function escapeHtml(value) {

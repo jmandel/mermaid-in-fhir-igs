@@ -15,6 +15,7 @@ A catalog of [Mermaid](https://mermaid.js.org/) diagrams found across FHIR Imple
 | [`build_catalog.mjs`](build_catalog.mjs) | The script that generates everything |
 | [`snapshot/`](snapshot/) | Frozen, shareable before/after site with vendored assets for local browsing and GitHub Pages |
 | [`build_snapshot_site.mjs`](build_snapshot_site.mjs) | Freezes a static-compare artifact tree into a self-contained snapshot |
+| [`review_overrides.json`](review_overrides.json) | Manual case-specific review annotations for semantic failures the geometry harness cannot infer |
 | [`tools/static-compare/`](tools/static-compare/) | The comparison harness source used to generate the before/after artifacts |
 
 ## How it works
@@ -91,6 +92,8 @@ Package metadata is only used as a fallback if you run the harness without `merm
 The comparison tables include the GitHub `org/repo` path and branch so each case can be traced back directly to the corresponding `build.fhir.org/ig/:org/:repo/branches/:branch/...` CI build.
 
 The GitHub Pages workflow publishes the committed `snapshot/` tree as the site root and keeps `catalog.html` available alongside it.
+
+Some Mermaid changes are semantic render regressions rather than layout regressions. Those can be annotated in `review_overrides.json` so the published snapshot and case metadata stay accurate even when the automated geometry checks are not sufficient on their own.
 
 ## Attribution
 

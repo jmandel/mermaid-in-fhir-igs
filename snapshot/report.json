@@ -7,8 +7,8 @@
   "patchedMermaid": "/home/jmandel/work/mermaid/packages/mermaid/dist/mermaid.js",
   "summary": {
     "totalCases": 29,
-    "failedCases": 24,
-    "passedCases": 5,
+    "failedCases": 25,
+    "passedCases": 4,
     "skippedCases": 0
   },
   "skipped": [],
@@ -13419,7 +13419,9 @@
           "afterBlank": false
         }
       ],
-      "regressionFlags": [],
+      "regressionFlags": [
+        "manual review: sequence alias regression with spaced identifiers before `as`; old Mermaid 3.0.9 rendered this legacy syntax, Mermaid 11.14.0 does not"
+      ],
       "captureErrors": {},
       "screenshots": {
         "before": "screenshots/hl7-fhir-au-ps-1-0-0-ci-build-uc-interstate-before.png",
@@ -13436,7 +13438,18 @@
         "before": "metrics/hl7-fhir-au-ps-1-0-0-ci-build-uc-interstate-before.json",
         "after": "metrics/hl7-fhir-au-ps-1-0-0-ci-build-uc-interstate-after.json"
       },
-      "status": "pass"
+      "status": "fail",
+      "manualReview": {
+        "packageId": "hl7.fhir.au.ps#1.0.0-ci-build",
+        "fileName": "uc-interstate.html",
+        "status": "review",
+        "reviewLevel": "render",
+        "caseStatus": "fail",
+        "reason": "Semantic render regression: Mermaid 11 parses spaced identifiers before `as` incorrectly in this sequence diagram, creating duplicate lifelines. Rewrite the figure with stable IDs without spaces and keep the human-readable labels on the right side of `as`.",
+        "regressionFlagsAppend": [
+          "manual review: sequence alias regression with spaced identifiers before `as`; old Mermaid 3.0.9 rendered this legacy syntax, Mermaid 11.14.0 does not"
+        ]
+      }
     },
     {
       "slug": "hl7-fhir-au-ps-1-0-0-ci-build-uc-referral",

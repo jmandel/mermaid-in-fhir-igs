@@ -18,7 +18,7 @@
   </head>
   <body>
     <h1>Mermaid page fixtures</h1>
-    <p>Each row keeps the local HTML copies used by the harness. “Review” flags call out cases with render loss or visible layout shift. Simple size changes are summarized numerically rather than treated as a hard failure by name.</p>
+    <p><a href="../index.html">Snapshot index</a> | <a href="../report.json">report.json</a></p>
     <table>
       <thead>
         <tr>
@@ -30,9 +30,9 @@
           <th>Review</th>
           <th>Blocks</th>
           <th>Page Δ</th>
-          <th>Max h Δ</th>
-          <th>Max shift</th>
-          <th>Worst fill Δ</th>
+          <th>Max Height Δ</th>
+          <th>Max Top Shift</th>
+          <th>Worst Fill Δ</th>
           <th>Before</th>
           <th>After</th>
           <th>Failure</th>
@@ -43,6 +43,26 @@
         </tr>
       </thead>
       <tbody>
+      <tr>
+        <td>hl7au/au-fhir-ps</td>
+        <td>master</td>
+        <td>hl7.fhir.au.ps#1.0.0-ci-build</td>
+        <td>uc-interstate.html</td>
+        <td class="review">review</td>
+        <td class="render">render</td>
+        <td>1 -&gt; 1</td>
+        <td>-139</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/after/index.html">after</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-interstate.html">published</a></td>
+        <td>Semantic render regression: Mermaid 11 parses spaced identifiers before `as` incorrectly in this sequence diagram, creating duplicate lifelines. Rewrite the figure with stable IDs without spaces and keep the human-readable labels on the right side of `as`.</td>
+      </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
         <td>main</td>
@@ -55,13 +75,13 @@
         <td>+237.25</td>
         <td>+280.79</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/api-security/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/api-security/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/api-security/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/api-security/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/api-security/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/api-security/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html">published</a></td>
+        <td>page +422px; shift ++280.79px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -75,13 +95,13 @@
         <td>+399.03</td>
         <td>+1094.25</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/business-analysis.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/business-analysis/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/business-analysis.html">published</a></td>
+        <td>page +1268px; shift ++1094.25px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -95,13 +115,13 @@
         <td>+177.56</td>
         <td>+130.55</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/data-intro/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/data-intro/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/data-intro/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/data-intro.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/data-intro/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/data-intro.html">published</a></td>
+        <td>page +314px; shift ++130.55px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -115,13 +135,13 @@
         <td>+139.72</td>
         <td>+441.79</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/design/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/design/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/design/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/design/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/design/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/design/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html">published</a></td>
+        <td>page +385px; shift ++441.79px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -135,13 +155,13 @@
         <td>+487.65</td>
         <td>+653.23</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/exchange/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/exchange/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/exchange/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/exchange/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/exchange/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/exchange.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/exchange/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/exchange.html">published</a></td>
+        <td>page +689px; shift ++653.23px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -155,13 +175,13 @@
         <td>+196.72</td>
         <td>+182.25</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/HIE/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/HIE/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/HIE/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/HIE/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/HIE/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/HIE.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/HIE/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/HIE.html">published</a></td>
+        <td>page +385px; shift ++182.25px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -175,13 +195,13 @@
         <td>+407.02</td>
         <td>+446.08</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/LTW/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/LTW/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/LTW/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/LTW/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/LTW/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/LTW/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW.html">published</a></td>
+        <td>page +860px; shift ++446.08px</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -195,13 +215,13 @@
         <td>+372.11</td>
         <td>+163.16</td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/SET/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/SET/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/SET/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/SET/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/SET/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/SET/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html">published</a></td>
+        <td>page +541px; shift ++163.16px</td>
       </tr>
       <tr>
         <td>HL7-cz/cz-ems</td>
@@ -215,13 +235,13 @@
         <td>+514.93</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes-cs.html">published page</a></td>
-        <td></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes-cs/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes-cs.html">published</a></td>
+        <td>page +521px</td>
       </tr>
       <tr>
         <td>HL7-cz/cz-ems</td>
@@ -235,13 +255,13 @@
         <td>+514.94</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.cz.ems/0.0.2/implementation-notes/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes.html">published page</a></td>
-        <td></td>
+        <td><a href="hl7.fhir.cz.ems/0.0.2/implementation-notes/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes.html">published</a></td>
+        <td>page +521px</td>
       </tr>
       <tr>
         <td>JohnMoehrke/xacml-consent</td>
@@ -255,13 +275,13 @@
         <td>+285.06</td>
         <td>+343.25</td>
         <td></td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/ab352/before/index.html">before</a></td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/ab352/after/index.html">after</a></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/ab352/before/index.html">before</a></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/ab352/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/ab352/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html">published page</a></td>
-        <td></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/ab352/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html">published</a></td>
+        <td>page +316px; shift ++343.25px</td>
       </tr>
       <tr>
         <td>SHIFT-Task-Force/SLS-ValueSets</td>
@@ -275,13 +295,13 @@
         <td>+285.06</td>
         <td>+343.25</td>
         <td></td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/before/index.html">before</a></td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/after/index.html">after</a></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/before/index.html">before</a></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html">published page</a></td>
-        <td></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/ab352/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html">published</a></td>
+        <td>page +316px; shift ++343.25px</td>
       </tr>
       <tr>
         <td>ehealthsuisse/ch-epr-fhir</td>
@@ -295,13 +315,13 @@
         <td>+77</td>
         <td></td>
         <td>-0.270</td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/before/index.html">before</a></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/after/index.html">after</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/before/index.html">before</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html">published page</a></td>
-        <td></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-67/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html">published</a></td>
+        <td>max h ++77px; fill -0.270</td>
       </tr>
       <tr>
         <td>ehealthsuisse/ch-epr-fhir</td>
@@ -315,13 +335,13 @@
         <td>+77</td>
         <td>+114.95</td>
         <td>-0.270</td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/before/index.html">before</a></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/after/index.html">after</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/before/index.html">before</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html">published page</a></td>
-        <td></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-mhd/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html">published</a></td>
+        <td>max h ++77px; fill -0.270</td>
       </tr>
       <tr>
         <td>nw-gmsa/nw-gmsa.github.com</td>
@@ -335,13 +355,13 @@
         <td>+189.95</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/architecture/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/architecture/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/architecture/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/architecture/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/architecture/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">published page</a></td>
-        <td></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/architecture/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">published</a></td>
+        <td>max h ++189.95px</td>
       </tr>
       <tr>
         <td>Minsal-CL/R2BO</td>
@@ -355,13 +375,13 @@
         <td>+79</td>
         <td></td>
         <td>-0.640</td>
-        <td><a href="../pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html">published page</a></td>
-        <td></td>
+        <td><a href="hl7.fhir.cl.minsal.r2bo/0.2.0-draft/design-consideration/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html">published</a></td>
+        <td>max h ++79px; fill -0.640</td>
       </tr>
       <tr>
         <td>HL7/aitransparency-ig</td>
@@ -375,13 +395,13 @@
         <td>+41.98</td>
         <td>+41.98</td>
         <td>-0.760</td>
-        <td><a href="../pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html">published page</a></td>
-        <td></td>
+        <td><a href="hl7.fhir.uv.aitransparency/1.0.0-ballot/general_guidance/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html">published</a></td>
+        <td>max h ++41.98px; fill -0.760</td>
       </tr>
       <tr>
         <td>FHIR/ig-guidance</td>
@@ -395,13 +415,13 @@
         <td>+58</td>
         <td></td>
         <td>-0.810</td>
-        <td><a href="../pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html">published page</a></td>
-        <td></td>
+        <td><a href="hl7.fhir.uv.howto/0.1.0/diagrams-mermaid/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html">published</a></td>
+        <td>max h ++58px; fill -0.810</td>
       </tr>
       <tr>
         <td>JohnMoehrke/xacml-consent</td>
@@ -415,13 +435,13 @@
         <td>+67</td>
         <td></td>
         <td>-0.490</td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/generic/before/index.html">before</a></td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/generic/after/index.html">after</a></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/generic/before/index.html">before</a></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/generic/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/johnmoehrke.xacml-consent.example/0.1.0/generic/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html">published page</a></td>
-        <td></td>
+        <td><a href="johnmoehrke.xacml-consent.example/0.1.0/generic/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html">published</a></td>
+        <td>max h ++67px; fill -0.490</td>
       </tr>
       <tr>
         <td>SHIFT-Task-Force/SLS-ValueSets</td>
@@ -435,13 +455,13 @@
         <td>+181</td>
         <td></td>
         <td>-0.290</td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/before/index.html">before</a></td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/after/index.html">after</a></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/before/index.html">before</a></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/sls.html">published page</a></td>
-        <td></td>
+        <td><a href="SHIFT-Task-Force.SLS-ValueSets/0.1.0/sls/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/sls.html">published</a></td>
+        <td>max h ++181px; fill -0.290</td>
       </tr>
       <tr>
         <td>ehealthsuisse/ch-epr-fhir</td>
@@ -455,12 +475,12 @@
         <td>+31.97</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/before/index.html">before</a></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/after/index.html">after</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/before/index.html">before</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html">published page</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/ch-mhd-1/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -475,12 +495,12 @@
         <td>+37.95</td>
         <td></td>
         <td>-0.050</td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/before/index.html">before</a></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/after/index.html">after</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/before/index.html">before</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-68.html">published page</a></td>
+        <td><a href="ch.fhir.ig.ch-epr-fhir/5.0.0/iti-68/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-68.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -495,12 +515,12 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/ILW/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/ILW/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/ILW/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/ILW/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/ILW/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ILW.html">published page</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/ILW/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ILW.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -515,12 +535,12 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/index/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/index/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/index/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/index/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/index/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/index.html">published page</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/index/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/index.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -535,12 +555,12 @@
         <td>+103.58</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/mCSD/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/mCSD/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/mCSD/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/mCSD/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/mCSD/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mCSD.html">published page</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/mCSD/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mCSD.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -555,12 +575,12 @@
         <td>+92.39</td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestReport.html">published page</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/Questionnaire-GenomicTestReport/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestReport.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -575,32 +595,12 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/testing/before/index.html">before</a></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/testing/after/index.html">after</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/testing/before/index.html">before</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/testing/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/fhir.nwgenomics.nhs.uk/0.2.2/testing/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/testing.html">published page</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>hl7au/au-fhir-ps</td>
-        <td>master</td>
-        <td>hl7.fhir.au.ps#1.0.0-ci-build</td>
-        <td>uc-interstate.html</td>
-        <td class="pass">pass</td>
-        <td class="none">none</td>
-        <td>1 -&gt; 1</td>
-        <td>-139</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/after/index.html">after</a></td>
-        <td></td>
-        <td></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-interstate/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-interstate.html">published page</a></td>
+        <td><a href="fhir.nwgenomics.nhs.uk/0.2.2/testing/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/testing.html">published</a></td>
         <td></td>
       </tr>
       <tr>
@@ -615,12 +615,12 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/before/index.html">before</a></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/after/index.html">after</a></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/before/index.html">before</a></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/after/index.html">after</a></td>
         <td></td>
         <td></td>
-        <td><a href="../pages/hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/case.json">case.json</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-referral.html">published page</a></td>
+        <td><a href="hl7.fhir.au.ps/1.0.0-ci-build/uc-referral/case.json">case.json</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-referral.html">published</a></td>
         <td></td>
       </tr></tbody>
     </table>
