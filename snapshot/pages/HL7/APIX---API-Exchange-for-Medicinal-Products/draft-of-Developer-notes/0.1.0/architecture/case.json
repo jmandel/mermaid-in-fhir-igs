@@ -50,6 +50,10 @@
       "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "b5ff1436c039995515b0816dd640d586601076ec1e8d25bdb296f1cf55b6d17a",
+    "after": "07270aea26b2097ae3e53a2877f9bc7dfa220669704a55ade9116ffd05a7b467"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/architecture.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid-init.js"

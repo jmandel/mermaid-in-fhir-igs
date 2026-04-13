@@ -51,6 +51,10 @@
       "html": "pages/nuts-foundation/nl-generic-functions-ig/main/0.3.0/credential-DeziUserCredential/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "aacc10c1f89b5172dfaaca7fd7a84522fde7c6259bfce3fc54de7f8ad7ffbf76",
+    "after": "aa4eaa7af5a01912acdc29c263ea33922d0ad503dda32fa761380fb02234dedf"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/credential-DeziUserCredential.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/mermaid-init.js"

@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/improve-readme-add-samples/1.0.0-cibuild/security/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "b6f01ce324f4c98dda294e8e2788f3ae901d541ac893388503b68f85c751ead0",
+    "after": "0537bc514997fec2a65259b4462c229495553c7d36e0a07ceeb2b8229ef37d80"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/security.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/assets/js/mermaid-init.js"

@@ -50,6 +50,10 @@
       "html": "pages/IKNL/PZP-FHIR-R4/issue137-legallycapable/1.0.0-rc2/data-model/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "5e8a345c4918cff7ab64a3711973a55e32966b84fc5a3cd9b701034fa7bc0112",
+    "after": "77485b1443d34bdc73c40a8659ad2be8e6e4ed40f6b06bafbe2fd1cd202351e0"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-model.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/assets/js/mermaid-init.js"

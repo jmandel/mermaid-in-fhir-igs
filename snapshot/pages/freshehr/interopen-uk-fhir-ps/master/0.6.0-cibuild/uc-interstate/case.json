@@ -50,6 +50,10 @@
       "html": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-interstate/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "6f5a0bfdeb7c4a9a930510568a23b0091c583fba63013d5f117f22e334d026ef",
+    "after": "aa8f0b86e1cf4c875b3038d11cd6ce53e0626dc319f5d8488ffab305e32a3688"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/uc-interstate.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/assets/js/mermaid-init.js"

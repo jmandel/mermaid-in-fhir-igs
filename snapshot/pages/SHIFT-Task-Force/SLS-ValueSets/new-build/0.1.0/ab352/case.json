@@ -51,6 +51,10 @@
       "html": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/ab352/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "95ade6538d7dada431175b43e714143ac4d3e40d3f7b42d2ad27a5345a8f1acd",
+    "after": "845f9355099c388c18f433670a3c41d4fbd4b7d1f931b74b5621a3a8674e9490"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/ab352.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/assets/js/mermaid-init.js"

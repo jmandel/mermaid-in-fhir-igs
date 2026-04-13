@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/fixes-index-page/1.0.0-cibuild/security/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "b49ccb027b64240caa2789dfd43833d542b4e5368ee7db32f92ebd98d772a434",
+    "after": "62ac7944e4e7fb844996b70d6d7d0df6da3eca5299a14b1b435070192ec6d796"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/security.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/mermaid-init.js"

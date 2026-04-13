@@ -51,6 +51,10 @@
       "html": "pages/HL7/uv-pocd/master/1.0.0/overview/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "ad2f2eab943c600a4751c0ba87b7bc237893ef9ad101895839edbef06a81bd51",
+    "after": "4f40bf489b614863eeabcad9cdab6374724722132abb006ed03ea2877dd65573"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/overview.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/assets/js/mermaid-init.js"

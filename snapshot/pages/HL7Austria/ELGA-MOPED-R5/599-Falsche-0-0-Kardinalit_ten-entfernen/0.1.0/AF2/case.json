@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF2/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "803a3b62c25f627300b19ffc93121d785a673feb942779b1066852ba12fe7aec",
+    "after": "bb26864c0bfcb15e1ac047715ae472ab424c6ca17bbaada1c2e78c7b23f6cad7"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/AF2.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/assets/js/mermaid-init.js"

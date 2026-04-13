@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/moped_konzepte/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "3a0e0054e91321f33d3d4bd8108e695dda18d3298da70f2f1243b552750c5528",
+    "after": "a7f853775185aca08c98137c102181dd6bec4ef7f03853506146b85d358f2e9a"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/moped_konzepte.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid-init.js"

@@ -50,6 +50,10 @@
       "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "cfa9126652970faf98fa6589cb479184da9c83f20ecec0ffdcbd67aec5ddd1d4",
+    "after": "7384618e86c1f6866b9a8f217aaf33559967b155eaf886b0975849d1d32a3a63"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/ch-mhd-1.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid-init.js"

@@ -51,6 +51,10 @@
       "html": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-exchange/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "5148a78a359d669be21557d300925707c1010420fd3b30e92a090be67fa951a7",
+    "after": "49818d91d2460c1792f473420f111c36b7fc77dc111382e308613592d94b1f7a"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-exchange.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/mermaid-init.js"

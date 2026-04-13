@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/actors/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "afc4fdb0883f341f679f62a35b684215481b2b038fb3af8995c499010bd2c0e9",
+    "after": "ea9b67c0490ee81d4f99baefb0671ace08338bf598d6fba45ec6bc064833e3f7"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid-init.js"

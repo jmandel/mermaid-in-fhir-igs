@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/improve-readme-add-samples/1.0.0-cibuild/usecase-referral-orthopedic/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "bbadcf8a735d463242c857dcaefdea8cae5ed6e254a57dffe10ecfa323b780bc",
+    "after": "31a3d4e4b1ffc0e73eeb520ed06e6d84ca79e91a9da816a35cd2fe0d1c0a23fc"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/usecase-referral-orthopedic.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/assets/js/mermaid-init.js"

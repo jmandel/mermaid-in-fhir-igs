@@ -50,6 +50,10 @@
       "html": "pages/hl7au/au-fhir-ps/master/1.0.0-ci-build/uc-interstate/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "a08703d0498da0cf5aac3fe521a839475e38633f6d3e4a0e4f6223b2335ef60c",
+    "after": "42c8246b26523c42d57d0b930f824fbb678599869a84ffd93eb3965f8d426ed4"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-interstate.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/assets/js/mermaid-init.js",

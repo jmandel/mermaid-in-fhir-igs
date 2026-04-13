@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/fix-main/0.1.0/actors/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "5a90ea0120d21649b47087a6767f128c012d92e59506986a8ba579dd276706ea",
+    "after": "e72e4b3f5e87d348264bfb750b8f43e6137dd1991b0a35a74a3f3c069437c540"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid-init.js"

@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "18438d4a063dc4c320c254758e0aa3500e28c3e98564712d6845f9c0d47ea0b3",
+    "after": "77af9c7afd881613f749c29e8570aa3239c43d7b0a74f05a84762bb79a3dd702"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid-init.js"

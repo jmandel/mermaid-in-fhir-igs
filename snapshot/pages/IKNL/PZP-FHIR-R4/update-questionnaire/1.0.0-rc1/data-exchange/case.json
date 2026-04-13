@@ -51,6 +51,10 @@
       "html": "pages/IKNL/PZP-FHIR-R4/update-questionnaire/1.0.0-rc1/data-exchange/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "6af17e418f6bd56e388051ce288d7267f840ba4c8b31000ed1fbc9e6cc395ee7",
+    "after": "b1190576300ae8f921b8f9a6c01e4755ad92a21cb0c6685978d2c85aae02ad5e"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/data-exchange.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/assets/js/mermaid-init.js"

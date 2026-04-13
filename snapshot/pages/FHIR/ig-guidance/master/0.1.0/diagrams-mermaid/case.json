@@ -50,6 +50,10 @@
       "html": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "32e358db533bc354556300bd0840d718d21d88d4bcfc49da269c1990327af49b",
+    "after": "2d0c18ce829e68c8553254febcdce5f048f516bc98596e915bba8f553b84a97f"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid-init.js"

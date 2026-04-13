@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/aa_update_general_documentation/1.0.0-cibuild/security/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "bb2904d3ec079628894f6314247d7868b24dcaf0a92c6c2d166eda5cb0622124",
+    "after": "dc1152556a9708861dca998e72bdc5bac193025cf7e3748df78e7249eb306eb7"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/security.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/assets/js/mermaid-init.js"

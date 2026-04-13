@@ -50,6 +50,10 @@
       "html": "pages/hl7au/au-fhir-ps/master/1.0.0-ci-build/uc-referral/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "22fe4ba4cee415132dfd5766d3c915a3ecacff595a4f8abca9969584cee61619",
+    "after": "4b6711f5c04b7da605c33a809ee197e13db943452baf9d18bfb2f9c0c549bc0a"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-referral.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/assets/js/mermaid-init.js"

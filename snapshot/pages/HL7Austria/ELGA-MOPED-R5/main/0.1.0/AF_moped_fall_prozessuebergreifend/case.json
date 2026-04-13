@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "4ebf80261751045b847886a03a1f2025adb5fd88c2058ddc61082462c4e5ad2b",
+    "after": "07b3271a78d1b9126bdae95ee9f48f88aae854e84952d26fa8bbff8f1d6880aa"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/AF_moped_fall_prozessuebergreifend.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid-init.js"

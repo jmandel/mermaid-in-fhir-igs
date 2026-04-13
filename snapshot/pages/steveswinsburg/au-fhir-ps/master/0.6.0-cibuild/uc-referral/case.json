@@ -50,6 +50,10 @@
       "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-referral/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "179a1fae63e0b79fd441c2928d2dffad6fa3c783c0b2ff152300df9ac05dfee3",
+    "after": "eddf8ee697b52f2e02d83da0ef46f1fd407ed187aebafc331ef638a128109989"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-referral.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid-init.js"

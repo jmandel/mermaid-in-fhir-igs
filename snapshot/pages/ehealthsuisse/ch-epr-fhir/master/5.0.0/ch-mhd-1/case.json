@@ -50,6 +50,10 @@
       "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/ch-mhd-1/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "8d42e036797517617298952f6253ef69844dd0f70427b7f2dd947eabcf1908f5",
+    "after": "093418483d735f44cb5073cfca2979d81c7fcf45aff524736c91d762b6452d08"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid-init.js"

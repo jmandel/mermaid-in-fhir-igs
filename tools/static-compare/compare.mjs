@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
+import { createHash } from 'node:crypto';
 import http from 'node:http';
+import { availableParallelism } from 'node:os';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import {
@@ -25,19 +27,25 @@ const PACKAGES_DIR = path.resolve(process.cwd(), readFlag('--packages') || path.
 const IG_INDEX_PATH = path.resolve(process.cwd(), readFlag('--igs') || path.join(REPO_ROOT, 'mermaid_igs.jsonl'));
 const OUTPUT_DIR = path.resolve(process.cwd(), readFlag('--out') || path.join(__dirname, 'artifacts'));
 const PATCHED_MERMAID = path.resolve(process.cwd(), readFlag('--mermaid') || path.join(__dirname, 'mermaid.js'));
+const CACHE_DIR = path.resolve(process.cwd(), readFlag('--cache') || path.join(__dirname, '.cache'));
 const CHROMIUM_PATH = path.resolve(process.cwd(), readFlag('--chromium') || process.env.CHROMIUM || '/usr/bin/chromium');
 const BRANCH_FILTER = parseCsvFlag(readFlag('--branches') || '');
+const JOBS = parsePositiveInt(readFlag('--jobs')) || Math.min(4, Math.max(1, availableParallelism() || 1));
 const VIEWPORT = { width: 1440, height: 1400 };
 const SCREENSHOT_WAIT_MS = 1500;
 const COLOR_THRESHOLD = 18;
 const BLANK_PIXEL_RATIO = 0.0005;
 const BLANK_PIXEL_FLOOR = 50;
+const CACHE_VERSION = 'static-compare-v2';
 
 const textFetchCache = new Map();
 const packageBaseCache = new Map();
+let patchedMermaidText = null;
+let patchedMermaidHash = null;
 
 async function main() {
   await ensurePatchedBundle();
+  await mkdir(CACHE_DIR, { recursive: true });
 
   const { cases, skipped } = await collectCases();
   if (!cases.length) {
@@ -78,26 +86,9 @@ async function main() {
   }
 
   const server = await startStaticServer(OUTPUT_DIR);
+  let captureSummary;
   try {
-    const browser = await playwright.chromium.launch({
-      executablePath: CHROMIUM_PATH,
-      headless: true,
-      args: ['--disable-gpu', '--no-sandbox'],
-    });
-    try {
-      for (const testCase of preparedCases) {
-        for (const variant of ['before', 'after']) {
-          try {
-            await captureVariant(browser, server.origin, testCase, variant);
-          } catch (error) {
-            if (!testCase.captureErrors) testCase.captureErrors = {};
-            testCase.captureErrors[variant] = error.message;
-          }
-        }
-      }
-    } finally {
-      await browser.close();
-    }
+    captureSummary = await captureAllVariants(server.origin, preparedCases);
   } finally {
     await new Promise((resolve, reject) => server.instance.close((err) => (err ? reject(err) : resolve())));
   }
@@ -115,6 +106,11 @@ async function main() {
   console.log(
     `Cases: ${report.summary.totalCases}, failed: ${report.summary.failedCases}, skipped: ${report.summary.skippedCases}`,
   );
+  if (captureSummary) {
+    console.log(
+      `Capture summary: rendered ${captureSummary.rendered}, cached ${captureSummary.restored}, failed ${captureSummary.failed}`,
+    );
+  }
 }
 
 function readFlag(name) {
@@ -130,9 +126,16 @@ function parseCsvFlag(value) {
     .filter(Boolean);
 }
 
+function parsePositiveInt(value) {
+  if (!value) return null;
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+}
+
 async function ensurePatchedBundle() {
   try {
-    await stat(PATCHED_MERMAID);
+    patchedMermaidText = await readFile(PATCHED_MERMAID, 'utf8');
+    patchedMermaidHash = hashContent(patchedMermaidText);
   } catch {
     throw new Error(
       `Missing patched Mermaid bundle at ${PATCHED_MERMAID}. ` +
@@ -491,22 +494,43 @@ async function writeCaseFixtures(testCase) {
     remoteMermaidInit,
   } = resolvedAssets;
 
+  const rewrittenHtml = rewriteHtml(rawHtml, pageUrl, {
+    mermaidPath: './assets/js/mermaid.js',
+    mermaidInitPath: './assets/js/mermaid-init.js',
+  });
+  const rewrittenHtmlHash = hashContent(rewrittenHtml);
+  const remoteMermaidInitHash = hashContent(remoteMermaidInit);
+  const remoteMermaidHash = hashContent(remoteMermaid);
+
+  testCase.variantCacheKeys = {
+    before: buildVariantCacheKey({
+      variant: 'before',
+      pageUrl,
+      rewrittenHtmlHash,
+      mermaidInitHash: remoteMermaidInitHash,
+      mermaidHash: remoteMermaidHash,
+    }),
+    after: buildVariantCacheKey({
+      variant: 'after',
+      pageUrl,
+      rewrittenHtmlHash,
+      mermaidInitHash: remoteMermaidInitHash,
+      mermaidHash: patchedMermaidHash,
+    }),
+  };
+
   for (const variant of ['before', 'after']) {
     const variantDir = path.join(OUTPUT_DIR, testCase.fixturePaths.root, variant);
     const assetsDir = path.join(variantDir, 'assets', 'js');
     await mkdir(assetsDir, { recursive: true });
 
-    const rewrittenHtml = rewriteHtml(rawHtml, pageUrl, {
-      mermaidPath: './assets/js/mermaid.js',
-      mermaidInitPath: './assets/js/mermaid-init.js',
-    });
     await writeFile(path.join(variantDir, 'index.html'), rewrittenHtml);
     await writeFile(path.join(assetsDir, 'mermaid-init.js'), remoteMermaidInit);
 
     if (variant === 'before') {
       await writeFile(path.join(assetsDir, 'mermaid.js'), remoteMermaid);
     } else {
-      await copyFile(PATCHED_MERMAID, path.join(assetsDir, 'mermaid.js'));
+      await writeFile(path.join(assetsDir, 'mermaid.js'), patchedMermaidText);
     }
   }
 
@@ -636,12 +660,104 @@ function isSpecialUrl(url) {
   );
 }
 
+async function captureAllVariants(origin, preparedCases) {
+  const tasks = [];
+  for (const testCase of preparedCases) {
+    for (const variant of ['before', 'after']) {
+      tasks.push({ testCase, variant });
+    }
+  }
+
+  const progress = {
+    total: tasks.length,
+    completed: 0,
+    rendered: 0,
+    restored: 0,
+    failed: 0,
+    next: 0,
+    startedAt: Date.now(),
+  };
+
+  if (!tasks.length) return progress;
+
+  const browser = await playwright.chromium.launch({
+    executablePath: CHROMIUM_PATH,
+    headless: true,
+    args: ['--disable-gpu', '--no-sandbox'],
+  });
+
+  try {
+    const workerCount = Math.min(JOBS, tasks.length);
+    console.log(
+      `Rendering ${tasks.length} page variants with ${workerCount} worker${workerCount === 1 ? '' : 's'}; cache ${CACHE_DIR}`,
+    );
+    await Promise.all(
+      Array.from({ length: workerCount }, (_, index) =>
+        runCaptureWorker(index + 1, browser, origin, tasks, progress),
+      ),
+    );
+  } finally {
+    await browser.close();
+  }
+
+  return progress;
+}
+
+async function runCaptureWorker(workerId, browser, origin, tasks, progress) {
+  while (true) {
+    const taskIndex = progress.next++;
+    if (taskIndex >= tasks.length) return;
+
+    const { testCase, variant } = tasks[taskIndex];
+    let status = 'render';
+    try {
+      const result = await captureVariant(browser, origin, testCase, variant);
+      if (result.cached) {
+        progress.restored++;
+        status = 'cache';
+      } else {
+        progress.rendered++;
+        status = 'render';
+      }
+    } catch (error) {
+      if (!testCase.captureErrors) testCase.captureErrors = {};
+      testCase.captureErrors[variant] = error.message;
+      progress.failed++;
+      status = 'error';
+    }
+
+    progress.completed++;
+    logCaptureProgress(progress, workerId, testCase, variant, status);
+  }
+}
+
+function logCaptureProgress(progress, workerId, testCase, variant, status) {
+  const elapsedMs = Date.now() - progress.startedAt;
+  const msPerTask = progress.completed ? elapsedMs / progress.completed : 0;
+  const remaining = Math.max(0, progress.total - progress.completed);
+  const etaMs = msPerTask * remaining;
+  const identity = [testCase.repoPath || testCase.packageId, testCase.branch, testCase.fileName, variant]
+    .filter(Boolean)
+    .join(' :: ');
+  console.log(
+    `[${progress.completed}/${progress.total}] worker ${workerId} ${status} ${identity} | rendered ${progress.rendered} cached ${progress.restored} failed ${progress.failed} | elapsed ${formatDuration(elapsedMs)} eta ${formatDuration(etaMs)}`,
+  );
+}
+
 async function captureVariant(browser, origin, testCase, variant) {
+  const cacheKey = testCase.variantCacheKeys?.[variant] || null;
+  if (cacheKey) {
+    const restoredMetrics = await restoreVariantFromCache(cacheKey, testCase, variant);
+    if (restoredMetrics) {
+      return { cached: true, metrics: restoredMetrics };
+    }
+  }
+
+  const outputPaths = variantArtifactPaths(testCase, variant);
   const page = await browser.newPage({ viewport: VIEWPORT });
   try {
     page.setDefaultTimeout(30000);
     const targetUrl = `${origin}/${testCase.fixturePaths[variant].html}`;
-    console.log(`rendering ${testCase.packageId} :: ${testCase.fileName} :: ${variant}`);
 
     await page.goto(targetUrl, { waitUntil: 'load', timeout: 30000 });
     await page.waitForFunction(
@@ -660,8 +776,7 @@ async function captureVariant(browser, origin, testCase, variant) {
     }
     await page.waitForTimeout(SCREENSHOT_WAIT_MS);
 
-    const screenshotPath = path.join(OUTPUT_DIR, 'screenshots', `${testCase.slug}-${variant}.png`);
-    await page.screenshot({ path: screenshotPath, fullPage: true });
+    await page.screenshot({ path: outputPaths.pageScreenshotAbs, fullPage: true, timeout: 120000 });
 
     const metrics = await page.evaluate(() => {
       function summarizeSvg(svg) {
@@ -789,10 +904,11 @@ async function captureVariant(browser, origin, testCase, variant) {
 
     const blockLocator = page.locator('.mermaid');
     const blockCount = await blockLocator.count();
+    const outputPathsWithBlocks = variantArtifactPaths(testCase, variant, blockCount);
     const blockScreenshots = [];
     for (let index = 0; index < blockCount; index++) {
-      const relativePath = `screenshots/${testCase.slug}-${variant}-block${index}.png`;
-      const absolutePath = path.join(OUTPUT_DIR, relativePath);
+      const relativePath = outputPathsWithBlocks.blockScreenshotRels[index];
+      const absolutePath = outputPathsWithBlocks.blockScreenshotAbss[index];
       await blockLocator.nth(index).screenshot({
         path: absolutePath,
         animations: 'disabled',
@@ -806,15 +922,144 @@ async function captureVariant(browser, origin, testCase, variant) {
     }
 
     metrics.blockScreenshots = blockScreenshots;
-    metrics.pageScreenshot = `screenshots/${testCase.slug}-${variant}.png`;
-
-    await writeFile(
-      path.join(OUTPUT_DIR, 'metrics', `${testCase.slug}-${variant}.json`),
-      JSON.stringify(metrics, null, 2),
+    const outputMetrics = materializeOutputMetrics(
+      {
+        ...metrics,
+        cacheKey,
+        cacheStatus: 'miss',
+      },
+      testCase,
+      variant,
     );
+
+    await writeFile(outputPathsWithBlocks.metricsAbs, JSON.stringify(outputMetrics, null, 2));
+
+    if (cacheKey) {
+      try {
+        await saveVariantToCache(cacheKey, outputMetrics, testCase, variant);
+      } catch (error) {
+        outputMetrics.cacheWriteError = error.message;
+        await writeFile(outputPathsWithBlocks.metricsAbs, JSON.stringify(outputMetrics, null, 2));
+      }
+    }
+
+    return { cached: false, metrics: outputMetrics };
   } finally {
     await page.close();
   }
+}
+
+function buildVariantCacheKey({ variant, pageUrl, rewrittenHtmlHash, mermaidInitHash, mermaidHash }) {
+  const digest = createHash('sha256');
+  digest.update(CACHE_VERSION);
+  digest.update('\\0');
+  digest.update(variant);
+  digest.update('\\0');
+  digest.update(pageUrl);
+  digest.update('\\0');
+  digest.update(rewrittenHtmlHash);
+  digest.update('\\0');
+  digest.update(mermaidInitHash);
+  digest.update('\\0');
+  digest.update(mermaidHash);
+  digest.update('\\0');
+  digest.update(JSON.stringify({ VIEWPORT, SCREENSHOT_WAIT_MS }));
+  return digest.digest('hex');
+}
+
+function variantPageScreenshotRel(testCase, variant) {
+  return `screenshots/${testCase.slug}-${variant}.png`;
+}
+
+function variantBlockScreenshotRel(testCase, variant, index) {
+  return `screenshots/${testCase.slug}-${variant}-block${index}.png`;
+}
+
+function variantMetricsRel(testCase, variant) {
+  return `metrics/${testCase.slug}-${variant}.json`;
+}
+
+function variantArtifactPaths(testCase, variant, blockCount = 0) {
+  const pageScreenshotRel = variantPageScreenshotRel(testCase, variant);
+  const blockScreenshotRels = Array.from({ length: blockCount }, (_, index) =>
+    variantBlockScreenshotRel(testCase, variant, index),
+  );
+  const metricsRel = variantMetricsRel(testCase, variant);
+  return {
+    pageScreenshotRel,
+    pageScreenshotAbs: path.join(OUTPUT_DIR, pageScreenshotRel),
+    blockScreenshotRels,
+    blockScreenshotAbss: blockScreenshotRels.map((relPath) => path.join(OUTPUT_DIR, relPath)),
+    metricsRel,
+    metricsAbs: path.join(OUTPUT_DIR, metricsRel),
+  };
+}
+
+function materializeOutputMetrics(metrics, testCase, variant) {
+  const paths = variantArtifactPaths(testCase, variant, metrics.blockScreenshots?.length || 0);
+  return {
+    ...metrics,
+    pageScreenshot: paths.pageScreenshotRel,
+    blockScreenshots: paths.blockScreenshotRels,
+  };
+}
+
+function materializeCacheMetrics(metrics, variant) {
+  const blockCount = metrics.blockScreenshots?.length || 0;
+  return {
+    ...metrics,
+    cacheVariant: variant,
+    pageScreenshot: 'page.png',
+    blockScreenshots: Array.from({ length: blockCount }, (_, index) => `block${index}.png`),
+  };
+}
+
+async function restoreVariantFromCache(cacheKey, testCase, variant) {
+  const cacheDir = path.join(CACHE_DIR, 'variants', cacheKey);
+  let cachedMetrics;
+  try {
+    cachedMetrics = JSON.parse(await readFile(path.join(cacheDir, 'metrics.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+
+  const blockCount = cachedMetrics.blockScreenshots?.length || 0;
+  const outputPaths = variantArtifactPaths(testCase, variant, blockCount);
+  try {
+    await copyFile(path.join(cacheDir, 'page.png'), outputPaths.pageScreenshotAbs);
+    for (let index = 0; index < blockCount; index++) {
+      await copyFile(path.join(cacheDir, `block${index}.png`), outputPaths.blockScreenshotAbss[index]);
+    }
+  } catch {
+    return null;
+  }
+
+  const outputMetrics = materializeOutputMetrics(
+    {
+      ...cachedMetrics,
+      cacheKey,
+      cacheStatus: 'hit',
+    },
+    testCase,
+    variant,
+  );
+  await writeFile(outputPaths.metricsAbs, JSON.stringify(outputMetrics, null, 2));
+  return outputMetrics;
+}
+
+async function saveVariantToCache(cacheKey, metrics, testCase, variant) {
+  const cacheDir = path.join(CACHE_DIR, 'variants', cacheKey);
+  const outputPaths = variantArtifactPaths(testCase, variant, metrics.blockScreenshots?.length || 0);
+  await rm(cacheDir, { recursive: true, force: true });
+  await mkdir(cacheDir, { recursive: true });
+  await copyFile(outputPaths.pageScreenshotAbs, path.join(cacheDir, 'page.png'));
+  for (let index = 0; index < outputPaths.blockScreenshotAbss.length; index++) {
+    await copyFile(outputPaths.blockScreenshotAbss[index], path.join(cacheDir, `block${index}.png`));
+  }
+  await writeFile(
+    path.join(cacheDir, 'metrics.json'),
+    JSON.stringify(materializeCacheMetrics(metrics, variant), null, 2),
+  );
 }
 
 async function analyzePng(filePath) {
@@ -1564,6 +1809,10 @@ function defaultStorageId(repoPath, branch, packageName, version) {
 function safeStorageId(value) {
   return String(value || 'unknown').replace(/[^a-z0-9_.\-@#]/gi, '_');
 }
+
+function hashContent(value) {
+  return createHash('sha256').update(value).digest('hex');
+}
 function safePathComponent(value) {
   return value
     .replace(/[\/\\]/g, '_')
@@ -1666,6 +1915,16 @@ function formatSignedNumber(value) {
 function formatSignedRatio(value) {
   if (value == null) return '';
   return value > 0 ? `+${value.toFixed(3)}` : value.toFixed(3);
+}
+
+function formatDuration(ms) {
+  const totalSeconds = Math.max(0, Math.round(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  if (hours > 0) return `${hours}h ${minutes}m ${seconds}s`;
+  if (minutes > 0) return `${minutes}m ${seconds}s`;
+  return `${seconds}s`;
 }
 
 function formatSignedCell(value) {

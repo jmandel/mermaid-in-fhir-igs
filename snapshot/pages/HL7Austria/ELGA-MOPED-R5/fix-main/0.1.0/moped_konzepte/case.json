@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/fix-main/0.1.0/moped_konzepte/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "4aa61ddf7d5d420c8653a2bba63df4749967cb2760209cb615a2605af9a418e0",
+    "after": "4bda8015c3d137c55c4a55abdc25d882b629993115585f74d602d93bbf215848"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/moped_konzepte.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid-init.js"

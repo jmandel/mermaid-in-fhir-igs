@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/moped_konzepte/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "4205b3421f8d6caacde1d91ee35073b0a31b6b913a5d457620de1bcf7ea9ae6e",
+    "after": "cad60ded15e3eb483b1e6e76f30ec92ddbc27c8d140c175de0f7734153a2c5ab"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/moped_konzepte.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid-init.js"

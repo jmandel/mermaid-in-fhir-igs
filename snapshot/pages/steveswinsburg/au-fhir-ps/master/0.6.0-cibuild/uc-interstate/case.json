@@ -50,6 +50,10 @@
       "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "b15cf948369e55bc35eec774ab0e493d27365a4ab4bc540ce095efc5eede10d6",
+    "after": "7d356ae1b065536042f71d91fc0c42c7f94850b0e0f02f4f7a410c9d1af6b4ca"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-interstate.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid-init.js"

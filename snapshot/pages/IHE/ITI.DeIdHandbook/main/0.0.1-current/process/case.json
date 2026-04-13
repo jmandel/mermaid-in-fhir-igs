@@ -51,6 +51,10 @@
       "html": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "d464dd8214c0413c48fc0ada5e3c32b744ee3b9037683cffb3468eafc91d9578",
+    "after": "db1edffeb33a143f8fd8a165f2039e61377a76437eb27539e0c98a2948695cc6"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/process.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/assets/js/mermaid-init.js"

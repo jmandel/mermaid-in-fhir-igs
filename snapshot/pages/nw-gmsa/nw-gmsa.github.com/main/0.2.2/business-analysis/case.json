@@ -51,6 +51,10 @@
       "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/business-analysis/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "3cd7af2116b85d0f2e0f1513749ee4b88f5589a55a00a5125a3ce11b64a07239",
+    "after": "f08a7745232a30dbfad8fd9f2c117721774e20650de589aa488ed54ef4a7e7b5"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/business-analysis.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"

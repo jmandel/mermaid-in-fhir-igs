@@ -51,6 +51,10 @@
       "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/ILW/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "272284cc32dc746d5b675897a3fee65926ee32cdfe6a74c5940fcfc603c88441",
+    "after": "b5bd8fc730cb86cddbefa862660eff8c237292b76777bb7873dcf9d76e342d63"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ILW.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"

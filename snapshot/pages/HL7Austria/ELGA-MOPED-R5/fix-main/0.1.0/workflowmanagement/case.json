@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/fix-main/0.1.0/workflowmanagement/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "0b0b0076e0c7eabb1b7055b6ba3cd994156bf914052dac24d466f76383c2f61c",
+    "after": "9970758ce6119f4a7c42584c1c18de1b3aa54b5e19c1cc3838b704f8b2cf68a8"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/workflowmanagement.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/assets/js/mermaid-init.js"

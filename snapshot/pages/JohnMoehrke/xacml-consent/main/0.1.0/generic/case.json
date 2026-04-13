@@ -51,6 +51,10 @@
       "html": "pages/JohnMoehrke/xacml-consent/main/0.1.0/generic/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "f0c44590ee8cb2e864c686ece0697d16fdba47fda88aee8b706a9a87255889e7",
+    "after": "b7b98a74abe81308e768ab5e26d33799038de6546af4494fe6c012cd24e267a1"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid-init.js"

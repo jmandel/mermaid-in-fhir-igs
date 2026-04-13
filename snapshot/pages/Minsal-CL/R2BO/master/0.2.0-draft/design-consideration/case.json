@@ -51,6 +51,10 @@
       "html": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "c8a748d7c0fd676448c9b41ddb08b5a40aa182b8059352d7668fb13ee282241d",
+    "after": "07841d7df66aa3c31fb0781100952666e1a0ed0c9596091326db64412e3f0c08"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/assets/js/mermaid-init.js"

@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "03d2db0eed747ee0a32ee77f841046cf4781ed5c2c2d17f8890f85fd92d11580",
+    "after": "1333f7c5da8207dbb287796baba00bb4b9ed5f59b31cc48e92395cd5b57ce7b0"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid-init.js"

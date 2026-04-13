@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/aa_update_general_documentation/1.0.0-cibuild/core-concepts/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "ab87d5f53a9a7e0b338abe6c97c5ef5dac5dfde7d62b4e643b7f97605c4d8da8",
+    "after": "07606eb1ca4da135567b0b843cc4086b48c8b3bc8cbf1d551037b616d77a7372"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/core-concepts.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/assets/js/mermaid-init.js"

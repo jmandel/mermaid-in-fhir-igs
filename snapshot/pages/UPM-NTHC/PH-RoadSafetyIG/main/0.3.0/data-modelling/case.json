@@ -51,6 +51,10 @@
       "html": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "cd39b2546a292469551fc7f8e725baca93f19f85d92a6576f7d02166290a447e",
+    "after": "ca9a3149abf9d94273dd7b71773f356a4e8bfb83143b67ea7d255edbbd65297a"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/data-modelling.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/assets/js/mermaid-init.js"

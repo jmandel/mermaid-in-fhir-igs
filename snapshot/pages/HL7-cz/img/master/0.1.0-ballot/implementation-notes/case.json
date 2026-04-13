@@ -51,6 +51,10 @@
       "html": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "a0fdc12b3e102283163a96a6a6318d7edb583943339eba3ae6f02278f99d4e91",
+    "after": "9aff6b304abbfd54491f9aec6ac6c0b035585e5683baf0edf2a96bac6c2cf392"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/mermaid-init.js"

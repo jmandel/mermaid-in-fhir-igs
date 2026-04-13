@@ -51,6 +51,10 @@
       "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "e7fb1152398f2e383dbf9124e91f71a5c2374e850eada418557bd604ac37c689",
+    "after": "9a46f729d57820239f2dc0f4a2de166860d63c73a881f0071dbfc21fcb368d53"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"

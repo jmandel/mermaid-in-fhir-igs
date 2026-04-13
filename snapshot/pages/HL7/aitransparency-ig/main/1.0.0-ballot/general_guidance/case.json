@@ -51,6 +51,10 @@
       "html": "pages/HL7/aitransparency-ig/main/1.0.0-ballot/general_guidance/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "a3a2c1d08339e7709df599d90ba58fb740e7ca9f3dc3fde24c293b780ea9bf80",
+    "after": "1d1a5341bab1186b9915ac694574154de464f58bd1fc255a49e73fe6389f531d"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/assets/js/mermaid-init.js"

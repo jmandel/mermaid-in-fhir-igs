@@ -50,6 +50,10 @@
       "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-67/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "f929deda01db6f44eed2753d43e20d058ca81301f858b2c7040e26e1d1b08d6e",
+    "after": "79ad7a8c3ba77d005150baffa1df02c5bf04ffe383e69e617ef192f2359fc490"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid-init.js"

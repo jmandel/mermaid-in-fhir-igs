@@ -50,6 +50,10 @@
       "html": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-referral/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "9cb90f0d9a4068de504188322b8920504406ad91ff43110b0560d6f2176d36ba",
+    "after": "c50d1ca7d90aeafbd6c4103eefe8b9a80379dad9f27cc780f4f627779272df30"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/uc-referral.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/assets/js/mermaid-init.js"

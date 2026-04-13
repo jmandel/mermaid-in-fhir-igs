@@ -50,6 +50,10 @@
       "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-mhd/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "84c97e3740ca49710ac2338a336d8945bb26d11e2bd75ede2374abb5bd243570",
+    "after": "3ec81fb45cfde813bd15f71470159af2c7b940e4e2c14dc7192f594dfde52ac9"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-mhd.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid-init.js"

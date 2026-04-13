@@ -51,6 +51,10 @@
       "html": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "3ff4ef74cac825aeebabb59e18c635a178a2e138945bc73d407ae9ba62af5929",
+    "after": "2b0892c1c0b8655a4e4089db19da09774767023a60471721782f1b6e1a0fe7a9"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/mermaid-init.js"

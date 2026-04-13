@@ -51,6 +51,10 @@
       "html": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "12987fb369a03de1dcdc6f7caa6c2583bbe65e0307158bafb426a4d24a2365d3",
+    "after": "e73ba14d0574ff442e30853aef24bb9a0b25eca0a3b0b75513f30c4e433de964"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/credential-DeziIDTokenCredential.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/assets/js/mermaid-init.js"

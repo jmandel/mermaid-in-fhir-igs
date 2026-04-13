@@ -51,6 +51,10 @@
       "html": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "ddbf570dcbd5c4d7276a66ac342a9504ddccccceef9ce8fd42fdbf91158111d8",
+    "after": "8349f0d214f1723e37146f69098eae2fae1cb54ff6dec7840421300a77fd8dc3"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/index.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/mermaid-init.js"

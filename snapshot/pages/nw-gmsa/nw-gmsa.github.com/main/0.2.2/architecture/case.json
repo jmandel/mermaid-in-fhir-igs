@@ -51,6 +51,10 @@
       "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/architecture/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "da458dc417c07e3e5d604d93d55b60357f65fa4bd8e0597e4a0e0b56c0e58e4b",
+    "after": "cb8d5f79bfeed4aea0805f3fa1d2edac7cec5bff924ffb5312d94fa61bdecdee"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"

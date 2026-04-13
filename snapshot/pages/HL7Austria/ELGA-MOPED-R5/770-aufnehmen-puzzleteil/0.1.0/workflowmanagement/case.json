@@ -50,6 +50,10 @@
       "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/workflowmanagement/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "244089d03cc7f7abc44113e120643b380961cf376a904dada45ea58460451ff6",
+    "after": "2cc6ff150b7bad6ba82ae8c6374ff57490620ce17af9cce66812ca1e7d770a10"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/workflowmanagement.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid-init.js"

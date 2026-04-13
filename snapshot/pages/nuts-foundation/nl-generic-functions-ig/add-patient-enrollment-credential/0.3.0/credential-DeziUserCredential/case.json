@@ -51,6 +51,10 @@
       "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-DeziUserCredential/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "06b4590a59a2c2d84413126834c20376d6f6d8c4f6f3a4598a7acb2eb35d95b8",
+    "after": "6b9a549f290c6d8ffe583f80309090ab029b7e60b6948f570d78ad875e13ad1d"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-DeziUserCredential.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid-init.js"

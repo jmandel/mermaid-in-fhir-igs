@@ -51,6 +51,10 @@
       "html": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "d702343163d2d0d5d4e115bf1dbc24f506f140936dcb926eadeee4c1a820edd0",
+    "after": "ce934d70145e185b394b34193d716b1a58c085c229d8421419dc3c8e7ccd946b"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/assets/js/mermaid-init.js"

@@ -51,6 +51,10 @@
       "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "ada596d08eacc31d193835a8ddfcecf3ff6e358147db2971629bbc279929d0fe",
+    "after": "4a442b278979cf6a6da445afe08f35ce218f82d9e2c4938c134a81c3bf07f74d"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-PatientEnrollmentCredential.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid-init.js"

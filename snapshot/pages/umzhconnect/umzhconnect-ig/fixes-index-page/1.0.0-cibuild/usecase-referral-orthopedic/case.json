@@ -51,6 +51,10 @@
       "html": "pages/umzhconnect/umzhconnect-ig/fixes-index-page/1.0.0-cibuild/usecase-referral-orthopedic/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "181f508e8287cace3d342329a736647475fc49834a19e2fd7db647cfad146a3c",
+    "after": "2f972b6e479b1e5c435ac67aa36305528c330c286fe1992ea4cc5c10fb7215ed"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/usecase-referral-orthopedic.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/mermaid-init.js"

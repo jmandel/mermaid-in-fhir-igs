@@ -50,6 +50,10 @@
       "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/subscriptions/source/index.html"
     }
   },
+  "variantCacheKeys": {
+    "before": "ed522377603e62f6af8d12464b4806e23e0053c508aba457e32a9a1e49a2f5bc",
+    "after": "e6c3cc5230481a9a0e0456cf27d05bdfb679b138255aac49a39e004461c7d67e"
+  },
   "resolvedPageUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/subscriptions.html",
   "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid.js",
   "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid-init.js"
