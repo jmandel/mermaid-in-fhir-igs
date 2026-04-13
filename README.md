@@ -24,7 +24,7 @@ A catalog of [Mermaid](https://mermaid.js.org/) diagrams found across FHIR Imple
 
 1. Fetches [`build.fhir.org/ig/qas.json`](https://build.fhir.org/ig/qas.json) — the CI build index for all FHIR IGs
 2. Filters to IGs built within a configurable lookback period
-3. Deduplicates by package ID (keeps the newest build per package)
+3. Keeps the newest build per GitHub repo/branch, then collapses branch variants whose extracted Mermaid content is byte-for-byte identical
 4. For each IG, fetches the built HTML pages and scans for Mermaid content:
    - `<div class="mermaid">` / `<pre class="mermaid">` elements
    - `<code class="language-mermaid">` elements
@@ -89,7 +89,7 @@ When `--igs` points at `mermaid_igs.jsonl`, the compare harness uses the exact C
 
 Package metadata is only used as a fallback if you run the harness without `mermaid_igs.jsonl` and ask it to infer cases directly from harvested content.
 
-The comparison tables include the GitHub `org/repo` path and branch so each case can be traced back directly to the corresponding `build.fhir.org/ig/:org/:repo/branches/:branch/...` CI build.
+The comparison tables include the GitHub `org/repo` path and branch so each case can be traced back directly to the corresponding `build.fhir.org/ig/:org/:repo/branches/:branch/...` CI build. By default the compare harness now takes every case present in `mermaid_igs.jsonl`; use `--branches main,master` only when you want an explicit branch filter.
 
 The GitHub Pages workflow publishes the committed `snapshot/` tree as the site root and keeps `catalog.html` available alongside it.
 

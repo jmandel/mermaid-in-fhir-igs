@@ -1,0 +1,56 @@
+{
+  "slug": "trifork-ch-epr-fhir-hpd-mapping-ch-mhd-1",
+  "storageId": "trifork_ch-epr-fhir@hpd-mapping",
+  "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
+  "package": "ch.fhir.ig.ch-epr-fhir",
+  "version": "5.0.0",
+  "title": "CH EPR FHIR (R4)",
+  "repo": "trifork/ch-epr-fhir/branches/hpd-mapping/qa.json",
+  "repoPath": "trifork/ch-epr-fhir",
+  "buildUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping",
+  "branch": "hpd-mapping",
+  "githubUrl": "https://github.com/trifork/ch-epr-fhir/tree/hpd-mapping",
+  "canonicalUrl": "http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir",
+  "canonical": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping",
+  "candidateBases": [
+    "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping"
+  ],
+  "fileName": "ch-mhd-1.html",
+  "originalFileName": "ch-mhd-1.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/trifork_ch-epr-fhir@hpd-mapping/ch-mhd-1.html",
+  "pagePath": "ch-mhd-1.html",
+  "pageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/ch-mhd-1.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 417,
+  "totalDiagramLength": 417,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1",
+    "caseJson": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/case.json",
+    "before": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/before",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/before/index.html"
+    },
+    "after": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/after",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/failure",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/source",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/ch-mhd-1/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/ch-mhd-1.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid-init.js"
+}

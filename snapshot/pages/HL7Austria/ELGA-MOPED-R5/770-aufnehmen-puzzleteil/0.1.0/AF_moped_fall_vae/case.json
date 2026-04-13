@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-770-aufnehmen-puzzleteil-af-moped-fall-vae",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@770-aufnehmen-puzzleteil",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil",
+  "branch": "770-aufnehmen-puzzleteil",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/770-aufnehmen-puzzleteil",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil"
+  ],
+  "fileName": "AF_moped_fall_vae.html",
+  "originalFileName": "AF_moped_fall_vae.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@770-aufnehmen-puzzleteil/AF_moped_fall_vae.html",
+  "pagePath": "AF_moped_fall_vae.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 5,
+  "maxDiagramLength": 1536,
+  "totalDiagramLength": 4551,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/770-aufnehmen-puzzleteil/0.1.0/AF_moped_fall_vae/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/assets/js/mermaid-init.js"
+}

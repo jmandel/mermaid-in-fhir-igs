@@ -9,7 +9,7 @@
 // Pipeline:
 //   1. Fetch build.fhir.org/ig/qas.json
 //   2. Filter to IGs built within the lookback period
-//   3. Deduplicate by package-id (newest build per package)
+//   3. Deduplicate by GitHub repo+branch (newest build per branch)
 //   4. For each IG, fetch built HTML pages from build.fhir.org, scan for mermaid
 //   5. Extract mermaid diagram code
 //   6. Write data files  (mermaid_igs.jsonl, diagrams.jsonl)
@@ -24,6 +24,7 @@
 //   content/              — saved Mermaid-containing pages fetched from build.fhir.org
 
 import { writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 
 // ================================================================
@@ -66,31 +67,34 @@ async function main() {
   const recent = qas.filter(e =>
     e['package-id'] && e.repo && e.dateISO8601 && new Date(e.dateISO8601) >= CUTOFF
   );
-  const byPkg = new Map();
+  const byRepoBranch = new Map();
   for (const e of recent) {
-    const pid = e['package-id'];
-    const prev = byPkg.get(pid);
+    const key = repoBranchKey(e.repo);
+    if (!key) continue;
+    const prev = byRepoBranch.get(key);
     if (!prev || new Date(e.dateISO8601) > new Date(prev.dateISO8601))
-      byPkg.set(pid, e);
+      byRepoBranch.set(key, e);
   }
-  const candidates = [...byPkg.values()]
+  const candidates = [...byRepoBranch.values()]
     .sort((a, b) => new Date(b.dateISO8601) - new Date(a.dateISO8601));
 
   console.error(`  ${recent.length} entries in lookback window`);
-  console.error(`  ${candidates.length} unique packages to check\n`);
+  console.error(`  ${candidates.length} unique repo/branch builds to check
+`);
 
   // --- Phase 3: scan for mermaid ---
   const kept = [];
   const skipped = [];
   const allDiagrams = [];
+  const scanned = [];
   let idx = 0;
 
   async function worker() {
-    while (idx < candidates.length && kept.length < TARGET) {
+    while (idx < candidates.length && scanned.length < TARGET) {
       const i = idx++;
       const entry = candidates[i];
       const buildUrl = deriveBuildUrl(entry.repo);
-      const safe = safeName(entry['package-id'] + '#' + (entry['ig-ver'] || 'latest'));
+      const safe = storageId(entry);
 
       if (!buildUrl) {
         skipped.push({ ...summarize(entry), safe, status: 'no_build_url' });
@@ -102,46 +106,76 @@ async function main() {
 
         if (result.mermaidFiles.length === 0) {
           skipped.push({ ...summarize(entry), safe, buildUrl, status: 'no_mermaid' });
-          process.stderr.write(`  [${i+1}/${candidates.length}] · skip ${entry['package-id']}\n`);
+          process.stderr.write(`  [${i+1}/${candidates.length}] · skip ${identityLabel(entry)}
+`);
           continue;
         }
 
-        // Found mermaid — record it
-        const row = {
-          ...summarize(entry), safe, buildUrl, status: 'kept',
-          mermaidFileCount: result.mermaidFiles.length,
-          diagramCount: result.diagrams.length,
-          mermaidFiles: result.mermaidFiles.map(f => f.name),
-        };
-        kept.push(row);
-
-        // Save mermaid-containing page files
-        const contentDir = path.join(CONTENT_DIR, safe);
-        await mkdir(contentDir, { recursive: true });
-        for (const f of result.mermaidFiles) {
-          await writeFile(path.join(contentDir, f.name.replace(/[/\\]/g, '__')), f.content);
-        }
-
-        // Accumulate diagrams
-        for (const d of result.diagrams) {
-          allDiagrams.push({
-            package: entry['package-id'], version: entry['ig-ver'] || '',
-            buildUrl, file: d.file, diagramType: d.type, code: d.code,
-          });
-        }
+        scanned.push({
+          entry,
+          safe,
+          buildUrl,
+          repoPath: extractRepoPath(entry.repo) || '',
+          branch: extractRepoBranch(entry.repo) || '',
+          identity: identityLabel(entry),
+          row: {
+            ...summarize(entry),
+            safe,
+            buildUrl,
+            status: 'kept',
+            mermaidFileCount: result.mermaidFiles.length,
+            diagramCount: result.diagrams.length,
+            mermaidFiles: result.mermaidFiles.map(f => f.name),
+          },
+          mermaidFiles: result.mermaidFiles,
+          diagrams: result.diagrams,
+          contentHash: mermaidContentHash(result.diagrams),
+        });
 
         process.stderr.write(
-          `  [${i+1}/${candidates.length}] + KEPT ${entry['package-id']}` +
+          `  [${i+1}/${candidates.length}] + scan ${identityLabel(entry)}` +
           `  (${result.mermaidFiles.length} pages, ${result.diagrams.length} diagrams)` +
-          `  -> ${kept.length}\n`
+          `  -> ${scanned.length}
+`
         );
       } catch (e) {
         skipped.push({ ...summarize(entry), safe, buildUrl, status: 'error', error: String(e.message || e) });
-        process.stderr.write(`  [${i+1}/${candidates.length}] X err  ${entry['package-id']}  ${e.message}\n`);
+        process.stderr.write(`  [${i+1}/${candidates.length}] X err  ${identityLabel(entry)}  ${e.message}
+`);
       }
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+
+  const deduped = dedupeScannedBuilds(scanned);
+  skipped.push(...deduped.skipped);
+
+  for (const item of deduped.kept) {
+    kept.push(item.row);
+
+    const contentDir = path.join(CONTENT_DIR, item.safe);
+    await mkdir(contentDir, { recursive: true });
+    for (const f of item.mermaidFiles) {
+      await writeFile(path.join(contentDir, f.name.replace(/[\/\\]/g, '__')), f.content);
+    }
+
+    for (const d of item.diagrams) {
+      allDiagrams.push({
+        package: item.entry['package-id'],
+        version: item.entry['ig-ver'] || '',
+        repoPath: item.repoPath,
+        branch: item.branch,
+        identity: item.identity,
+        buildUrl: item.buildUrl,
+        file: d.file,
+        diagramType: d.type,
+        code: d.code,
+      });
+    }
+
+    process.stderr.write(`      -> keep ${item.identity}
+`);
+  }
 
   // --- Phase 4: write data files ---
   const jsonlJoin = arr => arr.map(r => JSON.stringify(r)).join('\n') + (arr.length ? '\n' : '');
@@ -297,24 +331,26 @@ function entities(s) {
 // ================================================================
 
 function generateMarkdown(diagrams, igs) {
-  const byPkg = groupBy(diagrams, d => d.package);
-  const igMap = new Map(igs.map(ig => [ig.package, ig]));
+  const byIdentity = groupBy(diagrams, d => d.identity || d.package);
+  const igMap = new Map(igs.map(ig => [ig.identity || ig.package, ig]));
 
   const stats = computeStats(diagrams);
 
   let md = '# FHIR IG Mermaid Diagram Catalog\n\n';
   md += `> Auto-generated ${new Date().toISOString().slice(0,10)} from [build.fhir.org](https://build.fhir.org/ig/qas.json) CI builds\n`;
-  md += `> Lookback: ${LOOKBACK_DAYS} days — **${diagrams.length} diagrams** from **${byPkg.size} IGs**\n\n`;
+  md += `> Lookback: ${LOOKBACK_DAYS} days — **${diagrams.length} diagrams** from **${byIdentity.size} repo/branch builds**\n\n`;
   md += '### Diagram types\n\n';
   md += '| Type | Count |\n|------|------:|\n';
   for (const [type, count] of stats) md += `| ${type} | ${count} |\n`;
   md += `| **Total** | **${diagrams.length}** |\n\n`;
   md += '---\n\n';
 
-  for (const [pkg, diags] of byPkg) {
-    const ig = igMap.get(pkg) || {};
-    md += `## ${pkg}${ig.version ? ' (' + ig.version + ')' : ''}\n\n`;
-    if (ig.title && ig.title !== pkg) md += `**${ig.title}**\n\n`;
+  for (const [identity, diags] of byIdentity) {
+    const ig = igMap.get(identity) || {};
+    const heading = ig.identity || identity;
+    md += `## ${heading}\n\n`;
+    if (ig.package) md += `**Package:** \`${ig.package}${ig.version ? '#' + ig.version : ''}\`\n\n`;
+    if (ig.title && ig.title !== ig.package) md += `**${ig.title}**\n\n`;
     const links = [];
     if (ig.buildUrl) links.push(`[Build](${ig.buildUrl})`);
     if (ig.githubUrl) links.push(`[GitHub](${ig.githubUrl})`);
@@ -336,8 +372,8 @@ function generateMarkdown(diagrams, igs) {
 }
 
 function generateHtml(diagrams, igs) {
-  const byPkg = groupBy(diagrams, d => d.package);
-  const igMap = new Map(igs.map(ig => [ig.package, ig]));
+  const byIdentity = groupBy(diagrams, d => d.identity || d.package);
+  const igMap = new Map(igs.map(ig => [ig.identity || ig.package, ig]));
 
   const stats = computeStats(diagrams);
   let statsHtml = '<div class="stats"><h2>Diagram Types</h2><table><thead><tr><th>Type</th><th>Count</th></tr></thead><tbody>';
@@ -347,15 +383,17 @@ function generateHtml(diagrams, igs) {
   let toc = '';
   let content = '';
 
-  for (const [pkg, diags] of byPkg) {
-    const ig = igMap.get(pkg) || {};
-    const slug = pkg.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+  for (const [identity, diags] of byIdentity) {
+    const ig = igMap.get(identity) || {};
+    const heading = ig.identity || identity;
+    const slug = heading.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
 
-    toc += `<li><a href="#${slug}">${esc(pkg)}</a> <span class="badge">${diags.length}</span></li>\n`;
+    toc += `<li><a href="#${slug}">${esc(heading)}</a> <span class="badge">${diags.length}</span></li>\n`;
 
     content += `<section id="${slug}">\n`;
-    content += `<h2>${esc(pkg)}${ig.version ? ' <small>' + esc(ig.version) + '</small>' : ''}</h2>\n`;
-    if (ig.title && ig.title !== pkg) content += `<p class="ig-title">${esc(ig.title)}</p>\n`;
+    content += `<h2>${esc(heading)}</h2>\n`;
+    if (ig.package) content += `<p class="ig-title"><strong>Package:</strong> ${esc(ig.package)}${ig.version ? ' <small>' + esc(ig.version) + '</small>' : ''}</p>\n`;
+    if (ig.title && ig.title !== ig.package) content += `<p class="ig-title">${esc(ig.title)}</p>\n`;
     content += '<div class="ig-meta">';
     if (ig.fhirVersion) content += `<span class="label">FHIR ${esc(ig.fhirVersion)}</span> `;
     if (ig.date) content += `<span class="label">${esc(ig.date.slice(0,10))}</span> `;
@@ -476,7 +514,7 @@ function generateHtml(diagrams, igs) {
   <header>
     <div class="container">
       <h1>FHIR IG Mermaid Diagram Catalog</h1>
-      <p>${diagrams.length} diagrams from ${byPkg.size} Implementation Guides &mdash; last ${LOOKBACK_DAYS} days of CI builds</p>
+      <p>${diagrams.length} diagrams from ${byIdentity.size} repo/branch builds &mdash; last ${LOOKBACK_DAYS} days of CI builds</p>
     </div>
   </header>
   <div class="container">
@@ -515,6 +553,10 @@ function summarize(entry) {
     name: entry.name || '', title: entry.title || '',
     date: entry.dateISO8601 || '', fhirVersion: entry.version || '',
     repo: entry.repo || '', url: entry.url || '',
+    repoPath: extractRepoPath(entry.repo) || '',
+    branch: extractRepoBranch(entry.repo) || '',
+    identity: identityLabel(entry),
+    storageId: storageId(entry),
     githubUrl: repoToGithubUrl(entry.repo),
   };
 }
@@ -524,6 +566,90 @@ function repoToGithubUrl(repo) {
   if (!repo) return '';
   const m = repo.match(/^([^/]+\/[^/]+)\/branches\/([^/]+)\//);
   return m ? `https://github.com/${m[1]}/tree/${m[2]}` : '';
+}
+
+function extractRepoPath(repo = '') {
+  const match = repo.match(/^([^/]+\/[^/]+)\/branches\//);
+  return match ? match[1] : '';
+}
+
+function extractRepoBranch(repo = '') {
+  const match = repo.match(/\/branches\/([^/]+)\//);
+  return match ? match[1] : '';
+}
+
+function repoBranchKey(repo = '') {
+  const repoPath = extractRepoPath(repo);
+  const branch = extractRepoBranch(repo);
+  if (!repoPath || !branch) return '';
+  return `${repoPath}::${branch}`;
+}
+
+function identityLabel(entry) {
+  const repoPath = extractRepoPath(entry.repo || '');
+  const branch = extractRepoBranch(entry.repo || '');
+  if (repoPath && branch) return `${repoPath} @ ${branch}`;
+  return entry['package-id'] || 'unknown';
+}
+
+function storageId(entry) {
+  const repoPath = extractRepoPath(entry.repo || '');
+  const branch = extractRepoBranch(entry.repo || '');
+  if (repoPath && branch) return safeName(`${repoPath}@${branch}`);
+  return safeName(`${entry['package-id'] || 'unknown'}#${entry['ig-ver'] || 'latest'}`);
+}
+
+function mermaidContentHash(diagrams) {
+  const normalized = diagrams
+    .map((d) => ({ file: d.file, code: String(d.code || '').replace(/\r\n/g, '\n').trim() }))
+    .sort((a, b) => a.file.localeCompare(b.file) || a.code.localeCompare(b.code));
+  return createHash('sha256').update(JSON.stringify(normalized)).digest('hex');
+}
+
+function branchPreference(branch = '') {
+  if (branch === 'main') return 0;
+  if (branch === 'master') return 1;
+  return 2;
+}
+
+function dedupeScannedBuilds(scanned) {
+  const kept = [];
+  const skipped = [];
+  const winners = new Map();
+  const ordered = [...scanned].sort((a, b) => {
+    const repoCmp = (a.repoPath || '').localeCompare(b.repoPath || '');
+    if (repoCmp) return repoCmp;
+    const hashCmp = (a.contentHash || '').localeCompare(b.contentHash || '');
+    if (hashCmp) return hashCmp;
+    const prefCmp = branchPreference(a.branch) - branchPreference(b.branch);
+    if (prefCmp) return prefCmp;
+    return new Date(b.entry.dateISO8601 || 0) - new Date(a.entry.dateISO8601 || 0);
+  });
+
+  for (const item of ordered) {
+    const key = item.repoPath && item.contentHash ? `${item.repoPath}::${item.contentHash}` : `${item.safe}::unique`;
+    if (!winners.has(key)) {
+      winners.set(key, item);
+      kept.push(item);
+      continue;
+    }
+    const winner = winners.get(key);
+    skipped.push({
+      ...item.row,
+      safe: item.safe,
+      buildUrl: item.buildUrl,
+      status: 'duplicate_mermaid',
+      duplicateOf: {
+        repoPath: winner.repoPath,
+        branch: winner.branch,
+        buildUrl: winner.buildUrl,
+        safe: winner.safe,
+      },
+      reason: `identical Mermaid content to ${winner.identity}`,
+    });
+  }
+
+  return { kept, skipped };
 }
 
 function safeName(s) { return s.replace(/[^a-z0-9_.\-@#]/gi, '_'); }

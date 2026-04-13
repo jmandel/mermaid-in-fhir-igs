@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Data Exchange Overview - Advance Care Planning (PZP) v1.0.0-rc1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://iknl.nl/"><img height="55" alt="Visit the IKNL website" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/images/IKNL.png"/> </a>
+        </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Advance Care Planning (PZP)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-rc1 - trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/index.html">Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/information-standard.html">Information Standard</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-model.html">Data Model</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-exchange.html">Data Exchange</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/changelog.html">Change Log</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/toc.html'><b>Table of Contents</b></a></li><li><b>Data Exchange Overview</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Advance Care Planning (PZP), published by IKNL. This guide is not an authorized publication; it is the continuous build for version 1.0.0-rc1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/IKNL/PZP-FHIR-R4/'>https://github.com/IKNL/PZP-FHIR-R4/</a> and changes regularly. See the <a href='https://api.iknl.nl/docs/pzp/r4/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Data Exchange Overview</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#conformance-requirements-actors" id="markdown-toc-conformance-requirements-actors">Conformance Requirements Actors</a></li>
+  <li><a href="#general-api-requirements" id="markdown-toc-general-api-requirements">General API requirements</a></li>
+  <li><a href="#method-1-retrieve-acp-as-individual-resources" id="markdown-toc-method-1-retrieve-acp-as-individual-resources">Method 1: Retrieve ACP as Individual Resources</a></li>
+  <li><a href="#method-2-retrieve-acp-questionnaireresponse" id="markdown-toc-method-2-retrieve-acp-questionnaireresponse">Method 2: Retrieve ACP QuestionnaireResponse</a></li>
+</ul>
+
+</div>
+<p>This page describes the two transaction methods for exchanging a patient's Advance Care Planning (ACP) information using RESTful API.</p>
+
+<ol>
+  <li>As individual resources. By fetching specific resources (<code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Goal</code>, <code class="language-plaintext highlighter-rouge">Observation</code>, etc.) that together form the patient's ACP. See <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-model.html">Data Model page</a> for a complete overview.</li>
+  <li>As a form. Fetching <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> resource(s). This contains the ACP agreements recorded according to the structured form for uniform registration of ACP.</li>
+</ol>
+
+<p>This guide, in conjunction with its STU3 counterpart, specifies four distinct transactions for data exchange:</p>
+<ol>
+  <li><a href="#method-1-retrieve-acp-as-individual-resources">R4 Individual Resources</a></li>
+  <li><a href="#method-2-retrieve-acp-questionnaireresponse">R4 QuestionnaireResponse</a></li>
+  <li>STU3 Individual Resources</li>
+  <li>STU3 QuestionnaireResponse</li>
+</ol>
+
+<h3 id="conformance-requirements-actors">Conformance Requirements Actors</h3>
+
+<p>This implementation guide defines two actors, each with their own CapabilityStatements that specify the capabilities required for compliance:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/ActorDefinition-ACPActorConsulter.html">ACP Actor Consulter</a>: A client application that retrieves a patient's ACP information following this <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/CapabilityStatement-ACP-CapabilityStatementConsulter.html">CapabilityStatement</a>.</li>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/ActorDefinition-ACPActorProvider.html">ACP Actor Provider</a>: A server application that exposes a patient's ACP information following this <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/CapabilityStatement-ACP-CapabilityStatementProvider.html">CapabilityStatement</a>.</li>
+</ul>
+
+<p>To be conformant the ACP Actor Consulter SHALL support all four transaction groups. This ensures the actor can retrieve ACP information from any provider, regardless of the FHIR version (STU3 or R4) or exchange method implemented.
+The ACP Actor Provider SHALL support at least one of the four transaction groups. The individual resources method is preferred over the form-based method for system-to-system exchange, as it offers a more standardized and reusable data structure.</p>
+
+<h3 id="general-api-requirements">General API requirements</h3>
+
+<p>This IG focuses solely on defining how ACP health information is accessed and structured for data exchange. It does not specify supporting functionalities such as addressing, routing, localization, consent management, or authentication. These capabilities are expected to be provided by the underlying infrastructure specifications and agreements in use, such as Generic Functions, LSP, Twiin, or Nuts.</p>
+
+<p>Within this scope, the following requirements apply:</p>
+
+<ol>
+  <li><strong>Authorization</strong>: Accessing ACP information is subject to strict privacy and security rules. All API requests MUST be properly authenticated and authorized. The client application is expected to use a secure mechanism to obtain an access token with the necessary scopes to read the patient's clinical data.</li>
+  <li><strong>Patient Context</strong>: All queries described in this guide are patient-specific. The client needs to know the logical ID of the patient and include it in every query (e.g., <code class="language-plaintext highlighter-rouge">patient=123</code> or <code class="language-plaintext highlighter-rouge">subject=Patient/123</code>). The method for obtaining the patient's logical ID is not specified in this IG, but may include: an initial search request on the Patient endpoint using a patient identifier such as the BSN; interactions as defined in <a href="https://profiles.ihe.net/ITI/PDQm/3.2.0/ITI-119.html">IHE PDQm ITI-119</a>; or any other method provided by the infrastructure.</li>
+  <li><strong>Resolving References</strong>: The returned resources may contain nested resources or references to other resources (such as <code class="language-plaintext highlighter-rouge">Practitioner</code> or <code class="language-plaintext highlighter-rouge">RelatedPerson</code>). The client application may need to perform subsequent requests to resolve these references and display the full details.</li>
+</ol>
+
+<hr />
+
+<h3 id="method-1-retrieve-acp-as-individual-resources">Method 1: Retrieve ACP as Individual Resources</h3>
+
+<p>This approach provides granular access to the individual clinical statements that constitute the ACP. It allows applications to query for specific data points without processing an entire form.</p>
+
+<p>This approach is useful for applications that need to query specific parts of a patient's ACP, like treatment wishes or stated goals. While it requires multiple API calls, it provides more granular control and returns the ACP in usable resources. The below listed client requests are in scope of a Patient's context for which an initial request may be needed to match the Patient resource id with an identifier (e.g. BSN).</p>
+
+<h4 id="client-requests">Client Requests</h4>
+
+<p>The below listed search requests show how all the ACP agreements, procedural information and relevant clinical context can be retrieved. Information on individuals involved in the ACP process are referenced from these resources and can be retrieved using the <code class="language-plaintext highlighter-rouge">_include</code> statement as defined below, or by resolving the references. Standard FHIR rules apply on the search syntax. The <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/CapabilityStatement-ACP-CapabilityStatementProvider.html">Provider CapabilityStatement</a> and <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/CapabilityStatement-ACP-CapabilityStatementConsulter.html">Consulter CapabilityStatement</a> resources may provide a more structured overview of the below requirements.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1a GET [base]/Procedure?patient=Patient/[id]&amp;code=http://snomed.info/sct|713603004&amp;_include=Procedure:encounter
+
+1b GET [base]/Encounter?patient=Patient/[id]&amp;reason-reference:Procedure.code=http://snomed.info/sct|713603004&amp;_include=Encounter:reason-reference
+
+2 GET [base]/Consent?patient=Patient/[id]&amp;scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment&amp;category=http://snomed.info/sct|129125009&amp;_include=Consent:actor
+
+3 GET [base]/Consent?patient=Patient/[id]&amp;scope=http://terminology.hl7.org/CodeSystem/consentscope|adr&amp;category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd&amp;_include=Consent:actor
+
+4 GET [base]/Goal?patient=Patient/[id]&amp;category=http://snomed.info/sct|713603004
+
+5 GET [base]/Observation?patient=Patient/[id]&amp;code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003,570801000146104
+
+6 GET [base]/DeviceUseStatement?patient=Patient/[id]&amp;device.type:in=https://api.iknl.nl/docs/pzp/r4/ValueSet/ACP-MedicalDeviceProductType-ICD&amp;_include=DeviceUseStatement:device
+
+7 GET [base]/CommunicationRequest?patient=[id]&amp;category=http://snomed.info/sct|223449006
+</code></pre></div></div>
+
+<ol>
+  <li>Both requests are designed to retrieve the same information, but with different approaches:
+    <ul>
+      <li>A) Retrieves <code class="language-plaintext highlighter-rouge">Procedure</code> resources representing ACP procedures and includes the associated <code class="language-plaintext highlighter-rouge">Encounter</code> resource where the procedure took place.</li>
+      <li>B) Retrieves <code class="language-plaintext highlighter-rouge">Encounter</code> resources that list an ACP procedure as their reason, and includes the referenced resources in the result. Request A is generally preferred because <code class="language-plaintext highlighter-rouge">Encounter.patient</code> may not always be present; if absent, it indicates the patient was not involved in the Encounter. Using request A ensures these cases are included as well.</li>
+    </ul>
+  </li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">Consent</code> resources for Treatment Directives and includes the agreement parties (Patient, ContactPersons, and HealthProfessionals).</li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">Consent</code> resources for Advance Directives and includes the representatives (ContactPersons).</li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">Goal</code> resources related to advance care planning.</li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">Observation</code> resources related to specific wishes and plans, as defined by the profiles in the Implementation Guide.</li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">DeviceUseStatement</code> resources for devices representing an ICD, and includes the corresponding <code class="language-plaintext highlighter-rouge">Device</code> resource.</li>
+  <li>Retrieves <code class="language-plaintext highlighter-rouge">CommunicationRequest</code> resources representing all communication requests related to the ACP procedure.</li>
+</ol>
+
+<h4 id="advanced-search-parameters-supported">Advanced Search Parameters Supported</h4>
+<p>The queries above use several search parameter types and modifiers:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_include</code>: Returns referenced resources in the same <code class="language-plaintext highlighter-rouge">Bundle</code>, reducing the need for additional API calls.</li>
+  <li><code class="language-plaintext highlighter-rouge">in</code>: A modifier that enables searching against a ValueSet. In the client requests above, it checks if the device type is included in the specified ValueSet of ICD products.</li>
+  <li>Chained parameters: Used for searching within referenced resources. For example, to find <code class="language-plaintext highlighter-rouge">DeviceUseStatement</code> resources with a specific <code class="language-plaintext highlighter-rouge">Device</code>, or <code class="language-plaintext highlighter-rouge">Encounter</code> resources that have an advance care planning <code class="language-plaintext highlighter-rouge">Procedure</code> as their reason.</li>
+</ul>
+
+<h4 id="server-response">Server Response</h4>
+
+<p>Standard FHIR rules apply for every resource request:</p>
+
+<ul>
+  <li>Success: <code class="language-plaintext highlighter-rouge">200 OK</code>. The server will return a Bundle containing the matching resource(s) for the patient.</li>
+  <li>Not Found: If the patient has no matching resources, the server will return a 200 OK with an empty Bundle.</li>
+</ul>
+
+<h4 id="sequence-diagram">Sequence Diagram</h4>
+
+<div class="mermaid" style="height: 800px; overflow: visible;">
+
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token &amp; Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C-&gt;&gt;S: GET /Procedure?patient=Patient/[id]<br />&amp;code=sct|713603004<br />&amp;_include=Procedure:encounter
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C-&gt;&gt;S: GET /Consent?patient=Patient/[id]<br />&amp;scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&amp;category=http://snomed.info/sct|129125009<br />&amp;_include=Consent:actor
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C-&gt;&gt;S: GET /Consent?patient=Patient/[id]<br />&amp;scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&amp;category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&amp;_include=Consent:actor
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C-&gt;&gt;S: GET /Goal?patient=Patient/[id]<br />&amp;description=http://snomed.info/sct|385987000,1351964001,713148004
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C-&gt;&gt;S: GET /Observation?patient=Patient/[id]<br />&amp;code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C-&gt;&gt;S: GET /DeviceUseStatement?patient=Patient/[id]<br />&amp;device.type:in=https://api.iknl.nl/docs/pzp/r4/ValueSet/ACP-MedicalDeviceProductType-ICD<br />&amp;_include=DeviceUseStatement:device
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C-&gt;&gt;S: GET /CommunicationRequest?patient=Patient/[id]<br />&amp;category=http://snomed.info/sct|713603004
+            activate S
+            S--&gt;&gt;C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C-&gt;&gt;S: GET [Reference URL]
+        S--&gt;&gt;C: 200 OK (Referenced Resource)
+    end
+
+</div>
+
+<hr />
+
+<h3 id="method-2-retrieve-acp-questionnaireresponse">Method 2: Retrieve ACP QuestionnaireResponse</h3>
+
+<p>This approach is used to retrieve the complete form for uniform registration of ACP in its original context. It retrieves <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> resources that contain the content discussed by the individuals involved in the ACP conversation.</p>
+
+<p>This method is included to lower the implementation burden for data providers who already use a form-based registration process. By allowing them to expose their existing form as a <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>, it accelerates the availability of exchangeable ACP data. The trade-off is that this approach requires more effort from the ACP Actor Consulter, as they need to support multiple methods. The preferred method for system-to-system exchange is the individual resources method, as it offers a more standardized and reusable data structure.</p>
+
+<h4 id="client-request">Client Request</h4>
+
+<p>A client retrieves the <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> by performing a <code class="language-plaintext highlighter-rouge">GET</code> search operation. The search is scoped to a specific patient and is filtered by the canonical URL of the <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/Questionnaire-ACP-zib2020.html">ACP Questionnaire</a> to ensure that only the correct form is returned.</p>
+
+<blockquote>
+  <p>GET [base]/QuestionnaireResponse?subject=Patient/[id]&amp;questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020</p>
+</blockquote>
+
+<h4 id="server-response-1">Server Response</h4>
+
+<p>The server follows standard FHIR response rules:</p>
+
+<ul>
+  <li>Success: <code class="language-plaintext highlighter-rouge">200 OK</code>. The response body will contain a Bundle with the matching QuestionnaireResponse resource(s). Example QuestionnaireResponse resources are available <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/QuestionnaireResponse-HendrikHartman-20201001.html">here</a> and <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/QuestionnaireResponse-HendrikHartman-20221108.html">here</a>.</li>
+  <li>Not Found: <code class="language-plaintext highlighter-rouge">200 OK</code>. If there is no completed form for this patient, the server will return an empty Bundle.</li>
+</ul>
+
+<h4 id="sequence-diagram-1">Sequence Diagram</h4>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter&lt;br&gt;(Client)
+    participant S as ACP Actor Provider&lt;br&gt;(Server)
+
+    note over C, S: Prerequisite: client possesses access token &amp; Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C-&gt;&gt;S: GET /QuestionnaireResponse?subject=Patient/[id]&lt;br&gt;&amp;questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S--&gt;&gt;C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+</code></pre>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://iknl.nl/">IKNL</a>.  Package iknl.fhir.r4.pzp#1.0.0-rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 2, 2026 10:42+0000">2026-03-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://api.iknl.nl/docs/pzp/r4/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IKNL/PZP-FHIR-R4/issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

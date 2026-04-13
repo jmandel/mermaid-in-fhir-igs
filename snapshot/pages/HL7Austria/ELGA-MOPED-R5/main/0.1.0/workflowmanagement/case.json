@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-main-workflowmanagement",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@main",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/main/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/main",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main"
+  ],
+  "fileName": "workflowmanagement.html",
+  "originalFileName": "workflowmanagement.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@main/workflowmanagement.html",
+  "pagePath": "workflowmanagement.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/workflowmanagement.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 3,
+  "maxDiagramLength": 440,
+  "totalDiagramLength": 889,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/workflowmanagement/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/workflowmanagement.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid-init.js"
+}

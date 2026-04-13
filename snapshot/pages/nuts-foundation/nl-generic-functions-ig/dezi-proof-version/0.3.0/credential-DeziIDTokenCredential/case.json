@@ -1,0 +1,57 @@
+{
+  "slug": "nuts-foundation-nl-generic-functions-ig-dezi-proof-version-credential-deziidtokencredential",
+  "storageId": "nuts-foundation_nl-generic-functions-ig@dezi-proof-version",
+  "packageId": "fhir.nl.gf#0.3.0",
+  "package": "fhir.nl.gf",
+  "version": "0.3.0",
+  "title": "Netherlands - Generic Functions for data exchange Implementation Guide",
+  "repo": "nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/qa.json",
+  "repoPath": "nuts-foundation/nl-generic-functions-ig",
+  "buildUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version",
+  "branch": "dezi-proof-version",
+  "githubUrl": "https://github.com/nuts-foundation/nl-generic-functions-ig/tree/dezi-proof-version",
+  "canonicalUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf",
+  "canonical": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version"
+  ],
+  "fileName": "credential-DeziIDTokenCredential.html",
+  "originalFileName": "credential-DeziIDTokenCredential.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nuts-foundation_nl-generic-functions-ig@dezi-proof-version/credential-DeziIDTokenCredential.html",
+  "pagePath": "credential-DeziIDTokenCredential.html",
+  "pageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/credential-DeziIDTokenCredential.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 477,
+  "totalDiagramLength": 954,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential",
+    "caseJson": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/case.json",
+    "before": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/before",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/after",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/failure",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/source",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/dezi-proof-version/0.3.0/credential-DeziIDTokenCredential/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/credential-DeziIDTokenCredential.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/assets/js/mermaid-init.js"
+}

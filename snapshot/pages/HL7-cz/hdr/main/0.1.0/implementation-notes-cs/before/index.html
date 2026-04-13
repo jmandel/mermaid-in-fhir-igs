@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Implementační poznámky - HL7 Czech Hospital Discharge Report Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/cqf.css" rel="stylesheet" />
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/css/cz-core.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24"}
+    h3,h4,h5,h6{--heading-prefix:"24"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="https://www.hl7cr.eu/">
+    <img height="60" alt="Visit the HL7 Czech website" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/images/hl7cz-logo.png" />
+  </a>
+</div>
+<div id="project-nav">
+  <a id="project-logo" no-external="true" href="https://ncez.mzcr.cz/cs/node/573"><img height="60" alt="MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/images/NPO_logo.png" /> </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://ncez.mzcr.cz/"><img height="60" alt="NCEZ MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/images/logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Czech Hospital Discharge Report Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Czechia flag" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/images/cze.svg" height="16" title="Czechia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/index.html">Home (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/index-cs.html">Home (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/scope-and-content.html">Scope and content (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/scope-and-content-cs.html">Scope and content (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/background.html">Background (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/background-cs.html">Background (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/logical-models.html">Logical models (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/logical-models-cs.html">Logical models (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/model-map.html">Mapping to profiles (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/model-map-cs.html">Mapping to profiles (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/examples.html">Examples (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/examples-cs.html">Examples (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/obligations.html">Obligations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/obligations-cs.html">Obligations (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes.html">Implementation notes (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes-cs.html">Implementation notes (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/authors.html">Authors (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/authors-cs.html">Authors (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/downloads.html">Downloads (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/downloads-cs.html">Downloads (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/dependencies.html">Dependencies (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/dependencies-cs.html">Dependencies (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/copyright.html">Copyright (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/copyright-cs.html">Copyright (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/hl7-eu/hdr/index.html">IG HDR EU</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7-cz/hdr/branches/main/toc.html'><b>Table of Contents</b></a></li><li><b>Implementační poznámky</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Czech Hospital Discharge Report Implementation Guide, published by HL7 Czech Republic. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7-cz/hdr/'>https://github.com/HL7-cz/hdr/</a> and changes regularly. See the <a href='https://hl7.cz/fhir/hdr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Implementační poznámky</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#přehled" id="markdown-toc-přehled">Přehled</a></li>
+  <li><a href="#přehled-kapitol" id="markdown-toc-přehled-kapitol">Přehled kapitol</a></li>
+  <li><a href="#2-logický-model" id="markdown-toc-2-logický-model">2. Logický model</a></li>
+  <li><a href="#3-mapování-logical-model--fhir" id="markdown-toc-3-mapování-logical-model--fhir">3. Mapování (Logical Model → FHIR)</a>    <ul>
+      <li><a href="#31-účel" id="markdown-toc-31-účel">3.1 Účel</a></li>
+      <li><a href="#32-zásady-mapování" id="markdown-toc-32-zásady-mapování">3.2 Zásady mapování</a></li>
+      <li><a href="#33-přehled-mapování" id="markdown-toc-33-přehled-mapování">3.3 Přehled mapování</a></li>
+      <li><a href="#34-poznámky-k-lokálním-úpravám" id="markdown-toc-34-poznámky-k-lokálním-úpravám">3.4 Poznámky k lokálním úpravám</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-fhir-profily" id="markdown-toc-4-fhir-profily">4. FHIR profily</a>    <ul>
+      <li><a href="#41-struktura-profilu" id="markdown-toc-41-struktura-profilu">4.1 Struktura profilu</a></li>
+      <li><a href="#42-kardinalita" id="markdown-toc-42-kardinalita">4.2 Kardinalita</a></li>
+      <li><a href="#43-terminologické-vazby" id="markdown-toc-43-terminologické-vazby">4.3 Terminologické vazby</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-obligations-povinnosti" id="markdown-toc-5-obligations-povinnosti">5. Obligations (Povinnosti)</a>    <ul>
+      <li><a href="#51-přehled-a-terminologie" id="markdown-toc-51-přehled-a-terminologie">5.1 Přehled a terminologie</a></li>
+      <li><a href="#52-úrovně-plnění-l1l3" id="markdown-toc-52-úrovně-plnění-l1l3">5.2 Úrovně plnění (L1–L3)</a></li>
+      <li><a href="#53-aktéři" id="markdown-toc-53-aktéři">5.3 Aktéři</a></li>
+      <li><a href="#54-typy-závazných-pravidel" id="markdown-toc-54-typy-závazných-pravidel">5.4 Typy závazných pravidel</a></li>
+      <li><a href="#55-vazba-na-profily-a-testování" id="markdown-toc-55-vazba-na-profily-a-testování">5.5 Vazba na profily a testování</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-vzorové-instance-examples" id="markdown-toc-6-vzorové-instance-examples">6. Vzorové instance (Examples)</a>    <ul>
+      <li><a href="#61-obsah-a-struktura-příkladů" id="markdown-toc-61-obsah-a-struktura-příkladů">6.1 Obsah a struktura příkladů</a></li>
+      <li><a href="#62-úrovně-zralosti-datové-struktury" id="markdown-toc-62-úrovně-zralosti-datové-struktury">6.2 Úrovně zralosti datové struktury</a></li>
+      <li><a href="#63-typická-sada-resource-pro-příklad-propouštěcí-zprávy" id="markdown-toc-63-typická-sada-resource-pro-příklad-propouštěcí-zprávy">6.3 Typická sada resource pro příklad propouštěcí zprávy</a></li>
+      <li><a href="#64-cíl-příkladů" id="markdown-toc-64-cíl-příkladů">6.4 Cíl příkladů</a></li>
+      <li><a href="#65-validace-příkladů" id="markdown-toc-65-validace-příkladů">6.5 Validace příkladů</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p>Na následující stránce naleznete poznámky k implementaci nemocniční propouštěcí zprávy. Týkají se tvorby kompozice a naplnění tohoto profilu příslušnými daty.</p>
+
+<h3 id="přehled">Přehled</h3>
+
+<pre><code class="language-mermaid">classDiagram
+  direction LR
+  class CZ_BundleHDR{
+    &lt;&lt;Bundle&gt;&gt;
+  }
+  CZ_BundleHDR *-- "1" CZ_CompositionHdr
+  CZ_BundleHDR *-- "1" CZ_PatientCore
+  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
+  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
+  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
+  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
+  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
+  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
+  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
+  CZ_EncounterHdr *-- "1" CZ_PatientCore
+  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
+  
+
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: attester[legalAuthenticator]
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: attester[resultValidator]
+  CZ_CompositionHdr --&gt; CZ_PractitionerRole: author
+  CZ_CompositionHdr --&gt; CZ_PatientCore: subject
+  CZ_CompositionHdr --&gt; CZ_EncounterHdr: period [start]
+  CZ_CompositionHdr --&gt; CZ_EncounterHdr: period [end]
+  CZ_EncounterHdr --&gt; CZ_OrganizationCore: serviceProvider
+  CZ_CompositionHdr --&gt; CZ_OrganizationCore: castodian
+
+</code></pre>
+
+<p>Cílem je sjednotit strukturování, validaci a zobrazování zdravotnických dat ve FHIR.<br />
+Tento dokument je obecná šablona (např. pro propouštěcí zprávu, žádanky, nálezy) a slouží jako <strong>implementační průvodce (Implementation Guide)</strong>.</p>
+
+<hr />
+
+<h3 id="přehled-kapitol">Přehled kapitol</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kapitola</th>
+      <th>Účel</th>
+      <th>Výstup / Artefakt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Logický model</strong></td>
+      <td>Klinická struktura obsahu dokumentu</td>
+      <td>Tabulka prvků (CZ/EN)</td>
+    </tr>
+    <tr>
+      <td><strong>Mapování</strong></td>
+      <td>Vazba logického modelu na FHIR elementy</td>
+      <td>Mapping table</td>
+    </tr>
+    <tr>
+      <td><strong>FHIR profily</strong></td>
+      <td>Formální omezení, kardinality, vazby a terminologie</td>
+      <td>StructureDefinition</td>
+    </tr>
+    <tr>
+      <td><strong>Obligations</strong></td>
+      <td>Funkční a zobrazovací povinnosti</td>
+      <td>ObligationDefinition</td>
+    </tr>
+    <tr>
+      <td><strong>Vzorové instance</strong></td>
+      <td>Referenční příklady a validní výstupy</td>
+      <td>Bundle a navázané Resource</td>
+    </tr>
+    <tr>
+      <td><strong>Doporučený postup</strong></td>
+      <td>Kroky pro implementaci a testování</td>
+      <td>Postup v rámci IG</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="2-logický-model">2. Logický model</h2>
+<p><strong>Účel:</strong> Klinicky srozumitelný popis obsahu dokumentu, který tvoří základ pro technické mapování a validaci.<br />
+<strong>Jazyky:</strong> CZ (pro čitelnost), EN (autorita pro mapování a profily).</p>
+
+<p>Každý prvek obsahuje:</p>
+<ul>
+  <li>Identifikátor prvku (pro mapování)</li>
+  <li>Název (CZ/EN), popis</li>
+  <li>Datový typ / charakter hodnoty</li>
+</ul>
+
+<blockquote>
+  <p>Pozn.: EN verze logického modelu je <strong>závazná</strong> pro mapování a FHIR profily.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="3-mapování-logical-model--fhir">3. Mapování (Logical Model → FHIR)</h2>
+
+<h3 id="31-účel">3.1 Účel</h3>
+<p>Mapování definuje vztahy mezi prvky logického modelu (např. eHN Hospital Discharge Report) a odpovídajícími FHIR elementy v české implementační specifikaci (např. HDR CZ).<br />
+Slouží k tomu, aby bylo jednoznačně určeno, <strong>kam se jednotlivé položky logického modelu zapisují</strong> v rámci FHIR struktury (<code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">Bundle</code>, <code class="language-plaintext highlighter-rouge">Section</code> apod.).</p>
+
+<h3 id="32-zásady-mapování">3.2 Zásady mapování</h3>
+<ul>
+  <li>Každý prvek logického modelu musí být mapován na konkrétní FHIR element nebo skupinu elementů.</li>
+  <li>Pokud přímé mapování neexistuje, uvede se <code class="language-plaintext highlighter-rouge">Extension</code> nebo komentář s vysvětlením.</li>
+  <li>Mapování vychází z eHN HDR struktury (A.1 – Header, A.2 – Body) a rozvádí se do sekcí a podsekcí.</li>
+  <li>Každý řádek tabulky musí obsahovat buď vyplněný sloupec <strong>Target Code</strong>, nebo poznámku o způsobu řešení.</li>
+  <li>Vztah se vyjadřuje sloupcem <strong>Relationship</strong>, obvykle jako <code class="language-plaintext highlighter-rouge">is related to</code>.</li>
+</ul>
+
+<hr />
+
+<h3 id="33-přehled-mapování">3.3 Přehled mapování</h3>
+<p><strong>CZ Hospital Discharge Report Model → CZ FHIR Implementation Guide</strong></p>
+
+<h4 id="group-1--mapping-from-a--hospital-discharge-report-ehn--bundle-hdr-cz">Group 1 – Mapping from A – Hospital Discharge Report (eHN) → Bundle (HDR CZ)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source Code</th>
+      <th>Relationship</th>
+      <th>Target Code</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HospitalDischargeReport.header (A.1 – Hospital Discharge Report header data element)</td>
+      <td>is related to</td>
+      <td>Bundle</td>
+      <td>See the header model and map for details</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="group-2--mapping-from-a--hospital-discharge-report-ehn--composition-hdr-cz">Group 2 – Mapping from A – Hospital Discharge Report (eHN) → Composition (HDR CZ)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source Code</th>
+      <th>Relationship</th>
+      <th>Target Code</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HospitalDischargeReport.body (A.2 – Hospital Discharge Report body data element)</td>
+      <td>is related to</td>
+      <td>Composition</td>
+      <td>See details below</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.presentedForm (A.4 – Hospital Discharge Report in its narrative form)</td>
+      <td>is related to</td>
+      <td>Composition.extension:relatedArtefact.valueRelatedArtefact.document</td>
+      <td>Attachment (e.g. application/pdf) holding the presented form</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.advanceDirectives (A.2.1 – Advance directives)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAdvanceDirectives</td>
+      <td>Advance directives section</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.alerts (A.2.2 – Alerts)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAlert</td>
+      <td>See the Alerts model and map for details</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.encounter (A.2.3 – Encounter)</td>
+      <td>is related to</td>
+      <td>Composition.encounter</td>
+      <td>See the InPatientEncounter model and map for details</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.admissionEvaluation (A.2.4 – Admission evaluation)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionAdmissionEvaluation</td>
+      <td>Admission evaluation (with potential subsections)</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.patientHistory (A.2.5 – Patient history)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPatientHx</td>
+      <td>Narrative patient history section</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.hospitalStay (A.2.6 – Course of hospitalisation (Hospital stay))</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionHospitalCourse</td>
+      <td>Hospital course narrative + entries</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails (A.2.7 – Discharge details)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails</td>
+      <td>Container for discharge subsections and narrative</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.objectiveFindings (A.2.7.1 – Objective findings)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.functionalStatus (A.2.7.2 – Functional status)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails.section:sectionFunctionalStatus</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.dischargeDetails.dischargeNote (A.2.7.3 – Discharge note)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionDischargeDetails</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations (A.2.8 – Care plan and other recommendations after discharge)</td>
+      <td>is related to</td>
+      <td>Composition.section</td>
+      <td>Potentially covered by several sections</td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations.carePlan (A.2.8.1 – Care plan)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPlanOfCare</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>HospitalDischargeReport.body.recommendations.medicationSummary (A.2.8.2 – Medication summary)</td>
+      <td>is related to</td>
+      <td>Composition.section:sectionPharmacotherapy</td>
+      <td>CZ guide uses Pharmacotherapy section; use Discharge Medications if present in jurisdiction</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="34-poznámky-k-lokálním-úpravám">3.4 Poznámky k lokálním úpravám</h3>
+<ul>
+  <li>Mapování vychází z modelu eHN HDR v části A.2.</li>
+  <li>V české implementaci se používají pojmenované sekce dle <code class="language-plaintext highlighter-rouge">Composition.section:sectionXXX</code>.</li>
+  <li>Názvy sekcí (např. <code class="language-plaintext highlighter-rouge">sectionPharmacotherapy</code>, <code class="language-plaintext highlighter-rouge">sectionHospitalCourse</code>) odpovídají profilům definovaným v této implementační specifikaci.</li>
+  <li>V případě neexistence odpovídajícího FHIR elementu lze využít <code class="language-plaintext highlighter-rouge">Extension</code> s popisem ve sloupci Comment.</li>
+  <li>Mapování může být podkladem pro generování <code class="language-plaintext highlighter-rouge">ConceptMap</code> artefaktů nebo pro automatickou validaci v rámci testovacích scénářů.</li>
+</ul>
+
+<hr />
+
+<h2 id="4-fhir-profily">4. FHIR profily</h2>
+<p><strong>Účel:</strong> Zpřesňují použití FHIR resource v českém kontextu (omezují volitelnost, sjednocují praxi) a doplňují terminologické bindingy.</p>
+
+<h3 id="41-struktura-profilu">4.1 Struktura profilu</h3>
+<ul>
+  <li>Základní resource (např. <code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, …)</li>
+  <li>Kardinality (např. <code class="language-plaintext highlighter-rouge">Composition.author 1..1</code>, <code class="language-plaintext highlighter-rouge">section 1..*</code>)</li>
+  <li>Vazby mezi profily (např. <code class="language-plaintext highlighter-rouge">Composition.section</code> → <code class="language-plaintext highlighter-rouge">Condition</code>)</li>
+  <li>Odkazy na použitou terminologii (ValueSet, CodeSystem, Binding strength)</li>
+</ul>
+
+<h3 id="42-kardinalita">4.2 Kardinalita</h3>
+<ul>
+  <li><strong>Povinné:</strong> <code class="language-plaintext highlighter-rouge">1..1</code></li>
+  <li><strong>Volitelné:</strong> <code class="language-plaintext highlighter-rouge">0..1</code></li>
+  <li><strong>Opakovatelné:</strong> <code class="language-plaintext highlighter-rouge">0..*</code> / <code class="language-plaintext highlighter-rouge">1..*</code>
+    <blockquote>
+      <p>Národní profily mohou být <strong>přísnější</strong> než evropské.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="43-terminologické-vazby">4.3 Terminologické vazby</h3>
+<p>Každý profil využívá závazné nebo doporučené číselníky:</p>
+<ul>
+  <li><strong>required</strong> – musí být z daného ValueSetu,</li>
+  <li><strong>extensible</strong> – primárně z ValueSetu, případně rozšíření,</li>
+  <li><strong>preferred</strong> – doporučený ValueSet, ale nevyžadovaný.</li>
+</ul>
+
+<blockquote>
+  <p>Příklady: <code class="language-plaintext highlighter-rouge">Composition.type</code> – LOINC <code class="language-plaintext highlighter-rouge">34105-7</code>, <code class="language-plaintext highlighter-rouge">Condition.code</code> – ICD-10/SNOMED CT, <code class="language-plaintext highlighter-rouge">Observation.unit</code> – UCUM.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="5-obligations-povinnosti">5. Obligations (Povinnosti)</h2>
+
+<blockquote>
+  <p><strong>Informativní pro tuto verzi průvodce</strong><br />
+Do této verze příručky byly přidány závazná pravidla pouze jako informativní materiál ke shromažďování zpětné vazby o jejich používání.</p>
+</blockquote>
+
+<h3 id="51-přehled-a-terminologie">5.1 Přehled a terminologie</h3>
+<p>Závazná pravidla (<strong>Obligations</strong>) specifikují schopnosti a chování, které definovaní aktéři <strong>MAY</strong> (MOHOU), <strong>SHOULD</strong> (MĚLI BY) nebo <strong>SHALL</strong> (MUSÍ) implementovat v rámci uvedených FHIR profilů.<br />
+Obligations doplňují kardinality a terminologické bindingy všude tam, kde samotná struktura nestačí (např. požadavky na uživatelské funkce, workflow nebo povinné zobrazení vybraných položek).</p>
+
+<h3 id="52-úrovně-plnění-l1l3">5.2 Úrovně plnění (L1–L3)</h3>
+<ul>
+  <li><strong>L1</strong> – <em>nestrukturovaný dokument</em>: povinná metadata dokumentu + lidsky čitelný PDF výstup.</li>
+  <li><strong>L2</strong> – <em>strukturované sekce</em>: dokument členěný do identifikovatelných sekcí, obsah je převážně narativní.</li>
+  <li><strong>L3</strong> – <em>strukturované + kódované</em>: stejné sekce jako L2; vybrané informace <strong>SHALL</strong> být ve formalizované a kódované podobě.</li>
+</ul>
+
+<h3 id="53-aktéři">5.3 Aktéři</h3>
+<ul>
+  <li><strong>Tvůrce úrovně L1</strong> – vytváří L1 zprávu (odeslání konzumentovi / uložení do repozitáře).</li>
+  <li><strong>Konzument úrovně L1</strong> – přijímá/načítá a používá L1 zprávu.</li>
+  <li><strong>Tvůrce úrovně L2</strong> – vytváří L2 zprávu (sekce, narativ).</li>
+  <li><strong>Konzument úrovně L2</strong> – zpracovává L2 zprávu.</li>
+  <li><strong>Tvůrce úrovně L3</strong> – vytváří L3 zprávu (formální + kódované prvky).</li>
+  <li><strong>Konzument úrovně L3</strong> – zpracovává L3 zprávu včetně formálních/kódovaných prvků.</li>
+</ul>
+
+<blockquote>
+  <p>Diagram aktérů: <code class="language-plaintext highlighter-rouge">hdr-Actors-cs.svg</code></p>
+</blockquote>
+
+<h3 id="54-typy-závazných-pravidel">5.4 Typy závazných pravidel</h3>
+<ul>
+  <li><strong>Creator obligations</strong> – povinnosti pro <strong>tvorbu</strong> dokumentu (systémové/UX chování).
+    <ul>
+      <li>Příklad: Tvůrce <strong>SHALL</strong> umožnit výběr a uložení autora/atestátora propouštěcí zprávy.</li>
+    </ul>
+  </li>
+  <li><strong>Consumer obligations</strong> – povinnosti pro <strong>zobrazení</strong> v prohlížečích/konzumentech.
+    <ul>
+      <li>Příklad: Konzument <strong>SHALL</strong> zobrazit <code class="language-plaintext highlighter-rouge">Composition.title</code>, <code class="language-plaintext highlighter-rouge">Composition.date</code> a <code class="language-plaintext highlighter-rouge">Composition.author</code>; jazyk dokumentu <strong>MAY</strong> být nezobrazen.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="55-vazba-na-profily-a-testování">5.5 Vazba na profily a testování</h3>
+<p>Každé závazné pravidlo (Obligation) je svázáno s konkrétním profilem nebo skupinou profilů, které doplňuje.<br />
+Obligations se uplatňují v testovacích scénářích validace – např. při kontrole správného zobrazení sekcí nebo existence povinných funkcí při tvorbě dokumentu.</p>
+
+<hr />
+
+<h2 id="6-vzorové-instance-examples">6. Vzorové instance (Examples)</h2>
+
+<p><strong>Účel:</strong><br />
+Příklady slouží jako <strong>referenční implementace</strong>, která ukazuje, jak mají vypadat <strong>plně validní výstupy</strong> pro jednotlivé profily a úrovně zralosti (<strong>L1–L3</strong>) datové struktury.<br />
+Nejedná se pouze o ukázku <code class="language-plaintext highlighter-rouge">Bundle</code>, ale o <strong>kompletní sadu vzájemně provázaných FHIR resource</strong>, které reprezentují reálný klinický dokument včetně všech potřebných referencí.</p>
+
+<h3 id="61-obsah-a-struktura-příkladů">6.1 Obsah a struktura příkladů</h3>
+<p>Každý příklad:</p>
+<ul>
+  <li>odpovídá konkrétnímu profilu (např. <code class="language-plaintext highlighter-rouge">CZ_CompositionHdr</code>, <code class="language-plaintext highlighter-rouge">CZ_ConditionHdr</code>, <code class="language-plaintext highlighter-rouge">CZ_PatientCore</code>),</li>
+  <li>reflektuje závazná pravidla (Obligations) a kardinality profilu,</li>
+  <li>využívá příslušné číselníky a terminologické bindingy (LOINC, SNOMED CT, ICD-10, UCUM),</li>
+  <li>je validní vůči definovanému profilu v rámci implementační příručky.</li>
+</ul>
+
+<h3 id="62-úrovně-zralosti-datové-struktury">6.2 Úrovně zralosti datové struktury</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Úroveň</th>
+      <th>Obsah příkladu</th>
+      <th>Struktura</th>
+      <th>Použití</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>L1</strong></td>
+      <td>PDF + metadata</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td>Minimální interoperabilita</td>
+    </tr>
+    <tr>
+      <td><strong>L2</strong></td>
+      <td>Sekce + text</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition.section</code></td>
+      <td>Strukturovaný narativ</td>
+    </tr>
+    <tr>
+      <td><strong>L3</strong></td>
+      <td>Kódované položky</td>
+      <td><code class="language-plaintext highlighter-rouge">Composition.section</code> + <code class="language-plaintext highlighter-rouge">Condition</code>, <code class="language-plaintext highlighter-rouge">Medication</code>, …</td>
+      <td>Strojová interoperabilita</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="63-typická-sada-resource-pro-příklad-propouštěcí-zprávy">6.3 Typická sada resource pro příklad propouštěcí zprávy</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Composition</code> – hlavička a sekce dokumentu</li>
+  <li><code class="language-plaintext highlighter-rouge">Patient</code> – identifikace pacienta</li>
+  <li><code class="language-plaintext highlighter-rouge">Encounter</code> – hospitalizační epizoda</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition</code> – diagnózy (včetně hlavní diagnózy)</li>
+  <li><code class="language-plaintext highlighter-rouge">Procedure</code> – významné výkony a zákroky</li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationStatement</code>, <code class="language-plaintext highlighter-rouge">MedicationRequest</code>, <code class="language-plaintext highlighter-rouge">MedicationDispense</code> – informace o léčbě</li>
+  <li><code class="language-plaintext highlighter-rouge">AllergyIntolerance</code> – alergie a intolerance</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation</code> – klíčové nálezy, výsledky, fyziologické hodnoty</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference</code> – vložená PDF/narativní rendice</li>
+  <li>Další navázané resource dle profilu (např. <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Organization</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code>)</li>
+</ul>
+
+<h3 id="64-cíl-příkladů">6.4 Cíl příkladů</h3>
+<p>Příklady mají sloužit:</p>
+<ul>
+  <li><strong>implementátorům</strong> jako referenční model validní instance pro testování,</li>
+  <li><strong>tvůrcům a konzumentům</strong> (L1–L3) jako ukázka rozsahu dat, které mají být dostupné,</li>
+  <li><strong>testovacím scénářům</strong> jako základ pro automatickou validaci proti profilům a závazným pravidlům (<em>Obligations</em>).</li>
+</ul>
+
+<h3 id="65-validace-příkladů">6.5 Validace příkladů</h3>
+<p>Každý příklad musí být validní vůči příslušnému profilu (<code class="language-plaintext highlighter-rouge">StructureDefinition</code>) a mít správně navázané reference mezi resource.<br />
+Validaci lze provést pomocí nástroje <strong>FHIR Validator</strong>, IG Publisheru nebo jiného validačního rámce.</p>
+<blockquote>
+  <p>Doporučuje se zahrnout validaci do testovací pipeline (např. CI/CD) jako kontrolu souladu s profily.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.cz/">HL7 Czech Republic</a>.  Package hl7.fhir.cz.hdr#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 20, 2026 08:32+0000">2026-03-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/hdr/branches/main/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

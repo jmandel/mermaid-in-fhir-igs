@@ -1,0 +1,57 @@
+{
+  "slug": "upm-nthc-ph-roadsafetyig-main-data-modelling",
+  "storageId": "UPM-NTHC_PH-RoadSafetyIG@main",
+  "packageId": "example.fhir.ph.roadsafety#0.3.0",
+  "package": "example.fhir.ph.roadsafety",
+  "version": "0.3.0",
+  "title": "DRAFT PH Road Safety Implementation Guide",
+  "repo": "UPM-NTHC/PH-RoadSafetyIG/branches/main/qa.json",
+  "repoPath": "UPM-NTHC/PH-RoadSafetyIG",
+  "buildUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/UPM-NTHC/PH-RoadSafetyIG/tree/main",
+  "canonicalUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/ImplementationGuide/example.fhir.ph.roadsafety",
+  "canonical": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main"
+  ],
+  "fileName": "data-modelling.html",
+  "originalFileName": "data-modelling.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/UPM-NTHC_PH-RoadSafetyIG@main/data-modelling.html",
+  "pagePath": "data-modelling.html",
+  "pageUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/data-modelling.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 677,
+  "totalDiagramLength": 1354,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling",
+    "caseJson": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/case.json",
+    "before": {
+      "dir": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/before",
+      "html": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/before/index.html"
+    },
+    "after": {
+      "dir": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/after",
+      "html": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/failure",
+      "html": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/source",
+      "html": "pages/UPM-NTHC/PH-RoadSafetyIG/main/0.3.0/data-modelling/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/data-modelling.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/assets/js/mermaid-init.js"
+}

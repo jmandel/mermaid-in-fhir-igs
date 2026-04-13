@@ -1,0 +1,56 @@
+{
+  "slug": "iknl-pzp-fhir-r4-main-data-model",
+  "storageId": "IKNL_PZP-FHIR-R4@main",
+  "packageId": "iknl.fhir.r4.pzp#1.0.0-rc2",
+  "package": "iknl.fhir.r4.pzp",
+  "version": "1.0.0-rc2",
+  "title": "Advance Care Planning (PZP)",
+  "repo": "IKNL/PZP-FHIR-R4/branches/main/qa.json",
+  "repoPath": "IKNL/PZP-FHIR-R4",
+  "buildUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/IKNL/PZP-FHIR-R4/tree/main",
+  "canonicalUrl": "https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp",
+  "canonical": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main"
+  ],
+  "fileName": "data-model.html",
+  "originalFileName": "data-model.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/IKNL_PZP-FHIR-R4@main/data-model.html",
+  "pagePath": "data-model.html",
+  "pageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-model.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 3270,
+  "totalDiagramLength": 3270,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model",
+    "caseJson": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/case.json",
+    "before": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/before",
+      "html": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/before/index.html"
+    },
+    "after": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/after",
+      "html": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/failure",
+      "html": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/source",
+      "html": "pages/IKNL/PZP-FHIR-R4/main/1.0.0-rc2/data-model/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-model.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/mermaid-init.js"
+}

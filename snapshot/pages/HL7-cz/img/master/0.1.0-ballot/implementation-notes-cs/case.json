@@ -1,0 +1,57 @@
+{
+  "slug": "hl7-cz-img-master-implementation-notes-cs",
+  "storageId": "HL7-cz_img@master",
+  "packageId": "hl7.fhir.cz.img#0.1.0-ballot",
+  "package": "hl7.fhir.cz.img",
+  "version": "0.1.0-ballot",
+  "title": "HL7 Czech Imaging Report IG",
+  "repo": "HL7-cz/img/branches/master/qa.json",
+  "repoPath": "HL7-cz/img",
+  "buildUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/HL7-cz/img/tree/master",
+  "canonicalUrl": "https://hl7.cz/fhir/img/ImplementationGuide/hl7.fhir.cz.img",
+  "canonical": "https://build.fhir.org/ig/HL7-cz/img/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7-cz/img/branches/master"
+  ],
+  "fileName": "implementation-notes-cs.html",
+  "originalFileName": "implementation-notes-cs.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7-cz_img@master/implementation-notes-cs.html",
+  "pagePath": "implementation-notes-cs.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes-cs.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 2326,
+  "totalDiagramLength": 4652,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs",
+    "caseJson": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/case.json",
+    "before": {
+      "dir": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/before",
+      "html": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/after",
+      "html": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/failure",
+      "html": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/source",
+      "html": "pages/HL7-cz/img/master/0.1.0-ballot/implementation-notes-cs/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes-cs.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/mermaid-init.js"
+}

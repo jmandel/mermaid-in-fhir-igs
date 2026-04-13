@@ -1,0 +1,2806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Permission Ticket Architecture - SMART Permission Tickets v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Permission Tickets</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/oidf-issuers.html">OpenID Federation</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/toc.html'><b>Table of Contents</b></a></li><li><b>Permission Ticket Architecture</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART Permission Tickets, published by . This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/jmandel/smart-permission-tickets-wip/'>https://github.com/jmandel/smart-permission-tickets-wip/</a> and changes regularly. See the <a href='http://smarthealthit.org/ig/permission-tickets/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Permission Ticket Architecture</h2>
+  
+
+
+
+
+
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2026-04-09
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">SmartPermissionTickets</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#scope-and-non-goals" id="markdown-toc-scope-and-non-goals">Scope and Non-Goals</a></li>
+  <li><a href="#protocol-overview" id="markdown-toc-protocol-overview">Protocol Overview</a></li>
+  <li><a href="#technical-specification" id="markdown-toc-technical-specification">Technical Specification</a></li>
+  <li><a href="#access-calculation" id="markdown-toc-access-calculation">Access Calculation</a></li>
+  <li><a href="#must-understand-semantics" id="markdown-toc-must-understand-semantics">Must-Understand Semantics</a></li>
+  <li><a href="#requester-semantics" id="markdown-toc-requester-semantics">Requester Semantics</a></li>
+  <li><a href="#issuer-vs-recipient-responsibility" id="markdown-toc-issuer-vs-recipient-responsibility">Issuer vs. Recipient Responsibility</a></li>
+  <li><a href="#context-ticket-type-specific-semantics" id="markdown-toc-context-ticket-type-specific-semantics">Context (Ticket-Type-Specific Semantics)</a></li>
+  <li><a href="#ticket-audience-aud-and-recipient-set" id="markdown-toc-ticket-audience-aud-and-recipient-set">Ticket Audience (<code class="language-plaintext highlighter-rouge">aud</code>) and Recipient Set</a></li>
+  <li><a href="#ticket-type-registry" id="markdown-toc-ticket-type-registry">Ticket Type Registry</a></li>
+  <li><a href="#ticket-lifecycle" id="markdown-toc-ticket-lifecycle">Ticket Lifecycle</a></li>
+  <li><a href="#catalog-of-use-cases" id="markdown-toc-catalog-of-use-cases">Catalog of Use Cases</a></li>
+  <li><a href="#developer-reference" id="markdown-toc-developer-reference">Developer Reference</a></li>
+  <li><a href="#conformance" id="markdown-toc-conformance">Conformance</a></li>
+  <li><a href="#downloads" id="markdown-toc-downloads">Downloads</a></li>
+</ul>
+
+</div>
+<h3 id="introduction">Introduction</h3>
+
+<p>A Permission Ticket is an issuer-signed JWT presented to a Data Holder's token endpoint via <a href="https://www.rfc-editor.org/rfc/rfc8693">OAuth 2.0 Token Exchange (RFC 8693)</a>. It allows a client to redeem a portable authorization grant at any eligible Data Holder within the ticket's audience, without requiring the issuer to know where the subject has received care.</p>
+
+<p>The ticket is built around a <strong>portable kernel</strong>: only the signed fields that a recipient plausibly needs in order to say yes or no to a request live in the common shell. Each ticket conveys a <strong>subject</strong> (whose data), an optional <strong>requester</strong> (on whose behalf), an <strong>access</strong> grant (what resources and constraints), and an optional <strong>context</strong> object whose schema is selected by <code class="language-plaintext highlighter-rouge">ticket_type</code>.</p>
+
+<p>When present, <code class="language-plaintext highlighter-rouge">presenter_binding</code> cryptographically binds the ticket to the presenting client's key and/or trust-framework identity. A Data Holder authenticates the client, verifies the ticket signature against the issuer's published keys, enforces presenter binding if present, and grants access scoped to the intersection of requested and authorized access. No user login is required at the Data Holder.</p>
+
+<h3 id="scope-and-non-goals">Scope and Non-Goals</h3>
+
+<p><strong>This specification defines:</strong></p>
+<ul>
+  <li>The Permission Ticket artifact format and required claims</li>
+  <li>Presentation via OAuth 2.0 Token Exchange (RFC 8693) at the token endpoint</li>
+  <li>A custom <code class="language-plaintext highlighter-rouge">subject_token_type</code> for Permission Tickets</li>
+  <li>Discovery of Permission Ticket support via SMART configuration</li>
+  <li>Optional sender-constrained binding via <code class="language-plaintext highlighter-rouge">presenter_binding</code></li>
+  <li>Audience validation for single-recipient and network-wide recipient sets</li>
+  <li>Subject resolution and validation rules</li>
+  <li>Access calculation and access constraint enforcement</li>
+  <li>Must-understand semantics for base kernel fields and profile extensions</li>
+  <li>Seven use-case ticket types</li>
+</ul>
+
+<p><strong>This specification does not define:</strong></p>
+<ul>
+  <li>How a ticket issuer verifies real-world facts before minting a ticket</li>
+  <li>Trust framework governance or membership validation procedures</li>
+  <li>User-facing consent or authorization UX</li>
+  <li>Ticket issuance protocols between clients and issuers</li>
+  <li>A universal schema for all possible use cases (ticket types define use-case-specific constraints)</li>
+</ul>
+
+<h3 id="protocol-overview">Protocol Overview</h3>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Trigger as Trigger Event
+    participant Issuer as Trusted Issuer
+    participant Client as Client App
+    participant Server as Data Holder (FHIR)
+
+    Note over Trigger, Client: 1. Context Established
+    Trigger-&gt;&gt;Issuer: Event (e.g. Referral, Case Report)
+    Issuer-&gt;&gt;Issuer: Verify Context &amp; Identity
+    Issuer-&gt;&gt;Client: Mint Permission Ticket (JWT)
+
+    Note over Client, Server: 2. Redemption
+    Client-&gt;&gt;Client: Generate Client Assertion (JWT)
+    Client-&gt;&gt;Server: POST /token (token exchange + ticket as subject_token)
+
+    Note over Server: 3. Validation
+    Server-&gt;&gt;Server: Verify Client Assertion
+    Server-&gt;&gt;Server: Verify Ticket Signature (Issuer Trust)
+    Server-&gt;&gt;Server: Enforce Ticket Constraints
+    Server--&gt;&gt;Client: Access Token (Down-scoped)
+
+    Note over Client, Server: 4. Access
+    Client-&gt;&gt;Server: GET /Patient/123/Immunization
+    Server--&gt;&gt;Client: FHIR Resources
+</code></pre>
+
+<p>A trusted issuer mints a Permission Ticket and delivers it to the client. The client presents the ticket as a <code class="language-plaintext highlighter-rouge">subject_token</code> in an <a href="https://www.rfc-editor.org/rfc/rfc8693">RFC 8693</a> token exchange request, authenticating itself with a separate <code class="language-plaintext highlighter-rouge">client_assertion</code>. The Data Holder authenticates the client (standard SMART Backend Services), then validates the ticket: signature, issuer trust, audience, presenter binding, and access constraints. If valid, it issues an access token scoped to the intersection of requested and ticket-authorized access.</p>
+
+<hr />
+
+<h3 id="technical-specification">Technical Specification</h3>
+
+<h4 id="transport-token-exchange-rfc-8693">Transport: Token Exchange (RFC 8693)</h4>
+
+<p>Permission Tickets are presented via <a href="https://www.rfc-editor.org/rfc/rfc8693">OAuth 2.0 Token Exchange (RFC 8693)</a>. The client authenticates using <strong><a href="https://build.fhir.org/ig/HL7/smart-app-launch/backend-services.html">SMART Backend Services</a></strong> conventions (JWT <code class="language-plaintext highlighter-rouge">client_assertion</code> per <strong>RFC 7523</strong>) and presents the Permission Ticket as a separate <code class="language-plaintext highlighter-rouge">subject_token</code> parameter. This cleanly separates client <strong>authentication</strong> from the authorization <strong>grant</strong>: the <code class="language-plaintext highlighter-rouge">client_assertion</code> proves client identity; the <code class="language-plaintext highlighter-rouge">subject_token</code> carries the Permission Ticket.</p>
+
+<p>Using a distinct grant type (<code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:grant-type:token-exchange</code>) ensures that Data Holders that do not support Permission Tickets will reject the request with <code class="language-plaintext highlighter-rouge">unsupported_grant_type</code> rather than silently ignoring the ticket.</p>
+
+<h5 id="discovery">Discovery</h5>
+
+<p>Data Holders that support Permission Tickets SHALL advertise this in their <code class="language-plaintext highlighter-rouge">.well-known/smart-configuration</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"grant_types_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"client_credentials"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"urn:ietf:params:oauth:grant-type:token-exchange"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"smart_permission_ticket_types_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://smarthealthit.org/permission-ticket-type/patient-self-access-v1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"https://smarthealthit.org/permission-ticket-type/public-health-investigation-v1"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grant_types_supported</code></td>
+      <td>SHALL include <code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:grant-type:token-exchange</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code></td>
+      <td>Array of <code class="language-plaintext highlighter-rouge">ticket_type</code> URIs the Data Holder accepts. Clients SHOULD check this before presenting a ticket.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="trust-and-client-registration">Trust and Client Registration</h5>
+
+<p>This specification is designed so that <strong>client identity does not need to be universally understood</strong>. The Permission Ticket carries the authorization context; the client only needs to prove it holds the key bound to the ticket (or satisfies the framework binding). Data Holders need to authenticate clients, but do not need to maintain a shared global client registry.</p>
+
+<p>Many client identity approaches are compatible with this architecture. The same approach typically appears in two contexts: <strong>registration</strong> (how a Data Holder learns the client's keys) and <strong>ticket binding</strong> (how a ticket constrains which client may redeem it). These are related but not identical: for example, a manually registered unaffiliated client may still be bound by key thumbprint if the issuer knows the exact client key, or may be left unbound if the issuer does not know which client will redeem the ticket. The table below summarizes a few common examples; it is illustrative, not exhaustive, and other trust frameworks fit the same pattern.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Approach</th>
+      <th>Registration</th>
+      <th>Ticket Binding (<code class="language-plaintext highlighter-rouge">presenter_binding</code>)</th>
+      <th>Key Discovery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Manual / Unaffiliated</strong></td>
+      <td>Client registers directly with each Data Holder, exchanging public keys out of band</td>
+      <td>Either <code class="language-plaintext highlighter-rouge">jkt</code> binding when the issuer knows the exact client key, or no <code class="language-plaintext highlighter-rouge">presenter_binding</code> when the issuer does not know which client will redeem the ticket</td>
+      <td>Pre-registered JWK or JWKS</td>
+    </tr>
+    <tr>
+      <td><strong>Well-Known JWKS</strong></td>
+      <td>Client publishes keys at <code class="language-plaintext highlighter-rouge">{entity_uri}/.well-known/jwks.json</code>; trust frameworks (published directories) list recognized entities</td>
+      <td><code class="language-plaintext highlighter-rouge">framework_client</code> with <code class="language-plaintext highlighter-rouge">framework_type: "well-known"</code> and <code class="language-plaintext highlighter-rouge">entity_uri</code> matching the client's URL identity</td>
+      <td>Fetched from <code class="language-plaintext highlighter-rouge">{entity_uri}/.well-known/jwks.json</code></td>
+    </tr>
+    <tr>
+      <td><strong>OpenID Federation</strong></td>
+      <td>Client includes a <code class="language-plaintext highlighter-rouge">trust_chain</code> in the header of its <code class="language-plaintext highlighter-rouge">client_assertion</code>; Data Holder validates via a common Trust Anchor</td>
+      <td><code class="language-plaintext highlighter-rouge">framework_client</code> with appropriate <code class="language-plaintext highlighter-rouge">framework</code>/<code class="language-plaintext highlighter-rouge">entity_uri</code></td>
+      <td>Resolved from federation <code class="language-plaintext highlighter-rouge">trust_chain</code></td>
+    </tr>
+    <tr>
+      <td><strong>UDAP</strong></td>
+      <td>Client presents X.509 certificate chain from a trusted CA</td>
+      <td><code class="language-plaintext highlighter-rouge">framework_client</code> with <code class="language-plaintext highlighter-rouge">framework_type: "udap"</code> and <code class="language-plaintext highlighter-rouge">entity_uri</code> matching certificate SAN</td>
+      <td>Certificate in <code class="language-plaintext highlighter-rouge">x5c</code> header of <code class="language-plaintext highlighter-rouge">client_assertion</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Client ID format and registration details are determined by the chosen approach. Client-to-Issuer issuance protocol details are out of scope for this specification; profile-specific guides may define them.</p>
+
+<p>For the <strong>Well-Known JWKS</strong> approach, this specification uses a deterministic client identifier convention:</p>
+
+<ul>
+  <li>the client's stable identifier is <code class="language-plaintext highlighter-rouge">well-known:{entity_uri}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">entity_uri</code> is the HTTPS URL identity of the client</li>
+  <li>the same <code class="language-plaintext highlighter-rouge">entity_uri</code> yields the same <code class="language-plaintext highlighter-rouge">client_id</code> at every Data Holder, so no per-holder registration-assigned identifier is needed for this class of client</li>
+</ul>
+
+<p>This is how a set of independently operated Data Holders can recognize the same well-known client consistently. The <code class="language-plaintext highlighter-rouge">well-known:</code> prefix indicates that the remainder of the <code class="language-plaintext highlighter-rouge">client_id</code> is an entity URL whose keys are published at <code class="language-plaintext highlighter-rouge">{entity_uri}/.well-known/jwks.json</code>. When a client presents a <code class="language-plaintext highlighter-rouge">client_assertion</code> with <code class="language-plaintext highlighter-rouge">iss = sub = well-known:{entity_uri}</code>, the Data Holder strips the prefix, resolves the JWKS from the entity's well-known location, verifies the signature, and then applies any relevant trust-framework checks for that entity.</p>
+
+<p><strong>The Request:</strong></p>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">fhir.hospital.com</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+
+grant_type=urn:ietf:params:oauth:grant-type:token-exchange
+&amp;subject_token=eyJhbGciOiJ... (Permission Ticket JWT, signed by issuer)
+&amp;subject_token_type=https://smarthealthit.org/token-type/permission-ticket
+&amp;scope=patient/Observation.rs
+&amp;client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer
+&amp;client_assertion=eyJhbGciOiJ... (Client authentication JWT)
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grant_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:grant-type:token-exchange</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subject_token</code></td>
+      <td>The signed Permission Ticket JWT</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subject_token_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://smarthealthit.org/token-type/permission-ticket</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scope</code></td>
+      <td>Requested SMART scopes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">client_assertion_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:client-assertion-type:jwt-bearer</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">client_assertion</code></td>
+      <td>Standard SMART Backend Services client authentication JWT</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="full-example">Full Example</h5>
+<p>Here is what the <code class="language-plaintext highlighter-rouge">client_assertion</code> looks like when decoded. It is a standard SMART Backend Services authentication JWT — it does not contain the Permission Ticket.</p>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Client Assertion
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8",
+  "trust_chain": [
+    "eyJhbGciOiJFUzI1NiIs... (Signed Entity Statement for Client)",
+    "eyJhbGciOiJFUzI1NiIs... (Signed Entity Statement for Intermediate)",
+    "eyJhbGciOiJFUzI1NiIs... (Signed Entity Statement for Trust Anchor)"
+  ]
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://app.client.id",
+  "sub": "https://app.client.id",
+  "aud": "https://fhir.hospital.com/token",
+  "jti": "assertion-jti-123",
+  "iat": 1775572485,
+  "exp": 1775572785
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgiLCJ0cnVzdF9jaGFpbiI6WyJleUpoYkdjaU9pSkZVekkxTmlJcy4uLiAoU2lnbmVkIEVudGl0eSBTdGF0ZW1lbnQgZm9yIENsaWVudCkiLCJleUpoYkdjaU9pSkZVekkxTmlJcy4uLiAoU2lnbmVkIEVudGl0eSBTdGF0ZW1lbnQgZm9yIEludGVybWVkaWF0ZSkiLCJleUpoYkdjaU9pSkZVekkxTmlJcy4uLiAoU2lnbmVkIEVudGl0eSBTdGF0ZW1lbnQgZm9yIFRydXN0IEFuY2hvcikiXX0.eyJpc3MiOiJodHRwczovL2FwcC5jbGllbnQuaWQiLCJzdWIiOiJodHRwczovL2FwcC5jbGllbnQuaWQiLCJhdWQiOiJodHRwczovL2ZoaXIuaG9zcGl0YWwuY29tL3Rva2VuIiwianRpIjoiYXNzZXJ0aW9uLWp0aS0xMjMiLCJpYXQiOjE3NzU1NzI0ODUsImV4cCI6MTc3NTU3Mjc4NX0.CmEd8cDIjucIiS2GjeIFSAbYCjpzmOjpeI8-HgUW0lskFfxMpDpEeDE8g76sg7iVaFdQwzyzTJzMDdkbmNnS4A</code></pre>
+        </details>
+    </div>
+</div>
+
+<p>The Permission Ticket is sent separately in the <code class="language-plaintext highlighter-rouge">subject_token</code> parameter. See the <a href="#catalog-of-use-cases">use case examples</a> below for decoded ticket payloads.</p>
+
+<h5 id="presentation-model">Presentation Model</h5>
+
+<p>Client authentication and authorization are separated:</p>
+
+<ul>
+  <li>The <strong><code class="language-plaintext highlighter-rouge">client_assertion</code></strong> authenticates the client per standard SMART Backend Services. It contains only <code class="language-plaintext highlighter-rouge">iss</code>, <code class="language-plaintext highlighter-rouge">sub</code>, <code class="language-plaintext highlighter-rouge">aud</code>, <code class="language-plaintext highlighter-rouge">jti</code>, and <code class="language-plaintext highlighter-rouge">exp</code> — no ticket content.</li>
+  <li>The <strong><code class="language-plaintext highlighter-rouge">subject_token</code></strong> carries the Permission Ticket. It is a separate form parameter, not embedded in the assertion.</li>
+</ul>
+
+<p>The ticket's <code class="language-plaintext highlighter-rouge">presenter_binding</code> claim determines how tightly the ticket is bound to a specific client. There are three modes:</p>
+
+<ol>
+  <li><strong>Key-bound</strong> (<code class="language-plaintext highlighter-rouge">presenter_binding.method = "jkt"</code>): the ticket can only be redeemed by the client whose key matches the bound thumbprint.</li>
+  <li><strong>Framework-bound</strong> (<code class="language-plaintext highlighter-rouge">presenter_binding.method = "framework_client"</code>): the ticket can only be redeemed by a client whose trust-framework identity matches the bound entity.</li>
+  <li><strong>No binding</strong> (<code class="language-plaintext highlighter-rouge">presenter_binding</code> absent): any authenticated client in the ticket's <code class="language-plaintext highlighter-rouge">aud</code> may redeem it.</li>
+</ol>
+
+<p>In all three modes, the Data Holder authenticates the client through its standard mechanism (e.g., <code class="language-plaintext highlighter-rouge">client_assertion</code> JWT). The binding claims add constraints on top of that authentication, not in place of it. See <a href="#presenter-binding">Presenter Binding</a> below for full verification rules.</p>
+
+<p>The Data Holder SHALL NOT rely on any cross-party-stable client identifier inside the Permission Ticket itself. Client identity is established by the <code class="language-plaintext highlighter-rouge">client_assertion</code> (<code class="language-plaintext highlighter-rouge">iss</code>/<code class="language-plaintext highlighter-rouge">sub</code>).</p>
+
+<h4 id="artifact-ticket-structure">Artifact: Ticket Structure</h4>
+<p>The ticket payload is a JWT. It carries top-level <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">access</code>, optional <code class="language-plaintext highlighter-rouge">requester</code>, and optional <code class="language-plaintext highlighter-rouge">context</code> claims alongside the standard JWT envelope. <code class="language-plaintext highlighter-rouge">ticket_type</code> is the sole discriminator for the context schema and processing rules.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"iss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://trusted-issuer.org"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://network.org"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1735689600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jti"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticket-example-001"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ticket_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://smarthealthit.org/permission-ticket-type/patient-self-access-v1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"presenter_binding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jkt"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jkt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0ZcOCORZNYy-DWpqq30jZyJGHTN0d2HglBV3uiguA4I"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"patient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"John"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"birthDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-01-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hospital.example.org/mrn"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A12345"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resource_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Immunization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"read"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"search"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resource_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AllergyIntolerance"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"read"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"search"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>See the <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/StructureDefinition-PermissionTicket.html">Logical Model</a> for formal definitions.</p>
+
+<p>Every Permission Ticket SHALL include <code class="language-plaintext highlighter-rouge">ticket_type</code>. The <code class="language-plaintext highlighter-rouge">ticket_type</code> identifies the ticket's schema and processing rules. The Data Holder uses <code class="language-plaintext highlighter-rouge">ticket_type</code> to select validation and access logic.</p>
+
+<h4 id="presenter-binding">Presenter Binding</h4>
+<p>A Permission Ticket MAY bind redemption to a specific client using the <code class="language-plaintext highlighter-rouge">presenter_binding</code> claim. <code class="language-plaintext highlighter-rouge">presenter_binding</code> is a discriminated union selected by <code class="language-plaintext highlighter-rouge">method</code>, with two shapes:</p>
+
+<ul>
+  <li><strong>Key binding</strong> — <code class="language-plaintext highlighter-rouge">{ "method": "jkt", "jkt": "&lt;RFC 7638 thumbprint&gt;" }</code></li>
+  <li><strong>Framework binding</strong> — <code class="language-plaintext highlighter-rouge">{ "method": "framework_client", "framework": "&lt;framework id&gt;", "framework_type": "&lt;udap | well-known&gt;", "entity_uri": "&lt;client entity URI&gt;" }</code></li>
+</ul>
+
+<p><strong>Note on <code class="language-plaintext highlighter-rouge">cnf</code>:</strong> Standard JWT confirmation uses the <code class="language-plaintext highlighter-rouge">cnf</code> claim (<a href="https://www.rfc-editor.org/rfc/rfc7800">RFC 7800</a>). This specification uses <code class="language-plaintext highlighter-rouge">presenter_binding.method = "jkt"</code> with a sibling <code class="language-plaintext highlighter-rouge">jkt</code> field instead, keeping all presenter-binding semantics in one place. The binding semantics are the same as <code class="language-plaintext highlighter-rouge">cnf.jkt</code>; only the claim shape differs.</p>
+
+<h5 id="binding-modes">Binding Modes</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th><code class="language-plaintext highlighter-rouge">method</code></th>
+      <th>Verification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Key-bound</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">"jkt"</code></td>
+      <td>Data Holder computes the JWK Thumbprint (<a href="https://www.rfc-editor.org/rfc/rfc7638">RFC 7638</a>) of the <code class="language-plaintext highlighter-rouge">client_assertion</code> signing key and compares it to <code class="language-plaintext highlighter-rouge">presenter_binding.jkt</code>. Reject on mismatch.</td>
+    </tr>
+    <tr>
+      <td><strong>Framework-bound</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">"framework_client"</code></td>
+      <td>Data Holder confirms the presenting client matches <code class="language-plaintext highlighter-rouge">presenter_binding.entity_uri</code> within <code class="language-plaintext highlighter-rouge">presenter_binding.framework</code>, using that framework's native client authentication. Typical patterns: for UDAP (<code class="language-plaintext highlighter-rouge">framework_type = "udap"</code>), the client's X.509 certificate SAN URI matches <code class="language-plaintext highlighter-rouge">entity_uri</code> and chains to a trust anchor for the framework; for well-known clients (<code class="language-plaintext highlighter-rouge">framework_type = "well-known"</code>), the Data Holder fetches <code class="language-plaintext highlighter-rouge">${entity_uri}/.well-known/jwks.json</code> and verifies the <code class="language-plaintext highlighter-rouge">client_assertion</code> against that key set.</td>
+    </tr>
+    <tr>
+      <td><strong>No binding</strong></td>
+      <td><em>(claim absent)</em></td>
+      <td>Ticket does not constrain which client may redeem it. Any authenticated client in the ticket's <code class="language-plaintext highlighter-rouge">aud</code> may present it.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In all modes, the Data Holder authenticates the presenting client through its standard mechanism. Presenter binding adds a constraint on top of that authentication, not in place of it.</p>
+
+<h5 id="presenter-binding-per-ticket-type">Presenter Binding per Ticket Type</h5>
+
+<p><code class="language-plaintext highlighter-rouge">presenter_binding</code> is OPTIONAL. Some deployments will require it by local policy or narrower profiles, but the base model permits unbound tickets.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket Type</th>
+      <th><code class="language-plaintext highlighter-rouge">presenter_binding</code></th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UC1: Patient Access</td>
+      <td>Optional</td>
+      <td>Issuer may know the exact app key, but need not</td>
+    </tr>
+    <tr>
+      <td>UC2: Authorized Rep</td>
+      <td>Optional</td>
+      <td>Issuer may know the presenting client, but need not</td>
+    </tr>
+    <tr>
+      <td>UC3: Public Health</td>
+      <td>Optional</td>
+      <td>B2B; <code class="language-plaintext highlighter-rouge">aud</code> + client auth sufficient</td>
+    </tr>
+    <tr>
+      <td>UC4: Social Care</td>
+      <td>Optional</td>
+      <td>B2B; <code class="language-plaintext highlighter-rouge">aud</code> + client auth sufficient</td>
+    </tr>
+    <tr>
+      <td>UC5: Payer Claims</td>
+      <td>Optional</td>
+      <td>B2B; <code class="language-plaintext highlighter-rouge">aud</code> + client auth sufficient</td>
+    </tr>
+    <tr>
+      <td>UC6: Research</td>
+      <td>Optional</td>
+      <td>Issuer may use binding, but base model does not require it</td>
+    </tr>
+    <tr>
+      <td>UC7: Provider Consult</td>
+      <td>Optional</td>
+      <td>B2B; strictly better than status quo even without key binding</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="server-side-validation">Server-Side Validation</h4>
+<p>The Data Holder SHALL perform a two-layer validation:</p>
+
+<ol>
+  <li><strong>Layer 1: Client Authentication (Standard SMART)</strong>
+    <ul>
+      <li>Verify the <code class="language-plaintext highlighter-rouge">client_assertion</code> signature using the Client's registered public key (JWK).</li>
+      <li>Ensure the client is registered and active.</li>
+    </ul>
+  </li>
+  <li><strong>Layer 2: Ticket Validation (Permission Ticket Specific)</strong>
+    <ul>
+      <li>Verify the <code class="language-plaintext highlighter-rouge">subject_token_type</code> is <code class="language-plaintext highlighter-rouge">https://smarthealthit.org/token-type/permission-ticket</code>.</li>
+      <li>Parse the <code class="language-plaintext highlighter-rouge">subject_token</code> as a JWT.</li>
+      <li><strong>Verify Signature:</strong> Use the <code class="language-plaintext highlighter-rouge">iss</code> (Trusted Issuer) public key.</li>
+      <li><strong>Verify Trust:</strong> Is this <code class="language-plaintext highlighter-rouge">iss</code> in the Data Holder's trusted list?</li>
+      <li><strong>Verify Type:</strong> <code class="language-plaintext highlighter-rouge">ticket_type</code> SHALL be present and recognized. The Data Holder SHALL verify the <code class="language-plaintext highlighter-rouge">ticket_type</code> is listed in its <code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code>.</li>
+      <li><strong>Verify Presenter Binding:</strong> If <code class="language-plaintext highlighter-rouge">presenter_binding</code> is present, verify it according to <code class="language-plaintext highlighter-rouge">presenter_binding.method</code>.</li>
+      <li><strong>Check <code class="language-plaintext highlighter-rouge">must_understand</code>:</strong> If <code class="language-plaintext highlighter-rouge">must_understand</code> is present, verify the Data Holder recognizes every listed claim name. Reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code> if any entry is unrecognized.</li>
+      <li><strong>Enforce Kernel Fields:</strong> Every kernel field present in the ticket is must-understand. If the Data Holder encounters a kernel field it cannot enforce, it SHALL reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code>.</li>
+      <li><strong>Grant Access:</strong> If valid, grant the requested scopes <em>constrained</em> by the ticket's <code class="language-plaintext highlighter-rouge">access</code> rules.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="subject-resolution">Subject Resolution</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">subject</code> identifies whose data the ticket authorizes access to. Every ticket SHALL include <code class="language-plaintext highlighter-rouge">subject.patient</code>, a FHIR Patient resource carrying the demographic facts needed for matching (name, date of birth, identifiers). The patient may be thin — it only needs enough information for the recipient to resolve to a local record.</p>
+
+<p>Optionally, <code class="language-plaintext highlighter-rouge">subject.recipient_record</code> may provide a direct-recipient optimization: a FHIR Reference that can carry a <code class="language-plaintext highlighter-rouge">.reference</code> (literal resource URL), a <code class="language-plaintext highlighter-rouge">.identifier</code> (business identifier such as an MRN at the target site), or both. When <code class="language-plaintext highlighter-rouge">recipient_record</code> is present, the Data Holder SHOULD use it as a hint for faster resolution, falling back to demographic matching on <code class="language-plaintext highlighter-rouge">subject.patient</code> if the reference does not resolve.</p>
+
+<p>If subject resolution yields zero matches, or more than one match, the Data Holder SHALL reject the request with <code class="language-plaintext highlighter-rouge">invalid_grant</code> and an appropriate <code class="language-plaintext highlighter-rouge">error_description</code>.</p>
+
+<h4 id="issuer-attested-claims">Issuer-Attested Claims</h4>
+
+<p><code class="language-plaintext highlighter-rouge">requester</code> and <code class="language-plaintext highlighter-rouge">context</code> are issuer-attested facts. The Data Holder uses them for local policy evaluation and audit. The Data Holder does NOT independently re-verify the requester's identity, delegation relationship, consent, mandate, or contract — the issuer's reputation and trust-framework membership back that trust.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">requester</code> is absent, the ticket does not assert a separate third-party requester (i.e., it is self-access by the patient identified in <code class="language-plaintext highlighter-rouge">subject.patient</code>). This does not mean anonymous access — the presenting client is still authenticated by the outer <code class="language-plaintext highlighter-rouge">client_assertion</code>.</p>
+
+<p>When <code class="language-plaintext highlighter-rouge">ticket_type</code> defines no context fields, <code class="language-plaintext highlighter-rouge">context</code> MAY be omitted entirely or be <code class="language-plaintext highlighter-rouge">{}</code>.</p>
+
+<hr />
+
+<h3 id="access-calculation">Access Calculation</h3>
+
+<p>The Data Holder calculates granted access through the <strong>intersection</strong> of:</p>
+
+<ol>
+  <li><strong>Requested Scopes</strong>: The <code class="language-plaintext highlighter-rouge">scope</code> parameter in the token request</li>
+  <li><strong>Ticket Access</strong>: Constraints from <code class="language-plaintext highlighter-rouge">access</code></li>
+  <li><strong>Client Registration</strong>: Scopes the client is permitted to request</li>
+</ol>
+
+<p>If the intersection yields no valid access, return <code class="language-plaintext highlighter-rouge">invalid_scope</code> error.
+Requested scopes SHALL use SMART scope grammar. This specification allows either <code class="language-plaintext highlighter-rouge">patient/*</code> or <code class="language-plaintext highlighter-rouge">system/*</code> scopes depending on ticket type. For single-patient ticket types, clients SHOULD request SMART v2 CRUDS suffix scopes (for example, <code class="language-plaintext highlighter-rouge">patient/Observation.rs</code>).</p>
+
+<h4 id="smart-scope-projection">SMART Scope Projection</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">access.permissions</code> array is the normative authorization model. Each <code class="language-plaintext highlighter-rouge">DataPermission</code> maps to SMART v2 scopes as follows:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">resource_type</code> maps to the SMART resource type (e.g., <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Condition</code>, or <code class="language-plaintext highlighter-rouge">*</code> for all resources)</li>
+  <li><code class="language-plaintext highlighter-rouge">interactions</code> map to SMART CRUDS suffixes: <code class="language-plaintext highlighter-rouge">create</code> = <code class="language-plaintext highlighter-rouge">c</code>, <code class="language-plaintext highlighter-rouge">read</code> = <code class="language-plaintext highlighter-rouge">r</code>, <code class="language-plaintext highlighter-rouge">update</code> = <code class="language-plaintext highlighter-rouge">u</code>, <code class="language-plaintext highlighter-rouge">delete</code> = <code class="language-plaintext highlighter-rouge">d</code>, <code class="language-plaintext highlighter-rouge">search</code> = <code class="language-plaintext highlighter-rouge">s</code></li>
+</ul>
+
+<p>For example, a permission <code class="language-plaintext highlighter-rouge">{ kind: "data", resource_type: "Observation", interactions: ["read", "search"] }</code> projects to the SMART scope <code class="language-plaintext highlighter-rouge">patient/Observation.rs</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">OperationPermission</code> rules (e.g., <code class="language-plaintext highlighter-rouge">$everything</code>, <code class="language-plaintext highlighter-rouge">$export</code>) do not have a direct SMART scope equivalent; Data Holders should map these to appropriate local operation-level authorization.</p>
+
+<h4 id="access-constraints">Access Constraints</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">access</code> object defines what access the ticket authorizes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
+      <td>PermissionRule[]</td>
+      <td><strong>Required.</strong> Array of typed permission rules (DataPermission or OperationPermission). Each DataPermission specifies a <code class="language-plaintext highlighter-rouge">resource_type</code>, required <code class="language-plaintext highlighter-rouge">interactions</code>, and optional narrowing filters (<code class="language-plaintext highlighter-rouge">category_any_of</code>, <code class="language-plaintext highlighter-rouge">code_any_of</code>). Each OperationPermission specifies a FHIR operation <code class="language-plaintext highlighter-rouge">name</code> and optional <code class="language-plaintext highlighter-rouge">target</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data_period</code></td>
+      <td>Period</td>
+      <td>One coarse timeframe. Data Holder SHALL filter results to resources whose clinically relevant date falls within this period. If disjoint windows are needed, mint separate tickets.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">responder_filter</code></td>
+      <td>ResponderFilter[]</td>
+      <td>Optional responder-side scoping. Each entry is either a jurisdiction filter (<code class="language-plaintext highlighter-rouge">{ kind: "jurisdiction", address }</code>) or an organization filter (<code class="language-plaintext highlighter-rouge">{ kind: "organization", organization }</code>). A responding site or organization may answer if it matches <strong>any</strong> listed filter.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sensitive_data</code></td>
+      <td>"exclude" | "include"</td>
+      <td>Sensitive data policy. If absent, the recipient applies its own default policy.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="constraint-algebra">Constraint Algebra</h5>
+
+<p>Different access dimensions are combined <strong>conjunctively</strong> (AND): returned data must satisfy every present constraint. Within <code class="language-plaintext highlighter-rouge">responder_filter</code>, entries are combined <strong>disjunctively</strong> (OR): any listed jurisdiction or organization match authorizes that responder to answer. An absent dimension means no restriction for that dimension.</p>
+
+<p>Within a single <code class="language-plaintext highlighter-rouge">DataPermission</code>, populated filter groups (<code class="language-plaintext highlighter-rouge">category_any_of</code>, <code class="language-plaintext highlighter-rouge">code_any_of</code>) are ANDed across groups, and values within one group are ORed. Multiple <code class="language-plaintext highlighter-rouge">DataPermission</code> entries are additive (OR) — a resource matching any single permission rule is authorized.</p>
+
+<p>For example, a ticket with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"responder_filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jurisdiction"</span><span class="p">,</span><span class="w"> </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jurisdiction"</span><span class="p">,</span><span class="w"> </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organization"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/sid/us-npi"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="w"> </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>means: a responding site may answer if it is in CA, in NY, or is operated by the organization with NPI 123.</p>
+
+<h5 id="constraint-semantics">Constraint Semantics</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>What it restricts</th>
+      <th>Matching basis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
+      <td>Resource types, interactions, and optional category/code filters</td>
+      <td>Resource type + FHIR REST interaction + coded attributes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data_period</code></td>
+      <td>Relevant clinical or service dates of returned data</td>
+      <td>Date comparison against <code class="language-plaintext highlighter-rouge">authored</code>, <code class="language-plaintext highlighter-rouge">recorded</code>, <code class="language-plaintext highlighter-rouge">issued</code>, or <code class="language-plaintext highlighter-rouge">effective[x]</code>, falling back to encounter timing</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">responder_filter</code></td>
+      <td>Which responding data holders or sites may answer</td>
+      <td>Jurisdiction address match or organization identity match</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sensitive_data</code></td>
+      <td>Whether locally classified sensitive data is included</td>
+      <td>Recipient-local sensitivity labels and policy</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Data Holders that cannot enforce a presented constraint SHALL reject the ticket with <code class="language-plaintext highlighter-rouge">invalid_grant</code> and <code class="language-plaintext highlighter-rouge">error_description</code> indicating the unsupported constraint.</p>
+
+<p><strong>Example Access Constraints:</strong></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resource_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"read"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"search"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resource_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Procedure"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"read"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"search"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"data_period"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-12-31"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"responder_filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jurisdiction"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jurisdiction"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/sid/us-npi"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General Hospital"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"sensitive_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exclude"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This ticket authorizes read and search access to Conditions and Procedures, but only for data:</p>
+<ul>
+  <li>With dates in 2023-2024</li>
+  <li>And only from responders that match one of the listed responder filters</li>
+</ul>
+
+<h4 id="timeframe-and-data-period-matching">Timeframe and Data Period Matching</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">data_period</code> is one coarse timeframe for the ticket.</li>
+  <li>If multiple disjoint windows are needed, mint separate tickets.</li>
+  <li>Matching semantics: the recipient filters to resources whose clinically relevant date falls within the period. Relevant dates are <code class="language-plaintext highlighter-rouge">authored</code>, <code class="language-plaintext highlighter-rouge">recorded</code>, <code class="language-plaintext highlighter-rouge">issued</code>, or <code class="language-plaintext highlighter-rouge">effective[x]</code> where present, falling back to encounter timing when no resource-level date is available. Identity-type resources (Patient, Practitioner, Organization, Location) are exempt from date filtering.</li>
+</ul>
+
+<h4 id="sensitive-data">Sensitive Data</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">"exclude"</code> means the recipient should exclude locally classified sensitive data.</li>
+  <li><code class="language-plaintext highlighter-rouge">"include"</code> means the ticket permits such data, <strong>subject to local law and recipient policy</strong> — even with <code class="language-plaintext highlighter-rouge">resource_type: "*"</code> and <code class="language-plaintext highlighter-rouge">sensitive_data: "include"</code>, the recipient may still withhold data that local law prohibits releasing (e.g., 42 CFR Part 2 substance abuse records without proper consent).</li>
+  <li>If <code class="language-plaintext highlighter-rouge">sensitive_data</code> is absent, recipients apply their own default policy.</li>
+  <li>If classification is unknown and the ticket says <code class="language-plaintext highlighter-rouge">"exclude"</code>, recipients should default conservatively.</li>
+</ul>
+
+<h4 id="responder-filters">Responder Filters</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">responder_filter</code> restricts which data holders or data holder sites respond to the ticket.</li>
+  <li>Each entry is one of:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">{ kind: "jurisdiction", address }</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{ kind: "organization", organization }</code></li>
+    </ul>
+  </li>
+  <li>Matching is one-hop against the responding node, not a provenance chain.</li>
+  <li>Multiple filter entries are ORed together.</li>
+</ul>
+
+<h4 id="jurisdiction-filters">Jurisdiction Filters</h4>
+
+<ul>
+  <li>Jurisdiction filters are modeled with country/state-style values only.</li>
+  <li>A data holder checks whether its own jurisdiction matches the listed address; a multi-site data holder filters to sites in matching jurisdictions.</li>
+</ul>
+
+<h4 id="organization-filters">Organization Filters</h4>
+
+<ul>
+  <li>Organization filters positively scope which data holders or sites may answer.</li>
+  <li>Matching is by organizational identity, typically an NPI carried in <code class="language-plaintext highlighter-rouge">organization.identifier</code>.</li>
+</ul>
+
+<h4 id="token-time-and-resource-time-enforcement">Token-Time and Resource-Time Enforcement</h4>
+
+<p>Some access constraints — especially <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code>, and <code class="language-plaintext highlighter-rouge">sensitive_data</code> — may require filtering at the Resource Server rather than at the token endpoint. If a constraint cannot be fully enforced at token issuance, the Authorization Server SHALL carry the normalized constraint set forward in the issued access token (or make it available via token introspection) so the Resource Server can enforce it.</p>
+
+<p>If a component responsible for enforcing a constraint cannot do so, the request SHALL be rejected rather than silently ignoring the constraint.</p>
+
+<hr />
+
+<h3 id="must-understand-semantics">Must-Understand Semantics</h3>
+
+<h4 id="base-must-understand-set">Base Must-Understand Set</h4>
+
+<p>Every field defined in the kernel is must-understand when present. If a recipient receives a ticket containing a kernel field it cannot enforce, it SHALL reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code>. The base must-understand set includes:</p>
+
+<ul>
+  <li>JWT envelope: <code class="language-plaintext highlighter-rouge">iss</code>, <code class="language-plaintext highlighter-rouge">aud</code>, <code class="language-plaintext highlighter-rouge">exp</code>, <code class="language-plaintext highlighter-rouge">jti</code>, <code class="language-plaintext highlighter-rouge">ticket_type</code></li>
+  <li><code class="language-plaintext highlighter-rouge">presenter_binding</code></li>
+  <li><code class="language-plaintext highlighter-rouge">subject</code> (<code class="language-plaintext highlighter-rouge">subject.patient</code> and optional <code class="language-plaintext highlighter-rouge">subject.recipient_record</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">requester</code></li>
+  <li><code class="language-plaintext highlighter-rouge">access.permissions</code></li>
+  <li><code class="language-plaintext highlighter-rouge">access.data_period</code></li>
+  <li><code class="language-plaintext highlighter-rouge">access.responder_filter</code></li>
+  <li><code class="language-plaintext highlighter-rouge">access.sensitive_data</code></li>
+  <li><code class="language-plaintext highlighter-rouge">context</code></li>
+  <li><code class="language-plaintext highlighter-rouge">revocation</code></li>
+</ul>
+
+<h4 id="must_understand-for-extensions"><code class="language-plaintext highlighter-rouge">must_understand</code> for Extensions</h4>
+
+<p>Profile-specific claims not in the base set are safe to ignore <strong>unless</strong> the issuer lists them in <code class="language-plaintext highlighter-rouge">must_understand</code>. A recipient that sees a <code class="language-plaintext highlighter-rouge">must_understand</code> entry it does not recognize SHALL reject the ticket with <code class="language-plaintext highlighter-rouge">invalid_grant</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">must_understand</code> lists <strong>top-level claim names</strong> that the recipient MUST understand beyond the base kernel. Each entry is a string matching a top-level claim in the ticket payload. This is inspired by the JWS <code class="language-plaintext highlighter-rouge">crit</code> header parameter (<a href="https://www.rfc-editor.org/rfc/rfc7515">RFC 7515</a> Section 4.1.11) but applied to payload claims rather than header parameters.</p>
+
+<h4 id="unknown-fields">Unknown Fields</h4>
+
+<p>Fields not in the base kernel, not in <code class="language-plaintext highlighter-rouge">must_understand</code>, and not recognized by the recipient are safe to ignore. This is standard JWT behavior.</p>
+
+<h4 id="extension-example">Extension Example</h4>
+
+<p>A profile adds encounter-class filtering via a new top-level claim and lists it in <code class="language-plaintext highlighter-rouge">must_understand</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"iss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://issuer.example.org"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://network.example.org/token"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1775328000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jti"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ext-example-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ticket_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/ticket-types/encounter-filtered-v1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"must_understand"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"encounter_class_filter"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"encounter_class_filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ActCode"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMB"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"..."</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"..."</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"context"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A recipient that understands <code class="language-plaintext highlighter-rouge">encounter_class_filter</code> enforces it. A recipient that does not recognize the name rejects the ticket because it appears in <code class="language-plaintext highlighter-rouge">must_understand</code>. If the issuer had omitted <code class="language-plaintext highlighter-rouge">encounter_class_filter</code> from <code class="language-plaintext highlighter-rouge">must_understand</code>, recipients that do not recognize it would simply ignore it.</p>
+
+<p>Extensions should be modeled as new top-level claims rather than injecting fields into existing kernel structures. This keeps extensions visible and prevents profiles from silently altering the semantics of base claims.</p>
+
+<hr />
+
+<h3 id="requester-semantics">Requester Semantics</h3>
+
+<p><code class="language-plaintext highlighter-rouge">requester</code> is an <strong>issuer-attested claim</strong> about the real-world party for whom the grant exists. It is distinct from the presenting software client (the presenter authenticates via <code class="language-plaintext highlighter-rouge">client_assertion</code> and optional <code class="language-plaintext highlighter-rouge">presenter_binding</code>).</p>
+
+<ul>
+  <li>Absent for self-access. For self-access, the patient's identity is already in <code class="language-plaintext highlighter-rouge">subject.patient</code>; a separate <code class="language-plaintext highlighter-rouge">requester</code> would be redundant.</li>
+  <li>Present for proxy, organizational, clinician, or other non-self use cases.</li>
+  <li>The recipient trusts the issuer's attestation; it does <strong>not</strong> independently verify the requester's identity against the client authentication event.</li>
+  <li>The recipient <strong>may use <code class="language-plaintext highlighter-rouge">requester</code> for local policy decisions</strong> — scoping data, applying sensitivity rules, choosing which local access-control policies apply, audit logging, etc.</li>
+  <li>The <strong>security gate</strong> for ticket redemption remains: issuer trust, ticket signature, presenter binding, and audience validation. <code class="language-plaintext highlighter-rouge">requester</code> is not part of that gate.</li>
+  <li>The level of real-world verification the issuer performed before attesting to the requester varies by use case. For delegation, the issuer typically identity-proofed the requester and confirmed the patient's intent to delegate. For B2B use cases (public health, payer, consult), the issuer has institutional knowledge of the requesting organization rather than individual identity proofing.</li>
+</ul>
+
+<h4 id="relationship-between-presenter_binding-and-requester">Relationship between <code class="language-plaintext highlighter-rouge">presenter_binding</code> and <code class="language-plaintext highlighter-rouge">requester</code></h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">requester</code> and <code class="language-plaintext highlighter-rouge">presenter_binding</code> will often identify the same organization — the requesting organization is also the one operating the client software. But they do not need to align. Multiple requesters may share a client; an organization may operate a client on behalf of several requesters; or a platform provider may present tickets on behalf of various requesting organizations. The <code class="language-plaintext highlighter-rouge">requester</code> describes who the grant is for; the presenter binding constrains which software may redeem it.</p>
+
+<h4 id="delegation-and-relatedpersonrelationship">Delegation and RelatedPerson.relationship</h4>
+
+<p>For delegated access, the <code class="language-plaintext highlighter-rouge">requester</code> is a <code class="language-plaintext highlighter-rouge">RelatedPerson</code>. FHIR's <code class="language-plaintext highlighter-rouge">RelatedPerson.relationship</code> field (0..* CodeableConcept, Preferred binding) can express both the personal relationship <strong>and</strong> the legal authority type using stacked codings from v3-RoleCode:</p>
+
+<ul>
+  <li>Familial: <code class="language-plaintext highlighter-rouge">DAU</code> (daughter), <code class="language-plaintext highlighter-rouge">MTH</code> (mother), <code class="language-plaintext highlighter-rouge">SPS</code> (spouse), etc.</li>
+  <li>Legal authority: <code class="language-plaintext highlighter-rouge">GUARD</code> (guardian), <code class="language-plaintext highlighter-rouge">HPOWATT</code> (healthcare power of attorney), <code class="language-plaintext highlighter-rouge">DPOWATT</code> (durable POA), <code class="language-plaintext highlighter-rouge">POWATT</code> (power of attorney), <code class="language-plaintext highlighter-rouge">SPOWATT</code> (special POA)</li>
+</ul>
+
+<p>R5 explicitly added the legal authority codes to the RelatedPerson relationship value set. A single <code class="language-plaintext highlighter-rouge">requester</code> can carry both:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"requester"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RelatedPerson"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"relationship"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-RoleCode"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DAU"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-RoleCode"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HPOWATT"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reyes"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Elena"</span><span class="p">]</span><span class="w"> </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This tells the recipient: "the requester is the patient's daughter and holds healthcare power of attorney." The recipient can use this for local policy decisions (e.g., applying different rules for a guardian vs. a POA holder). The actual POA document, if needed for audit or review, is outside the base ticket kernel.</p>
+
+<hr />
+
+<h3 id="issuer-vs-recipient-responsibility">Issuer vs. Recipient Responsibility</h3>
+
+<p>The issuer does all real-world verification. The ticket carries only what the recipient needs for matching, filtering, and local policy selection.</p>
+
+<h4 id="what-the-issuer-verifies-before-minting">What the Issuer Verifies Before Minting</h4>
+
+<ul>
+  <li>Patient identity (via digital ID, in-person verification, portal authentication, etc.)</li>
+  <li>Requester identity and relationship to patient (for delegation: POA, guardianship, parental authority; for B2B: organizational identity)</li>
+  <li>Legal/regulatory basis for access (consent obtained, mandate exists, contract in force, care relationship established)</li>
+  <li>Scope appropriateness (the requested access is within the delegation scope, study protocol, mandate authority, etc.)</li>
+  <li>Any jurisdiction-specific requirements</li>
+</ul>
+
+<h4 id="what-the-recipient-uses-from-the-ticket">What the Recipient Uses from the Ticket</h4>
+
+<ul>
+  <li><strong>For matching</strong>: <code class="language-plaintext highlighter-rouge">subject.patient</code> to resolve to a local patient record</li>
+  <li><strong>For cryptographic validation</strong>: signature, <code class="language-plaintext highlighter-rouge">iss</code> (issuer trust), <code class="language-plaintext highlighter-rouge">exp</code>, <code class="language-plaintext highlighter-rouge">aud</code>, <code class="language-plaintext highlighter-rouge">presenter_binding</code></li>
+  <li><strong>For access filtering</strong>: <code class="language-plaintext highlighter-rouge">access.permissions</code>, <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code>, <code class="language-plaintext highlighter-rouge">sensitive_data</code></li>
+  <li><strong>For local policy selection</strong>: <code class="language-plaintext highlighter-rouge">requester</code> (type, identity, relationship), <code class="language-plaintext highlighter-rouge">ticket_type</code>, <code class="language-plaintext highlighter-rouge">context</code> — the recipient may apply different local policies based on these (e.g., broader release for a public health investigation than for a payer claim)</li>
+  <li><strong>For audit</strong>: all of the above</li>
+</ul>
+
+<h4 id="what-the-recipient-does-not-do">What the Recipient Does NOT Do</h4>
+
+<ul>
+  <li>Re-verify the delegation relationship, consent, mandate, or contract</li>
+  <li>Independently authenticate the requester's identity (the presenter is authenticated; the requester is an issuer attestation)</li>
+  <li>Require off-ticket supporting documents to say yes or no (unless a narrower profile says otherwise)</li>
+</ul>
+
+<p>The recipient trusts the issuer for all real-world verification. The issuer's reputation and trust-framework membership back that trust.</p>
+
+<hr />
+
+<h3 id="context-ticket-type-specific-semantics">Context (Ticket-Type-Specific Semantics)</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">context</code> claim carries ticket-type-specific mandatory workflow semantics. <code class="language-plaintext highlighter-rouge">ticket_type</code> is the sole discriminator; there is no separate <code class="language-plaintext highlighter-rouge">context.kind</code>.</p>
+
+<p>A fact belongs in <code class="language-plaintext highlighter-rouge">context</code> if every instance of that ticket type needs it for the recipient to say yes or no, but other ticket types do not.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket Type</th>
+      <th>Required Context Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UC1, UC2</td>
+      <td><em>(none; <code class="language-plaintext highlighter-rouge">context</code> may be omitted)</em></td>
+    </tr>
+    <tr>
+      <td>UC3</td>
+      <td><code class="language-plaintext highlighter-rouge">reportable_condition</code></td>
+    </tr>
+    <tr>
+      <td>UC4</td>
+      <td><code class="language-plaintext highlighter-rouge">concern</code>, <code class="language-plaintext highlighter-rouge">referral</code></td>
+    </tr>
+    <tr>
+      <td>UC5</td>
+      <td><code class="language-plaintext highlighter-rouge">service</code>, <code class="language-plaintext highlighter-rouge">claim</code></td>
+    </tr>
+    <tr>
+      <td>UC6</td>
+      <td><code class="language-plaintext highlighter-rouge">study</code></td>
+    </tr>
+    <tr>
+      <td>UC7</td>
+      <td><code class="language-plaintext highlighter-rouge">reason</code>, <code class="language-plaintext highlighter-rouge">consult_request</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>UC1 and UC2 intentionally define no context fields. Delegation is expressed by the presence and type of <code class="language-plaintext highlighter-rouge">requester</code>, not by a context discriminator.</p>
+
+<hr />
+
+<h3 id="ticket-audience-aud-and-recipient-set">Ticket Audience (<code class="language-plaintext highlighter-rouge">aud</code>) and Recipient Set</h3>
+
+<p>For Permission Tickets, <code class="language-plaintext highlighter-rouge">aud</code> identifies the set of eligible Data Holders that may honor the ticket. It does not imply that the issuer knows where the subject has received care or where data is actually held. This recipient set may be expressed as one or more enumerated recipient URLs, or as a network / trust framework identifier whose membership can be validated by the Data Holder.</p>
+
+<p>This is distinct from <code class="language-plaintext highlighter-rouge">aud</code> in the outer <code class="language-plaintext highlighter-rouge">client_assertion</code>, which remains the Data Holder's token endpoint URL per SMART Backend Services.</p>
+
+<h4 id="mode-1-enumerated-recipients">Mode 1: Enumerated Recipients</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">aud</code> is a specific URL or array of URLs:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.hospital.com"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="err">//</span><span class="w"> </span><span class="err">or</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.hospital-a.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://fhir.hospital-b.com"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Validation:</strong> The Data Holder's base URL SHALL exactly match one of the enumerated values.</p>
+
+<h4 id="mode-2-trust-framework">Mode 2: Trust Framework</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">aud</code> references a trust framework identifier:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://tefca.hhs.gov"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Validation:</strong> The Data Holder SHALL be a verified participant in the referenced trust framework. Verification mechanisms are trust-framework-specific (e.g., the Data Holder's Entity ID appears in the framework's federation).</p>
+
+<h4 id="recommendations">Recommendations</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Recommended <code class="language-plaintext highlighter-rouge">aud</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ticket for known single recipient</td>
+      <td>Specific Data Holder URL</td>
+    </tr>
+    <tr>
+      <td>Ticket valid across a network</td>
+      <td>Trust framework identifier</td>
+    </tr>
+    <tr>
+      <td>Ticket for multiple known recipients</td>
+      <td>Array of Data Holder URLs</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Data Holders SHALL reject tickets where <code class="language-plaintext highlighter-rouge">aud</code> validation fails with error <code class="language-plaintext highlighter-rouge">invalid_grant</code> and <code class="language-plaintext highlighter-rouge">error_description</code>: "Ticket not valid for this server".</p>
+
+<hr />
+
+<h3 id="ticket-type-registry">Ticket Type Registry</h3>
+
+<p>Each use case maps to a <code class="language-plaintext highlighter-rouge">ticket_type</code> URI that identifies the ticket's schema and processing rules:</p>
+
+<table>
+  <thead>
+    <tr><th>Use Case</th><th><code>ticket_type</code> URI</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>Use Case 1: Patient Self Access</td><td><code>https://smarthealthit.org/permission-ticket-type/patient-self-access-v1</code></td></tr>
+  <tr><td>Use Case 2: Patient-Delegated Access</td><td><code>https://smarthealthit.org/permission-ticket-type/patient-delegated-access-v1</code></td></tr>
+  <tr><td>Use Case 3: Public Health Investigation</td><td><code>https://smarthealthit.org/permission-ticket-type/public-health-investigation-v1</code></td></tr>
+  <tr><td>Use Case 4: Social Care (CBO) Referral</td><td><code>https://smarthealthit.org/permission-ticket-type/social-care-referral-v1</code></td></tr>
+  <tr><td>Use Case 5: Payer Claims Adjudication</td><td><code>https://smarthealthit.org/permission-ticket-type/payer-claims-adjudication-v1</code></td></tr>
+  <tr><td>Use Case 6: Research Study</td><td><code>https://smarthealthit.org/permission-ticket-type/research-study-access-v1</code></td></tr>
+  <tr><td>Use Case 7: Provider-to-Provider Consult</td><td><code>https://smarthealthit.org/permission-ticket-type/provider-consult-v1</code></td></tr>
+  </tbody>
+</table>
+
+<p>Data Holders advertise which <code class="language-plaintext highlighter-rouge">ticket_type</code> URIs they support via <code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code> in their <code class="language-plaintext highlighter-rouge">.well-known/smart-configuration</code>. Unknown <code class="language-plaintext highlighter-rouge">ticket_type</code> values SHALL be rejected with <code class="language-plaintext highlighter-rouge">invalid_grant</code>.</p>
+
+<blockquote>
+  <p><strong>Note on future multi-token composition:</strong> RFC 8693 defines an optional <code class="language-plaintext highlighter-rouge">actor_token</code> parameter alongside <code class="language-plaintext highlighter-rouge">subject_token</code>. Future versions of this specification may use <code class="language-plaintext highlighter-rouge">actor_token</code> to support multi-token composition scenarios (e.g., a separate identity ticket from a verified identity provider combined with an authorization ticket from a trusted issuer). All current use cases require only a single Permission Ticket as the <code class="language-plaintext highlighter-rouge">subject_token</code>.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="ticket-lifecycle">Ticket Lifecycle</h3>
+
+<h4 id="validity-period">Validity Period</h4>
+
+<ul>
+  <li>Tickets SHALL include an <code class="language-plaintext highlighter-rouge">exp</code> (expiration) claim</li>
+  <li>Data Holders SHALL reject expired tickets</li>
+  <li>Recommended validity periods:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Use Case</th>
+      <th>Recommended <code class="language-plaintext highlighter-rouge">exp</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Interactive/real-time</td>
+      <td>1-4 hours</td>
+    </tr>
+    <tr>
+      <td>Batch processing</td>
+      <td>24 hours</td>
+    </tr>
+    <tr>
+      <td>Standing authorization</td>
+      <td>Up to 1 year (with revocation)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="long-lived-access">Long-Lived Access</h4>
+
+<p>For scenarios requiring access beyond a single session (e.g., ongoing care relationships, research studies), two approaches are supported:</p>
+
+<p><strong>Approach 1: Refresh via Issuer</strong></p>
+
+<p>The client periodically obtains fresh tickets from the issuer. Suitable when:</p>
+<ul>
+  <li>Issuer interaction is low-friction (automated, no user involvement)</li>
+  <li>Access should be re-validated regularly</li>
+</ul>
+
+<p><strong>Approach 2: Long-Lived Tickets with Revocation</strong></p>
+
+<p>The issuer mints a ticket with extended validity (weeks to months) and supports revocation. Suitable when:</p>
+<ul>
+  <li>Issuer interaction is high-friction (e.g., in-person identity verification via Clear, notarized documents)</li>
+  <li>Access may need to be terminated before natural expiration</li>
+  <li>The cost of re-issuance (user time, verification fees) is prohibitive</li>
+</ul>
+
+<h4 id="revocation">Revocation</h4>
+
+<p>Issuers MAY support revocation of individual tickets before expiration. If a ticket includes a <code class="language-plaintext highlighter-rouge">revocation</code> claim, it SHALL also include a <code class="language-plaintext highlighter-rouge">jti</code> (unique ticket ID).</p>
+
+<p><strong>Status List Pointer</strong></p>
+
+<p>Tickets supporting revocation include a <code class="language-plaintext highlighter-rouge">revocation</code> claim:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"iss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://trusted-issuer.org"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://tefca.hhs.gov"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1735689600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jti"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticket-unique-id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ticket_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://smarthealthit.org/permission-ticket-type/patient-self-access-v1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"presenter_binding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jkt"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jkt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0ZcOCORZNYy-DWpqq30jZyJGHTN0d2HglBV3uiguA4I"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"revocation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://trusted-issuer.org/.well-known/status/patient-access"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">4722</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"patient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resource_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"read"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"search"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">revocation.url</code></td>
+      <td>URL of the issuer's status list for this category of tickets</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">revocation.index</code></td>
+      <td>Zero-based bit index for this ticket in the published status list</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Status List Format</strong></p>
+
+<p>The status list is a JSON file served at the URL specified in the ticket:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"kid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"issuer-signing-key-id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"H4sIAAAAAAAA/2NgYGBgBGIOAwA+T46LBQAAAA"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kid</code></td>
+      <td>Optional key identifier for the ticket-signing key family covered by this list</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bits</code></td>
+      <td>Base64url-encoded gzip-compressed bitstring. A set bit marks the corresponding <code class="language-plaintext highlighter-rouge">revocation.index</code> as revoked.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Revocation Checking</strong></p>
+
+<p><em>Issuers:</em></p>
+<ul>
+  <li>SHALL publish the status list at the URL specified in tickets</li>
+  <li>SHALL serve the status list over HTTPS</li>
+</ul>
+
+<p><em>Data Holders:</em></p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">revocation</code> is present in the ticket, SHALL fetch or use a valid cached copy of the status list</li>
+  <li>MAY cache status-list responses respecting HTTP cache headers</li>
+  <li>SHALL reject tickets whose <code class="language-plaintext highlighter-rouge">revocation.index</code> bit is set</li>
+  <li>If revocation status cannot be determined (no valid cache and retrieval failure), SHALL reject the request (fail-closed)</li>
+</ul>
+
+<p><strong>Grouping for Privacy</strong></p>
+
+<p>Issuers MAY use multiple status-list URLs to group tickets by category, preventing unnecessary cross-ticket correlation when checking revocation.</p>
+
+<h4 id="reusability">Reusability</h4>
+
+<ul>
+  <li>Tickets are <strong>reusable</strong> until expiration (or revocation)</li>
+  <li>Data Holders are NOT REQUIRED to enforce single-use semantics</li>
+  <li>If single-use is required for a use case, the issuer should use very short expiration times</li>
+</ul>
+
+<hr />
+
+<h3 id="catalog-of-use-cases">Catalog of Use Cases</h3>
+
+<p>Here are seven scenarios demonstrating how Permission Tickets model diverse authorization needs. Each use case maps to a single <code class="language-plaintext highlighter-rouge">ticket_type</code>.</p>
+
+<h4 id="per-profile-constraints">Per-Profile Constraints</h4>
+
+<p>The table below summarizes required and optional fields for each ticket type:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Use Case</th>
+      <th><code class="language-plaintext highlighter-rouge">presenter_binding</code></th>
+      <th>Requester</th>
+      <th>Context Fields</th>
+      <th>Access Dimensions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UC1: Patient Self Access</td>
+      <td>Optional</td>
+      <td>—</td>
+      <td><em>(none)</em></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code> (required)</td>
+    </tr>
+    <tr>
+      <td>UC2: Patient-Delegated Access</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">RelatedPerson</code> (required)</td>
+      <td><em>(none)</em></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code> (required)</td>
+    </tr>
+    <tr>
+      <td>UC3: Public Health</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> (required)</td>
+      <td><code class="language-plaintext highlighter-rouge">reportable_condition</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code>, <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code></td>
+    </tr>
+    <tr>
+      <td>UC4: Social Care</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> (required)</td>
+      <td><code class="language-plaintext highlighter-rouge">concern</code>, <code class="language-plaintext highlighter-rouge">referral</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
+    </tr>
+    <tr>
+      <td>UC5: Payer Claims</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> (required)</td>
+      <td><code class="language-plaintext highlighter-rouge">service</code>, <code class="language-plaintext highlighter-rouge">claim</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code>, <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code></td>
+    </tr>
+    <tr>
+      <td>UC6: Research</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> (required)</td>
+      <td><code class="language-plaintext highlighter-rouge">study</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code>, <code class="language-plaintext highlighter-rouge">data_period</code></td>
+    </tr>
+    <tr>
+      <td>UC7: Provider Consult</td>
+      <td>Optional</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole</code> (required)</td>
+      <td><code class="language-plaintext highlighter-rouge">reason</code>, <code class="language-plaintext highlighter-rouge">consult_request</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="use-case-1-patient-self-access">Use Case 1: Patient Self Access</h4>
+<p><em>A patient uses a high-assurance Digital ID wallet to authorize an app to fetch their data from multiple hospitals.</em></p>
+
+<h5 id="ticket-schema">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics: Name, DOB, Identifier).</li>
+  <li><strong>Requester:</strong> None (self-access).</li>
+  <li><strong>Context:</strong> <em>(none; <code class="language-plaintext highlighter-rouge">context</code> may be omitted or empty for this ticket type)</em>.</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code> with specific resource types and interactions.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://trusted-issuer.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc1-4b33cc1d-0f6b-44bf-bd33-80f6d7140f3e",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/patient-self-access-v1",
+  "presenter_binding": {
+    "method": "jkt",
+    "jkt": "JuI6ibZHcMPQICaIZ55PbXpnsudQmKt00D0BiEXNrMc"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "A12345"
+        }
+      ],
+      "birthDate": "1989-09-14",
+      "name": [
+        {
+          "family": "Reyes",
+          "given": [
+            "Elena"
+          ]
+        }
+      ]
+    }
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "AllergyIntolerance",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Observation",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "MedicationRequest",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "data_period": {
+      "start": "2021-01-01",
+      "end": "2026-01-01"
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL3RydXN0ZWQtaXNzdWVyLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjMS00YjMzY2MxZC0wZjZiLTQ0YmYtYmQzMy04MGY2ZDcxNDBmM2UiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9wYXRpZW50LXNlbGYtYWNjZXNzLXYxIiwicHJlc2VudGVyX2JpbmRpbmciOnsibWV0aG9kIjoiamt0Iiwiamt0IjoiSnVJNmliWkhjTVBRSUNhSVo1NVBiWHBuc3VkUW1LdDAwRDBCaUVYTnJNYyJ9LCJzdWJqZWN0Ijp7InBhdGllbnQiOnsicmVzb3VyY2VUeXBlIjoiUGF0aWVudCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9ob3NwaXRhbC5leGFtcGxlLm9yZy9tcm4iLCJ2YWx1ZSI6IkExMjM0NSJ9XSwiYmlydGhEYXRlIjoiMTk4OS0wOS0xNCIsIm5hbWUiOlt7ImZhbWlseSI6IlJleWVzIiwiZ2l2ZW4iOlsiRWxlbmEiXX1dfX0sImFjY2VzcyI6eyJwZXJtaXNzaW9ucyI6W3sia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiQWxsZXJneUludG9sZXJhbmNlIiwiaW50ZXJhY3Rpb25zIjpbInJlYWQiLCJzZWFyY2giXX0seyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJDb25kaXRpb24iLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6Ik9ic2VydmF0aW9uIiwiaW50ZXJhY3Rpb25zIjpbInJlYWQiLCJzZWFyY2giXX0seyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJNZWRpY2F0aW9uUmVxdWVzdCIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19XSwiZGF0YV9wZXJpb2QiOnsic3RhcnQiOiIyMDIxLTAxLTAxIiwiZW5kIjoiMjAyNi0wMS0wMSJ9fSwiaWF0IjoxNzc1NTcyNDg1fQ.MIe-EYyV8l4aaeQ9qBNAo_yhqp0vB-txAs5nS7oyF57YOrLs82QhanxTvc8qO8Y3vEdBUgQBStD9ZgNkmRfQbg</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-2-patient-delegated-access">Use Case 2: Patient-Delegated Access</h4>
+<p><em>An adult daughter accesses her elderly mother's records. The relationship is verified by a Trusted Issuer, not the Hospital.</em></p>
+
+<h5 id="ticket-schema-1">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">RelatedPerson</code> with relationship codings expressing both personal relationship and legal authority type.</li>
+  <li><strong>Context:</strong> <em>(none; same as UC1 — delegation is expressed by the presence and type of <code class="language-plaintext highlighter-rouge">requester</code>)</em></li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code> with specific resource types and interactions.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://trusted-issuer.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc2-8c6f4ec2-4fb6-4c42-9530-6bbd11c77e49",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/patient-delegated-access-v1",
+  "presenter_binding": {
+    "method": "jkt",
+    "jkt": "JuI6ibZHcMPQICaIZ55PbXpnsudQmKt00D0BiEXNrMc"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "https://national-mpi.net",
+          "value": "pt-555"
+        }
+      ],
+      "birthDate": "1948-06-15",
+      "name": [
+        {
+          "family": "Reyes",
+          "given": [
+            "Maria"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "RelatedPerson",
+    "relationship": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+            "code": "DAU",
+            "display": "daughter"
+          }
+        ]
+      },
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+            "code": "HPOWATT",
+            "display": "healthcare power of attorney"
+          }
+        ]
+      }
+    ],
+    "name": [
+      {
+        "family": "Reyes",
+        "given": [
+          "Elena"
+        ]
+      }
+    ]
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Immunization",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "MedicationRequest",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ]
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL3RydXN0ZWQtaXNzdWVyLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjMi04YzZmNGVjMi00ZmI2LTRjNDItOTUzMC02YmJkMTFjNzdlNDkiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9wYXRpZW50LWRlbGVnYXRlZC1hY2Nlc3MtdjEiLCJwcmVzZW50ZXJfYmluZGluZyI6eyJtZXRob2QiOiJqa3QiLCJqa3QiOiJKdUk2aWJaSGNNUFFJQ2FJWjU1UGJYcG5zdWRRbUt0MDBEMEJpRVhOck1jIn0sInN1YmplY3QiOnsicGF0aWVudCI6eyJyZXNvdXJjZVR5cGUiOiJQYXRpZW50IiwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cHM6Ly9uYXRpb25hbC1tcGkubmV0IiwidmFsdWUiOiJwdC01NTUifV0sImJpcnRoRGF0ZSI6IjE5NDgtMDYtMTUiLCJuYW1lIjpbeyJmYW1pbHkiOiJSZXllcyIsImdpdmVuIjpbIk1hcmlhIl19XX19LCJyZXF1ZXN0ZXIiOnsicmVzb3VyY2VUeXBlIjoiUmVsYXRlZFBlcnNvbiIsInJlbGF0aW9uc2hpcCI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YzLVJvbGVDb2RlIiwiY29kZSI6IkRBVSIsImRpc3BsYXkiOiJkYXVnaHRlciJ9XX0seyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vdjMtUm9sZUNvZGUiLCJjb2RlIjoiSFBPV0FUVCIsImRpc3BsYXkiOiJoZWFsdGhjYXJlIHBvd2VyIG9mIGF0dG9ybmV5In1dfV0sIm5hbWUiOlt7ImZhbWlseSI6IlJleWVzIiwiZ2l2ZW4iOlsiRWxlbmEiXX1dfSwiYWNjZXNzIjp7InBlcm1pc3Npb25zIjpbeyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJDb25kaXRpb24iLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6IkltbXVuaXphdGlvbiIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19LHsia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiTWVkaWNhdGlvblJlcXVlc3QiLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfV19LCJpYXQiOjE3NzU1NzI0ODV9.SReKdudPC70Q6Hm4hupBIOyd4b46rz2CKnDyQRaeKEzw5Zx40HlnUW6QkSI5iNxiebiXi6ciX11W8h31VtEGVw</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-3-public-health-investigation">Use Case 3: Public Health Investigation</h4>
+<p><em>A Hospital creates a Case Report. The Public Health Agency (PHA) uses a ticket to query for follow-up data.</em></p>
+
+<h5 id="ticket-schema-2">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">Organization</code> (public health agency).</li>
+  <li><strong>Context:</strong> <code class="language-plaintext highlighter-rouge">reportable_condition</code> (coded condition).</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code>, optional <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code>, <code class="language-plaintext highlighter-rouge">sensitive_data</code>.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://issuer.state.example.gov",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc3-16ff62cf-2d2d-4b30-8c86-6a13d7ab7d16",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/public-health-investigation-v1",
+  "presenter_binding": {
+    "method": "framework_client",
+    "framework": "https://state.example.gov/trust-framework/public-health",
+    "framework_type": "udap",
+    "entity_uri": "https://state.example.gov/organizations/epi-unit"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "M445566"
+        }
+      ],
+      "birthDate": "1978-02-21",
+      "name": [
+        {
+          "family": "Carter",
+          "given": [
+            "Monica"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "Organization",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "https://state.example.gov/organizations/epi-unit"
+      }
+    ],
+    "name": "State Epidemiology Unit"
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Observation",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "DiagnosticReport",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "data_period": {
+      "start": "2025-12-01",
+      "end": "2026-06-01"
+    },
+    "responder_filter": [
+      {
+        "kind": "jurisdiction",
+        "address": {
+          "country": "US",
+          "state": "TX"
+        }
+      }
+    ],
+    "sensitive_data": "include"
+  },
+  "context": {
+    "reportable_condition": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "840539006",
+          "display": "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+        }
+      ]
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL2lzc3Vlci5zdGF0ZS5leGFtcGxlLmdvdiIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjMy0xNmZmNjJjZi0yZDJkLTRiMzAtOGM4Ni02YTEzZDdhYjdkMTYiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9wdWJsaWMtaGVhbHRoLWludmVzdGlnYXRpb24tdjEiLCJwcmVzZW50ZXJfYmluZGluZyI6eyJtZXRob2QiOiJmcmFtZXdvcmtfY2xpZW50IiwiZnJhbWV3b3JrIjoiaHR0cHM6Ly9zdGF0ZS5leGFtcGxlLmdvdi90cnVzdC1mcmFtZXdvcmsvcHVibGljLWhlYWx0aCIsImZyYW1ld29ya190eXBlIjoidWRhcCIsImVudGl0eV91cmkiOiJodHRwczovL3N0YXRlLmV4YW1wbGUuZ292L29yZ2FuaXphdGlvbnMvZXBpLXVuaXQifSwic3ViamVjdCI6eyJwYXRpZW50Ijp7InJlc291cmNlVHlwZSI6IlBhdGllbnQiLCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwOi8vaG9zcGl0YWwuZXhhbXBsZS5vcmcvbXJuIiwidmFsdWUiOiJNNDQ1NTY2In1dLCJiaXJ0aERhdGUiOiIxOTc4LTAyLTIxIiwibmFtZSI6W3siZmFtaWx5IjoiQ2FydGVyIiwiZ2l2ZW4iOlsiTW9uaWNhIl19XX19LCJyZXF1ZXN0ZXIiOnsicmVzb3VyY2VUeXBlIjoiT3JnYW5pemF0aW9uIiwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoidXJuOmlldGY6cmZjOjM5ODYiLCJ2YWx1ZSI6Imh0dHBzOi8vc3RhdGUuZXhhbXBsZS5nb3Yvb3JnYW5pemF0aW9ucy9lcGktdW5pdCJ9XSwibmFtZSI6IlN0YXRlIEVwaWRlbWlvbG9neSBVbml0In0sImFjY2VzcyI6eyJwZXJtaXNzaW9ucyI6W3sia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiQ29uZGl0aW9uIiwiaW50ZXJhY3Rpb25zIjpbInJlYWQiLCJzZWFyY2giXX0seyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJPYnNlcnZhdGlvbiIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19LHsia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiRGlhZ25vc3RpY1JlcG9ydCIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19XSwiZGF0YV9wZXJpb2QiOnsic3RhcnQiOiIyMDI1LTEyLTAxIiwiZW5kIjoiMjAyNi0wNi0wMSJ9LCJyZXNwb25kZXJfZmlsdGVyIjpbeyJraW5kIjoianVyaXNkaWN0aW9uIiwiYWRkcmVzcyI6eyJjb3VudHJ5IjoiVVMiLCJzdGF0ZSI6IlRYIn19XSwic2Vuc2l0aXZlX2RhdGEiOiJpbmNsdWRlIn0sImNvbnRleHQiOnsicmVwb3J0YWJsZV9jb25kaXRpb24iOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6Ijg0MDUzOTAwNiIsImRpc3BsYXkiOiJEaXNlYXNlIGNhdXNlZCBieSBzZXZlcmUgYWN1dGUgcmVzcGlyYXRvcnkgc3luZHJvbWUgY29yb25hdmlydXMgMiAoZGlzb3JkZXIpIn1dfX0sImlhdCI6MTc3NTU3MjQ4NX0.XbZDti0VeGx5ynuvplCMgeNE4xUH1m7qPnZDz9ahoh992qpRLyWrzaG44CGWdyf9Rlh9-PhZGw87CkjttuTPnQ</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-4-social-care-cbo-referral">Use Case 4: Social Care (CBO) Referral</h4>
+<p><em>A community-based organization needs to access referral-related data. A Food Bank volunteer needs to update a referral status.</em></p>
+
+<h5 id="ticket-schema-3">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">Organization</code> (social care hub).</li>
+  <li><strong>Context:</strong> <code class="language-plaintext highlighter-rouge">concern</code> (coded concern), <code class="language-plaintext highlighter-rouge">referral</code> (ServiceRequest).</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code> with specific resource types and interactions.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://issuer.example.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc4-0d0f7272-2d85-49ef-8c39-d4a8e8d8a7f2",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/social-care-referral-v1",
+  "presenter_binding": {
+    "method": "framework_client",
+    "framework": "https://smarthealthit.org/trust-frameworks/reference-demo-well-known",
+    "framework_type": "well-known",
+    "entity_uri": "https://aco.example.org/entities/social-care-hub"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "S778899"
+        }
+      ],
+      "birthDate": "1963-11-03",
+      "name": [
+        {
+          "family": "Nguyen",
+          "given": [
+            "Linh"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "Organization",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "https://aco.example.org/entities/social-care-hub"
+      }
+    ],
+    "name": "Community Social Care Hub"
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "ServiceRequest",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Observation",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "sensitive_data": "exclude"
+  },
+  "context": {
+    "concern": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "733423003",
+          "display": "Food insecurity"
+        }
+      ]
+    },
+    "referral": {
+      "resourceType": "ServiceRequest",
+      "identifier": [
+        {
+          "system": "http://issuer.example.org/referrals",
+          "value": "REF-1001"
+        }
+      ],
+      "status": "active",
+      "intent": "order"
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL2lzc3Vlci5leGFtcGxlLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjNC0wZDBmNzI3Mi0yZDg1LTQ5ZWYtOGMzOS1kNGE4ZThkOGE3ZjIiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9zb2NpYWwtY2FyZS1yZWZlcnJhbC12MSIsInByZXNlbnRlcl9iaW5kaW5nIjp7Im1ldGhvZCI6ImZyYW1ld29ya19jbGllbnQiLCJmcmFtZXdvcmsiOiJodHRwczovL3NtYXJ0aGVhbHRoaXQub3JnL3RydXN0LWZyYW1ld29ya3MvcmVmZXJlbmNlLWRlbW8td2VsbC1rbm93biIsImZyYW1ld29ya190eXBlIjoid2VsbC1rbm93biIsImVudGl0eV91cmkiOiJodHRwczovL2Fjby5leGFtcGxlLm9yZy9lbnRpdGllcy9zb2NpYWwtY2FyZS1odWIifSwic3ViamVjdCI6eyJwYXRpZW50Ijp7InJlc291cmNlVHlwZSI6IlBhdGllbnQiLCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwOi8vaG9zcGl0YWwuZXhhbXBsZS5vcmcvbXJuIiwidmFsdWUiOiJTNzc4ODk5In1dLCJiaXJ0aERhdGUiOiIxOTYzLTExLTAzIiwibmFtZSI6W3siZmFtaWx5IjoiTmd1eWVuIiwiZ2l2ZW4iOlsiTGluaCJdfV19fSwicmVxdWVzdGVyIjp7InJlc291cmNlVHlwZSI6Ik9yZ2FuaXphdGlvbiIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6InVybjppZXRmOnJmYzozOTg2IiwidmFsdWUiOiJodHRwczovL2Fjby5leGFtcGxlLm9yZy9lbnRpdGllcy9zb2NpYWwtY2FyZS1odWIifV0sIm5hbWUiOiJDb21tdW5pdHkgU29jaWFsIENhcmUgSHViIn0sImFjY2VzcyI6eyJwZXJtaXNzaW9ucyI6W3sia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiU2VydmljZVJlcXVlc3QiLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6IkNvbmRpdGlvbiIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19LHsia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiT2JzZXJ2YXRpb24iLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfV0sInNlbnNpdGl2ZV9kYXRhIjoiZXhjbHVkZSJ9LCJjb250ZXh0Ijp7ImNvbmNlcm4iOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjczMzQyMzAwMyIsImRpc3BsYXkiOiJGb29kIGluc2VjdXJpdHkifV19LCJyZWZlcnJhbCI6eyJyZXNvdXJjZVR5cGUiOiJTZXJ2aWNlUmVxdWVzdCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9pc3N1ZXIuZXhhbXBsZS5vcmcvcmVmZXJyYWxzIiwidmFsdWUiOiJSRUYtMTAwMSJ9XSwic3RhdHVzIjoiYWN0aXZlIiwiaW50ZW50Ijoib3JkZXIifX0sImlhdCI6MTc3NTU3MjQ4NX0.zQtenzHBPtS95nblajdS2RpgVdrkRkhOYIhVDxXBI9GFx5wSHdmDcy9iaMSOD-RC_Vm7zVA32UlyjAUjkhYZ1g</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-5-payer-claims-adjudication">Use Case 5: Payer Claims Adjudication</h4>
+<p><em>A Payer requests clinical documents to support a specific claim.</em></p>
+
+<h5 id="ticket-schema-4">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">Organization</code> (Payer).</li>
+  <li><strong>Context:</strong> <code class="language-plaintext highlighter-rouge">service</code> (coded service), <code class="language-plaintext highlighter-rouge">claim</code> (Claim resource).</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code>, optional <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code>.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://issuer.example.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc5-9096d8d2-3627-45ee-8ea2-5e5a0ab51b7b",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/payer-claims-adjudication-v1",
+  "presenter_binding": {
+    "method": "framework_client",
+    "framework": "https://payer.example.org/trust-framework",
+    "framework_type": "udap",
+    "entity_uri": "https://payer.example.org/entities/claims-ops"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "C112233"
+        }
+      ],
+      "birthDate": "1954-07-19",
+      "name": [
+        {
+          "family": "Johnson",
+          "given": [
+            "Amelia"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "Organization",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "https://payer.example.org/entities/claims-ops"
+      }
+    ],
+    "name": "Acme Health Plan Claims Operations"
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "Claim",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "ExplanationOfBenefit",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "DocumentReference",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "data_period": {
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    "responder_filter": [
+      {
+        "kind": "organization",
+        "organization": {
+          "resourceType": "Organization",
+          "identifier": [
+            {
+              "system": "http://hl7.org/fhir/sid/us-npi",
+              "value": "1234567893"
+            }
+          ],
+          "name": "General Hospital"
+        }
+      }
+    ],
+    "sensitive_data": "exclude"
+  },
+  "context": {
+    "service": {
+      "coding": [
+        {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "99214",
+          "display": "Office or other outpatient visit"
+        }
+      ]
+    },
+    "claim": {
+      "resourceType": "Claim",
+      "identifier": [
+        {
+          "system": "http://payer.example.org/claims",
+          "value": "CLM-884422"
+        }
+      ],
+      "status": "active",
+      "use": "claim"
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL2lzc3Vlci5leGFtcGxlLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjNS05MDk2ZDhkMi0zNjI3LTQ1ZWUtOGVhMi01ZTVhMGFiNTFiN2IiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9wYXllci1jbGFpbXMtYWRqdWRpY2F0aW9uLXYxIiwicHJlc2VudGVyX2JpbmRpbmciOnsibWV0aG9kIjoiZnJhbWV3b3JrX2NsaWVudCIsImZyYW1ld29yayI6Imh0dHBzOi8vcGF5ZXIuZXhhbXBsZS5vcmcvdHJ1c3QtZnJhbWV3b3JrIiwiZnJhbWV3b3JrX3R5cGUiOiJ1ZGFwIiwiZW50aXR5X3VyaSI6Imh0dHBzOi8vcGF5ZXIuZXhhbXBsZS5vcmcvZW50aXRpZXMvY2xhaW1zLW9wcyJ9LCJzdWJqZWN0Ijp7InBhdGllbnQiOnsicmVzb3VyY2VUeXBlIjoiUGF0aWVudCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9ob3NwaXRhbC5leGFtcGxlLm9yZy9tcm4iLCJ2YWx1ZSI6IkMxMTIyMzMifV0sImJpcnRoRGF0ZSI6IjE5NTQtMDctMTkiLCJuYW1lIjpbeyJmYW1pbHkiOiJKb2huc29uIiwiZ2l2ZW4iOlsiQW1lbGlhIl19XX19LCJyZXF1ZXN0ZXIiOnsicmVzb3VyY2VUeXBlIjoiT3JnYW5pemF0aW9uIiwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoidXJuOmlldGY6cmZjOjM5ODYiLCJ2YWx1ZSI6Imh0dHBzOi8vcGF5ZXIuZXhhbXBsZS5vcmcvZW50aXRpZXMvY2xhaW1zLW9wcyJ9XSwibmFtZSI6IkFjbWUgSGVhbHRoIFBsYW4gQ2xhaW1zIE9wZXJhdGlvbnMifSwiYWNjZXNzIjp7InBlcm1pc3Npb25zIjpbeyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJDbGFpbSIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19LHsia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiRXhwbGFuYXRpb25PZkJlbmVmaXQiLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6IkRvY3VtZW50UmVmZXJlbmNlIiwiaW50ZXJhY3Rpb25zIjpbInJlYWQiLCJzZWFyY2giXX1dLCJkYXRhX3BlcmlvZCI6eyJzdGFydCI6IjIwMjUtMDEtMDEiLCJlbmQiOiIyMDI1LTEyLTMxIn0sInJlc3BvbmRlcl9maWx0ZXIiOlt7ImtpbmQiOiJvcmdhbml6YXRpb24iLCJvcmdhbml6YXRpb24iOnsicmVzb3VyY2VUeXBlIjoiT3JnYW5pemF0aW9uIiwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvdXMtbnBpIiwidmFsdWUiOiIxMjM0NTY3ODkzIn1dLCJuYW1lIjoiR2VuZXJhbCBIb3NwaXRhbCJ9fV0sInNlbnNpdGl2ZV9kYXRhIjoiZXhjbHVkZSJ9LCJjb250ZXh0Ijp7InNlcnZpY2UiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vd3d3LmFtYS1hc3NuLm9yZy9nby9jcHQiLCJjb2RlIjoiOTkyMTQiLCJkaXNwbGF5IjoiT2ZmaWNlIG9yIG90aGVyIG91dHBhdGllbnQgdmlzaXQifV19LCJjbGFpbSI6eyJyZXNvdXJjZVR5cGUiOiJDbGFpbSIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9wYXllci5leGFtcGxlLm9yZy9jbGFpbXMiLCJ2YWx1ZSI6IkNMTS04ODQ0MjIifV0sInN0YXR1cyI6ImFjdGl2ZSIsInVzZSI6ImNsYWltIn19LCJpYXQiOjE3NzU1NzI0ODV9.H2x1ApBQxxiEXdZQXjpbtFXkwBq5n7WzjCwL8lOPnnxg1o6nYpjTZxuo5Y6RZxH-YrwE9PRAkOADTVHEmbfaRQ</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-6-research-study">Use Case 6: Research Study</h4>
+<p><em>A patient consents to a study. The ticket proves consent exists without requiring the researcher to be a "user" at the hospital.</em></p>
+
+<h5 id="ticket-schema-5">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">Organization</code> (research institute).</li>
+  <li><strong>Context:</strong> <code class="language-plaintext highlighter-rouge">study</code> (ResearchStudy resource).</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code>, optional <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">sensitive_data</code>.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://issuer.example.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc6-b5774e14-a020-46f2-94d3-2bb95b7ac4af",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/research-study-access-v1",
+  "presenter_binding": {
+    "method": "framework_client",
+    "framework": "https://research.example.org/trust-framework",
+    "framework_type": "udap",
+    "entity_uri": "https://research.example.org/entities/study-team-204"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "R445500"
+        }
+      ],
+      "birthDate": "1970-05-30",
+      "name": [
+        {
+          "family": "Lopez",
+          "given": [
+            "Marina"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "Organization",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "https://research.example.org/entities/study-team-204"
+      }
+    ],
+    "name": "Study Team 204"
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Observation",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "data_period": {
+      "start": "2024-01-01",
+      "end": "2026-12-31"
+    },
+    "sensitive_data": "exclude"
+  },
+  "context": {
+    "study": {
+      "resourceType": "ResearchStudy",
+      "identifier": [
+        {
+          "system": "http://research.example.org/studies",
+          "value": "STUDY-204"
+        }
+      ],
+      "status": "active",
+      "title": "Diabetes Outcomes Registry"
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL2lzc3Vlci5leGFtcGxlLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjNi1iNTc3NGUxNC1hMDIwLTQ2ZjItOTRkMy0yYmI5NWI3YWM0YWYiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9yZXNlYXJjaC1zdHVkeS1hY2Nlc3MtdjEiLCJwcmVzZW50ZXJfYmluZGluZyI6eyJtZXRob2QiOiJmcmFtZXdvcmtfY2xpZW50IiwiZnJhbWV3b3JrIjoiaHR0cHM6Ly9yZXNlYXJjaC5leGFtcGxlLm9yZy90cnVzdC1mcmFtZXdvcmsiLCJmcmFtZXdvcmtfdHlwZSI6InVkYXAiLCJlbnRpdHlfdXJpIjoiaHR0cHM6Ly9yZXNlYXJjaC5leGFtcGxlLm9yZy9lbnRpdGllcy9zdHVkeS10ZWFtLTIwNCJ9LCJzdWJqZWN0Ijp7InBhdGllbnQiOnsicmVzb3VyY2VUeXBlIjoiUGF0aWVudCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9ob3NwaXRhbC5leGFtcGxlLm9yZy9tcm4iLCJ2YWx1ZSI6IlI0NDU1MDAifV0sImJpcnRoRGF0ZSI6IjE5NzAtMDUtMzAiLCJuYW1lIjpbeyJmYW1pbHkiOiJMb3BleiIsImdpdmVuIjpbIk1hcmluYSJdfV19fSwicmVxdWVzdGVyIjp7InJlc291cmNlVHlwZSI6Ik9yZ2FuaXphdGlvbiIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6InVybjppZXRmOnJmYzozOTg2IiwidmFsdWUiOiJodHRwczovL3Jlc2VhcmNoLmV4YW1wbGUub3JnL2VudGl0aWVzL3N0dWR5LXRlYW0tMjA0In1dLCJuYW1lIjoiU3R1ZHkgVGVhbSAyMDQifSwiYWNjZXNzIjp7InBlcm1pc3Npb25zIjpbeyJraW5kIjoiZGF0YSIsInJlc291cmNlX3R5cGUiOiJDb25kaXRpb24iLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6Ik9ic2VydmF0aW9uIiwiaW50ZXJhY3Rpb25zIjpbInJlYWQiLCJzZWFyY2giXX1dLCJkYXRhX3BlcmlvZCI6eyJzdGFydCI6IjIwMjQtMDEtMDEiLCJlbmQiOiIyMDI2LTEyLTMxIn0sInNlbnNpdGl2ZV9kYXRhIjoiZXhjbHVkZSJ9LCJjb250ZXh0Ijp7InN0dWR5Ijp7InJlc291cmNlVHlwZSI6IlJlc2VhcmNoU3R1ZHkiLCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwOi8vcmVzZWFyY2guZXhhbXBsZS5vcmcvc3R1ZGllcyIsInZhbHVlIjoiU1RVRFktMjA0In1dLCJzdGF0dXMiOiJhY3RpdmUiLCJ0aXRsZSI6IkRpYWJldGVzIE91dGNvbWVzIFJlZ2lzdHJ5In19LCJpYXQiOjE3NzU1NzI0ODV9.SKvdmOUsnw0oG5-nikdcEgG8mA0PziBrd58EJJIitnWx2prZpAyG_cpX_0HfBrjgpahZjwot0E5VMLUSIXQyLA</code></pre>
+        </details>
+    </div>
+</div>
+
+<h4 id="use-case-7-provider-to-provider-consult">Use Case 7: Provider-to-Provider Consult</h4>
+<p><em>A Specialist (Practitioner) requests data from a Referring Provider.</em></p>
+
+<h5 id="ticket-schema-6">Ticket Schema</h5>
+<ul>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">Patient</code> (matched by demographics or identifier).</li>
+  <li><strong>Requester:</strong> <code class="language-plaintext highlighter-rouge">PractitionerRole</code> (specialist role).</li>
+  <li><strong>Context:</strong> <code class="language-plaintext highlighter-rouge">reason</code> (coded reason), <code class="language-plaintext highlighter-rouge">consult_request</code> (ServiceRequest).</li>
+  <li><strong>Access:</strong> <code class="language-plaintext highlighter-rouge">permissions</code> with specific resource types and interactions.</li>
+</ul>
+
+<!-- Static JWT Viewer - No JavaScript -->
+<div class="jwt-artifact" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; font-family: sans-serif;">
+    <h4 style="margin: 0; padding: 12px; background: #e8e8e8; border-bottom: 1px solid #ddd;">Permission Ticket Artifact
+    </h4>
+
+    <div style="padding: 15px;">
+        <h5 style="margin-top: 0;">Header</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "alg": "ES256",
+  "kid": "nvOGRCsTz2QIQLsbl0ZQ_ux0tfyh5iave-jvNsANWv8"
+}</code></pre>
+
+        <h5>Payload (Claims)</h5>
+        <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto;"><code>{
+  "iss": "https://issuer.example.org",
+  "aud": "https://network.org",
+  "exp": 1775576085,
+  "jti": "uc7-d6927f7f-74c8-4b1b-a7a5-7f4e6d99390a",
+  "ticket_type": "https://smarthealthit.org/permission-ticket-type/provider-consult-v1",
+  "presenter_binding": {
+    "method": "framework_client",
+    "framework": "https://smarthealthit.org/trust-frameworks/reference-demo-well-known",
+    "framework_type": "well-known",
+    "entity_uri": "https://hospital.example.org/entities/cardiology-group"
+  },
+  "subject": {
+    "patient": {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "http://hospital.example.org/mrn",
+          "value": "K667788"
+        }
+      ],
+      "birthDate": "1981-03-08",
+      "name": [
+        {
+          "family": "Thomas",
+          "given": [
+            "Jared"
+          ]
+        }
+      ]
+    }
+  },
+  "requester": {
+    "resourceType": "PractitionerRole",
+    "code": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "17561000",
+            "display": "Cardiologist"
+          }
+        ]
+      }
+    ]
+  },
+  "access": {
+    "permissions": [
+      {
+        "kind": "data",
+        "resource_type": "Condition",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "Observation",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      },
+      {
+        "kind": "data",
+        "resource_type": "DiagnosticReport",
+        "interactions": [
+          "read",
+          "search"
+        ]
+      }
+    ],
+    "sensitive_data": "exclude"
+  },
+  "context": {
+    "reason": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "53741008",
+          "display": "Coronary arteriosclerosis"
+        }
+      ]
+    },
+    "consult_request": {
+      "resourceType": "ServiceRequest",
+      "identifier": [
+        {
+          "system": "http://issuer.example.org/consults",
+          "value": "CONSULT-7788"
+        }
+      ],
+      "status": "active",
+      "intent": "order"
+    }
+  },
+  "iat": 1775572485
+}</code></pre>
+
+        <details open="" style="margin-top: 15px;">
+            <summary style="cursor: pointer; font-weight: bold;">Raw Signed JWT</summary>
+            <pre style="background: white; padding: 10px; border: 1px solid #ddd; border-radius: 3px; overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; margin-top: 10px;"><code>eyJhbGciOiJFUzI1NiIsImtpZCI6Im52T0dSQ3NUejJRSVFMc2JsMFpRX3V4MHRmeWg1aWF2ZS1qdk5zQU5XdjgifQ.eyJpc3MiOiJodHRwczovL2lzc3Vlci5leGFtcGxlLm9yZyIsImF1ZCI6Imh0dHBzOi8vbmV0d29yay5vcmciLCJleHAiOjE3NzU1NzYwODUsImp0aSI6InVjNy1kNjkyN2Y3Zi03NGM4LTRiMWItYTdhNS03ZjRlNmQ5OTM5MGEiLCJ0aWNrZXRfdHlwZSI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvcGVybWlzc2lvbi10aWNrZXQtdHlwZS9wcm92aWRlci1jb25zdWx0LXYxIiwicHJlc2VudGVyX2JpbmRpbmciOnsibWV0aG9kIjoiZnJhbWV3b3JrX2NsaWVudCIsImZyYW1ld29yayI6Imh0dHBzOi8vc21hcnRoZWFsdGhpdC5vcmcvdHJ1c3QtZnJhbWV3b3Jrcy9yZWZlcmVuY2UtZGVtby13ZWxsLWtub3duIiwiZnJhbWV3b3JrX3R5cGUiOiJ3ZWxsLWtub3duIiwiZW50aXR5X3VyaSI6Imh0dHBzOi8vaG9zcGl0YWwuZXhhbXBsZS5vcmcvZW50aXRpZXMvY2FyZGlvbG9neS1ncm91cCJ9LCJzdWJqZWN0Ijp7InBhdGllbnQiOnsicmVzb3VyY2VUeXBlIjoiUGF0aWVudCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9ob3NwaXRhbC5leGFtcGxlLm9yZy9tcm4iLCJ2YWx1ZSI6Iks2Njc3ODgifV0sImJpcnRoRGF0ZSI6IjE5ODEtMDMtMDgiLCJuYW1lIjpbeyJmYW1pbHkiOiJUaG9tYXMiLCJnaXZlbiI6WyJKYXJlZCJdfV19fSwicmVxdWVzdGVyIjp7InJlc291cmNlVHlwZSI6IlByYWN0aXRpb25lclJvbGUiLCJjb2RlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiMTc1NjEwMDAiLCJkaXNwbGF5IjoiQ2FyZGlvbG9naXN0In1dfV19LCJhY2Nlc3MiOnsicGVybWlzc2lvbnMiOlt7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6IkNvbmRpdGlvbiIsImludGVyYWN0aW9ucyI6WyJyZWFkIiwic2VhcmNoIl19LHsia2luZCI6ImRhdGEiLCJyZXNvdXJjZV90eXBlIjoiT2JzZXJ2YXRpb24iLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfSx7ImtpbmQiOiJkYXRhIiwicmVzb3VyY2VfdHlwZSI6IkRpYWdub3N0aWNSZXBvcnQiLCJpbnRlcmFjdGlvbnMiOlsicmVhZCIsInNlYXJjaCJdfV0sInNlbnNpdGl2ZV9kYXRhIjoiZXhjbHVkZSJ9LCJjb250ZXh0Ijp7InJlYXNvbiI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNTM3NDEwMDgiLCJkaXNwbGF5IjoiQ29yb25hcnkgYXJ0ZXJpb3NjbGVyb3NpcyJ9XX0sImNvbnN1bHRfcmVxdWVzdCI6eyJyZXNvdXJjZVR5cGUiOiJTZXJ2aWNlUmVxdWVzdCIsImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHA6Ly9pc3N1ZXIuZXhhbXBsZS5vcmcvY29uc3VsdHMiLCJ2YWx1ZSI6IkNPTlNVTFQtNzc4OCJ9XSwic3RhdHVzIjoiYWN0aXZlIiwiaW50ZW50Ijoib3JkZXIifX0sImlhdCI6MTc3NTU3MjQ4NX0.LMPWjGyOgiNVi0s7GyIhnMagJOY40-QJJhcTjiDiMEe7SjQQT_op-7aR4nIRRe5aiQs1p0N7rTNgWHa_1blLTw</code></pre>
+        </details>
+    </div>
+</div>
+
+<hr />
+
+<h3 id="developer-reference">Developer Reference</h3>
+
+<h4 id="typescript-interfaces">TypeScript Interfaces</h4>
+
+<p>The following TypeScript interfaces define the structure of the Permission Ticket, the Client Assertion, and the Token Exchange request.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ─── FHIR Primitives ────────────────────────────────────────────────────────</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">Uri</span> <span class="o">=</span> <span class="kr">string</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">Instant</span> <span class="o">=</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// ISO 8601 timestamp per FHIR</span>
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="nx">T</span><span class="p">,</span> <span class="p">...</span><span class="nx">T</span><span class="p">[]];</span>
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">JwtAudience</span> <span class="o">=</span> <span class="kr">string</span> <span class="o">|</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// ─── FHIR Building Blocks ───────────────────────────────────────────────────</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRCoding</span> <span class="p">{</span>
+    <span class="nl">system</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">code</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRCodeableConcept</span> <span class="p">{</span>
+    <span class="nl">coding</span><span class="p">?:</span> <span class="nx">FHIRCoding</span><span class="p">[];</span>
+    <span class="nl">text</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRIdentifier</span> <span class="p">{</span>
+    <span class="nl">system</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">value</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">type</span><span class="p">?:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRHumanName</span> <span class="p">{</span>
+    <span class="nl">family</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">given</span><span class="p">?:</span> <span class="kr">string</span><span class="p">[];</span>
+    <span class="nl">prefix</span><span class="p">?:</span> <span class="kr">string</span><span class="p">[];</span>
+    <span class="nl">suffix</span><span class="p">?:</span> <span class="kr">string</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRPeriod</span> <span class="p">{</span>
+    <span class="nl">start</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">end</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRReference</span> <span class="p">{</span>
+    <span class="nl">reference</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">;</span>
+    <span class="nl">type</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">FHIRAddress</span> <span class="p">{</span>
+    <span class="nl">country</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">state</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ─── Permission Ticket ──────────────────────────────────────────────────────</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">PermissionTicket</span> <span class="p">{</span>
+    <span class="nl">iss</span><span class="p">:</span> <span class="nx">Uri</span><span class="p">;</span>
+    <span class="nl">aud</span><span class="p">:</span> <span class="nx">JwtAudience</span><span class="p">;</span>
+    <span class="nl">exp</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">jti</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">ticket_type</span><span class="p">:</span> <span class="nx">Uri</span><span class="p">;</span>
+    <span class="nl">iat</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+
+    <span class="nl">presenter_binding</span><span class="p">?:</span>
+        <span class="o">|</span> <span class="p">{</span>
+            <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jkt</span><span class="dl">"</span><span class="p">;</span>
+            <span class="nl">jkt</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+          <span class="p">}</span>
+        <span class="o">|</span> <span class="p">{</span>
+            <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">framework_client</span><span class="dl">"</span><span class="p">;</span>
+            <span class="nl">framework</span><span class="p">:</span> <span class="nx">Uri</span><span class="p">;</span>
+            <span class="nl">framework_type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">well-known</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">udap</span><span class="dl">"</span><span class="p">;</span>
+            <span class="nl">entity_uri</span><span class="p">:</span> <span class="nx">Uri</span><span class="p">;</span>
+          <span class="p">};</span>
+
+    <span class="nl">revocation</span><span class="p">?:</span> <span class="p">{</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">Uri</span><span class="p">;</span>
+        <span class="nl">index</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="cm">/**
+     * Payload claim names the recipient MUST understand beyond the base kernel.
+     * Inspired by JWS crit (RFC 7515 §4.1.11), applied to payload claims.
+     */</span>
+    <span class="nl">must_understand</span><span class="p">?:</span> <span class="kr">string</span><span class="p">[];</span>
+
+    <span class="nl">subject</span><span class="p">:</span> <span class="nx">Subject</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * The real-world party for whom the grant exists.
+     * Issuer-attested; the recipient trusts this without independent verification.
+     */</span>
+    <span class="nl">requester</span><span class="p">?:</span> <span class="nx">Requester</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Normative authorization model.
+     */</span>
+    <span class="nl">access</span><span class="p">:</span> <span class="nx">AccessGrant</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Ticket-type-specific mandatory workflow semantics.
+     * Omitted when the ticket type defines no context fields.
+     */</span>
+    <span class="nl">context</span><span class="p">?:</span> <span class="nx">TicketContext</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">Subject</span> <span class="p">{</span>
+    <span class="nl">patient</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">resourceType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Patient</span><span class="dl">"</span><span class="p">;</span>
+        <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">[];</span>
+        <span class="nl">name</span><span class="p">?:</span> <span class="nx">FHIRHumanName</span><span class="p">[];</span>
+        <span class="nl">birthDate</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+        <span class="nl">gender</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nl">recipient_record</span><span class="p">?:</span> <span class="nx">FHIRReference</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="kd">type</span><span class="p">?:</span> <span class="dl">"</span><span class="s2">Patient</span><span class="dl">"</span> <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">Requester</span> <span class="o">=</span>
+    <span class="o">|</span> <span class="p">{</span> <span class="na">resourceType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RelatedPerson</span><span class="dl">"</span><span class="p">;</span> <span class="nl">relationship</span><span class="p">?:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">[];</span>
+        <span class="nl">name</span><span class="p">?:</span> <span class="nx">FHIRHumanName</span><span class="p">[];</span> <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">[]</span> <span class="p">}</span>
+    <span class="o">|</span> <span class="p">{</span> <span class="na">resourceType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Practitioner</span><span class="dl">"</span><span class="p">;</span> <span class="nl">name</span><span class="p">?:</span> <span class="nx">FHIRHumanName</span><span class="p">[];</span>
+        <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">[]</span> <span class="p">}</span>
+    <span class="o">|</span> <span class="p">{</span> <span class="na">resourceType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PractitionerRole</span><span class="dl">"</span><span class="p">;</span> <span class="nl">code</span><span class="p">?:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">[];</span>
+        <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">[]</span> <span class="p">}</span>
+    <span class="o">|</span> <span class="p">{</span> <span class="na">resourceType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Organization</span><span class="dl">"</span><span class="p">;</span> <span class="nl">name</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+        <span class="nl">identifier</span><span class="p">?:</span> <span class="nx">FHIRIdentifier</span><span class="p">[]</span> <span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">SensitiveDataPolicy</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">exclude</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">include</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">RestInteraction</span> <span class="o">=</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">read</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">search</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">history</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">create</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">update</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">patch</span><span class="dl">"</span>
+    <span class="o">|</span> <span class="dl">"</span><span class="s2">delete</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">DataPermission</span> <span class="p">{</span>
+    <span class="nl">kind</span><span class="p">:</span> <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nl">resource_type</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">interactions</span><span class="p">:</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="nx">RestInteraction</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="nl">category_any_of</span><span class="p">?:</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="nx">FHIRCoding</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="nl">code_any_of</span><span class="p">?:</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="nx">FHIRCoding</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">OperationPermission</span> <span class="p">{</span>
+    <span class="nl">kind</span><span class="p">:</span> <span class="dl">"</span><span class="s2">operation</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">target</span><span class="p">?:</span> <span class="nx">FHIRReference</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">PermissionRule</span> <span class="o">=</span> <span class="nx">DataPermission</span> <span class="o">|</span> <span class="nx">OperationPermission</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">AccessGrant</span> <span class="p">{</span>
+    <span class="nl">permissions</span><span class="p">:</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span><span class="nx">PermissionRule</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="nl">data_period</span><span class="p">?:</span> <span class="nx">FHIRPeriod</span><span class="p">;</span>
+    <span class="nl">responder_filter</span><span class="p">?:</span> <span class="nx">NonEmptyArray</span><span class="o">&lt;</span>
+        <span class="o">|</span> <span class="p">{</span> <span class="na">kind</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jurisdiction</span><span class="dl">"</span><span class="p">;</span> <span class="nl">address</span><span class="p">:</span> <span class="nx">FHIRAddress</span> <span class="p">}</span>
+        <span class="o">|</span> <span class="p">{</span> <span class="na">kind</span><span class="p">:</span> <span class="dl">"</span><span class="s2">organization</span><span class="dl">"</span><span class="p">;</span> <span class="nl">organization</span><span class="p">:</span> <span class="nx">FHIROrganization</span> <span class="p">}</span>
+    <span class="o">&gt;</span><span class="p">;</span>
+    <span class="nl">sensitive_data</span><span class="p">?:</span> <span class="nx">SensitiveDataPolicy</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ─── Context Types ──────────────────────────────────────────────────────────</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">PatientAccessContext</span> <span class="o">=</span> <span class="nb">Record</span><span class="o">&lt;</span><span class="kr">string</span><span class="p">,</span> <span class="nx">never</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">PublicHealthContext</span> <span class="p">{</span>
+    <span class="nl">reportable_condition</span><span class="p">:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">SocialCareReferralContext</span> <span class="p">{</span>
+    <span class="nl">concern</span><span class="p">:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">;</span>
+    <span class="nl">referral</span><span class="p">:</span> <span class="kr">any</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">PayerClaimsContext</span> <span class="p">{</span>
+    <span class="nl">service</span><span class="p">:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">;</span>
+    <span class="nl">claim</span><span class="p">:</span> <span class="kr">any</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">ResearchContext</span> <span class="p">{</span>
+    <span class="nl">study</span><span class="p">:</span> <span class="kr">any</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">ProviderConsultContext</span> <span class="p">{</span>
+    <span class="nl">reason</span><span class="p">:</span> <span class="nx">FHIRCodeableConcept</span><span class="p">;</span>
+    <span class="nl">consult_request</span><span class="p">:</span> <span class="kr">any</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">TicketContext</span> <span class="o">=</span>
+    <span class="o">|</span> <span class="nx">PatientAccessContext</span>
+    <span class="o">|</span> <span class="nx">PublicHealthContext</span>
+    <span class="o">|</span> <span class="nx">SocialCareReferralContext</span>
+    <span class="o">|</span> <span class="nx">PayerClaimsContext</span>
+    <span class="o">|</span> <span class="nx">ResearchContext</span>
+    <span class="o">|</span> <span class="nx">ProviderConsultContext</span><span class="p">;</span>
+
+<span class="c1">// ─── Client Assertion &amp; Token Exchange ──────────────────────────────────────</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">ClientAssertion</span> <span class="p">{</span>
+    <span class="nl">iss</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>          <span class="c1">// Client ID</span>
+    <span class="nl">sub</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>          <span class="c1">// Client ID</span>
+    <span class="nl">aud</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>          <span class="c1">// Token Endpoint URL</span>
+    <span class="nl">jti</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>          <span class="c1">// Unique Assertion ID</span>
+    <span class="nl">iat</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>         <span class="c1">// Issued-at Timestamp</span>
+    <span class="nl">exp</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>         <span class="c1">// Expiration Timestamp</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">TokenExchangeRequest</span> <span class="p">{</span>
+    <span class="nl">grant_type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">urn:ietf:params:oauth:grant-type:token-exchange</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nl">subject_token</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>  <span class="c1">// Signed Permission Ticket JWT</span>
+    <span class="nl">subject_token_type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://smarthealthit.org/token-type/permission-ticket</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nl">scope</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>         <span class="c1">// Requested SMART scopes</span>
+    <span class="nl">client_assertion_type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">urn:ietf:params:oauth:client-assertion-type:jwt-bearer</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nl">client_assertion</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Signed Client Assertion JWT</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="signing-algorithm">Signing Algorithm</h4>
+
+<ul>
+  <li><strong>Algorithm:</strong> ES256 (ECDSA using P-256 and SHA-256) is RECOMMENDED. RS256 is also supported.</li>
+  <li><strong>JWS Header:</strong> SHALL include <code class="language-plaintext highlighter-rouge">alg</code> and <code class="language-plaintext highlighter-rouge">kid</code> (Key ID) to facilitate key rotation.</li>
+  <li><strong>Roles:</strong>
+    <ul>
+      <li>The <strong>issuer</strong> signs the <code class="language-plaintext highlighter-rouge">PermissionTicket</code>.</li>
+      <li>The <strong>client</strong> signs the <code class="language-plaintext highlighter-rouge">ClientAssertion</code> it presents to the Data Holder.</li>
+    </ul>
+  </li>
+  <li><strong>Binding:</strong> When present, <code class="language-plaintext highlighter-rouge">presenter_binding.method = "jkt"</code> binds redemption to a specific client key via its JWK Thumbprint (<a href="https://www.rfc-editor.org/rfc/rfc7638">RFC 7638</a>). <code class="language-plaintext highlighter-rouge">presenter_binding.method = "framework_client"</code> binds redemption to a framework-recognized entity. When <code class="language-plaintext highlighter-rouge">presenter_binding</code> is absent, <code class="language-plaintext highlighter-rouge">aud</code> + client authentication provide the trust boundary.</li>
+</ul>
+
+<p>For where issuer and client signing keys are published and discovered, see <a href="#issuer-key-publication">Issuer Key Publication</a> and <a href="#client-key-publication">Client Key Publication</a> below.</p>
+
+<h4 id="issuer-key-publication">Issuer Key Publication</h4>
+
+<p>Every <code class="language-plaintext highlighter-rouge">PermissionTicket</code> issuer SHALL publish its verification keys as a JWK Set at <code class="language-plaintext highlighter-rouge">${iss}/.well-known/jwks.json</code>, regardless of any trust framework it participates in. This is the framework-agnostic publication path; any Data Holder can resolve the issuer's keys from it without framework-specific configuration.</p>
+
+<p>Issuers that participate in a trust framework MAY additionally publish through that framework's native discovery format. The Data Holder decides which path to use based on its own configured trust policy.</p>
+
+<ul>
+  <li><strong>OpenID Federation</strong> — the issuer publishes its leaf entity configuration at <code class="language-plaintext highlighter-rouge">${iss}/.well-known/openid-federation</code>. See <a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/oidf-issuers.html">OpenID Federation for Permission Ticket Issuers</a> for the metadata layout, the structural binding between <code class="language-plaintext highlighter-rouge">iss</code> and the OIDF leaf entity ID, the federation-signing vs ticket-signing key separation, and the verifier pipeline.</li>
+  <li><strong>UDAP</strong> — discovery begins from <code class="language-plaintext highlighter-rouge">${iss}/.well-known/udap</code>.</li>
+</ul>
+
+<p>Implementations that publish the same issuer through multiple mechanisms SHOULD keep any shared <code class="language-plaintext highlighter-rouge">kid</code> values aligned across those publication surfaces. This is an interoperability recommendation, not a token-time validation requirement.</p>
+
+<h4 id="client-key-publication">Client Key Publication</h4>
+
+<p>Client public keys used to verify a <code class="language-plaintext highlighter-rouge">ClientAssertion</code> SHALL either be registered with the Data Holder out of band, or be discoverable via a JWKS the Data Holder is configured to consult. The specific publication path depends on the client identity approach in use; see <a href="#trust-and-client-registration">Trust and Client Registration</a> above for representative patterns.</p>
+
+<h4 id="error-responses">Error Responses</h4>
+
+<p>When ticket validation fails, the Data Holder SHALL return an OAuth 2.0 error response per RFC 6749.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th><code class="language-plaintext highlighter-rouge">error</code></th>
+      <th><code class="language-plaintext highlighter-rouge">error_description</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Grant type not supported</td>
+      <td><code class="language-plaintext highlighter-rouge">unsupported_grant_type</code></td>
+      <td>"Token exchange not supported"</td>
+    </tr>
+    <tr>
+      <td>Missing or wrong <code class="language-plaintext highlighter-rouge">subject_token_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_request</code></td>
+      <td>"Unsupported subject token type"</td>
+    </tr>
+    <tr>
+      <td>Missing <code class="language-plaintext highlighter-rouge">subject_token</code></td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_request</code></td>
+      <td>"No permission ticket provided"</td>
+    </tr>
+    <tr>
+      <td>Malformed ticket (not valid JWT)</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Malformed permission ticket"</td>
+    </tr>
+    <tr>
+      <td>Missing <code class="language-plaintext highlighter-rouge">ticket_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Missing ticket type"</td>
+    </tr>
+    <tr>
+      <td>Ticket signature invalid</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket signature verification failed"</td>
+    </tr>
+    <tr>
+      <td>Issuer not trusted</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket issuer not trusted: {iss}"</td>
+    </tr>
+    <tr>
+      <td>Issuer JWKS unavailable</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Unable to retrieve issuer keys"</td>
+    </tr>
+    <tr>
+      <td>Ticket expired</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket expired"</td>
+    </tr>
+    <tr>
+      <td>Presenter binding mismatch (key or framework)</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket presenter binding mismatch"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">aud</code> mismatch</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket not valid for this server"</td>
+    </tr>
+    <tr>
+      <td>Unknown <code class="language-plaintext highlighter-rouge">ticket_type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Unsupported ticket type"</td>
+    </tr>
+    <tr>
+      <td>Unrecognized <code class="language-plaintext highlighter-rouge">must_understand</code> entry</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Unrecognized must_understand claim: {name}"</td>
+    </tr>
+    <tr>
+      <td>Unsupported kernel field</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Cannot enforce kernel field: {field}"</td>
+    </tr>
+    <tr>
+      <td>Subject not resolvable</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Unable to resolve ticket subject"</td>
+    </tr>
+    <tr>
+      <td>Ambiguous subject match</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ambiguous ticket subject match"</td>
+    </tr>
+    <tr>
+      <td>Ticket revoked</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Ticket has been revoked"</td>
+    </tr>
+    <tr>
+      <td>Revocable ticket missing <code class="language-plaintext highlighter-rouge">jti</code></td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Revocable ticket missing jti"</td>
+    </tr>
+    <tr>
+      <td>Unsupported constraint</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_grant</code></td>
+      <td>"Unsupported access constraint: {field}"</td>
+    </tr>
+    <tr>
+      <td>No valid scopes after intersection</td>
+      <td><code class="language-plaintext highlighter-rouge">invalid_scope</code></td>
+      <td>"No authorized scopes"</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="conformance">Conformance</h3>
+
+<p>This section defines requirements using RFC 2119 keywords (SHALL, SHOULD, MAY).</p>
+
+<h4 id="data-holder-requirements">Data Holder Requirements</h4>
+
+<p><strong>SHALL:</strong></p>
+<ul>
+  <li>Support the <code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:grant-type:token-exchange</code> grant type at the token endpoint</li>
+  <li>Advertise <code class="language-plaintext highlighter-rouge">urn:ietf:params:oauth:grant-type:token-exchange</code> in <code class="language-plaintext highlighter-rouge">grant_types_supported</code> in <code class="language-plaintext highlighter-rouge">.well-known/smart-configuration</code></li>
+  <li>Advertise supported ticket types in <code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code> in <code class="language-plaintext highlighter-rouge">.well-known/smart-configuration</code></li>
+  <li>Accept <code class="language-plaintext highlighter-rouge">subject_token_type</code> of <code class="language-plaintext highlighter-rouge">https://smarthealthit.org/token-type/permission-ticket</code></li>
+  <li>Validate client assertion per SMART Backend Services</li>
+  <li>Verify the ticket's signature, <code class="language-plaintext highlighter-rouge">ticket_type</code>, <code class="language-plaintext highlighter-rouge">aud</code>, and <code class="language-plaintext highlighter-rouge">exp</code></li>
+  <li>If <code class="language-plaintext highlighter-rouge">presenter_binding</code> is present, verify it according to <code class="language-plaintext highlighter-rouge">presenter_binding.method</code></li>
+  <li>Validate <code class="language-plaintext highlighter-rouge">ticket_type</code> is recognized (listed in <code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code>) and select processing rules accordingly</li>
+  <li>Process <code class="language-plaintext highlighter-rouge">must_understand</code>: reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code> if any listed claim name is unrecognized</li>
+  <li>Reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code> if any present kernel field cannot be enforced</li>
+  <li>Resolve <code class="language-plaintext highlighter-rouge">subject.patient</code> to a local patient record; reject if zero or ambiguous matches</li>
+  <li>Calculate granted access as intersection of requested scopes, ticket <code class="language-plaintext highlighter-rouge">access.permissions</code>, and client registration</li>
+  <li>Enforce all presented <code class="language-plaintext highlighter-rouge">access</code> constraints (<code class="language-plaintext highlighter-rouge">permissions</code>, <code class="language-plaintext highlighter-rouge">data_period</code>, <code class="language-plaintext highlighter-rouge">responder_filter</code>, <code class="language-plaintext highlighter-rouge">sensitive_data</code>) or reject with <code class="language-plaintext highlighter-rouge">invalid_grant</code></li>
+  <li>Enforce subset constraints at the appropriate layer (token endpoint, resource server, or both)</li>
+  <li>If <code class="language-plaintext highlighter-rouge">revocation</code> is present, verify <code class="language-plaintext highlighter-rouge">jti</code> is also present; perform revocation checking before issuing a token; if revocation status cannot be determined, reject the request</li>
+  <li>Return appropriate error codes on validation failure</li>
+</ul>
+
+<p><strong>SHOULD:</strong></p>
+<ul>
+  <li>Cache issuer JWKS with appropriate TTL</li>
+  <li>Cache revocation responses per HTTP cache headers</li>
+  <li>Log <code class="language-plaintext highlighter-rouge">requester</code> and <code class="language-plaintext highlighter-rouge">context</code> for audit trail</li>
+</ul>
+
+<p><strong>MAY:</strong></p>
+<ul>
+  <li>Support trust framework audience validation</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">subject.recipient_record</code> as a hint for faster patient resolution</li>
+</ul>
+
+<h4 id="client-requirements">Client Requirements</h4>
+
+<p><strong>SHALL:</strong></p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">grant_type=urn:ietf:params:oauth:grant-type:token-exchange</code></li>
+  <li>Include the Permission Ticket as <code class="language-plaintext highlighter-rouge">subject_token</code> with <code class="language-plaintext highlighter-rouge">subject_token_type=https://smarthealthit.org/token-type/permission-ticket</code></li>
+  <li>Sign client assertion with registered or federated key</li>
+  <li>Use identical value for <code class="language-plaintext highlighter-rouge">iss</code> and <code class="language-plaintext highlighter-rouge">sub</code> in client assertion (the Client ID URL)</li>
+</ul>
+
+<p>For well-known clients, that Client ID URL is the deterministic identifier <code class="language-plaintext highlighter-rouge">well-known:{entity_uri}</code> rather than a Data Holder-assigned registration identifier.</p>
+
+<p><strong>SHOULD:</strong></p>
+<ul>
+  <li>Check <code class="language-plaintext highlighter-rouge">smart_permission_ticket_types_supported</code> in the Data Holder's <code class="language-plaintext highlighter-rouge">.well-known/smart-configuration</code> before presenting a ticket</li>
+  <li>Request only scopes authorized by held tickets</li>
+  <li>For single-patient ticket types, request SMART v2 CRUDS suffix scopes (for example <code class="language-plaintext highlighter-rouge">patient/Observation.rs</code>)</li>
+  <li>Include <code class="language-plaintext highlighter-rouge">jti</code> in client assertion for replay protection</li>
+  <li>Refresh tickets before expiration for continued access</li>
+</ul>
+
+<h4 id="issuer-requirements">Issuer Requirements</h4>
+
+<p><strong>SHALL:</strong></p>
+<ul>
+  <li>Sign tickets with keys published at <code class="language-plaintext highlighter-rouge">{iss}/.well-known/jwks.json</code></li>
+  <li>Include claims: <code class="language-plaintext highlighter-rouge">iss</code>, <code class="language-plaintext highlighter-rouge">aud</code>, <code class="language-plaintext highlighter-rouge">exp</code>, <code class="language-plaintext highlighter-rouge">jti</code>, <code class="language-plaintext highlighter-rouge">ticket_type</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">access</code>, and <code class="language-plaintext highlighter-rouge">context</code> when the ticket type defines context fields</li>
+  <li>When using <code class="language-plaintext highlighter-rouge">presenter_binding</code>, bind the ticket appropriately with one method (<code class="language-plaintext highlighter-rouge">jkt</code> or <code class="language-plaintext highlighter-rouge">framework_client</code>)</li>
+  <li>If <code class="language-plaintext highlighter-rouge">revocation</code> is present, include <code class="language-plaintext highlighter-rouge">jti</code> and publish the status list at the URL specified in tickets</li>
+</ul>
+
+<p><strong>SHOULD:</strong></p>
+<ul>
+  <li>Verify real-world facts (patient identity, requester identity, legal basis, scope appropriateness) before minting</li>
+  <li>Include <code class="language-plaintext highlighter-rouge">iat</code> for audit</li>
+  <li>Use short expiration for interactive use cases (1-4 hours)</li>
+  <li>Support revocation for long-lived tickets</li>
+  <li>Include <code class="language-plaintext highlighter-rouge">must_understand</code> when minting tickets with profile-specific extension claims</li>
+</ul>
+
+<hr />
+
+<h3 id="downloads">Downloads</h3>
+
+<ul>
+  <li><strong><a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/source-code.zip">Source Code &amp; Examples (ZIP)</a></strong>: Includes TypeScript scripts for key generation, ticket signing, and example generation.</li>
+  <li><strong><a href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/StructureDefinition-PermissionTicket.html">Permission Ticket Logical Model</a></strong> for formal definitions.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package smart.permission-tickets#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 9, 2026 15:30+0000">2026-04-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

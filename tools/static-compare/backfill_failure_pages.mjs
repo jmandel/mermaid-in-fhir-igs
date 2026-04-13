@@ -14,13 +14,13 @@ async function main() {
   const report = JSON.parse(await readFile(REPORT_PATH, 'utf8'));
 
   for (const item of report.cases) {
-    item.fixturePaths = item.fixturePaths || buildFixturePaths(item.packageId, item.fileName);
+    item.fixturePaths = item.fixturePaths || buildFixturePaths(item, item.fileName);
     item.localPages = item.localPages || successLocalPages(item.fixturePaths);
   }
 
   for (const item of report.skipped) {
-    item.fixturePaths = item.fixturePaths || buildFixturePaths(item.packageId, item.fileName);
-    item.fullPath = item.fullPath || path.join(CONTENT_DIR, item.packageId, item.fileName);
+    item.fixturePaths = item.fixturePaths || buildFixturePaths(item, item.fileName);
+    item.fullPath = item.fullPath || path.join(CONTENT_DIR, item.storageId || item.packageId, item.fileName);
     item.localPages = await writeFailureFixture(item);
   }
 
@@ -57,6 +57,9 @@ async function writeFailureFixture(item) {
   }
 
   const metadata = {
+    storageId: item.storageId || null,
+    repoPath: item.repoPath || null,
+    branch: item.branch || null,
     packageId: item.packageId,
     fileName: item.fileName,
     reason: item.reason || 'unknown failure',
@@ -128,6 +131,8 @@ function buildPagesManifest(report) {
     const rankA = reviewSortValue(a);
     const rankB = reviewSortValue(b);
     if (rankA !== rankB) return rankB - rankA;
+    if ((a.repoPath || '') !== (b.repoPath || '')) return (a.repoPath || '').localeCompare(b.repoPath || '');
+    if ((a.branch || '') !== (b.branch || '')) return (a.branch || '').localeCompare(b.branch || '');
     if (a.packageId !== b.packageId) return a.packageId.localeCompare(b.packageId);
     return a.fileName.localeCompare(b.fileName);
   });
@@ -255,17 +260,27 @@ function renderFailureHtml(metadata) {
 </html>`;
 }
 
-function buildFixturePaths(packageId, fileName) {
-  const { name, version } = splitPackageId(packageId);
+function buildFixturePaths(identity, fileName) {
+  const meta = typeof identity === 'string' ? { packageId: identity } : (identity || {});
   const pageName = fileName.replace(/\.html$/i, '');
-  const root = toPosixPath(
-    path.join(
-      'pages',
-      safePathComponent(name),
-      safePathComponent(version || 'unversioned'),
-      safePathComponent(pageName),
-    ),
-  );
+  const rootParts = ['pages'];
+
+  if (meta.repoPath) {
+    rootParts.push(...String(meta.repoPath).split('/').map(safePathComponent));
+  } else {
+    const { name } = splitPackageId(meta.packageId || meta.storageId || 'unknown');
+    rootParts.push(safePathComponent(name));
+  }
+
+  if (meta.branch) {
+    rootParts.push(safePathComponent(meta.branch));
+  }
+
+  const version = meta.version || splitPackageId(meta.packageId || '').version || 'unversioned';
+  rootParts.push(safePathComponent(version));
+  rootParts.push(safePathComponent(pageName));
+
+  const root = toPosixPath(path.join(...rootParts));
 
   return {
     root,

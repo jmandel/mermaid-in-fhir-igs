@@ -1,0 +1,56 @@
+{
+  "slug": "ehealthsuisse-ch-epr-fhir-master-iti-mhd",
+  "storageId": "ehealthsuisse_ch-epr-fhir@master",
+  "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
+  "package": "ch.fhir.ig.ch-epr-fhir",
+  "version": "5.0.0",
+  "title": "CH EPR FHIR (R4)",
+  "repo": "ehealthsuisse/ch-epr-fhir/branches/master/qa.json",
+  "repoPath": "ehealthsuisse/ch-epr-fhir",
+  "buildUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/ehealthsuisse/ch-epr-fhir/tree/master",
+  "canonicalUrl": "http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir",
+  "canonical": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master"
+  ],
+  "fileName": "iti-mhd.html",
+  "originalFileName": "iti-mhd.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/ehealthsuisse_ch-epr-fhir@master/iti-mhd.html",
+  "pagePath": "iti-mhd.html",
+  "pageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 3,
+  "maxDiagramLength": 417,
+  "totalDiagramLength": 1199,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd",
+    "caseJson": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/case.json",
+    "before": {
+      "dir": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/before",
+      "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/before/index.html"
+    },
+    "after": {
+      "dir": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/after",
+      "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/failure",
+      "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/source",
+      "html": "pages/ehealthsuisse/ch-epr-fhir/master/5.0.0/iti-mhd/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "steveswinsburg-au-fhir-ps-master-uc-interstate",
+  "storageId": "steveswinsburg_au-fhir-ps@master",
+  "packageId": "hl7.fhir.au.ps#0.6.0-cibuild",
+  "package": "hl7.fhir.au.ps",
+  "version": "0.6.0-cibuild",
+  "title": "AU Patient Summary Implementation Guide",
+  "repo": "steveswinsburg/au-fhir-ps/branches/master/qa.json",
+  "repoPath": "steveswinsburg/au-fhir-ps",
+  "buildUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/steveswinsburg/au-fhir-ps/tree/master",
+  "canonicalUrl": "http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps",
+  "canonical": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master"
+  ],
+  "fileName": "uc-interstate.html",
+  "originalFileName": "uc-interstate.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/steveswinsburg_au-fhir-ps@master/uc-interstate.html",
+  "pagePath": "uc-interstate.html",
+  "pageUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-interstate.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 365,
+  "totalDiagramLength": 365,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate",
+    "caseJson": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/case.json",
+    "before": {
+      "dir": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/before",
+      "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/before/index.html"
+    },
+    "after": {
+      "dir": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/after",
+      "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/failure",
+      "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/source",
+      "html": "pages/steveswinsburg/au-fhir-ps/master/0.6.0-cibuild/uc-interstate/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-interstate.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/assets/js/mermaid-init.js"
+}

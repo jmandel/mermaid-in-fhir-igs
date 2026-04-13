@@ -1,0 +1,57 @@
+{
+  "slug": "nuts-foundation-nl-generic-functions-ig-care-services-soft-delete-credential-deziidtokencredential",
+  "storageId": "nuts-foundation_nl-generic-functions-ig@care-services-soft-delete",
+  "packageId": "fhir.nl.gf#0.3.0",
+  "package": "fhir.nl.gf",
+  "version": "0.3.0",
+  "title": "Netherlands - Generic Functions for data exchange Implementation Guide",
+  "repo": "nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/qa.json",
+  "repoPath": "nuts-foundation/nl-generic-functions-ig",
+  "buildUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete",
+  "branch": "care-services-soft-delete",
+  "githubUrl": "https://github.com/nuts-foundation/nl-generic-functions-ig/tree/care-services-soft-delete",
+  "canonicalUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf",
+  "canonical": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete"
+  ],
+  "fileName": "credential-DeziIDTokenCredential.html",
+  "originalFileName": "credential-DeziIDTokenCredential.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nuts-foundation_nl-generic-functions-ig@care-services-soft-delete/credential-DeziIDTokenCredential.html",
+  "pagePath": "credential-DeziIDTokenCredential.html",
+  "pageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/credential-DeziIDTokenCredential.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 473,
+  "totalDiagramLength": 946,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential",
+    "caseJson": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/case.json",
+    "before": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/before",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/after",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/failure",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/source",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/care-services-soft-delete/0.3.0/credential-DeziIDTokenCredential/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/credential-DeziIDTokenCredential.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/assets/js/mermaid-init.js"
+}

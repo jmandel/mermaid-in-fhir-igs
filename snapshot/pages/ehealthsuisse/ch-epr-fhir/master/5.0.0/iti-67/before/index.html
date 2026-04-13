@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Find Document References [ITI-67] - CH EPR FHIR (R4) v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/hl7.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/css/fhir.css" rel="stylesheet"/>
+
+    <style>
+    
+    .navbar-inverse {
+        background-color: #144b8a;
+    }   
+
+    #segment-footer .container {
+      background-color: #144b8a;
+    }
+    
+
+    
+
+    
+    #ig-status {
+      color: #4fa2da;
+    } 
+    
+
+    </style>
+ 
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+            <!--
+<div id="family-nav">
+	<a id="logo" no-external="true" href="http://hl7.org/fhir"> <img
+		alt="logo fhir" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/images/fhir-logo-www.png" />
+	</a>
+</div>
+-->
+
+
+            <div id="family-nav">
+                <a id="logo" no-external="true" href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/searchform.html">
+                    <img src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/images/search.png" alt="Search FHIR" />
+                </a>
+            </div>
+            <div id="hl7-nav">
+    <a id="ehealthsuisse-logo" no-external="true" href="https://www.e-health-suisse.ch">
+        <img alt="visit the e-health-suisse website" height="60" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/images/LogoDE_ehealthsuisse.svg" />
+    </a>            
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CH EPR FHIR (R4)</span>
+            <br/>
+            <span style="display:inline-block;">5.0.0 - trial-use
+
+
+
+  <img alt="Switzerland flag" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/images/che.svg" height="16" title="Switzerland"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+    <li>
+        <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/index.html">Home</a>
+    </li>
+    <li class="Profiles">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1
+            <b class="caret">
+            </b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-iua.html">Internet User Authorization (IUA)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-pdqm.html">Patient Demographics Query for mobile (PDQm)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-pixm.html">Patient Identifier Cross-referencing for mobile (PIXm)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html">Mobile Access to Health Documents (MHD)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-restful-atna.html">RESTful ATNA</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mcsd.html">Mobile Care Services Discovery (mCSD)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ppqm.html">Privacy Policy Query for Mobile (CH:PPQm)</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-atc.html">Audit Trail Consumption (CH:ATC)</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2
+            <b class="caret">
+            </b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-103.html">Get Authorization Server Metadata [ITI-103]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-71.html">Get Access Token [ITI-71]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-72.html">Incorporate Access Token [ITI-72]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-104.html">Patient Identity Feed FHIR [ITI-104]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-119.html">Patient Demographics Match [ITI-119]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-83.html">Mobile Patient Identifier Cross-reference Query [ITI-83]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-65.html">Provide Document Bundle [ITI-65]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html">Find Document References [ITI-67]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-68.html">Retrieve Document [ITI-68]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html">Update Document Metadata [CH:MHD-1]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-20.html">Record Audit Event [ITI-20]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-90.html">Find Matching Care Services [ITI-90]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-130.html">Care Services Feed [ITI-130]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ppq-3.html">Mobile Privacy Policy Feed [PPQ-3]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ppq-4.html">Mobile Privacy Policy Bundle Feed [PPQ-4]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ppq-5.html">Mobile Privacy Policy Retrieve [PPQ-5]</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-81.html">Retrieve Audit Event [ITI-81]</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
+            <b class="caret">
+            </b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/volume3.html">CH:ATC Audit Event Content Profiles</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Appendix
+            <b class="caret">
+            </b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/profiles.html">Profiles</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/extensions.html">Extensions</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/terminology.html">Terminology</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/capstatements.html">Capability Statements</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/operations.html">Operations</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/sequencediagrams.html">Sequence diagrams</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/tracecontext.html">Trace Context</a>
+            </li>
+            <li>
+                <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/changelog.html">Open Issues / Change Log</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/artifacts.html">Artifacts</a>
+    </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/toc.html'><b>Table of Contents</b></a></li><li><b>Find Document References [ITI-67]</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">CH EPR FHIR (R4), published by eHealth Suisse. This guide is not an authorized publication; it is the continuous build for version 5.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/ehealthsuisse/ch-epr-fhir/'>https://github.com/ehealthsuisse/ch-epr-fhir/</a> and changes regularly. See the <a href='http://fhir.ch/ig/ch-epr-fhir/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Find Document References [ITI-67]</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+  <li><a href="#actor-roles" id="markdown-toc-actor-roles">Actor Roles</a></li>
+  <li><a href="#referenced-standards" id="markdown-toc-referenced-standards">Referenced Standards</a></li>
+  <li><a href="#messages" id="markdown-toc-messages">Messages</a></li>
+  <li><a href="#security-consideration" id="markdown-toc-security-consideration">Security Consideration</a></li>
+</ul>
+
+</div>
+<p>This section describes the additional requirements for the Swiss EPR of the <a href="https://profiles.ihe.net/ITI/MHD/ITI-67.html">Find Document References
+[ITI-67]</a> transaction defined in the MHD Profile published in the IHE ITI
+Trial Implementation “Mobile Access to Health Documents”.</p>
+
+<h3 id="scope">Scope</h3>
+
+<p>The Find Document References transaction is used to find DocumentReference Resources that
+satisfy a set of parameters. It is equivalent to the <em>FindDocuments</em> and
+<em>FindDocumentsByReferenceId</em> queries from the <em>Registry Stored Query</em> [ITI-18] transaction. The
+result of the query is a FHIR Bundle containing DocumentReference Resources that match the
+query parameters.</p>
+
+<h3 id="actor-roles">Actor Roles</h3>
+
+<p><strong>Actor:</strong> Document Consumer <br />
+<strong>Role:</strong> Requests a list of DocumentReference Resources, matching the supplied set of criteria, from the Document Responder. <br />
+<strong>Actor:</strong> Document Responder <br />
+<strong>Role:</strong> Returns DocumentReference Resources that match the search criteria provided by the Document Consumer.</p>
+
+<h3 id="referenced-standards">Referenced Standards</h3>
+
+<ol>
+  <li><a href="https://profiles.ihe.net/ITI/MHD/4.2.3">Mobile access to Health Documents (MHD), Rev. 4.2.3</a></li>
+  <li>This MHD Profile is based on Release 4 of the <a href="https://hl7.org/fhir/R4/index.html">HL7® FHIR®</a> standard.</li>
+</ol>
+
+<h3 id="messages">Messages</h3>
+
+<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="158px" preserveAspectRatio="none" style="width:447px;height:158px;background:#FFFFFF;" version="1.1" viewBox="0 0 447 158" width="447px" zoomAndPan="magnify"><title>Interaction Diagram for [ITI-67]</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="249.2109" x="98.261" y="27.9951">Interaction Diagram for [ITI-67]</text><g><title>Document Responder</title><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1;" width="10" x="353.6353" y="104.7266" /></g><g><title>Document Consumer</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="82.1836" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="86" x2="86" y1="73.5938" y2="151.8594" /></g><g><title>Document Responder</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="354.6353" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="358.5376" x2="358.5376" y1="73.5938" y2="151.8594" /></g><g class="participant participant-head" data-participant="DocumentConsumer"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162.3672" x="5" y="42.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="12" y="62.292">Document Consumer</text></g><g class="participant participant-head" data-participant="DocumentResponder"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="166.1953" x="275.5376" y="42.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="282.5376" y="62.292">Document Responder</text></g><g><title>Document Responder</title><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1;" width="10" x="353.6353" y="104.7266" /></g><g class="message" data-participant-1="DocumentConsumer" data-participant-2="DocumentResponder"><polygon fill="#181818" points="341.6353,100.7266,351.6353,104.7266,341.6353,108.7266,345.6353,104.7266" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="86.1836" x2="347.6353" y1="104.7266" y2="104.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="233.8223" x="93.1836" y="99.6606">Find Document References Request</text></g><g class="message" data-participant-1="DocumentResponder" data-participant-2="DocumentConsumer"><polygon fill="#181818" points="97.1836,129.8594,87.1836,133.8594,97.1836,137.8594,93.1836,133.8594" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="91.1836" x2="357.6353" y1="133.8594" y2="133.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243.4517" x="103.1836" y="128.7935">Find Document References Response</text></g></g></svg></div>
+
+<h4 id="find-document-references-request-message">Find Document References Request Message</h4>
+
+<p>The Document Consumer SHALL include the search parameter patient.identifier with the oid of the EPR-SPID.
+The search parameters of type <a href="https://hl7.org/fhir/R4/search.html#token">token</a> SHALL contain both the system and the code.</p>
+
+<p><em>Find Document Reference</em> example <strong>request</strong>:</p>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">[base]/DocumentReference?patient.identifier=urn:oid:2.16.756.5.30.1.127.3.10.3|761337610411353650&amp;status=current</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
+<span class="na">traceparent</span><span class="p">:</span> <span class="s">00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-00</span>
+</code></pre></div></div>
+
+<h4 id="expected-actions">Expected Actions</h4>
+
+<p>The Document Responder SHALL process the query to discover the DocumentReference entries that match the search parameters given.</p>
+
+<p>The Document Responder SHALL set the <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> value to the URL used in ITI-68
+transactions to retrieve that document's content.</p>
+
+<h5 id="federated-cross-community-access-option">Federated Cross Community Access Option</h5>
+
+<p>If the Document Responder supports the Federated Cross Community Access Option the Document Responder SHALL delegate the queries
+to the different connected communities and aggregate and sort the results including the results of his own community.</p>
+
+<p>The Document Responder SHALL freeze the result set from the federated cross community queries and allow paged access by the Document Consumer. 
+Subsequent query to an individual result by the Document Consumer SHALL return the current resource, not the frozen one.</p>
+
+<div class="mermaid">
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+           'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] --&gt;|Query| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --&gt; C(Document Responder own community)
+    B --&gt; D(Document Responders federated communities)
+</div>
+
+<h4 id="find-document-references-response-message">Find Document References Response Message</h4>
+
+<p>The response Bundle SHALL follow the <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/StructureDefinition-ch-mhd-documentreference-comprehensive-bundle.html">CH MHD Find Document References Comprehensive Response message</a>
+Profile (<a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/Bundle-Bundle-FindDocumentReferences.html">example: MHD Find DocumentReferences</a>).</p>
+
+<h5 id="federated-cross-community-access-option-1">Federated Cross Community Access Option</h5>
+
+<p>If a Document Responder does not respond, an OperationOutcome with a severity warning SHALL be added to the aggregated results indicating the community does not respond.</p>
+
+<p>For matching DocumentReferences returned by the Document Responder, the Document Responder SHALL ensure by rewriting the id and attachment.url that follow-up reads, updates or document retrieval will be handled by same Document Responder actor. Any id, url rewrite SHALL be resolvable for at least an hour.</p>
+
+<h4 id="capabilitystatement-resource">CapabilityStatement Resource</h4>
+
+<p>The CapabilityStatement resource for the <strong>Document Consumer</strong> is <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/CapabilityStatement-CH.MHD.DocumentConsumer.html">MHD Document Consumer</a>.</p>
+
+<p>The CapabilityStatement resource for the <strong>Document Responder</strong> is <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/CapabilityStatement-CH.MHD.DocumentResponder.html">MHD Document Responder</a>.</p>
+
+<h3 id="security-consideration">Security Consideration</h3>
+
+<p>The transaction SHALL be secured by Transport Layer Security (TLS) encryption and server authentication with
+server certificates. Transactions across communities SHALL use mTLS.</p>
+
+<p>The transaction SHALL use client authentication and authorization using one of the following strategies:</p>
+<ol>
+  <li>Use an extended access token defined in <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-71.html">IUA</a> conveyed as defined in the <a href="https://profiles.ihe.net/ITI/IUA/index.html#372-incorporate-access-token-iti-72">Incorporate Access Token [ITI-72]</a> transaction.</li>
+  <li>or, use mutual authentication (mTLS) on the transport layer in combination with a XUA token for authorization from the Get X-User Assertion transaction (Annex 5.1 1.6.4.2). The XUA token SHALL be conveyed as defined in the <a href="https://profiles.ihe.net/ITI/IUA/index.html#372-incorporate-access-token-iti-72">Incorporate Access Token [ITI-72]</a> transaction.</li>
+</ol>
+
+<p>All Document Responders except the one with the Federated Cross Community Access Option SHALL be grouped with the Authorization Decision Consumer actor of the CH:ADR profile
+defined in Extension 2.1 to Annex 5 of the ordinances and perform an Authorization Decision Request [CH:ADR] for
+every Find Document References [ITI-67] response.</p>
+
+<p>The actors SHALL support the <em>traceparent</em> header handling, as defined in <a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/tracecontext.html">Appendix: Trace Context</a>.</p>
+
+<h4 id="security-audit-considerations">Security Audit Considerations</h4>
+
+<h5 id="document-consumer-audit">Document Consumer Audit</h5>
+
+<p>The <strong>Document Consumer</strong> SHALL record an audit event according to
+<a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/StructureDefinition-ChAuditEventIti67Consumer.html">CH Audit Event for [ITI-67] Document Consumer</a> 
+(<a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/AuditEvent-ChAuditEventIti67ConsumerExample.html">example</a>).</p>
+
+<h5 id="document-responder-audit">Document Responder Audit</h5>
+
+<p>The <strong>Document Responder</strong> SHALL record an audit event according to
+<a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/StructureDefinition-ChAuditEventIti67Responder.html">CH Audit Event for [ITI-67] Document Responder</a>
+(<a href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/AuditEvent-ChAuditEventIti67ResponderExample.html">example</a>).</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.e-health-suisse.ch">eHealth Suisse</a>.  Package ch.fhir.ig.ch-epr-fhir#5.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 16:16+0000">2026-01-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSffM9HysTOg3VdMOeaFmWiWGH0OQT-FZLmwZaeXgZqUr66Y0A/viewform?usp=sf_link&amp;entry%2E1353807103=ch.fhir.ig.ch-epr-fhir%235.0.0%20/iti-67.html&amp;entry%2E247644557=Find%20Document%20References%20[ITI-67]">Propose a change</a>
+
+
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Poznámky k implementaci - HL7 Czech Imaging Report IG v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/cqf.css" rel="stylesheet" />
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/cz-core.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"31"}
+    h3,h4,h5,h6{--heading-prefix:"31"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="https://www.hl7cr.eu/">
+    <img height="60" alt="Visit the HL7 Czech website" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/hl7cz-logo.png" />
+  </a>
+</div>
+<div id="project-nav">
+  <a id="project-logo" no-external="true" href="https://ncez.mzcr.cz/cs/node/573"><img height="60" alt="MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/NPO_logo.png" /> </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://ncez.mzcr.cz/"><img height="60" alt="NCEZ MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Czech Imaging Report IG</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <img alt="Czechia flag" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/cze.svg" height="16" title="Czechia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/index.html">Home (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/index-cs.html">Home (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/scope-and-content.html">Scope and content (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/scope-and-content-cs.html">Scope and content (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/background.html">Background (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/background-cs.html">Background (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/use-cases.html">Use cases (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/use-cases-cs.html">Use cases (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/workflow.html">Workflow (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/workflow-cs.html">Workflow (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/logical-models.html">Logical models (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/logical-models-cs.html">Logical models (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/terminology-considerations.html">Terminology considerations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/terminology-considerations-cs.html">Terminology considerations (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/model-map.html">Mapping to profiles (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/model-map-cs.html">Mapping to profiles (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/examples.html">Examples (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/examples-cs.html">Examples (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations.html">Obligations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations-cs.html">Obligations (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes.html">Implementation notes (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes-cs.html">Implementation notes (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/authors.html">Authors (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/authors-cs.html">Authors (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/downloads.html">Downloads (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/downloads-cs.html">Downloads (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/dependencies.html">Dependencies (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/dependencies-cs.html">Dependencies (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/copyright.html">Copyright (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/copyright-cs.html">Copyright (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/hl7-eu/imaging-r4/en/">IG IMG EU</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7-cz/img/branches/master/toc.html'><b>Table of Contents</b></a></li><li><b>Poznámky k implementaci</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Czech Imaging Report IG, published by HL7 Czech Republic. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7-cz/img/'>https://github.com/HL7-cz/img/</a> and changes regularly. See the <a href='https://hl7.cz/fhir/img/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Poznámky k implementaci</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#přehled-obsahu" id="markdown-toc-přehled-obsahu">Přehled obsahu</a></li>
+  <li><a href="#popis-obsahu-cz_compositionimagingreport" id="markdown-toc-popis-obsahu-cz_compositionimagingreport">Popis obsahu CZ_CompositionImagingReport</a></li>
+  <li><a href="#sekce-a-obsah" id="markdown-toc-sekce-a-obsah">Sekce a obsah</a></li>
+</ul>
+
+</div>
+
+<p>Na následující stránce naleznete poznámky k implementaci zprávy z obrazového vyšetření. Týkají se tvorby bundlu, kompozice a naplnění těchto profilů příslušnými daty.</p>
+
+<h3 id="přehled-obsahu">Přehled obsahu</h3>
+
+<pre><code class="language-mermaid">classDiagram
+  direction LR
+  class CZ_BundleImagingReport{
+    &lt;&lt;Bundle&gt;&gt;
+  }
+  CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
+  CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
+  CZ_BundleImagingReport *-- "1" CZ_PatientCore
+  CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImagingReport *-- "0..*" CZ_Practioner
+  CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
+  CZ_BundleImagingReport *-- "0..*" CZ_OrganizationCore
+  CZ_BundleImagingReport *-- "0..*" CZ_StudyImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ProcedureImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ObservationResultImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_KeyImageDocumentReference
+  CZ_BundleImagingReport *-- "0..*" CZ_ConditionImage
+  CZ_BundleImagingReport *-- "0..*" CZ_CarePlanImage
+
+  CZ_DiagnosticReport --&gt; CZ_CompositionImagingReport: composition
+  
+
+  CZ_CompositionImagingReport --&gt; CZ_ImagingOrderInformation: extension[basedOn]  
+  CZ_CompositionImagingReport --&gt; CZ_DiagnosticReport: extension[diagnosticreport-reference]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: author[author]
+  CZ_CompositionImagingReport --&gt; CZ_DeviceObserver: author[authoring-device]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: attester[legalAuthenticator]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: attester[resultValidator]
+  CZ_CompositionImagingReport --&gt; CZ_OrganizationCore: custodian
+  CZ_CompositionImagingReport --&gt; CZ_PatientCore: subject
+  CZ_CompositionImagingReport --&gt; CZ_StudyImaging: section[imagingstudy]
+  CZ_CompositionImagingReport --&gt; CZ_ImagingOrderInformation: section[order]
+  CZ_CompositionImagingReport --&gt; CZ_ConditionImage: section[clinicalQuestion]
+  CZ_CompositionImagingReport --&gt; CZ_ProcedureImaging: section[procedure]
+  CZ_CompositionImagingReport --&gt; CZ_StudyImaging: section[comparison]
+  CZ_CompositionImagingReport --&gt; CZ_ObservationResultImaging: section[findings]
+  CZ_CompositionImagingReport --&gt; CZ_KeyImageDocumentReference: section[findings]
+  CZ_CompositionImagingReport --&gt; CZ_KeyImageDocumentReference: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_ObservationResultImaging: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_ConditionImage: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_CarePlanImage: section[recommendation]
+
+</code></pre>
+<p>Obrazová zpráva je reprezentována jako FHIR bundle, který obsahuje zdroje CZ_CompositionImagingReport a CZ_DiagnosticReport a všechny zdroje ve stromové struktuře zdrojů, na které se odkazovalo (viz <a href="https://www.hl7.org/fhir/composition-operation-document.html">$document operation</a>). Při implementaci je nutné se řídit závaznými pravidly, které jsou popsány v sekci <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations-cs.html">Obligations</a></p>
+
+<h3 id="popis-obsahu-cz_compositionimagingreport">Popis obsahu CZ_CompositionImagingReport</h3>
+
+<h3 id="sekce-a-obsah">Sekce a obsah</h3>
+
+<p>Kompozice obsahuje základní komponenty a sekce. Mezi základní komponenty patří například informace o autorovi, datum vytvoření dokumentu apod. V rámci sekcí je rozdělena do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, je nutné vyjádřit odůvodnění v <code class="language-plaintext highlighter-rouge">composition.section.emptyReason</code>.</p>
+
+<h4 id="sekce-kompozice">Sekce kompozice</h4>
+
+<p><strong>Zobrazovací studie (Imaging study)</strong></p>
+
+<p>Informace o studiích, o kterých tato zpráva informuje. Zahrnuje například identifikátory studie, datum a čas provedení vyšetření, použité modality při vyšetření a různé série.</p>
+
+<p><strong>Objednávka (Order)</strong></p>
+
+<p>Sekce objednávky obsahuje informace o objednávkách, které vedly ke studiím a této zprávě. Zahrnuje informace jako „přístupové číslo“, identitu odesílajícího lékaře nebo organizace, indikaci k vyšetření a ideálně i další kontext pacienta a specifické klinické otázky položené odesílajícím lékařem. Klinické otázky mají někdy tvar „Sledování X“, kde X je existující známý nález (možná z předchozího vyšetření), nebo „Vyloučení X“, kde X je stav, pro jehož vyloučení je zapotřebí zhodnocení obrazové výstupu. Indikace jsou také doufejme uvedeny, aby poskytly zobrazovacímu lékaři důležitý klinický kontext a podpořily posouzení vhodnosti objednávky a/nebo fakturace. Pokud indikace nejsou přítomny, někdy je musí jej nalézt zobrazovací personál.</p>
+
+<blockquote>
+  <p>Poznámka: „Vyloučení X“, ačkoli je pro zobrazovacího lékaře do jisté míry užitečné, může být problematické pro fakturaci, protože příznaky, které naznačují možnou přítomnost onemocnění a prokazují lékařskou nutnost zobrazovacího vyšetření, jsou implicitní, ale nejsou zachyceny. V praxi se na pracovišti tato formuloce stále více odmítá.</p>
+</blockquote>
+
+<p><strong>Podpůrné klinické údaje (History)</strong></p>
+
+<p>Tato část obsahuje klinické údaje pacienta a další předchozí klinické podrobnosti, které zobrazovací lékař považuje za relevantní pro zobrazovací studii. Některé informace může poskytnout odesílající lékař v objednávce a další jsou extrahovány z lékařské dokumentace zobrazovacím personálem, automatizovanými nástroji nebo samotným radiologem. Tyto informace poskytují základní informace pro zobrazovacího lékaře, kontext pro obsah zprávy a někdy jsou relevantní pro fakturaci a klinické pokyny. Mezi potenciální zdroje patří výsledky nebo shrnutí klinických poznámek ze setkání, kde byla zadána objednávka zobrazovacího vyšetření.</p>
+
+<p><strong>Klinická otázka (Clinical question)</strong></p>
+
+<p>Klinická otázka je klíčovým prvkem objednávky na obrazové vyšetření. Měla by být zadána jako věta tázací, měla by končit otazníkem a mělo by možné na ni na základě obrazového vyšetření odpovědět. Dodává provádějícímu pracovníkovi nezbytný kontext a směr. Stručně a výstižně vysvětluje, proč je vyšetření nutné, což například umožňuje radiologovi zvolit  nejvhodnější zobrazovací protokol a zaměřit se na hledání konkrétní patologie. Tím se zvyšuje diagnostická přesnost a efektivita celého procesu, minimalizuje se riziko nejasností v závěrečné zprávě a zároveň se zajišťuje, že je pacient vystaven záření nebo kontrastní látce jen v medicínsky odůvodněných případech. Klinická otázka tak přeměňuje rutinní skenování na cílený diagnostický nástroj.</p>
+
+<p><strong>Procedura (Procedure)</strong></p>
+
+<p>Tato část obsahuje informace, jako je typ procedury, zobrazená anatomie, datum a čas zobrazovacího vyšetření a pracoviště, které jej provedlo.</p>
+
+<p>Tato část, nazývaná také zobrazovací technika, může popisovat použité parametry, podrobnosti o všech podaných kontrastních látkách a/nebo radiofarmacích, včetně koncentrace, objemu a cesty podání, a o všech použitých lécích a katétrech nebo zařízeních.</p>
+
+<p>Tato část může také popisovat přípravu dat vytvořených procedurou: Pohledy, sady snímků, rekonstrukce, přeformátování a následné zpracování.</p>
+
+<p>Zde může být také popsána radiační dávka; textový obsah a metriky mohou být omezeny/formátovány tak, aby splňovaly místní předpisy.</p>
+
+<p>Informace v této části jsou obvykle podrobnější než ty, které jsou uvedeny v Objednávce, a ve skutečnosti se mohou lišit od objednaného vyšetření na základě potřeb pacienta a úsudku zobrazovacího lékaře.</p>
+
+<p>Zde mohou být také popsány jakékoli nedostatky studie, například zda bylo zobrazení neúplné nebo zda se vyskytly problémy s kvalitou, které zabránily interpretaci některé části studie nebo jinak ohrozily citlivost a specifičnost vyšetření. V případě, že se pacient nemohl zobrazování zúčastnit, například kvůli klaustrofobii nebo záchvatu, může být stále vypracována zpráva a tato část by uváděla, že vyšetření nebylo provedeno, a uváděla by důvod.</p>
+
+<p>I když skutečné pokyny dané pacientovi obvykle nejsou ve zprávě uvedeny, některé zmiňují skutečnost, že pokyny byly dány, a případně že byla projednána rizika a byl získán souhlas. Poznámky k postupu od technika jsou obvykle zaznamenány jinde, ale zde mohou být uvedeny důležité podrobnosti, jako jsou nežádoucí reakce pacienta nebo věci, které mohou ovlivnit kvalitu studie.</p>
+
+<p>Někdy jsou zde uvedeny i podrobnosti o postupu, které mohou být vyžadovány pro fakturaci.</p>
+
+<p><strong>Srovnání (Comparison)</strong></p>
+
+<p>Tato část obsahuje seznam dalších studií, které zobrazovací lékař považoval za relevantní. Obvykle jsou identifikovány podle typu (modality, anatomie, typu vyšetření) a data. Zjištění z těchto studií a srovnání se současnou studií jsou obvykle uvedena v další části (např. s uvedením nezměněných výsledků, s rozlišujícími popisy a/nebo měřeními), ačkoli některé z těchto studií nemusí být v nálezech konkrétně zmíněny. Obvykle se předpokládá, že zobrazovacímu lékaři byly k dispozici jak snímky, tak i zpráva pro každou srovnávací studii, avšak v některých případech, například u externích předchozích studií, byla k dispozici pouze zpráva nebo pouze snímky, v takovém případě to lze zde uvést.</p>
+
+<p><strong>Nálezy (Findings)</strong></p>
+
+<p>Tato část poskytuje podrobný popis nálezů zobrazovacího vyšetření. Nálezy by měly být popsány jasně a stručně, pokud možno s použitím standardizované anatomické, patologické a radiologické terminologie.</p>
+
+<p>Pokud existuje značný počet nálezů, zobrazovací lékař je obvykle uspořádá do skupin, obvykle podle anatomie. Šablony pro hlášení pro konkrétní typy zákroků (například ty na radreport.org) také často uspořádají nálezy.</p>
+
+<p>Důležitý rozdíl mezi nálezy a výsledkem spočívá v tom, že nálezy zachycují to, co zobrazovací lékař viděl na snímku, zatímco výsledek zachycuje to, co odvodil/usoudil. Nálezy mohou zaznamenat radiolucenci, zatímco výsledek zaznamená zlomeninu. Existují případy, kdy se oba typy překrývají, ale zobrazovací lékaři se obecně snaží v nálezech zachytit, jaké jsou významné obrazové prvky, a ve výsledku sdělit objednávajícímu lékaři, co si myslí, že tyto prvky představují z klinického hlediska.</p>
+
+<p><strong>Výsledek (Impression)</strong></p>
+
+<p>Někdy se také nazývá Závěr nebo Diagnóza a poskytuje celkovou interpretaci nálezů radiologem, specifickou diagnózu a/nebo diferenciální diagnózu (pokud je to možné), odpovědi na jakékoli klinické otázky položené odesílajícím lékařem a případná doporučení pro další léčbu a/nebo potvrzení.</p>
+
+<p>Doporučení se nejčastěji týkají následného diagnostického zobrazování nebo jiných diagnostických postupů, jako jsou biopsie nebo laboratorní testy. Mohou také zahrnovat návrhy na korelaci výsledku zobrazování s dalšími klinickými informacemi pro zvýšení spolehlivosti diagnózy, doporučení ke specialistům nebo méně často terapeutické postupy. Doporučení mohou citovat konkrétní použité pokyny, zejména pokud odesílající lékař může být méně obeznámen se současnými pokyny pro určité nálezy než lékař specializující se na zobrazovací metody. Lékař specializující se na zobrazovací metody může při sestavování doporučení zohlednit odbornost odesílajícího lékaře; u neobvyklého typu rakoviny může rodinný lékař shledat doporučení pro následné sledování užitečnějšími než onkologický specialista.</p>
+
+<p>Vzhledem k tomu, že odesílající lékaři se mohou konkrétně zaměřit na tuto část, může si lékař specializující se na zobrazovací metody vybrat obzvláště důležité detaily, jako jsou klíčové nálezy nebo jakékoli nežádoucí účinky, aby je zde zopakoval a shrnul.</p>
+
+<p>Pořadí položek ve výsledku je často významné, protože zobrazovací lékaři často umisťují nejkritičtější, nejakčnější a nejvýznamnější položky v sekci výsledků jako první, aby minimalizovali riziko jejich přehlédnutí. V případě diferenciální diagnózy se více možných diagnóz obvykle prezentuje v pořadí od nejpravděpodobnější po nejméně pravděpodobnou. Položky výsledků mohou být také očíslovány, aby se usnadnilo slovní odkazování nebo propojení s komunikací.</p>
+
+<p>Některé položky ve výsledku mohou být klinicky významné, ale nesouvisely s indikacemi nebo důvodem vyšetření; například plicní uzlík, který byl při vyšetření hrudníku považován za podezřelý z traumatu. Tyto položky se často označují jako „náhodné nálezy“.</p>
+
+<p>Některé položky ve výsledku mohou být kritické, protože představují potenciál pro závažný negativní klinický dopad na pacienta, pokud nebudou neprodleně přijata vhodná opatření. Přítomnost takových položek téměř vždy vede ke komunikaci s ošetřujícím personálem a/nebo pacientem.</p>
+
+<p><strong>Doporučení (Recommendation)</strong></p>
+
+<p>Některé položky ve výsledku mohou být považovány za akčovatelné, protože je vhodné provést určitá následná opatření nebo komunikovat. Doporučení mohou, ale nemusí zahrnovat konkrétní odpovídající následná opatření. Během procesu hlášení mohla, ale nemuselo proběhnout odpovídající komunikace s příslušnými osobami a tato komunikace bude ve zprávě uvedena.</p>
+
+<p><strong>Komplikace (Complication)</strong></p>
+
+<p>Informace o dalších zdravotních problémech, které se objeví po zákroku, diagnostickém testu nebo studii, léčbě nebo nemoci.</p>
+
+<p><strong>Komunikace (Communication)</strong></p>
+
+<p>Toto je volitelná část, protože se nepředpokládalo, že bude často vyžadována.</p>
+
+<p>Existuje velký zájem o nástroje, které by usnadnily jasné a rychlé sdělování kritických výsledků příslušným osobám, potvrdily, že probíhá následná kontrola proveditelných nálezů, a zajistily, aby náhodné nálezy „nepropadly skrz naskrz“.</p>
+
+<p>Komunikace jsou záznamy ve zprávě o pokusech a/nebo úspěšných sděleních určitého obsahu zprávy odesílajícímu lékaři, pacientovi nebo jiné příslušné osobě. Tato komunikace je iniciována během generování Diagnostické zprávy členy organizace, kteří tuto objednávku plní. Např. přímé sdělení časově kritických výsledků radiologem odesílajícímu lékaři.</p>
+
+<p>Komunikace není v pokynech ACR uvedena jako samostatná část, ale kódy pro sekci komunikace existují. Běžnou praxí je prezentovat záznamy o komunikaci ve spodní části zprávy, těsně pod výsledkem, protože jsou často řízeny konkrétními položkami ve výsledku a vyskytují se na konci procesu vytváření zprávy. Takové záznamy o komunikaci podporují lékařsko-právní využití a kontrolu a zlepšování souladu s osvědčenými postupy pro bezpečnost pacientů a kvalitu péče.</p>
+
+<p>Záznam o komunikaci obvykle zaznamenává datum, čas a způsob komunikace, kontaktovanou osobu/organizaci a může shrnout sdělený obsah.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.cz/">HL7 Czech Republic</a>.  Package hl7.fhir.cz.img#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 28, 2026 16:02+0000">2026-01-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/img/branches/master/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/img/branches/master/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

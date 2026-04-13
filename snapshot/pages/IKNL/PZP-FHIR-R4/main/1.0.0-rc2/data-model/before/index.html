@@ -1,0 +1,2020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Data Model Overview - Advance Care Planning (PZP) v1.0.0-rc2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://iknl.nl/"><img height="55" alt="Visit the IKNL website" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/images/IKNL.png"/> </a>
+        </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Advance Care Planning (PZP)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-rc2 - trial-use
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/index.html">Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/information-standard.html">Information Standard</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-model.html">Data Model</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-exchange.html">Data Exchange</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/changelog.html">Change Log</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/toc.html'><b>Table of Contents</b></a></li><li><b>Data Model Overview</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Advance Care Planning (PZP), published by IKNL. This guide is not an authorized publication; it is the continuous build for version 1.0.0-rc2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/IKNL/PZP-FHIR-R4/'>https://github.com/IKNL/PZP-FHIR-R4/</a> and changes regularly. See the <a href='https://api.iknl.nl/docs/pzp/r4/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Data Model Overview</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#fhir-data-model-overview" id="markdown-toc-fhir-data-model-overview">FHIR Data Model Overview</a></li>
+  <li><a href="#acp-questionnaire" id="markdown-toc-acp-questionnaire">ACP Questionnaire</a></li>
+  <li><a href="#associating-acp-dataset-to-fhir" id="markdown-toc-associating-acp-dataset-to-fhir">Associating ACP dataset to FHIR</a></li>
+</ul>
+
+</div>
+<p>This page provides an overview of the FHIR profiles used to represent the ACP dataset, many of which are based on nl-core profiles.</p>
+
+<h3 id="fhir-data-model-overview">FHIR Data Model Overview</h3>
+
+<p>The diagram below illustrates the FHIR data model for this implementation guide. The resources represent the core event where the advance care plan is discussed, the individuals involved in the ACP process, the documented outcomes of the ACP and additional clinical context relevant to the ACP agreements.</p>
+
+<h4 id="data-model-overview-diagram">Data Model Overview Diagram</h4>
+<div class="mermaid" style="height: 700px; overflow: visible;">
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --&gt; Encounter
+    CommunicationRequest -- "sender, subject" --&gt; Patient
+    CommunicationRequest -- "requester" --&gt; PractitionerRole
+    CommunicationRequest -- "recipient" --&gt; RelatedPerson
+    Consent -- "patient, provision.actor" --&gt; Patient
+    Consent -- "provision.actor" --&gt; PractitionerRole
+    Consent -- "provision.actor" --&gt; RelatedPerson
+    DeviceUseStatement -- "device" --&gt; Device
+    DeviceUseStatement -- "subject" --&gt; Patient
+    DeviceUseStatement -- "extension" --&gt; PractitionerRole
+    Encounter -- "subject" --&gt; Patient
+    Encounter -- "participant" --&gt; PractitionerRole
+    Encounter -- "reasonReference" --&gt; Procedure
+    Encounter -- "participant" --&gt; RelatedPerson
+    Goal -- "subject" --&gt; Patient
+    Observation -- "encounter" --&gt; Encounter
+    Observation -- "subject" --&gt; Patient
+    Observation -- "performer" --&gt; PractitionerRole
+    Patient -- "contact.extension" --&gt; RelatedPerson
+    PractitionerRole -- "practitioner" --&gt; Practitioner
+    Procedure -- "encounter" --&gt; Encounter
+    Procedure -- "performer, subject" --&gt; Patient
+    Procedure -- "performer" --&gt; PractitionerRole
+    Procedure -- "performer" --&gt; RelatedPerson
+    RelatedPerson -- "patient" --&gt; Patient
+</div>
+
+<h3 id="acp-questionnaire">ACP Questionnaire</h3>
+
+<p>A patient's ACP preferences can be documented using a structured form, such as the one developed by IKNL. This implementation guide provides a corresponding <a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/Questionnaire-ACP-zib2020.html">FHIR Questionnaire resource</a> to ensure standardized and interoperable data capture.</p>
+
+<p>The Questionnaire's primary function is to specify its identity and question identifiers required to capture answers in a QuestionnaireResponse. The Questionnaire is based on the ACP form dataset and aims to preserve the zib structure as much as possible. To ensure the intended meaning is preserved in both the Questionnaire and QuestionnaireResponse, some questions correspond to zib concepts with preset answer codes that are marked as readOnly. This approach tightly couples the Questionnaire and QuestionnaireResponse to the underlying zib data model. The Questionnaire is not specifically designed for direct use in a user interface, though this is possible. For optimal user interaction, the questionnaire may need customization, for example, hiding preselected and read-only questions.</p>
+
+<p>Two example QuestionnaireResponse resources, based on this Questionnaire, are included:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/QuestionnaireResponse-HendrikHartman-20201001.html">QuestionnaireResponse for Hendrik Hartman (01-01-2020)</a></li>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/QuestionnaireResponse-HendrikHartman-20221108.html">QuestionnaireResponse for Hendrik Hartman (08-11-2022)</a></li>
+</ul>
+
+<h3 id="associating-acp-dataset-to-fhir">Associating ACP dataset to FHIR</h3>
+
+<p>The FHIR profiles in this guide are directly linked to the ACP dataset elements published in ART-DECOR.</p>
+
+<p>Each StructureDefinition includes a <code class="language-plaintext highlighter-rouge">StructureDefinition.mapping.uri</code> that points to the specific version of the ACP dataset used. Additionally, every element within a profile is individually mapped to its corresponding dataset element using the <code class="language-plaintext highlighter-rouge">ElementDefinition.mapping</code> property. The mapping table below shows all mappings in one view, while the "Mappings" tab of each profile page displays the mappings consolidated per profile. These mappings provide a straightforward way to highlight the elements that are especially relevant for the ACP use case.</p>
+
+<h4 id="obligation-flags">Obligation flags</h4>
+<p>To indicate which elements are essential for the ACP use case, <a href="https://hl7.org/fhir/extensions/StructureDefinition-obligation.html">Obligation flags</a> have been added to all elements mapped to the ACP dataset. These flags are visible in the formal profile views.</p>
+
+<p>In this version of the IG, Obligation flags are applied to all mapped elements, regardless of whether the dataset element is mandatory or optional. The obligations are defined for the following actors:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/ActorDefinition-ACPActorProvider.html">ACP Actor Provider</a>: <code class="language-plaintext highlighter-rouge">SHALL:populate-if-known</code></li>
+  <li><a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/ActorDefinition-ACPActorConsulter.html">ACP Actor Consulter</a>: <code class="language-plaintext highlighter-rouge">SHALL:no-error</code></li>
+</ul>
+
+<p>In future versions of the IG, these obligations may be refined on a per-element basis.</p>
+
+<h4 id="note-on-referenced-zibs">Note on referenced zibs</h4>
+
+<p>The ACP dataset is built from reusable components known as Zorginformatiebouwstenen (zibs). A zib can reference other zibs to create a comprehensive clinical picture. The ACP dataset, however, only includes the first level of these references. If a nested zib (i.e., a zib referenced by another) was not deemed essential for the primary ACP use case, it was not added to the dataset and is therefore not profiled or mapped in this guide.</p>
+
+<p>Nevertheless, the FHIR profiles in this guide are based on the nl-core (zib) profiles and remain open by design. If a system contains deeper information that is not explicitly profiled in this ACP guide, it is encouraged to include it.</p>
+
+<p>For example, the zib AdvanceDirective can reference the zib Problem to which the directive applies. While this guide does not define a specific ACP profile for the target Problem, this data provides important context. When including such information, systems should make it available by conforming to the general-purpose nl-core profiles for those resources.</p>
+
+<h4 id="mappings-by-dataset-id">Mappings by dataset ID</h4>
+
+<p>This table provides an overview of all dataset elements that are mapped to FHIR profiles in this implementation guide.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Dataset name</th>
+      <th>Resource</th>
+      <th>FHIR element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>808</td>
+      <td>Contact</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>809</td>
+      <td> ContactType</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">class</code></td>
+    </tr>
+    <tr>
+      <td>810</td>
+      <td> ContactMet</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">participant</code></td>
+    </tr>
+    <tr>
+      <td>842</td>
+      <td>  Gesprek gevoerd door (Zorgverlener)</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">participant[healthProfessional].individual</code></td>
+    </tr>
+    <tr>
+      <td>814</td>
+      <td> BeginDatumTijd</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">period.start</code></td>
+    </tr>
+    <tr>
+      <td>819</td>
+      <td>  Verrichting</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">reasonReference[procedure]</code></td>
+    </tr>
+    <tr>
+      <td>820</td>
+      <td>   Verrichting</td>
+      <td>Procedure (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Procedure.html">ACPProcedure</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>827</td>
+      <td>    PZP-gesprek (VerrichtingType)</td>
+      <td>Procedure (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Procedure.html">ACPProcedure</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>822</td>
+      <td>  ToelichtingRedenContact</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">reasonReference.extension[commentContactReason]</code></td>
+    </tr>
+    <tr>
+      <td>822</td>
+      <td>  ToelichtingRedenContact</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">reasonCode[deviatingResult].extension[commentContactReason]</code></td>
+    </tr>
+    <tr>
+      <td>736</td>
+      <td>Datum van invullen</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">period.start</code></td>
+    </tr>
+    <tr>
+      <td>351</td>
+      <td>Patient</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>352</td>
+      <td> Naamgegevens</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>353</td>
+      <td>  Voornamen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>354</td>
+      <td>  Initialen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>355</td>
+      <td>  Roepnaam</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>356</td>
+      <td>  Naamgebruik</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].use</code></td>
+    </tr>
+    <tr>
+      <td>358</td>
+      <td>   Voorvoegsels</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>359</td>
+      <td>   Achternaam</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>361</td>
+      <td>   VoorvoegselsPartner</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerPrefix]</code></td>
+    </tr>
+    <tr>
+      <td>362</td>
+      <td>   AchternaamPartner</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerLastName]</code></td>
+    </tr>
+    <tr>
+      <td>363</td>
+      <td>  Titels</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].suffix</code></td>
+    </tr>
+    <tr>
+      <td>364</td>
+      <td> Adresgegevens</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address</code></td>
+    </tr>
+    <tr>
+      <td>365</td>
+      <td>  Straat</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[streetName]</code></td>
+    </tr>
+    <tr>
+      <td>366</td>
+      <td>  Huisnummer</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumber]</code></td>
+    </tr>
+    <tr>
+      <td>367</td>
+      <td>  Huisnummerletter</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>368</td>
+      <td>  Huisnummertoevoeging</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>369</td>
+      <td>  AanduidingBijNummer</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberIndication]</code></td>
+    </tr>
+    <tr>
+      <td>370</td>
+      <td>  Postcode</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.postalCode</code></td>
+    </tr>
+    <tr>
+      <td>371</td>
+      <td>  Woonplaats</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.city</code></td>
+    </tr>
+    <tr>
+      <td>372</td>
+      <td>  Gemeente</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.district</code></td>
+    </tr>
+    <tr>
+      <td>373</td>
+      <td>  Land</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.country.extension[countryCode]</code></td>
+    </tr>
+    <tr>
+      <td>374</td>
+      <td>  AdditioneleInformatie</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[additionalInformation]</code></td>
+    </tr>
+    <tr>
+      <td>375</td>
+      <td>  AdresSoort</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.use</code></td>
+    </tr>
+    <tr>
+      <td>375</td>
+      <td>  AdresSoort</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.type</code></td>
+    </tr>
+    <tr>
+      <td>376</td>
+      <td> Contactgegevens</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom</code></td>
+    </tr>
+    <tr>
+      <td>377</td>
+      <td>  Telefoonnummers</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers]</code></td>
+    </tr>
+    <tr>
+      <td>378</td>
+      <td>   Telefoonnummer</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].value</code></td>
+    </tr>
+    <tr>
+      <td>379</td>
+      <td>   TelecomType</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system</code></td>
+    </tr>
+    <tr>
+      <td>379</td>
+      <td>   TelecomType</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system.extension[telecomType].valueCodeableConcept</code></td>
+    </tr>
+    <tr>
+      <td>380</td>
+      <td>   NummerSoort</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].use</code></td>
+    </tr>
+    <tr>
+      <td>381</td>
+      <td>   Toelichting</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>382</td>
+      <td>  EmailAdressen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses]</code></td>
+    </tr>
+    <tr>
+      <td>383</td>
+      <td>   EmailAdres</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].value</code></td>
+    </tr>
+    <tr>
+      <td>384</td>
+      <td>   EmailSoort</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].system</code></td>
+    </tr>
+    <tr>
+      <td>385</td>
+      <td> Identificatienummer</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">identifier</code></td>
+    </tr>
+    <tr>
+      <td>386</td>
+      <td> Geboortedatum</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">birthDate</code></td>
+    </tr>
+    <tr>
+      <td>387</td>
+      <td> Geslacht</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">gender</code></td>
+    </tr>
+    <tr>
+      <td>387</td>
+      <td> Geslacht</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">gender.extension[genderCodelist]</code></td>
+    </tr>
+    <tr>
+      <td>391</td>
+      <td>Gesprek gevoerd door (Zorgverlener)</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>391</td>
+      <td>Gesprek gevoerd door (Zorgverlener)</td>
+      <td>PractitionerRole (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-PractitionerRole.html">ACPHealthProfessionalPractitionerRole</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>392</td>
+      <td> ZorgverlenerIdentificatienummer</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">identifier</code></td>
+    </tr>
+    <tr>
+      <td>393</td>
+      <td> Naamgegevens</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>394</td>
+      <td>  Voornamen</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>398</td>
+      <td>  Geslachtsnaam</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family</code></td>
+    </tr>
+    <tr>
+      <td>399</td>
+      <td>   Voorvoegsels</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>   Achternaam</td>
+      <td>Practitioner (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-Practitioner.html">ACPHealthProfessionalPractitioner</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>405</td>
+      <td> Functie (Specialisme)</td>
+      <td>PractitionerRole (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-PractitionerRole.html">ACPHealthProfessionalPractitionerRole</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">specialty[specialty]</code></td>
+    </tr>
+    <tr>
+      <td>761</td>
+      <td>Wilsbekwaamheid m.b.t. medische behandelbeslissingen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[legallyCapableMedicalTreatmentDecisions]</code></td>
+    </tr>
+    <tr>
+      <td>762</td>
+      <td> Wilsbekwaamheid m.b.t. medische behandelbeslissingen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[legallyCapableMedicalTreatmentDecisions].extension[legallyCapable]</code></td>
+    </tr>
+    <tr>
+      <td>763</td>
+      <td> Toelichting</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[legallyCapableMedicalTreatmentDecisions].extension[legallyCapableComment]</code></td>
+    </tr>
+    <tr>
+      <td>441</td>
+      <td>Wettelijk vertegenwoordiger (Contactpersoon)</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>442</td>
+      <td> Naamgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>443</td>
+      <td>  Voornamen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>444</td>
+      <td>  Initialen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>445</td>
+      <td>  Roepnaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>446</td>
+      <td>  Naamgebruik</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].use</code></td>
+    </tr>
+    <tr>
+      <td>448</td>
+      <td>   Voorvoegsels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>449</td>
+      <td>   Achternaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>451</td>
+      <td>   VoorvoegselsPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerPrefix]</code></td>
+    </tr>
+    <tr>
+      <td>452</td>
+      <td>   AchternaamPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerLastName]</code></td>
+    </tr>
+    <tr>
+      <td>453</td>
+      <td>  Titels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].suffix</code></td>
+    </tr>
+    <tr>
+      <td>454</td>
+      <td> Contactgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom</code></td>
+    </tr>
+    <tr>
+      <td>455</td>
+      <td>  Telefoonnummers</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers]</code></td>
+    </tr>
+    <tr>
+      <td>456</td>
+      <td>   Telefoonnummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].value</code></td>
+    </tr>
+    <tr>
+      <td>457</td>
+      <td>   TelecomType</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system</code></td>
+    </tr>
+    <tr>
+      <td>457</td>
+      <td>   TelecomType</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system.extension[telecomType]</code></td>
+    </tr>
+    <tr>
+      <td>458</td>
+      <td>   NummerSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].use</code></td>
+    </tr>
+    <tr>
+      <td>459</td>
+      <td>   Toelichting</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>460</td>
+      <td>  EmailAdressen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses]</code></td>
+    </tr>
+    <tr>
+      <td>461</td>
+      <td>   EmailAdres</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].value</code></td>
+    </tr>
+    <tr>
+      <td>462</td>
+      <td>   EmailSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].system</code></td>
+    </tr>
+    <tr>
+      <td>463</td>
+      <td> Adresgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address</code></td>
+    </tr>
+    <tr>
+      <td>464</td>
+      <td>  Straat</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[streetName]</code></td>
+    </tr>
+    <tr>
+      <td>465</td>
+      <td>  Huisnummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumber]</code></td>
+    </tr>
+    <tr>
+      <td>466</td>
+      <td>  Huisnummerletter</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>467</td>
+      <td>  Huisnummertoevoeging</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>468</td>
+      <td>  AanduidingBijNummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberIndication]</code></td>
+    </tr>
+    <tr>
+      <td>469</td>
+      <td>  Postcode</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.postalCode</code></td>
+    </tr>
+    <tr>
+      <td>470</td>
+      <td>  Woonplaats</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.city</code></td>
+    </tr>
+    <tr>
+      <td>471</td>
+      <td>  Gemeente</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.district</code></td>
+    </tr>
+    <tr>
+      <td>472</td>
+      <td>  Land</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.country.extension[countryCode]</code></td>
+    </tr>
+    <tr>
+      <td>473</td>
+      <td>  AdditioneleInformatie</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[additionalInformation]</code></td>
+    </tr>
+    <tr>
+      <td>474</td>
+      <td>  AdresSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.use</code></td>
+    </tr>
+    <tr>
+      <td>474</td>
+      <td>  AdresSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.type</code></td>
+    </tr>
+    <tr>
+      <td>475</td>
+      <td> Rol</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[role]</code></td>
+    </tr>
+    <tr>
+      <td>476</td>
+      <td> Relatie</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[relationship]</code></td>
+    </tr>
+    <tr>
+      <td>477</td>
+      <td>Vertegenwoordiger is contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[role]</code></td>
+    </tr>
+    <tr>
+      <td>478</td>
+      <td>Eerste contactpersoon (Contactpersoon)</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>479</td>
+      <td> Naamgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>480</td>
+      <td>  Voornamen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>481</td>
+      <td>  Initialen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>482</td>
+      <td>  Roepnaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>483</td>
+      <td>  Naamgebruik</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].use</code></td>
+    </tr>
+    <tr>
+      <td>485</td>
+      <td>   Voorvoegsels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>486</td>
+      <td>   Achternaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>488</td>
+      <td>   VoorvoegselsPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerPrefix]</code></td>
+    </tr>
+    <tr>
+      <td>489</td>
+      <td>   AchternaamPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerLastName]</code></td>
+    </tr>
+    <tr>
+      <td>490</td>
+      <td>  Titels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].suffix</code></td>
+    </tr>
+    <tr>
+      <td>491</td>
+      <td> Contactgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom</code></td>
+    </tr>
+    <tr>
+      <td>492</td>
+      <td>  Telefoonnummers</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers]</code></td>
+    </tr>
+    <tr>
+      <td>493</td>
+      <td>   Telefoonnummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].value</code></td>
+    </tr>
+    <tr>
+      <td>494</td>
+      <td>   TelecomType</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system</code></td>
+    </tr>
+    <tr>
+      <td>494</td>
+      <td>   TelecomType</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].system.extension[telecomType]</code></td>
+    </tr>
+    <tr>
+      <td>495</td>
+      <td>   NummerSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].use</code></td>
+    </tr>
+    <tr>
+      <td>496</td>
+      <td>   Toelichting</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[telephoneNumbers].extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>497</td>
+      <td>  EmailAdressen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses]</code></td>
+    </tr>
+    <tr>
+      <td>498</td>
+      <td>   EmailAdres</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].value</code></td>
+    </tr>
+    <tr>
+      <td>499</td>
+      <td>   EmailSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom[emailAddresses].system</code></td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td> Adresgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address</code></td>
+    </tr>
+    <tr>
+      <td>501</td>
+      <td>  Straat</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[streetName]</code></td>
+    </tr>
+    <tr>
+      <td>502</td>
+      <td>  Huisnummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumber]</code></td>
+    </tr>
+    <tr>
+      <td>503</td>
+      <td>  Huisnummerletter</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>504</td>
+      <td>  Huisnummertoevoeging</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberLetter-houseNumberAddition]</code></td>
+    </tr>
+    <tr>
+      <td>505</td>
+      <td>  AanduidingBijNummer</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[houseNumberIndication]</code></td>
+    </tr>
+    <tr>
+      <td>506</td>
+      <td>  Postcode</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.postalCode</code></td>
+    </tr>
+    <tr>
+      <td>507</td>
+      <td>  Woonplaats</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.city</code></td>
+    </tr>
+    <tr>
+      <td>508</td>
+      <td>  Gemeente</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.district</code></td>
+    </tr>
+    <tr>
+      <td>509</td>
+      <td>  Land</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.country.extension[countryCode]</code></td>
+    </tr>
+    <tr>
+      <td>510</td>
+      <td>  AdditioneleInformatie</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.line.extension[additionalInformation]</code></td>
+    </tr>
+    <tr>
+      <td>511</td>
+      <td>  AdresSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.use</code></td>
+    </tr>
+    <tr>
+      <td>511</td>
+      <td>  AdresSoort</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">address.type</code></td>
+    </tr>
+    <tr>
+      <td>512</td>
+      <td> Rol</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[role]</code></td>
+    </tr>
+    <tr>
+      <td>513</td>
+      <td> Relatie</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[relationship]</code></td>
+    </tr>
+    <tr>
+      <td>514</td>
+      <td>Gesprek gevoerd in bijzijn van (Patient)</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+    </tr>
+    <tr>
+      <td>515</td>
+      <td> Naamgegevens</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>516</td>
+      <td>  Voornamen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>517</td>
+      <td>  Initialen</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>518</td>
+      <td>  Roepnaam</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>519</td>
+      <td>  Naamgebruik</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].use</code></td>
+    </tr>
+    <tr>
+      <td>521</td>
+      <td>   Voorvoegsels</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>522</td>
+      <td>   Achternaam</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>524</td>
+      <td>   VoorvoegselsPartner</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerPrefix]</code></td>
+    </tr>
+    <tr>
+      <td>525</td>
+      <td>   AchternaamPartner</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerLastName]</code></td>
+    </tr>
+    <tr>
+      <td>526</td>
+      <td>  Titels</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].suffix</code></td>
+    </tr>
+    <tr>
+      <td>554</td>
+      <td>Gesprek gevoerd in bijzijn van (Contactpersoon)</td>
+      <td>Encounter (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Encounter.html">ACPEncounter</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">participant[contactPerson].individual</code></td>
+    </tr>
+    <tr>
+      <td>554</td>
+      <td>Gesprek gevoerd in bijzijn van (Contactpersoon)</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>555</td>
+      <td> Naamgegevens</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+    </tr>
+    <tr>
+      <td>556</td>
+      <td>  Voornamen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>557</td>
+      <td>  Initialen</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].given</code></td>
+    </tr>
+    <tr>
+      <td>558</td>
+      <td>  Roepnaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation-GivenName].given</code></td>
+    </tr>
+    <tr>
+      <td>559</td>
+      <td>  Naamgebruik</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].use</code></td>
+    </tr>
+    <tr>
+      <td>561</td>
+      <td>   Voorvoegsels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[prefix]</code></td>
+    </tr>
+    <tr>
+      <td>562</td>
+      <td>   Achternaam</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[lastName]</code></td>
+    </tr>
+    <tr>
+      <td>564</td>
+      <td>   VoorvoegselsPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerPrefix]</code></td>
+    </tr>
+    <tr>
+      <td>565</td>
+      <td>   AchternaamPartner</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].family.extension[partnerLastName]</code></td>
+    </tr>
+    <tr>
+      <td>566</td>
+      <td>  Titels</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">name[nameInformation].suffix</code></td>
+    </tr>
+    <tr>
+      <td>588</td>
+      <td> Rol</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[role]</code></td>
+    </tr>
+    <tr>
+      <td>589</td>
+      <td> Relatie</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">relationship[relationship]</code></td>
+    </tr>
+    <tr>
+      <td>590</td>
+      <td>Belangrijkste doel van behandeling ([Meting])</td>
+      <td>Goal (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalPolicyGoal.html">ACPMedicalPolicyGoal</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>591</td>
+      <td> Belangrijkste doel van behandeling ([MetingNaam])</td>
+      <td>Goal (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalPolicyGoal.html">ACPMedicalPolicyGoal</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>592</td>
+      <td> Doel ([MetingWaarde])</td>
+      <td>Goal (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalPolicyGoal.html">ACPMedicalPolicyGoal</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+    </tr>
+    <tr>
+      <td>596</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Goal (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalPolicyGoal.html">ACPMedicalPolicyGoal</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">startDate</code></td>
+    </tr>
+    <tr>
+      <td>598</td>
+      <td> [Toelichting]</td>
+      <td>Goal (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalPolicyGoal.html">ACPMedicalPolicyGoal</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>602</td>
+      <td>Behandelgrens (BehandelAanwijzing2)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>603</td>
+      <td> BehandelBesluit</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.type</code></td>
+    </tr>
+    <tr>
+      <td>604</td>
+      <td> Behandeling</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.code</code></td>
+    </tr>
+    <tr>
+      <td>605</td>
+      <td> SpecificatieAnders</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">modifierExtension[specificationOther]</code></td>
+    </tr>
+    <tr>
+      <td>606</td>
+      <td> MeestRecenteBespreekdatum</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
+    </tr>
+    <tr>
+      <td>607</td>
+      <td> DatumBeeindigd</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.period.end</code></td>
+    </tr>
+    <tr>
+      <td>608</td>
+      <td> RedenBeeindigd</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.extension[reasonForEnding]</code></td>
+    </tr>
+    <tr>
+      <td>609</td>
+      <td> Wilsverklaring</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">sourceReference</code></td>
+    </tr>
+    <tr>
+      <td>610</td>
+      <td>  Wilsverklaring</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>611</td>
+      <td> AfspraakPartij</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty]</code></td>
+    </tr>
+    <tr>
+      <td>612</td>
+      <td>  Patient</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>613</td>
+      <td>   Patient</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>614</td>
+      <td>  Vertegenwoordiger</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>615</td>
+      <td>   Contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>616</td>
+      <td>  Zorgverlener</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>617</td>
+      <td>   Zorgverlener</td>
+      <td>PractitionerRole (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-PractitionerRole.html">ACPHealthProfessionalPractitionerRole</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>618</td>
+      <td> Toelichting</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>619</td>
+      <td>Heeft de patient een ICD?</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">type</code></td>
+    </tr>
+    <tr>
+      <td>619</td>
+      <td>Heeft de patient een ICD?</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>620</td>
+      <td>ICD (MedischHulpmiddel)</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>621</td>
+      <td> Product</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>622</td>
+      <td>  ProductID</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">identifier[gs1ProductID]</code></td>
+    </tr>
+    <tr>
+      <td>622</td>
+      <td>  ProductID</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">identifier[hibcProductID]</code></td>
+    </tr>
+    <tr>
+      <td>622</td>
+      <td>  ProductID</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">udiCarrier[gs1UdiCarrier].carrierHRF</code></td>
+    </tr>
+    <tr>
+      <td>622</td>
+      <td>  ProductID</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">udiCarrier[hibcUdiCarrier].carrierHRF</code></td>
+    </tr>
+    <tr>
+      <td>623</td>
+      <td>  ProductType van ICD</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">type</code></td>
+    </tr>
+    <tr>
+      <td>624</td>
+      <td> ProductOmschrijving</td>
+      <td>Device (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.Product-ICD.html">ACPMedicalDeviceProductICD</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>625</td>
+      <td> AnatomischeLocatie</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">bodySite</code></td>
+    </tr>
+    <tr>
+      <td>626</td>
+      <td>  Locatie</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">bodySite</code></td>
+    </tr>
+    <tr>
+      <td>627</td>
+      <td>  Lateraliteit</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">bodySite.extension[laterality]</code></td>
+    </tr>
+    <tr>
+      <td>628</td>
+      <td> Indicatie</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">reasonReference[indication]</code></td>
+    </tr>
+    <tr>
+      <td>630</td>
+      <td> BeginDatum</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">timingPeriod.start</code></td>
+    </tr>
+    <tr>
+      <td>631</td>
+      <td> EindDatum</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">timingPeriod.end</code></td>
+    </tr>
+    <tr>
+      <td>632</td>
+      <td> Toelichting</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>633</td>
+      <td> Locatie</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[location]</code></td>
+    </tr>
+    <tr>
+      <td>635</td>
+      <td> Zorgverlener</td>
+      <td>DeviceUseStatement (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-MedicalDevice.html">ACPMedicalDevice</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[healthProfessional]</code></td>
+    </tr>
+    <tr>
+      <td>636</td>
+      <td>  Zorgverlener</td>
+      <td>PractitionerRole (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-PractitionerRole.html">ACPHealthProfessionalPractitionerRole</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>637</td>
+      <td>Afspraak uitzetten ICD (BehandelAanwijzing2)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>638</td>
+      <td> Afspraak uitzetten ICD (BehandelBesluit)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">modifierExtension[specificationOther]</code></td>
+    </tr>
+    <tr>
+      <td>638</td>
+      <td> Afspraak uitzetten ICD (BehandelBesluit)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.type</code></td>
+    </tr>
+    <tr>
+      <td>639</td>
+      <td> Behandeling van uitzetten ICD (Behandeling)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.code.text</code></td>
+    </tr>
+    <tr>
+      <td>641</td>
+      <td> MeestRecenteBespreekdatum</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
+    </tr>
+    <tr>
+      <td>642</td>
+      <td> DatumBeeindigd</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.period.end</code></td>
+    </tr>
+    <tr>
+      <td>643</td>
+      <td> RedenBeeindigd</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.extension[reasonForEnding]</code></td>
+    </tr>
+    <tr>
+      <td>644</td>
+      <td> Wilsverklaring</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[additionalAdvanceDirective].valueReference</code></td>
+    </tr>
+    <tr>
+      <td>644</td>
+      <td> Wilsverklaring</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">sourceReference</code></td>
+    </tr>
+    <tr>
+      <td>645</td>
+      <td>  Wilsverklaring</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>646</td>
+      <td> AfspraakPartij</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty]</code></td>
+    </tr>
+    <tr>
+      <td>647</td>
+      <td>  Patient</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>648</td>
+      <td>   Patient</td>
+      <td>Patient (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-Patient.html">ACPPatient</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>649</td>
+      <td>  Vertegenwoordiger</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>650</td>
+      <td>   Contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>651</td>
+      <td>  Zorgverlener</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[agreementParty].reference</code></td>
+    </tr>
+    <tr>
+      <td>652</td>
+      <td>   Zorgverlener</td>
+      <td>PractitionerRole (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-HealthProfessional-PractitionerRole.html">ACPHealthProfessionalPractitionerRole</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>653</td>
+      <td> Toelichting</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-TreatmentDirective.html">ACPTreatmentDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>654</td>
+      <td>Specifieke wensen ([Meting])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>655</td>
+      <td> Wens en verwachting patient ([MetingNaam])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>656</td>
+      <td> Wens en verwachting patient ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">valueString</code></td>
+    </tr>
+    <tr>
+      <td>656</td>
+      <td> Wens en verwachting patient ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>657</td>
+      <td> Vaststellen wens en verwachting patiënt ([MeetMethode])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">method</code></td>
+    </tr>
+    <tr>
+      <td>660</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SpecificCareWishes.html">ACPSpecificCareWishes</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code></td>
+    </tr>
+    <tr>
+      <td>666</td>
+      <td>Gewenste plek van overlijden ([Meting])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>667</td>
+      <td> Gewenste plek van overlijden ([MetingNaam])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>668</td>
+      <td> Voorkeursplek ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">valueCodeableConcept</code></td>
+    </tr>
+    <tr>
+      <td>668</td>
+      <td> Voorkeursplek ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>672</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code></td>
+    </tr>
+    <tr>
+      <td>674</td>
+      <td> [Toelichting]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PreferredPlaceOfDeath.html">ACPPreferredPlaceOfDeath</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>678</td>
+      <td>Euthanasie standpunt ([Meting])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>679</td>
+      <td> Euthanasie standpunt ([MetingNaam])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>680</td>
+      <td> Euthanasie standpunt ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">valueCodeableConcept</code></td>
+    </tr>
+    <tr>
+      <td>680</td>
+      <td> Euthanasie standpunt ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>684</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code></td>
+    </tr>
+    <tr>
+      <td>686</td>
+      <td> [Toelichting]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-PositionRegardingEuthanasia.html">ACPPositionRegardingEuthanasia</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+    </tr>
+    <tr>
+      <td>690</td>
+      <td>Euthanasieverklaring (Wilsverklaring)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>691</td>
+      <td> Euthanasieverklaring (WilsverklaringType)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.code</code></td>
+    </tr>
+    <tr>
+      <td>692</td>
+      <td> WilsverklaringDatum</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
+    </tr>
+    <tr>
+      <td>693</td>
+      <td> Aandoening</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[disorder]</code></td>
+    </tr>
+    <tr>
+      <td>695</td>
+      <td> Vertegenwoordiger</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[representative].reference</code></td>
+    </tr>
+    <tr>
+      <td>696</td>
+      <td>  Contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>697</td>
+      <td> WilsverklaringDocument</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">sourceAttachment</code></td>
+    </tr>
+    <tr>
+      <td>698</td>
+      <td> Toelichting</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>746</td>
+      <td>Keuze orgaandonatie vastgelegd in donorregister? ([Meting])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-OrganDonationChoiceRegistration.html">ACPOrganDonationChoiceRegistration</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>747</td>
+      <td> Keuze orgaandonatie vastgelegd in donorregister? ([MetingNaam])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-OrganDonationChoiceRegistration.html">ACPOrganDonationChoiceRegistration</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>748</td>
+      <td> Keuze orgaandonatie in donorregister ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-OrganDonationChoiceRegistration.html">ACPOrganDonationChoiceRegistration</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">valueCodeableConcept</code></td>
+    </tr>
+    <tr>
+      <td>748</td>
+      <td> Keuze orgaandonatie in donorregister ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-OrganDonationChoiceRegistration.html">ACPOrganDonationChoiceRegistration</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>752</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-OrganDonationChoiceRegistration.html">ACPOrganDonationChoiceRegistration</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code></td>
+    </tr>
+    <tr>
+      <td>700</td>
+      <td>Keuze orgaandonatie vastgelegd (Wilsverklaring)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td> Orgaandonatie (WilsverklaringType)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.code</code></td>
+    </tr>
+    <tr>
+      <td>702</td>
+      <td> WilsverklaringDatum</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
+    </tr>
+    <tr>
+      <td>703</td>
+      <td> Aandoening</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[disorder]</code></td>
+    </tr>
+    <tr>
+      <td>705</td>
+      <td> Vertegenwoordiger</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[representative].reference</code></td>
+    </tr>
+    <tr>
+      <td>706</td>
+      <td>  Contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>707</td>
+      <td> WilsverklaringDocument</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">sourceAttachment</code></td>
+    </tr>
+    <tr>
+      <td>708</td>
+      <td> Toelichting</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>709</td>
+      <td>Wat verder nog belangrijk is ([Meting])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SenseOfPurpose.html">ACPSenseOfPurpose</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>710</td>
+      <td> Wat verder nog belangrijk is ([MetingNaam])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SenseOfPurpose.html">ACPSenseOfPurpose</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>711</td>
+      <td> Wat verder nog belangrijk is ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SenseOfPurpose.html">ACPSenseOfPurpose</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">valueString</code></td>
+    </tr>
+    <tr>
+      <td>711</td>
+      <td> Wat verder nog belangrijk is ([MetingWaarde])</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SenseOfPurpose.html">ACPSenseOfPurpose</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>715</td>
+      <td> [MeetDatumBeginTijd]</td>
+      <td>Observation (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-SenseOfPurpose.html">ACPSenseOfPurpose</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code></td>
+    </tr>
+    <tr>
+      <td>721</td>
+      <td>Eerder vastgelegde behandelafspraken (Wilsverklaring)</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>722</td>
+      <td> WilsverklaringType</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.code</code></td>
+    </tr>
+    <tr>
+      <td>723</td>
+      <td> WilsverklaringDatum</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">dateTime</code></td>
+    </tr>
+    <tr>
+      <td>724</td>
+      <td> Aandoening</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[disorder]</code></td>
+    </tr>
+    <tr>
+      <td>726</td>
+      <td> Vertegenwoordiger</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">provision.actor[representative].reference</code></td>
+    </tr>
+    <tr>
+      <td>727</td>
+      <td>  Contactpersoon</td>
+      <td>RelatedPerson (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-ContactPerson.html">ACPContactPerson</a>)</td>
+      <td>``</td>
+    </tr>
+    <tr>
+      <td>728</td>
+      <td> WilsverklaringDocument</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">sourceAttachment</code></td>
+    </tr>
+    <tr>
+      <td>729</td>
+      <td> Toelichting</td>
+      <td>Consent (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-AdvanceDirective.html">ACPAdvanceDirective</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">extension[comment]</code></td>
+    </tr>
+    <tr>
+      <td>734</td>
+      <td>Heeft u patient geïnformeerd over eigen verantwoordelijkheid om deze behandelafspraken met naasten te bespreken?</td>
+      <td>CommunicationRequest (<a href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/StructureDefinition-ACP-InformRelativesRequest.html">ACPInformRelativesRequest</a>)</td>
+      <td>``</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://iknl.nl/">IKNL</a>.  Package iknl.fhir.r4.pzp#1.0.0-rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 3, 2026 13:11+0000">2026-03-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://api.iknl.nl/docs/pzp/r4/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IKNL/PZP-FHIR-R4/issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

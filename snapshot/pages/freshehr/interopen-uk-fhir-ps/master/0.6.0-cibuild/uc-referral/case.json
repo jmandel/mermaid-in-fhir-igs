@@ -1,0 +1,56 @@
+{
+  "slug": "freshehr-interopen-uk-fhir-ps-master-uc-referral",
+  "storageId": "freshehr_interopen-uk-fhir-ps@master",
+  "packageId": "hl7.fhir.au.ps#0.6.0-cibuild",
+  "package": "hl7.fhir.au.ps",
+  "version": "0.6.0-cibuild",
+  "title": "AU Patient Summary Implementation Guide",
+  "repo": "freshehr/interopen-uk-fhir-ps/branches/master/qa.json",
+  "repoPath": "freshehr/interopen-uk-fhir-ps",
+  "buildUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/freshehr/interopen-uk-fhir-ps/tree/master",
+  "canonicalUrl": "http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps",
+  "canonical": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master"
+  ],
+  "fileName": "uc-referral.html",
+  "originalFileName": "uc-referral.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/freshehr_interopen-uk-fhir-ps@master/uc-referral.html",
+  "pagePath": "uc-referral.html",
+  "pageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/uc-referral.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 428,
+  "totalDiagramLength": 428,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral",
+    "caseJson": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/case.json",
+    "before": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/before",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/before/index.html"
+    },
+    "after": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/after",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/failure",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/source",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/master/0.6.0-cibuild/uc-referral/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/uc-referral.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/assets/js/mermaid-init.js"
+}

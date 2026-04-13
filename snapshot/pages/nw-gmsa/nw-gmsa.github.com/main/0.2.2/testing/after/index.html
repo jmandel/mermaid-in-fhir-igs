@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Testing - NHS North West Genomics v0.2.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/bootstrap-fhir.css"/>
+    
+
+     <!-- <style>
+    svg { background-size: 50% ; }
+    </style> -->
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/project.css"/>
+    <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/prism.css"/>
+
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/ihe.css"/>
+<link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/nonum.css"/>
+<script async="null" src="../../../../../../../vendor/https/www.googletagmanager.com/gtag/js__q_867e93efd0.js" type="text/javascript"> </script> 
+
+
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/favicon.png"/>
+      <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/font-awesome.min.css">
+  
+  <body onload="document.body.style.opacity='1'">
+
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/prism.js"></script>
+  <!-- <script type="text/javascript"src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid.min.js"></script>
+     <script type="text/javascript" src="../../../../../../../shared/assets/347ab4816feffe8f-mermaid-init.js"></script>
+   <script type="text/javascript"src="../../../../../../../vendor/https/cdn.jsdelivr.net/npm/mermaid_11.12.0/dist/mermaid.min.js"></script> -->
+   <script src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js" type="text/javascript"></script>
+   <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js" type="text/javascript"></script>
+
+
+<style type="text/css">h2{--heading-prefix:"19"}
+ h3,h4,h5,h6{--heading-prefix:"19"}</style>
+ <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+  <!-- <div id="family-nav">
+    <a id="iheuk-logo" no-external="true" href="https://ihe-uk.org/"><img height="50" alt="Visit the IHE UK website" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/iheuk-logo.png"/> </a>
+</div> -->
+<div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a no-external="true" id="nhse-logo" href="https://www.nw-gmsa.nhs.uk/"><img src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/nwgmsa-logo.svg" alt="MFT Logo" height="50"/></a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NHS North West Genomics</span>
+            <br/>
+            <span style="display:inline-block;">0.2.2 - ci-build
+
+
+
+  <img src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/images/gbr.svg" alt="United Kingdom flag" title="United Kingdom" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Analysis and Design (Volume 1)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html">Design Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW.html">Laboratory Testing Workflow (LTW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ILW.html">Inter-Laboratory Workflow (ILW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html">Specimen Event Tracking (SET)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/HIE.html">Health Information Exchange (HIE)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mCSD.html">Care Services Discovery (mCSD)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PAM.html">Patient Administration (PAM)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html">API Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interfaces (Volume 2)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/exchange.html">Exchange Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html">Placer Order Management [LAB-1] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-3.html">Order Results Management [LAB-3] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PDQm.html">Patient Matching [PDQm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/MHD.html">Document Exchange [MHD]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/QEDm.html">Resource Access [QEDm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/IUA.html">Authorisation [IUA]</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models (Volume 3)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/data-intro.html">Data Contracts and Issue Reporting</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestOrder.html">Genomic Test Order (Template)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestReport.html">Genomic Test Report (Template)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefacts (Volume 4)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/artifacts.html">HL7 FHIR R4</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/hl7v2.html">HL7 v2.5.1</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Development
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/testing.html">Environments and Testing</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/support.html">Support</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">Architecture</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/toc.html"><b>Table of Contents</b></a></li><li><b>Testing</b></li>
+
+          <span style="float:right;">
+
+            <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/support.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">NHS North West Genomics, published by NHS North West Genomics. This guide is not an authorized publication; it is the continuous build for version 0.2.2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/nw-gmsa/nw-gmsa.github.com/">https://github.com/nw-gmsa/nw-gmsa.github.com/</a> and changes regularly. See the <a href="https://fhir.nwgenomics.nhs.uk/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Testing</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#development-testing" id="markdown-toc-development-testing">Development Testing</a>    <ul>
+      <li><a href="#fhir-validation" id="markdown-toc-fhir-validation">FHIR Validation</a></li>
+      <li><a href="#command-line-validation" id="markdown-toc-command-line-validation">Command Line Validation</a></li>
+      <li><a href="#asking-a-fhir-server" id="markdown-toc-asking-a-fhir-server">Asking a FHIR Server</a></li>
+    </ul>
+  </li>
+  <li><a href="#integration-testing" id="markdown-toc-integration-testing">Integration Testing</a>    <ul>
+      <li><a href="#test-patients" id="markdown-toc-test-patients">Test Patients</a></li>
+      <li><a href="#nhs-england-edi--test-patients" id="markdown-toc-nhs-england-edi--test-patients">NHS England EDI  Test Patients</a></li>
+    </ul>
+  </li>
+  <li><a href="#environments" id="markdown-toc-environments">Environments</a>    <ul>
+      <li><a href="#security-and-authorisation" id="markdown-toc-security-and-authorisation">Security and authorisation</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="development-testing">Development Testing</h2>
+
+<h3 id="fhir-validation">FHIR Validation</h3>
+
+<p>For details see <a href="https://hl7.org/fhir/R4/validation.html">FHIR Validation</a></p>
+
+<h3 id="command-line-validation">Command Line Validation</h3>
+
+<p>See <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">Using the FHIR Validator</a></p>
+
+<p>The FHIR Validator works best with individual FHIR Resources and this may be an easier why to start checking your FHIR is correct.
+Due to API security requirements of the NHS England Ontology Service, this can not be used as a Terminology Server (the <code class="language-plaintext highlighter-rouge">-tx</code> parameter). This ig is configured to use the UK edition of SNOMED (83821000000107).</p>
+
+<p>To use this Implementation Guide with the HL7 Validator, you will need to download this as a package (download link <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/package.tgz">package.tgz</a>) and then specify this NPM package file via the <code class="language-plaintext highlighter-rouge">-ig package.tgz</code> parameter.</p>
+
+<p>The FHIR Validator defaults to validating individual FHIR resources (not FHIR Bundles), to validate FHIR resources in a Bundle see <strong>Validating a single resource in a bundle</strong> on the <em>Using the FHIR Validator</em> link above.</p>
+
+<h4 id="examples-to-validate-a-bundle">Examples to Validate a Bundle</h4>
+
+<h5 id="laboratory-order-o21-validation-example">laboratory-order O21 Validation Example</h5>
+
+<pre><code class="language-aiignore"> java -jar validator_cli.jar c:\temp\bundle.json -version 4.0.1 -ig package.tgz -bundle ServiceRequest:0 https://fhir.nwgenomics.nhs.uk/StructureDefinition/ServiceRequest -tx n/a
+</code></pre>
+
+<h5 id="unsolicited-observation-r01-validation-example">unsolicited-observation R01 Validation Example</h5>
+
+<pre><code class="language-aiignore"> java -jar validator_cli.jar c:\temp\bundle.json -version 4.0.1 -ig package.tgz -bundle DiagnosticReport:0 https://fhir.nwgenomics.nhs.uk/StructureDefinition/DiagnosticReport -tx n/a
+</code></pre>
+
+<h3 id="asking-a-fhir-server">Asking a FHIR Server</h3>
+
+<p><a href="https://validator.fhir.org/">validator.fhir.org</a> provides a web-based interface to the Validator CLI jar. This defaults to international FHIR and the options tab can be used to specify specific packages and SNOMED editions (this is listed as <code class="language-plaintext highlighter-rouge">UK - 999000041000000102</code>). This IG is not currently published to the registry and so <code class="language-plaintext highlighter-rouge">ukcore</code> should be used instead using the latest release</p>
+
+<h2 id="integration-testing">Integration Testing</h2>
+
+<h3 id="test-patients">Test Patients</h3>
+
+<p>All test patients (with a NHS Number) are on NHS England <a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">Personal Demographics Service - FHIR API</a> (Int environment).</p>
+
+<p>The ODS code for GP Surgery MUST be a real code, this is used for routing reports to relevant ICS.</p>
+
+<h4 id="genomics-test-patients">Genomics Test Patients</h4>
+
+<h5 id="nhs-north-west-genomics">NHS North West Genomics</h5>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>NHS Number</th>
+      <th>Surname</th>
+      <th>Forename</th>
+      <th>Middle name</th>
+      <th>Other Name</th>
+      <th>Gender</th>
+      <th>Date Of Birth <br/> (SMSP)</th>
+      <th>Deceased</th>
+      <th>GP Surgery <br/> ODS Code</th>
+      <th>Address line 1</th>
+      <th>Address line 2</th>
+      <th>Address line 3</th>
+      <th>Address line 4 <br/> city</th>
+      <th>Address line 5 <br/> district</th>
+      <th>Postcode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-OctaviaCHISLETT-9449305552.html">944 930 5552</a></td>
+      <td>CHISLETT</td>
+      <td>Octavia</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>2008-09-20</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>1 RAVENSFIELD GARDENS</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EPSOM</td>
+      <td>SURREY</td>
+      <td>KT19 0ST</td>
+    </tr>
+    <tr>
+      <td>9737383192</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Manchester.html">MANCHESTER</a></td>
+      <td>Sansa</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1972-09-21</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=P84673">P84673</a></td>
+      <td>Oxford Rd</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>MANCHESTER</td>
+      <td>&nbsp;</td>
+      <td>M13 9PL</td>
+    </tr>
+    <tr>
+      <td>9737383206</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Liverpool.html">LIVERPOOL</a></td>
+      <td>Ned</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1942-06-18</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=N82035">N82035</a></td>
+      <td>20 Forthlin Road</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>LIVERPOOL</td>
+      <td>&nbsp;</td>
+      <td>L18 9TN</td>
+    </tr>
+    <tr>
+      <td>9737383214</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Lancaster.html">LANCASTER</a></td>
+      <td>Jaime</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1970-07-27</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=P81002">P81002</a></td>
+      <td>Dalton Square</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>LANCASTER</td>
+      <td>&nbsp;</td>
+      <td>LA1 1PJ</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9737383230</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-London.html">LONDON</a></td>
+      <td>Cersei</td>
+      <td>&nbsp;</td>
+      <td>Cersei LANCASTER (maiden)</td>
+      <td>F</td>
+      <td>1973-10-03</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=F83004">F83004</a></td>
+      <td>110 The Queen's Walk</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>LONDON</td>
+      <td>&nbsp;</td>
+      <td>SE1 2AA</td>
+    </tr>
+    <tr>
+      <td>9737383249</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Birmingham.html">BIRMINGHAM</a></td>
+      <td>Tommen</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1999-09-07</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=M85124">M85124</a></td>
+      <td>Victoria Square</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>BIRMINGHAM</td>
+      <td>&nbsp;</td>
+      <td>B3 3DQ</td>
+    </tr>
+    <tr>
+      <td>9737383257</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Wrexham.html">WREXHAM</a></td>
+      <td>Myrcella</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1999-10-13</td>
+      <td>&nbsp;</td>
+      <td>Future: <a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=W91022">W91022</a> Current: <a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=N81082">N81082</a></td>
+      <td>Ffordd, Mold Rd</td>
+      <td>Mold</td>
+      <td>&nbsp;</td>
+      <td>WREXHAM</td>
+      <td>&nbsp;</td>
+      <td>LL11 2AH</td>
+    </tr>
+    <tr>
+      <td>9737383265</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Nottingham.html">NOTTINGHAM</a></td>
+      <td>Lyarra</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1924-01-05</td>
+      <td>✅</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=C81010">C81010</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>NG10 1NP</td>
+    </tr>
+    <tr>
+      <td>9737383273</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Bolton.html">BOLTON</a></td>
+      <td>Ramsay</td>
+      <td>&nbsp;</td>
+      <td>Ramsay ROCHDALE (old)</td>
+      <td>M</td>
+      <td>1985-05-13</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=P84673">P84673</a></td>
+      <td>Victoria Sq</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>BOLTON</td>
+      <td>&nbsp;</td>
+      <td>BL1 1RU</td>
+    </tr>
+    <tr>
+      <td>9737383281</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Congleton.html">CONGLETON</a></td>
+      <td>Margaery</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1982-02-11</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=N81027">N81027</a></td>
+      <td>Town Hall</td>
+      <td>7 High Street</td>
+      <td>&nbsp;</td>
+      <td>CONGLETON</td>
+      <td>&nbsp;</td>
+      <td>CW12 1BN</td>
+    </tr>
+    <tr>
+      <td>9737383303</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Warrington.html">WARRINGTON</a></td>
+      <td>Olennas</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1938-07-20</td>
+      <td>✅</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9737383311</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Northwich.html">NORTHWICH</a></td>
+      <td>Mace</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1957-01-19</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=N81087">N81087</a></td>
+      <td>Apple Market St</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Northwich</td>
+      <td>&nbsp;</td>
+      <td>CW9 5BB</td>
+    </tr>
+    <tr>
+      <td>9737383338</td>
+      <td>BUXTON</td>
+      <td>Lysa</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1971-01-01</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=C81065">C81065</a></td>
+      <td>Market Place</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Buxton</td>
+      <td>&nbsp;</td>
+      <td>SK17 6EL</td>
+    </tr>
+    <tr>
+      <td>9737383346</td>
+      <td>HAWES</td>
+      <td>Ygritte</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>2023-02-09</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=B82045">B82045</a></td>
+      <td>Market Place</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Hawes</td>
+      <td>&nbsp;</td>
+      <td>DL8 3QN</td>
+    </tr>
+    <tr>
+      <td>9737383354</td>
+      <td>KENDAL</td>
+      <td>Tormund</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1978-12-07</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=A82025">A82025</a></td>
+      <td>9a Lowther St</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Kendal</td>
+      <td>&nbsp;</td>
+      <td>LA9 4DA</td>
+    </tr>
+    <tr>
+      <td>9737383362</td>
+      <td>BROUGH</td>
+      <td>Gilly</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1989-07-01</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=A82038">A82038</a></td>
+      <td>Townhead House</td>
+      <td>Brough</td>
+      <td>Sowerby</td>
+      <td>KIRKBY STEPHEN</td>
+      <td>&nbsp;</td>
+      <td>CA17 4EG</td>
+    </tr>
+    <tr>
+      <td>9737383370</td>
+      <td>BLACKBURN</td>
+      <td>Robert</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1965-01-14</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=Y02657">Y02657</a></td>
+      <td>King William Street</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Blackburn</td>
+      <td>Lancashire</td>
+      <td>BB1 7DY</td>
+    </tr>
+    <tr>
+      <td>9737383389</td>
+      <td>BURNLEY</td>
+      <td>Selyse</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1967-09-18</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=Y00206">Y00206</a></td>
+      <td>Manchester Road</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Burnley</td>
+      <td>Lancashire</td>
+      <td>BB11 9SA</td>
+    </tr>
+    <tr>
+      <td>9737383397</td>
+      <td>TAMESIDE</td>
+      <td>Hodor</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1960-07-27</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=P89020">P89020</a></td>
+      <td>Stockport Road</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Tameside</td>
+      <td>&nbsp;</td>
+      <td>OL7 0NS</td>
+    </tr>
+    <tr>
+      <td>(CHI Number)</td>
+      <td>GLASGOW</td>
+      <td>Karsi</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1982-01-16</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>J B Russell House</td>
+      <td>Gartnavel Royal Hospital Campus</td>
+      <td>1055 Great Western Road</td>
+      <td>Glasgow</td>
+      <td>&nbsp;</td>
+      <td>G12 0XH</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>STREFORD</td>
+      <td>Syrio</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1992-05-29</td>
+      <td>✅  2025-12-01</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="nhs-north-east-and-yorkshire-genomics">NHS North East and Yorkshire Genomics</h5>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>NHS Number</th>
+      <th>Surname</th>
+      <th>Forename</th>
+      <th>Middle name</th>
+      <th>Other Name</th>
+      <th>Gender</th>
+      <th>Date Of Birth <br/> (SMSP)</th>
+      <th>Deceased</th>
+      <th>GP Surgery <br/> ODS Code</th>
+      <th>Address line 1</th>
+      <th>Address line 2</th>
+      <th>Address line 3</th>
+      <th>Address line 4 <br/> city</th>
+      <th>Address line 5 <br/> district</th>
+      <th>Postcode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&nbsp;</td>
+      <td>NEWCASTLE</td>
+      <td>Rheana</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>2009-06-11</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=Y05671">Y05671</a></td>
+      <td>Byker</td>
+      <td>Newcastle</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>NE6 1SG</td>
+    </tr>
+    <tr>
+      <td>9737383222</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-Patient-Leeds.html">LEEDS</a></td>
+      <td>Rob</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1978-01-17</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=B86016">B86016</a></td>
+      <td>Maison Lane</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>LEEDS</td>
+      <td>&nbsp;</td>
+      <td>LS8 2HH</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>SHEFFIELD</td>
+      <td>Theon</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1986-09-12</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=C88622">C88622</a></td>
+      <td>SPITAL STREET</td>
+      <td>Sheffield</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>S3 9LB</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>HULL</td>
+      <td>Yara</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1981-04-23</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=B81061">B81061</a></td>
+      <td>4 Centurion Way</td>
+      <td>Brough</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>HU15 1AY</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>YORK</td>
+      <td>Euron</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1982-03-02</td>
+      <td>✅</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>MIDDLESBOROUGH</td>
+      <td>Allanys</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1947-04-27</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=A81027">A81027</a></td>
+      <td>1 WORSALL ROAD</td>
+      <td>Yarm</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>TS15 9DD</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>SUNDERLAND</td>
+      <td>Corlys</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1965-03-22</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=A89025">A89025</a></td>
+      <td>WASHINGTON CENTRE</td>
+      <td>WASHINGTON</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>NE38 7NQ</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>DURHAM</td>
+      <td>Alicent</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1993-12-27</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=A83011">A83011</a></td>
+      <td>26 GILESGATE</td>
+      <td>DURHAM</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>DH1 1QW</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>BRADFORD</td>
+      <td>Rodrik</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1942-09-20</td>
+      <td>&nbsp;</td>
+      <td><a href="https://www.odsdatasearchandexport.nhs.uk/?search=generalorg&amp;query=B83055">B83055</a></td>
+      <td>COUSEN ROAD</td>
+      <td>GREAT HORTON</td>
+      <td>BRADFORD</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>BD7 3JX</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In HL7 <a href="https://confluence.hl7.org/download/attachments/25559919/2018%2004%2003%20-%20V2%20LRI%20-%20Ch.%205%20CG%20and%20Code%20System%20Tables.pdf?api=v2">Lab Results Interface (LRI)</a>, the Gene Variant examples are mapped to the following test patients:</p>
+
+<ul>
+  <li>Example Gene Variant 1 Galactosemia (Not a UK Test Code) - 9737383281 Margaery CONGLETON
+    <ul>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/TO2/MDM_T02_LRI-GeneVariant-1.txt">HL7 v2 MDM_T02</a></li>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Output/PDF/R01/LRI-GeneVariant-1.txt.pdf">PDF Laboratory Report</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/V2/R01/LRI-GeneVariant-1.txt">HL7 v2 ORU_R01 LRI</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/FHIR/R01/LRI-GeneVariant-1.txt.json">HL7 FHIR Message R01 Genomic Reporting</a></li>
+    </ul>
+  </li>
+  <li>Example Gene Variant 2 Cystic Fibrosis (R185) - 9737383214 Jamie LANCASTER
+    <ul>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/TO2/MDM_T02_LRI-GeneVariant-2.txt">HL7 v2 MDM_T02</a></li>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Output/PDF/R01/LRI-GeneVariant-2.txt.pdf">PDF Laboratory Report</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/V2/R01/LRI-GeneVariant-2.txt">HL7 v2 ORU_R01 LRI</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/FHIR/R01/LRI-GeneVariant-2.txt.json">HL7 FHIR Message R01 Genomic Reporting</a></li>
+    </ul>
+  </li>
+  <li>Example Gene Variant 3 Lynch Syndrome (R210) - 9737383206 Ned LIVERPOOL
+    <ul>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/TO2/MDM_T02_LRI-GeneVariant-3.txt">HL7 v2 MDM_T02</a></li>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Output/PDF/R01/LRI-GeneVariant-3.txt.pdf">PDF Laboratory Report</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/V2/R01/LRI-GeneVariant-3.txt">HL7 v2 ORU_R01 LRI</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/FHIR/R01/LRI-GeneVariant-3.txt.json">HL7 FHIR Message R01 Genomic Reporting</a></li>
+    </ul>
+  </li>
+  <li>Example 4 Infantile Epilepsy (R59)- 9737383346 Ygritte HAWES
+    <ul>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/TO2/MDM_T02_LRI-GeneVariant-4.txt">HL7 v2 MDM_T02</a></li>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Output/PDF/R01/LRI-GeneVariant-4.txt.pdf">PDF Laboratory Report</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/V2/R01/LRI-GeneVariant-4.txt">HL7 v2 ORU_R01 LRI</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/FHIR/R01/LRI-GeneVariant-4.txt.json">HL7 FHIR Message R01 Genomic Reporting</a></li>
+    </ul>
+  </li>
+  <li>Example 5 Learning Disability (R377) - 9737383346 Hodor TAMESIDE
+    <ul>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/TO2/MDM_T02_LRI-GeneVariant-5.txt">HL7 v2 MDM_T02</a></li>
+      <li><a href="https://github.com/nw-gmsa/Testing/blob/main/Output/PDF/R01/LRI-GeneVariant-5.txt.pdf">PDF Laboratory Report</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Outpyt/V2/R01/LRI-GeneVariant-5.txt">HL7 v2 ORU_R01 LRI</a></li>
+      <li><strong>PROOF OF CONCEPT</strong> <a href="https://github.com/nw-gmsa/Testing/blob/main/Output/FHIR/R01/LRI-GeneVariant-5.txt.json">HL7 FHIR Message R01 Genomic Reporting</a></li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-mermaid">graph TD;
+    subgraph LynchSyndrome[Lynch Syndrome Scenario]
+        Nottingham((Nottingham&lt;br/&gt;Lyarra)) --&gt; |Mother| Liverpool[Liverpool&lt;br/&gt;Ned]
+        Liverpool --&gt; |Father| Leeds[Leeds&lt;br/&gt;Rob]
+        Liverpool --&gt; |Father| Manchester((Manchester&lt;br/&gt;Sansa))
+    end
+
+    subgraph CysticFibrosis[Cystic Fibrosis Scenario]
+        London((London&lt;br/&gt;Cersei)) --&gt; |Mother| Birmmingham
+        London --&gt; |Mother| Wrexham((Wrexham&lt;br/&gt;Myrcella))
+        Lancaster[Lancaster&lt;br/&gt;Jaime] --&gt; |Father| Birmmingham[Birmmingham&lt;br/&gt;Tommen]
+        Lancaster --&gt; |Father| Wrexham
+        London --&gt; |Twin| Lancaster
+    end
+    
+    subgraph TBD[Galactosemia Scenario]
+        Warrington((Warrington&lt;br/&gt;Olenna)) --&gt; |Mother| Northwich 
+        Northwich[Northwich&lt;br/&gt;Mace] --&gt; |Father| Congleton((Congleton&lt;br/&gt;Margaery))
+    end
+</code></pre>
+
+<h3 id="nhs-england-edi--test-patients">NHS England EDI  Test Patients</h3>
+
+<p>These patients are created in the NHS England Test Data Repository (TDR) and were used for previous national programmes (from HSCIC and NHS Digital)</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>NHS Number</th>
+      <th>Surname</th>
+      <th>Forename</th>
+      <th>Middle name</th>
+      <th>Gender</th>
+      <th>Date Of Birth <br/> (SMSP)</th>
+      <th>Deceased</th>
+      <th>GP Surgery <br/> ODS Code</th>
+      <th>Address line 1</th>
+      <th>Address line 2</th>
+      <th>Address line 3</th>
+      <th>Address line 4 <br/> city</th>
+      <th>Address line 5 <br/> district</th>
+      <th>Postcode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l2437">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999468.html">999 999 9468</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>ONE</td>
+      <td>John</td>
+      <td>M</td>
+      <td>1925-01-27</td>
+      <td>&nbsp;</td>
+      <td>D82015</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>B6 5RQ</td>
+    </tr>
+    <tr>
+      <td><a name="l2483">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999476.html">999 999 9476</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>TWO</td>
+      <td>&nbsp;</td>
+      <td>M (F)</td>
+      <td>1962-02-01 (1964-02-29)</td>
+      <td>&nbsp;</td>
+      <td>B85023</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX6 7JJ</td>
+    </tr>
+    <tr>
+      <td><a name="l2529">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999484.html">999 999 9484</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>THREE</td>
+      <td>ZOE</td>
+      <td>M (F)</td>
+      <td>2007-05-05  (1978-07-19)</td>
+      <td>&nbsp;</td>
+      <td>-</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX2 5SE</td>
+    </tr>
+    <tr>
+      <td><a name="l2575">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999492.html">999 999 9492</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>FOUR</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1933-03-03 (1911-02-12)</td>
+      <td>&nbsp;</td>
+      <td>B85023</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX1 2SS</td>
+    </tr>
+    <tr>
+      <td><a name="l2621">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999506.html">999 999 9506</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>FIVE</td>
+      <td>LESLIE</td>
+      <td>M</td>
+      <td>1990-10-19</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>LL1 1EQ</td>
+    </tr>
+    <tr>
+      <td><a name="l2667">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999514.html">999 999 9514</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>SIX</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1988-01-14 (1960-06-24)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>CV35 8DU</td>
+    </tr>
+    <tr>
+      <td><a name="l2713">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999522.html">999 999 9522</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>SEVEN</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>2007-05-05 (1945-01-01)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX2 5SE</td>
+    </tr>
+    <tr>
+      <td><a name="l2759">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999530.html">999 999 9530</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>EIGHT</td>
+      <td>&nbsp;</td>
+      <td>M</td>
+      <td>1985-12-01 (1972-03-12)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Retest T</td>
+    </tr>
+    <tr>
+      <td><a name="l2805">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999549.html">999 999 9549</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>NINE</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>2002-02-02 (1950-11-13)</td>
+      <td>&nbsp;</td>
+      <td>B85023</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX1 2SS</td>
+    </tr>
+    <tr>
+      <td><a name="l2851">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999557.html">999 999 9557</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>TEN</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1980-01-01 (1960-03-22)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>RG12 9AX</td>
+    </tr>
+    <tr>
+      <td><a name="l2897">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999565.html">999 999 9565</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>ELEVEN</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>2008-05-05 (1930-04-14)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>BD16 1QB</td>
+    </tr>
+    <tr>
+      <td><a name="l2943">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999573.html">999 999 9573</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>TWELVE</td>
+      <td>&nbsp;</td>
+      <td>F (M)</td>
+      <td>1963-05-05 (1964-01-01)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX1 2SS</td>
+    </tr>
+    <tr>
+      <td><a name="l2989">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999581.html">999 999 9581</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>THIRTEEN</td>
+      <td>&nbsp;</td>
+      <td>F</td>
+      <td>1960-01-01 (1930-05-14)</td>
+      <td>&nbsp;</td>
+      <td>B85023</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>EX2 5SE</td>
+    </tr>
+    <tr>
+      <td><a name="l3035">​</a><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Patient-9999999603.html">999 999 9603</a></td>
+      <td>EDITESTPATIENT</td>
+      <td>FOURTEEN</td>
+      <td>&nbsp;</td>
+      <td>M (F)</td>
+      <td>1984-11-06 (1939-07-05)</td>
+      <td>&nbsp;</td>
+      <td>B85023</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ub4 0db</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="environments">Environments</h2>
+
+<p>The APIs are available on the <a href="https://digital.nhs.uk/services/health-and-social-care-network">Health and Social Care Network (HSCN)</a></p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Environment</th>
+      <th>Service</th>
+      <th>Base Url</th>
+      <th>Capability Statement 'OAS'</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Development</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Genomics Regional Orchestration Engine (RIE)</td>
+      <td>https://gen-tie-dev.nwgenomics.nhs.uk/gentiedev/ESB</td>
+      <td>See <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html">Placer Order Management [LAB-1]</a> and <a href="https://10.165.194.216/gentiedev/ESB/metadata">CapabilityStatement</a></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Genomics Regional Health Information Exchange (IHE) <br/> Genomics Clinical Data Repository (CDR)</td>
+      <td>https://gen-tie-dev.nwgenomics.nhs.uk/irishealth/csp/healthshare/clinicaldatarepository/fhir/r4</td>
+      <td><a name="l3159">​</a>See <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PCC-44.html">Query Existing Data [PCC-44]</a></td>
+    </tr>
+    <tr>
+      <td>Integration Testing</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Genomics Regional Orchestration Engine (RIE)</td>
+      <td>https://gen-tie-test.nwgenomics.nhs.uk/gentietest/ESB</td>
+      <td>See <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html">Placer Order Management [LAB-1]</a> and <a href="https://10.165.194.217/gentietest/ESB/metadata">CapabilityStatement</a></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Genomics Regional OAuth2 Server</td>
+      <td>https://gen-tie-test.nwgenomics.nhs.uk/gentietest/oauth2</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="security-and-authorisation">Security and authorisation</h3>
+
+<p>This API has two access modes:</p>
+
+<ul>
+  <li>Development - unrestricted access</li>
+  <li>Integration Testing - OAuth2 <a href="https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/">client-credentials</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/support.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nwgenomics.nhs.uk/contact-us">NHS North West Genomics</a>.  Package fhir.nwgenomics.nhs.uk#0.2.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:11+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/IHE/supplement-template/issues/new/choose" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/IHE/supplement-template/issues" target="_blank">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://fhir.nwgenomics.nhs.uk/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: var(--footer-hyperlink-text-color)" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/images/cc-by.png" alt="CC0" style="border-style: none;" height="17"/></a> |
+                  <!-- <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://www.ihe.net/resources/public_comment/" target="_blank">Propose a change<img src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/external.png" alt="external" style="vertical-align: baseline"/></a>
+                 <script src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/.assets/js/google-analytics.js" type="text/javascript"> </script>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+
+
+</link></head></html>

@@ -1,0 +1,56 @@
+{
+  "slug": "fhir-ig-guidance-master-diagrams-mermaid",
+  "storageId": "FHIR_ig-guidance@master",
+  "packageId": "hl7.fhir.uv.howto#0.1.0",
+  "package": "hl7.fhir.uv.howto",
+  "version": "0.1.0",
+  "title": "Guidance for FHIR IG Creation",
+  "repo": "FHIR/ig-guidance/branches/master/qa.json",
+  "repoPath": "FHIR/ig-guidance",
+  "buildUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/FHIR/ig-guidance/tree/master",
+  "canonicalUrl": "http://hl7.org/fhir/uv/howto/ImplementationGuide/hl7.fhir.uv.howto",
+  "canonical": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master"
+  ],
+  "fileName": "diagrams-mermaid.html",
+  "originalFileName": "diagrams-mermaid.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/FHIR_ig-guidance@master/diagrams-mermaid.html",
+  "pagePath": "diagrams-mermaid.html",
+  "pageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 53,
+  "totalDiagramLength": 53,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid",
+    "caseJson": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/case.json",
+    "before": {
+      "dir": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/before",
+      "html": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/before/index.html"
+    },
+    "after": {
+      "dir": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/after",
+      "html": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/failure",
+      "html": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/source",
+      "html": "pages/FHIR/ig-guidance/master/0.1.0/diagrams-mermaid/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/assets/js/mermaid-init.js"
+}

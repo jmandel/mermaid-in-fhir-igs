@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Implementation notes - HL7 Czech Imaging Report IG v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/cqf.css" rel="stylesheet" />
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/css/cz-core.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"30"}
+    h3,h4,h5,h6{--heading-prefix:"30"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="https://www.hl7cr.eu/">
+    <img height="60" alt="Visit the HL7 Czech website" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/hl7cz-logo.png" />
+  </a>
+</div>
+<div id="project-nav">
+  <a id="project-logo" no-external="true" href="https://ncez.mzcr.cz/cs/node/573"><img height="60" alt="MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/NPO_logo.png" /> </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://ncez.mzcr.cz/"><img height="60" alt="NCEZ MZCR"
+      src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Czech Imaging Report IG</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <img alt="Czechia flag" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/images/cze.svg" height="16" title="Czechia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/index.html">Home (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/index-cs.html">Home (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/scope-and-content.html">Scope and content (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/scope-and-content-cs.html">Scope and content (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/background.html">Background (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/background-cs.html">Background (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/use-cases.html">Use cases (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/use-cases-cs.html">Use cases (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/workflow.html">Workflow (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/workflow-cs.html">Workflow (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/logical-models.html">Logical models (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/logical-models-cs.html">Logical models (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/terminology-considerations.html">Terminology considerations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/terminology-considerations-cs.html">Terminology considerations (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/model-map.html">Mapping to profiles (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/model-map-cs.html">Mapping to profiles (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/examples.html">Examples (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/examples-cs.html">Examples (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations.html">Obligations (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations-cs.html">Obligations (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes.html">Implementation notes (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes-cs.html">Implementation notes (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/authors.html">Authors (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/authors-cs.html">Authors (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/downloads.html">Downloads (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/downloads-cs.html">Downloads (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/dependencies.html">Dependencies (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/dependencies-cs.html">Dependencies (cs)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/copyright.html">Copyright (en)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/copyright-cs.html">Copyright (cs)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/hl7-eu/imaging-r4/en/">IG IMG EU</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7-cz/img/branches/master/toc.html'><b>Table of Contents</b></a></li><li><b>Implementation notes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Czech Imaging Report IG, published by HL7 Czech Republic. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7-cz/img/'>https://github.com/HL7-cz/img/</a> and changes regularly. See the <a href='https://hl7.cz/fhir/img/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Implementation notes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#contents-overview" id="markdown-toc-contents-overview">Contents overview</a></li>
+  <li><a href="#description-of-content-cz_compositionimagingreport" id="markdown-toc-description-of-content-cz_compositionimagingreport">Description of content CZ_CompositionImagingReport</a></li>
+  <li><a href="#sections-and-content" id="markdown-toc-sections-and-content">Sections and content</a></li>
+</ul>
+
+</div>
+
+<p>On the following page, you will find notes on implementing the image report. They concern the creation of a bundle, its composition, and filling these profiles with the relevant data.</p>
+
+<h3 id="contents-overview">Contents overview</h3>
+
+<pre><code class="language-mermaid">classDiagram
+  direction LR
+  class CZ_BundleImagingReport{
+    &lt;&lt;Bundle&gt;&gt;
+  }
+  CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
+  CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
+  CZ_BundleImagingReport *-- "1" CZ_PatientCore
+  CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImagingReport *-- "0..*" CZ_Practioner
+  CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
+  CZ_BundleImagingReport *-- "0..*" CZ_OrganizationCore
+  CZ_BundleImagingReport *-- "0..*" CZ_StudyImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ProcedureImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ObservationResultImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_KeyImageDocumentReference
+  CZ_BundleImagingReport *-- "0..*" CZ_ConditionImage
+  CZ_BundleImagingReport *-- "0..*" CZ_CarePlanImage
+
+  CZ_DiagnosticReport --&gt; CZ_CompositionImagingReport: composition
+  
+
+  CZ_CompositionImagingReport --&gt; CZ_ImagingOrderInformation: extension[basedOn]  
+  CZ_CompositionImagingReport --&gt; CZ_DiagnosticReport: extension[diagnosticreport-reference]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: author[author]
+  CZ_CompositionImagingReport --&gt; CZ_DeviceObserver: author[authoring-device]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: attester[legalAuthenticator]
+  CZ_CompositionImagingReport --&gt; CZ_Practioner: attester[resultValidator]
+  CZ_CompositionImagingReport --&gt; CZ_OrganizationCore: custodian
+  CZ_CompositionImagingReport --&gt; CZ_PatientCore: subject
+  CZ_CompositionImagingReport --&gt; CZ_StudyImaging: section[imagingstudy]
+  CZ_CompositionImagingReport --&gt; CZ_ImagingOrderInformation: section[order]
+  CZ_CompositionImagingReport --&gt; CZ_ConditionImage: section[clinicalQuestion]
+  CZ_CompositionImagingReport --&gt; CZ_ProcedureImaging: section[procedure]
+  CZ_CompositionImagingReport --&gt; CZ_StudyImaging: section[comparison]
+  CZ_CompositionImagingReport --&gt; CZ_ObservationResultImaging: section[findings]
+  CZ_CompositionImagingReport --&gt; CZ_KeyImageDocumentReference: section[findings]
+  CZ_CompositionImagingReport --&gt; CZ_KeyImageDocumentReference: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_ObservationResultImaging: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_ConditionImage: section[impression]
+  CZ_CompositionImagingReport --&gt; CZ_CarePlanImage: section[recommendation]
+
+</code></pre>
+
+<p>The report is a FHIR bundle that includes CZ_CompositionImagingReport and CZ_DiagnosticReport resources and all resources in the tree of resources that referred to (see <a href="https://www.hl7.org/fhir/composition-operation-document.html">$document operation</a>). During implementation, it is necessary to follow the obligatory rules described in the <a href="https://build.fhir.org/ig/HL7-cz/img/branches/master/obligations.html">Obligations</a> section.</p>
+
+<h3 id="description-of-content-cz_compositionimagingreport">Description of content CZ_CompositionImagingReport</h3>
+
+<h3 id="sections-and-content">Sections and content</h3>
+
+<p>The composition contains basic components and sections. Basic components include, for example, information about the author, the date of creation of the document, etc. The sections are divided into a set of mandatory and optional sections. If no data is available for a mandatory section, the reason must be stated in <code class="language-plaintext highlighter-rouge">composition.section.emptyReason</code>.</p>
+
+<h4 id="composition-sections">Composition sections</h4>
+
+<p><strong>Imaging Study</strong></p>
+
+<p>Information on the studies that this report is reporting on. It includes such as the study identifiers, date and time the exam was done, the modalities used in the exam and the different series.</p>
+
+<p><strong>Order</strong></p>
+
+<p>The order section contains information on the orders that resulted in the studies and this report. It includes information such as the  <code class="language-plaintext highlighter-rouge">AccessionNumber</code>, the identity of the referring physician or organization, the indication for examination, and, ideally, additional patient context and specific clinical questions provided by the referring physician. Clinical questions are sometimes of the form “Follow-up X”, where X is an existing known finding (perhaps from a previous exam), or “Rule out X”, where X is a condition for which imaging input is requested on whether or not it is present. Indications are also, hopefully, provided to provide important clinical context to the imaging clinician, and to support assessment of the appropriateness of the order and/or billing. If indications are not present, they are sometimes sought out by imaging staff.</p>
+
+<blockquote>
+  <p>Note: “Rule out X”, while somewhat helpful for the imaging clinician, can be problematic for billing since the symptoms that suggest the possible presence of the condition and establish the medical necessity of the imaging exam are implied, but not captured. Site practices increasingly deprecate such wording.</p>
+</blockquote>
+
+<p><strong>History</strong></p>
+
+<p>This section includes patient history and other prior clinical details deemed relevant to the imaging study by the imaging clinician. Some information may be provided by the referring physician in the order, and more is extracted from the medical record by imaging staff, automated tools, or by the radiologist themselves. This information provides background for the imaging clinician, context for the contents of the report, and is sometimes relevant to billing and clinical guidelines. Potential sources include impressions or summaries of the clinical notes from the encounter where the imaging order was placed.</p>
+
+<p><strong>Clinical question</strong></p>
+
+<p>A clinical question is a key element of an imaging order. It should be entered as an interrogative sentence, it should end with a question mark, and it should be possible to answer it based on the imaging examination. It provides the performing professional with the necessary context and direction. It briefly and concisely explains why the examination is necessary, which, for example, allows the radiologist to choose the most appropriate imaging protocol and focus on finding a specific pathology. This increases diagnostic accuracy and the efficiency of the entire process, minimizes the risk of ambiguities in the final report, and at the same time ensures that the patient is exposed to radiation or a contrast agent only in medically justified cases. The clinical question thus transforms a routine scan into a targeted diagnostic tool.</p>
+
+<p><strong>Procedure</strong></p>
+
+<p>This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it.</p>
+
+<p>Also called Imaging technique, this section may describe the parameters that were used, details of any contrast media and/or radiopharmaceuticals administered, including concentration, volume, and route of administration, and any medications, and catheters or devices used.</p>
+
+<p>The section can also describe preparation of the data produced by the procedure: Views, image sets, recons, reformats and post processing.</p>
+
+<p>Radiation dose may also be described here; the text content and metrics may be constrained/formatted to meet local regulations.</p>
+
+<p>The information in this section is typically more detailed than what is listed as the Order, and in fact may differ from the ordered exam based on the needs of the patient and the judgment of the imaging clinician.</p>
+
+<p>Any deficiencies of the study may also be described here, such as whether the imaging was incomplete or if there were quality issues that prevented interpretation of some part of the study or otherwise compromise the sensitivity and specificity of the examination. In the event that a patient was unable to undergo imaging, for example due to claustrophobia or a seizure, a report might still be produced and this section would note that the exam was not performed and provide a reason.</p>
+
+<p>While the actual instructions given to the patient are not typically listed in the report, some mention the fact that instructions were given, and perhaps that risks were discussed, and consent was obtained. Procedure notes from the technologist are typically captured elsewhere, but significant details such as adverse patient reactions, or things that may affect the quality of the study, may be included here.</p>
+
+<p>Procedure details that may be required for billing are sometimes included here as well.</p>
+
+<p><strong>Comparison</strong></p>
+
+<p>This section is a list of other studies that were considered relevant by the imaging clinician. They are typically identified by type (modality, anatomy, exam type) and date. Findings from these studies and comparisons with the current study are typically woven into the next section (e.g. indicating no change, differentiating descriptions and/or measurements), although some of these studies may not be specifically mentioned in the findings. It is typically presumed that both the images and the report for each comparison study were available to the imaging clinician, however in some cases, such as for external priors, only the report or only the images were available, in which case that may be noted here.</p>
+
+<p><strong>Findings</strong></p>
+
+<p>This section provides a detailed description of the findings on the imaging examination. The findings should be described in a clear and concise manner, using standardized anatomic, pathologic, and radiologic terminology whenever possible.</p>
+
+<p>When there are significant numbers of findings, the imaging clinician will typically organize them into groups, typically by anatomy. Reporting templates for particular procedure types (such as those at radreport.org) will also often organize the findings.</p>
+
+<p>An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms.</p>
+
+<p><strong>Impression</strong></p>
+
+<p>Sometimes also called Conclusion or Diagnosis, provides the radiologist’s overall interpretation of the findings, a specific diagnosis and/or differential diagnosis (when possible), responses to any clinical questions posed by the referring physician, and any recommendations for further management and/or confirmation, as appropriate.</p>
+
+<p>Recommendations most often cover subsequent diagnostic imaging or other diagnostic procedures such as biopsies or lab tests. They may also include suggestions to correlate the imaging result with other clinical information to improve the confidence of the diagnosis, referrals to specialists, or less commonly, therapeutic procedures. The recommendations may cite specific guidelines applied, particularly when the referring physician might be less familiar with the current guidelines for certain findings than the imaging clinician. The imaging clinician may take into account the expertise of the referring physician when composing recommendations; for an unusual cancer, a family physician might find follow-up recommendations more helpful than an oncology specialist would.</p>
+
+<p>Since referring physicians may specifically focus their attention on this section, the imaging clinician may choose particularly important details such as key findings or any adverse events, to re-iterate and summarize here.</p>
+
+<p>The order of items in the impression is often significant, in that imaging clinicians frequently put the most critical, most actionable, most significant items first in the impression section to minimize the chance of them being overlooked. In the case of differential diagnosis, the multiple possible diagnoses are typically presented in order from the most likely to the least likely. Impression items may also be numbered to facilitate verbal referencing or linking to communications.</p>
+
+<p>Some items in the impression may be clinically significant but were not associated with the indications or reason for exam; for example, a lung nodule deemed to be suspicious on a chest exam for trauma. These are often referred to as “incidental findings”.</p>
+
+<p>Some items in the impression may be critical, in that they represent the potential for severe negative clinical impact to the patient if appropriate action is not taken promptly. The presence of such items almost always results in a communication with care staff and/or the patient.</p>
+
+<p><strong>Recommendation</strong></p>
+
+<p>Some items in the impression may be considered actionable, in that some follow-up action or communication is advisable. The recommendations may or may not include a specific corresponding follow-up action. A corresponding communication to relevant persons may or may not have taken place during the reporting process and be noted in the report.</p>
+
+<p><strong>Complication</strong></p>
+
+<p>Information on additional medical problems that develop following a procedure, diagnostic test or study, treatment, or illness.</p>
+
+<p><strong>Communication</strong></p>
+
+<p>This is an optional section as it not anticipated that it is often required.</p>
+
+<p>There is strong interest in tooling to facilitate communicating critical results clearly and rapidly with the appropriate people, confirming that follow-up of actionable findings takes place, and making sure that incidental findings do not “fall through the cracks”.</p>
+
+<p>Communications are records in the report about attempted and/or successful communications of some content of the report to the referring physician, the patient, or other appropriate person. These communications are initiated during the generation of the DiagnosticReport by members of the organization fulfilling that order. E.g. direct communication of time critical results by the radiologist to the referring physician.</p>
+
+<p>Communication is not listed as a separate section in the ACR guidance, but codes for a communication section do exist. It is common practice to present communication records at the bottom of the report, just below the impressions, since they are often driven by specific items in the impression and occur at the end of the report creation process. Such communication records support medico-legal usage and the review and improvement of conformance to best practices for patient safety and quality of care.</p>
+
+<p>The communication entry typically records the date, time, and method of communication, the person/organization contacted, and may summarize the content communicated.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hl7.cz/">HL7 Czech Republic</a>.  Package hl7.fhir.cz.img#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 28, 2026 16:02+0000">2026-01-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/img/branches/master/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7-cz/img/branches/master/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7-cz/img/branches/master/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

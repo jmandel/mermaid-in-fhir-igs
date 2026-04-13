@@ -1,0 +1,57 @@
+{
+  "slug": "johnmoehrke-xacml-consent-main-ab352",
+  "storageId": "JohnMoehrke_xacml-consent@main",
+  "packageId": "johnmoehrke.xacml-consent.example#0.1.0",
+  "package": "johnmoehrke.xacml-consent.example",
+  "version": "0.1.0",
+  "title": "John Moehrke XACML Consent Example",
+  "repo": "JohnMoehrke/xacml-consent/branches/main/qa.json",
+  "repoPath": "JohnMoehrke/xacml-consent",
+  "buildUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/JohnMoehrke/xacml-consent/tree/main",
+  "canonicalUrl": "http://johnmoehrke.github.io/xacml-consent/ImplementationGuide/johnmoehrke.xacml-consent.example",
+  "canonical": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main"
+  ],
+  "fileName": "ab352.html",
+  "originalFileName": "ab352.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/JohnMoehrke_xacml-consent@main/ab352.html",
+  "pagePath": "ab352.html",
+  "pageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 6,
+  "maxDiagramLength": 1304,
+  "totalDiagramLength": 6658,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352",
+    "caseJson": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/case.json",
+    "before": {
+      "dir": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/before",
+      "html": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/before/index.html"
+    },
+    "after": {
+      "dir": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/after",
+      "html": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/failure",
+      "html": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/source",
+      "html": "pages/JohnMoehrke/xacml-consent/main/0.1.0/ab352/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/assets/js/mermaid-init.js"
+}

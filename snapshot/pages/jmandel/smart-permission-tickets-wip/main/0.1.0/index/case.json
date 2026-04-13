@@ -1,0 +1,57 @@
+{
+  "slug": "jmandel-smart-permission-tickets-wip-main-index",
+  "storageId": "jmandel_smart-permission-tickets-wip@main",
+  "packageId": "smart.permission-tickets#0.1.0",
+  "package": "smart.permission-tickets",
+  "version": "0.1.0",
+  "title": "SMART Permission Tickets",
+  "repo": "jmandel/smart-permission-tickets-wip/branches/main/qa.json",
+  "repoPath": "jmandel/smart-permission-tickets-wip",
+  "buildUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/jmandel/smart-permission-tickets-wip/tree/main",
+  "canonicalUrl": "http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets",
+  "canonical": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main"
+  ],
+  "fileName": "index.html",
+  "originalFileName": "index.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/jmandel_smart-permission-tickets-wip@main/index.html",
+  "pagePath": "index.html",
+  "pageUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/index.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 930,
+  "totalDiagramLength": 1860,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index",
+    "caseJson": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/case.json",
+    "before": {
+      "dir": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/before",
+      "html": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/before/index.html"
+    },
+    "after": {
+      "dir": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/after",
+      "html": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/failure",
+      "html": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/source",
+      "html": "pages/jmandel/smart-permission-tickets-wip/main/0.1.0/index/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/index.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/assets/js/mermaid-init.js"
+}

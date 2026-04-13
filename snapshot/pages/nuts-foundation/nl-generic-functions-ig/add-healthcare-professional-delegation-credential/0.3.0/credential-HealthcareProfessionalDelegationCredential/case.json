@@ -1,0 +1,57 @@
+{
+  "slug": "nuts-foundation-nl-generic-functions-ig-add-healthcare-professional-delegation-credential-credential-healthcareprofessionaldelegationcredential",
+  "storageId": "nuts-foundation_nl-generic-functions-ig@add-healthcare-professional-delegation-credential",
+  "packageId": "fhir.nl.gf#0.3.0",
+  "package": "fhir.nl.gf",
+  "version": "0.3.0",
+  "title": "Netherlands - Generic Functions for data exchange Implementation Guide",
+  "repo": "nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/qa.json",
+  "repoPath": "nuts-foundation/nl-generic-functions-ig",
+  "buildUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential",
+  "branch": "add-healthcare-professional-delegation-credential",
+  "githubUrl": "https://github.com/nuts-foundation/nl-generic-functions-ig/tree/add-healthcare-professional-delegation-credential",
+  "canonicalUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf",
+  "canonical": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential"
+  ],
+  "fileName": "credential-HealthcareProfessionalDelegationCredential.html",
+  "originalFileName": "credential-HealthcareProfessionalDelegationCredential.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nuts-foundation_nl-generic-functions-ig@add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html",
+  "pagePath": "credential-HealthcareProfessionalDelegationCredential.html",
+  "pageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 735,
+  "totalDiagramLength": 1470,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential",
+    "caseJson": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/case.json",
+    "before": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/before",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/after",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/failure",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/source",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-healthcare-professional-delegation-credential/0.3.0/credential-HealthcareProfessionalDelegationCredential/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/assets/js/mermaid-init.js"
+}

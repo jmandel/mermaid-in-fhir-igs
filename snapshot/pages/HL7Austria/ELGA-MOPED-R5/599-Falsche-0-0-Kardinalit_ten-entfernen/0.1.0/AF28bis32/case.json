@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-599-falsche-0-0-kardinalit-ten-entfernen-af28bis32",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@599-Falsche-0-0-Kardinalit_ten-entfernen",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen",
+  "branch": "599-Falsche-0-0-Kardinalitäten-entfernen",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/599-Falsche-0-0-Kardinalitäten-entfernen",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen"
+  ],
+  "fileName": "AF28bis32.html",
+  "originalFileName": "AF28bis32.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@599-Falsche-0-0-Kardinalit_ten-entfernen/AF28bis32.html",
+  "pagePath": "AF28bis32.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/AF28bis32.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 5,
+  "maxDiagramLength": 1536,
+  "totalDiagramLength": 4551,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/599-Falsche-0-0-Kardinalit_ten-entfernen/0.1.0/AF28bis32/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/AF28bis32.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalit%C3%A4ten-entfernen/assets/js/mermaid-init.js"
+}

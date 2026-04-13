@@ -1,0 +1,57 @@
+{
+  "slug": "iknl-pzp-fhir-r4-changelog-data-exchange",
+  "storageId": "IKNL_PZP-FHIR-R4@Changelog",
+  "packageId": "iknl.fhir.r4.pzp#1.0.0-rc1",
+  "package": "iknl.fhir.r4.pzp",
+  "version": "1.0.0-rc1",
+  "title": "Advance Care Planning (PZP)",
+  "repo": "IKNL/PZP-FHIR-R4/branches/Changelog/qa.json",
+  "repoPath": "IKNL/PZP-FHIR-R4",
+  "buildUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog",
+  "branch": "Changelog",
+  "githubUrl": "https://github.com/IKNL/PZP-FHIR-R4/tree/Changelog",
+  "canonicalUrl": "https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp",
+  "canonical": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog",
+  "candidateBases": [
+    "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog"
+  ],
+  "fileName": "data-exchange.html",
+  "originalFileName": "data-exchange.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/IKNL_PZP-FHIR-R4@Changelog/data-exchange.html",
+  "pagePath": "data-exchange.html",
+  "pageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-exchange.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 3,
+  "maxDiagramLength": 2746,
+  "totalDiagramLength": 3736,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange",
+    "caseJson": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/case.json",
+    "before": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/before",
+      "html": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/before/index.html"
+    },
+    "after": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/after",
+      "html": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/failure",
+      "html": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/source",
+      "html": "pages/IKNL/PZP-FHIR-R4/Changelog/1.0.0-rc1/data-exchange/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-exchange.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/assets/js/mermaid-init.js"
+}

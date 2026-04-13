@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-607-anwendungsfall-31-genehmigung-nach-ablehnung-workflowmanagement",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "branch": "607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung"
+  ],
+  "fileName": "workflowmanagement.html",
+  "originalFileName": "workflowmanagement.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html",
+  "pagePath": "workflowmanagement.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 3,
+  "maxDiagramLength": 440,
+  "totalDiagramLength": 889,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/workflowmanagement/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid-init.js"
+}

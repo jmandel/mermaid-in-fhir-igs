@@ -26,7 +26,7 @@ const IG_INDEX_PATH = path.resolve(process.cwd(), readFlag('--igs') || path.join
 const OUTPUT_DIR = path.resolve(process.cwd(), readFlag('--out') || path.join(__dirname, 'artifacts'));
 const PATCHED_MERMAID = path.resolve(process.cwd(), readFlag('--mermaid') || path.join(__dirname, 'mermaid.js'));
 const CHROMIUM_PATH = path.resolve(process.cwd(), readFlag('--chromium') || process.env.CHROMIUM || '/usr/bin/chromium');
-const BRANCH_FILTER = parseCsvFlag(readFlag('--branches') || 'main,master');
+const BRANCH_FILTER = parseCsvFlag(readFlag('--branches') || '');
 const VIEWPORT = { width: 1440, height: 1400 };
 const SCREENSHOT_WAIT_MS = 1500;
 const COLOR_THRESHOLD = 18;
@@ -164,13 +164,20 @@ async function collectCasesFromIgIndex() {
   const rows = await loadIgIndexRows();
 
   for (const row of rows) {
-    const packageId = row.safe || `${row.package}#${row.version || 'latest'}`;
-    const packageDir = path.join(CONTENT_DIR, packageId);
+    const storageId = row.storageId || row.safe || defaultStorageId(row.repoPath, row.branch, row.package, row.version);
+    const packageId = formatPackageId(row.package, row.version, storageId);
+    const packageDir = path.join(CONTENT_DIR, storageId);
 
     for (const originalFileName of row.mermaidFiles || []) {
-      const storedFileName = originalFileName.replace(/[/\\]/g, '__');
+      const storedFileName = originalFileName.replace(/[\/\\]/g, '__');
       const fullPath = path.join(packageDir, storedFileName);
-      const fixturePaths = buildFixturePaths(packageId, storedFileName);
+      const fixturePaths = buildFixturePaths({
+        storageId,
+        repoPath: row.repoPath || null,
+        branch: row.branch || null,
+        packageId,
+        version: row.version || null,
+      }, storedFileName);
       const pagePath = originalFileName.replace(/^web__/, '');
 
       let html;
@@ -178,6 +185,7 @@ async function collectCasesFromIgIndex() {
         html = await readFile(fullPath, 'utf8');
       } catch (error) {
         skipped.push({
+          storageId,
           packageId,
           repo: row.repo || null,
           repoPath: row.repoPath || null,
@@ -188,6 +196,7 @@ async function collectCasesFromIgIndex() {
           pageUrl: new URL(pagePath, ensureTrailingSlash(row.buildUrl)).href,
           buildUrl: row.buildUrl,
           branch: row.branch || null,
+          version: row.version || null,
           fixturePaths,
           reason: `harvested page missing from content tree: ${error.message}`,
         });
@@ -201,6 +210,7 @@ async function collectCasesFromIgIndex() {
       const scriptPaths = extractMermaidScriptPaths(html);
       if (!scriptPaths.mermaidPath || !scriptPaths.mermaidInitPath) {
         skipped.push({
+          storageId,
           packageId,
           repo: row.repo || null,
           repoPath: row.repoPath || null,
@@ -211,6 +221,7 @@ async function collectCasesFromIgIndex() {
           pageUrl,
           buildUrl: row.buildUrl,
           branch: row.branch || null,
+          version: row.version || null,
           fixturePaths,
           scriptPaths,
           reason: 'could not find Mermaid script references in harvested HTML',
@@ -219,7 +230,8 @@ async function collectCasesFromIgIndex() {
       }
 
       cases.push({
-        slug: slugify(`${packageId}--${storedFileName.replace(/\.html$/i, '')}`),
+        slug: slugify(`${storageId}--${storedFileName.replace(/\.html$/i, '')}`),
+        storageId,
         packageId,
         package: row.package || null,
         version: row.version || null,
@@ -248,6 +260,8 @@ async function collectCasesFromIgIndex() {
   }
 
   cases.sort((a, b) => {
+    if ((a.repoPath || '') !== (b.repoPath || '')) return (a.repoPath || '').localeCompare(b.repoPath || '');
+    if ((a.branch || '') !== (b.branch || '')) return (a.branch || '').localeCompare(b.branch || '');
     if (a.packageId !== b.packageId) return a.packageId.localeCompare(b.packageId);
     return a.fileName.localeCompare(b.fileName);
   });
@@ -261,19 +275,25 @@ async function loadIgIndexRows() {
     .map((line) => line.trim())
     .filter(Boolean);
 
-  const rows = lines.map((line) => JSON.parse(line));
-  const filtered = rows.filter((row) => {
-    if (!row.buildUrl || !row.safe || !Array.isArray(row.mermaidFiles)) return false;
-    if (!BRANCH_FILTER.length) return true;
-    const branch = extractRepoBranch(row.repo || '');
-    return branch ? BRANCH_FILTER.includes(branch) : false;
-  });
+  const rows = lines
+    .map((line) => JSON.parse(line))
+    .map((row) => ({
+      ...row,
+      repoPath: row.repoPath || extractRepoPath(row.repo || ''),
+      branch: row.branch || extractRepoBranch(row.repo || ''),
+      storageId: row.storageId || row.safe || defaultStorageId(
+        row.repoPath || extractRepoPath(row.repo || ''),
+        row.branch || extractRepoBranch(row.repo || ''),
+        row.package,
+        row.version,
+      ),
+    }));
 
-  return filtered.map((row) => ({
-    ...row,
-    repoPath: extractRepoPath(row.repo || ''),
-    branch: extractRepoBranch(row.repo || ''),
-  }));
+  return rows.filter((row) => {
+    if (!row.buildUrl || !Array.isArray(row.mermaidFiles)) return false;
+    if (!BRANCH_FILTER.length) return true;
+    return row.branch ? BRANCH_FILTER.includes(row.branch) : false;
+  });
 }
 
 function extractRepoBranch(repo) {
@@ -285,7 +305,6 @@ function extractRepoPath(repo) {
   const match = repo.match(/^([^/]+\/[^/]+)\/branches\//);
   return match ? match[1] : null;
 }
-
 async function collectCasesFromContentInference() {
   const cases = [];
   const skipped = [];
@@ -526,6 +545,9 @@ async function writeFailureFixture(testCase) {
   }
 
   const metadata = {
+    storageId: testCase.storageId || null,
+    repoPath: testCase.repoPath || null,
+    branch: testCase.branch || null,
     packageId: testCase.packageId,
     fileName: testCase.fileName,
     reason: testCase.reason || 'unknown failure',
@@ -1371,17 +1393,27 @@ function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
-function buildFixturePaths(packageId, fileName) {
-  const { name, version } = splitPackageId(packageId);
+function buildFixturePaths(identity, fileName) {
+  const meta = typeof identity === 'string' ? { packageId: identity } : (identity || {});
   const pageName = fileName.replace(/\.html$/i, '');
-  const root = toPosixPath(
-    path.join(
-      'pages',
-      safePathComponent(name),
-      safePathComponent(version || 'unversioned'),
-      safePathComponent(pageName),
-    ),
-  );
+  const rootParts = ['pages'];
+
+  if (meta.repoPath) {
+    rootParts.push(...String(meta.repoPath).split('/').map(safePathComponent));
+  } else {
+    const { name } = splitPackageId(meta.packageId || meta.storageId || 'unknown');
+    rootParts.push(safePathComponent(name));
+  }
+
+  if (meta.branch) {
+    rootParts.push(safePathComponent(meta.branch));
+  }
+
+  const version = meta.version || splitPackageId(meta.packageId || '').version || 'unversioned';
+  rootParts.push(safePathComponent(version));
+  rootParts.push(safePathComponent(pageName));
+
+  const root = toPosixPath(path.join(...rootParts));
 
   return {
     root,
@@ -1459,6 +1491,8 @@ function buildPagesManifest(report) {
     const rankA = reviewSortValue(a);
     const rankB = reviewSortValue(b);
     if (rankA !== rankB) return rankB - rankA;
+    if ((a.repoPath || '') !== (b.repoPath || '')) return (a.repoPath || '').localeCompare(b.repoPath || '');
+    if ((a.branch || '') !== (b.branch || '')) return (a.branch || '').localeCompare(b.branch || '');
     if (a.packageId !== b.packageId) return a.packageId.localeCompare(b.packageId);
     return a.fileName.localeCompare(b.fileName);
   });
@@ -1517,6 +1551,19 @@ function splitPackageId(packageId) {
   };
 }
 
+function formatPackageId(packageName, version, fallback = 'unknown') {
+  if (!packageName) return fallback;
+  return `${packageName}#${version || 'latest'}`;
+}
+
+function defaultStorageId(repoPath, branch, packageName, version) {
+  if (repoPath && branch) return safeStorageId(`${repoPath}@${branch}`);
+  return safeStorageId(`${packageName || 'unknown'}#${version || 'latest'}`);
+}
+
+function safeStorageId(value) {
+  return String(value || 'unknown').replace(/[^a-z0-9_.\-@#]/gi, '_');
+}
 function safePathComponent(value) {
   return value
     .replace(/[\/\\]/g, '_')

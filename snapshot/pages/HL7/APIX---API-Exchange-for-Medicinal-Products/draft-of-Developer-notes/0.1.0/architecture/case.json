@@ -1,0 +1,56 @@
+{
+  "slug": "hl7-apix-api-exchange-for-medicinal-products-draft-of-developer-notes-architecture",
+  "storageId": "HL7_APIX---API-Exchange-for-Medicinal-Products@draft-of-Developer-notes",
+  "packageId": "hl7.fhir.uv.apix#0.1.0",
+  "package": "hl7.fhir.uv.apix",
+  "version": "0.1.0",
+  "title": "API for the Exchange of Medicinal Product Information (APIX)",
+  "repo": "HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/qa.json",
+  "repoPath": "HL7/APIX---API-Exchange-for-Medicinal-Products",
+  "buildUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes",
+  "branch": "draft-of-Developer-notes",
+  "githubUrl": "https://github.com/HL7/APIX---API-Exchange-for-Medicinal-Products/tree/draft-of-Developer-notes",
+  "canonicalUrl": "http://hl7.org/fhir/uv/apix/ImplementationGuide/hl7.fhir.uv.apix",
+  "canonical": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes"
+  ],
+  "fileName": "architecture.html",
+  "originalFileName": "architecture.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7_APIX---API-Exchange-for-Medicinal-Products@draft-of-Developer-notes/architecture.html",
+  "pagePath": "architecture.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/architecture.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 886,
+  "totalDiagramLength": 886,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture",
+    "caseJson": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/case.json",
+    "before": {
+      "dir": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/before",
+      "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/after",
+      "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/failure",
+      "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/source",
+      "html": "pages/HL7/APIX---API-Exchange-for-Medicinal-Products/draft-of-Developer-notes/0.1.0/architecture/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/architecture.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Referral - Orthopedic Surgery - CH UMZH Connect IG (R4) v1.0.0-cibuild</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/hl7.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/css/fhir.css" rel="stylesheet"/>
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+ 
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+            <!--
+<div id="family-nav">
+	<a id="logo" no-external="true" href="http://hl7.org/fhir"> <img
+		alt="logo fhir" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/images/fhir-logo-www.png" />
+	</a>
+</div>
+-->
+
+
+            <div id="family-nav">
+                <a id="logo" no-external="true" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/searchform.html">
+                    <img src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/images/search.png" alt="Search FHIR" />
+                </a>
+            </div>
+            <div id="hl7-nav">
+    <a id="logo" no-external="true" href="https://umzh.uzh.ch/">
+        <img alt="visit the website" height="60" src="../../../../../../../vendor/https/umzh.uzh.ch/favicon.ico" />
+    </a>            
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CH UMZH Connect IG (R4)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-cibuild - ci-build
+
+
+
+  <img alt="Switzerland flag" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/images/che.svg" height="16" title="Switzerland"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/index.html">Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/background.html">Background</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/core-concepts.html">Core Concepts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/security.html">Security</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/guidance-reference-architecture.html">Reference Architecture</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/guidance-security-implementation.html">Security Implementation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/usecase-referral-orthopedic.html">Referral - Orthopedic Surgery</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/usecase-referral-sarcoma-tumorboard.html">Referral - Sarcoma Tumor Board</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/toc.html'><b>Table of Contents</b></a></li><li><b>Referral - Orthopedic Surgery</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">CH UMZH Connect IG (R4), published by UMZH. This guide is not an authorized publication; it is the continuous build for version 1.0.0-cibuild  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/umzhconnect/umzhconnect-ig/'>https://github.com/umzhconnect/umzhconnect-ig/</a> and changes regularly. See the <a href='http://fhir.ch/ig/ch-umzh-connect/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Referral - Orthopedic Surgery</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="referral---orthopedic-surgery">Referral - Orthopedic Surgery</h3>
+
+<p>The patient <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Patient-PetraMeier.html">PetraMeier</a> visits the emergency department of Placer with knee pain after falling on icy street. The <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/PractitionerRole-HansMusterRole.html">treating practitioner</a> suspects a rupture of the left ACL and suggests treatment at Fulfiller.
+Comorbidities: The patient is already being treated for heart problems in cardiology at Placer.</p>
+
+<p><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/ServiceRequest-ReferralOrthopedicSurgery.html">Example ServiceRequest</a></p>
+
+<p><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Task-TaskReferralOrthopedicSurgery.html">Example Task (Initial - Referral Orthopedic Surgery)</a></p>
+
+<p><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Task-TaskReferralOrthopedicSurgeryUpdated.html">Example Task (Updated - with Questionnaire)</a></p>
+
+<p><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Questionnaire-QuestionnaireSmokingStatus.html">Example Questionnaire (Smoking Status)</a></p>
+
+<p><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/QuestionnaireResponse-QuestionnaireResponseSmokingStatus.html">Example QuestionnaireResponse (Smoking Status)</a></p>
+
+<h4 id="overview">Overview</h4>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    title Referral - Orthopedic Surgery
+
+    participant Placer as Placer
+    participant Fulfiller as Fulfiller
+    activate Placer
+    Placer-&gt;&gt;Placer: POST ServiceRequest-ReferralOrthopedicSurgery
+    Placer-&gt;&gt;Fulfiller: POST Task (basedOn/focus: ServiceRequest-ReferralOrthopedicSurgery)
+    activate Fulfiller
+    Fulfiller--&gt;&gt;Placer: created
+    deactivate Placer
+    deactivate Fulfiller
+
+    Fulfiller-&gt;&gt;Placer: GET Resources (Diagnoses, Medications, Reports)
+    activate Fulfiller
+    activate Placer
+    Placer--&gt;&gt;Fulfiller: return search results (Bundle)
+    deactivate Fulfiller
+    deactivate Placer
+
+    Note over Fulfiller: Request additional information&lt;br/&gt;(smoking status) via Questionnaire
+    Fulfiller-&gt;&gt;Fulfiller: Update Task&lt;br/&gt;(owner: Placer, businessStatus: on-hold,&lt;br/&gt;output: QuestionnaireSmokingStatus)
+    activate Fulfiller
+    Fulfiller--&gt;&gt;Placer: Notify Task updated
+    activate Placer
+    Placer-&gt;&gt;Fulfiller: GET Task
+    Fulfiller--&gt;&gt;Placer: Return Task
+    Placer-&gt;&gt;Fulfiller: GET Questionnaire by canonical
+    Fulfiller--&gt;&gt;Placer: Return QuestionnaireSmokingStatus
+    Placer--&gt;&gt;Placer: Practitioner fills out Questionnaire
+    Placer-&gt;&gt;Fulfiller: POST QuestionnaireResponse
+    Fulfiller--&gt;&gt;Placer: created
+    Placer-&gt;&gt;Fulfiller: PATCH Task (owner: Fulfiller, input: QuestionnaireResponseSmokingStatus)
+    Fulfiller--&gt;&gt;Placer: updated
+    deactivate Placer
+    deactivate Fulfiller
+
+    Fulfiller-&gt;&gt;Fulfiller: Update Task&lt;br/&gt;(businessStatus: completed, output: Report)
+    activate Fulfiller
+    Fulfiller--&gt;&gt;Placer: Notify Task updated
+    activate Placer
+    Placer-&gt;&gt; Fulfiller: GET Task?_id=...&amp;_include=Task:ch-umzhconnectig-task-outputreference
+    Fulfiller--&gt;&gt;Placer: return result (Bundle)
+    deactivate Placer
+    deactivate Fulfiller
+
+
+</code></pre>
+
+<h4 id="field-sources">Field Sources</h4>
+
+<p>The following table indicates the source of each field in the ServiceRequest:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Source</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">identifier[placerOrderIdentifier].system</code></td>
+      <td>Hard-coded</td>
+      <td>TODO?</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">identifier[placerOrderIdentifier].value</code></td>
+      <td>Generated</td>
+      <td>Unique referral order number (e.g., REF-2025-001)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">status</code></td>
+      <td>Hard-coded</td>
+      <td>Fixed value <code class="language-plaintext highlighter-rouge">active</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">intent</code></td>
+      <td>Hard-coded</td>
+      <td>Fixed value <code class="language-plaintext highlighter-rouge">order</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">category</code></td>
+      <td><a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/ValueSet-ch-umzh-connect-servicerequest-category.html">VS CH UMZH Connect ServiceRequest Category</a></td>
+      <td>SNOMED CT code 183545006 "Referral to orthopedic service (procedure)"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+      <td>Referenced</td>
+      <td>the patient being referred</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">requester</code></td>
+      <td>Referenced</td>
+      <td>the referring physician with their organizational context</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">authoredOn</code></td>
+      <td>Current date</td>
+      <td>Date when the referral was created</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">reasonReference</code></td>
+      <td>Referenced</td>
+      <td>Primary diagnosis: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Condition-SuspectedACLRupture.html">Suspected ACL Rupture</a>. If the primary diagnosis is unknown, all diagnoses go to supportingInfo as Condition. The title of the diagnosis is captured in <code class="language-plaintext highlighter-rouge">Condition.code.text</code> whereas any additional description in <code class="language-plaintext highlighter-rouge">Condition.note.text</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">supportingInfo</code></td>
+      <td>Referenced</td>
+      <td>Secondary diagnosis: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Condition-HeartFailureHFrEF.html">Heart Failure HFrEF</a>; Medications: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/MedicationStatement-MedicationEntresto.html">Entresto</a>, <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/MedicationStatement-MedicationConcor.html">Concor</a>; Documents: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/DocumentReference-DocCardiologyAttachment.html">Report Cardiology</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">note.text</code></td>
+      <td>Manual entry</td>
+      <td>Free-text clinical note entered ad-hoc for the referral</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="task-field-sources">Task Field Sources</h4>
+
+<p>The following table indicates the source of each field in the Task:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Source</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">status</code></td>
+      <td>Dynamic</td>
+      <td>Initial Task: <code class="language-plaintext highlighter-rouge">ready</code> (created by Placer). Updated Task: <code class="language-plaintext highlighter-rouge">in-progress</code> (after Fulfiller accepts and updates)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">intent</code></td>
+      <td>Hard-coded</td>
+      <td>Fixed value <code class="language-plaintext highlighter-rouge">order</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">priority</code></td>
+      <td>Hard-coded</td>
+      <td>Fixed value <code class="language-plaintext highlighter-rouge">routine</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">basedOn</code></td>
+      <td>Referenced</td>
+      <td>The <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/ServiceRequest-ReferralOrthopedicSurgery.html">ServiceRequest</a> this Task is based on</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">for</code></td>
+      <td>Referenced</td>
+      <td>The patient being referred: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Patient-PetraMeier.html">PetraMeier</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">requester</code></td>
+      <td>Referenced</td>
+      <td>The referring physician with their organizational context: <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/PractitionerRole-HansMusterRole.html">HansMusterRole</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">owner</code></td>
+      <td>Dynamic</td>
+      <td>Initial Task: Fulfiller. When Fulfiller creates Questionnaire: changed to Placer. When QuestionnaireResponse is created: changed back to Fulfiller. The organization responsible for fulfilling the task</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">businessStatus</code></td>
+      <td>Dynamic</td>
+      <td>Initial Task: <code class="language-plaintext highlighter-rouge">ready</code>. When Fulfiller creates Questionnaire: changed to <code class="language-plaintext highlighter-rouge">on-hold</code>. When QuestionnaireResponse is created: changed to <code class="language-plaintext highlighter-rouge">in-progress</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">authoredOn</code></td>
+      <td>Current date</td>
+      <td>Date when the Task was created by the Placer</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lastModified</code></td>
+      <td>Current date</td>
+      <td>Date when the Task was last updated (only in updated Task)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">focus</code></td>
+      <td>Referenced</td>
+      <td>The <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/ServiceRequest-ReferralOrthopedicSurgery.html">ServiceRequest</a> this Task focuses on</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">input[0].type</code></td>
+      <td>Hard-coded</td>
+      <td><code class="language-plaintext highlighter-rouge">273510007</code> (only when Questionnaire is created)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">input[0].valueCanonical</code></td>
+      <td>Referenced</td>
+      <td>Reference to the canonical <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/Questionnaire-QuestionnaireSmokingStatus.html">Questionnaire</a> to be completed (only when Questionnaire is created)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output[0].type</code></td>
+      <td>Hard-coded</td>
+      <td><code class="language-plaintext highlighter-rouge">273510007</code> (only when QuestionnaireResponse is created)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output[0].valueReference</code></td>
+      <td>Referenced</td>
+      <td>Reference to the <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/QuestionnaireResponse-QuestionnaireResponseSmokingStatus.html">QuestionnaireResponse</a> (only when QuestionnaireResponse is created)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://umzh.uzh.ch/">UMZH</a>.  Package ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 5, 2026 07:51+0000">2026-03-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/qa.html">QA Report</a>
+                 
+                
+
+
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

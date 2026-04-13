@@ -1,0 +1,56 @@
+{
+  "slug": "trifork-ch-epr-fhir-hpd-mapping-iti-68",
+  "storageId": "trifork_ch-epr-fhir@hpd-mapping",
+  "packageId": "ch.fhir.ig.ch-epr-fhir#5.0.0",
+  "package": "ch.fhir.ig.ch-epr-fhir",
+  "version": "5.0.0",
+  "title": "CH EPR FHIR (R4)",
+  "repo": "trifork/ch-epr-fhir/branches/hpd-mapping/qa.json",
+  "repoPath": "trifork/ch-epr-fhir",
+  "buildUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping",
+  "branch": "hpd-mapping",
+  "githubUrl": "https://github.com/trifork/ch-epr-fhir/tree/hpd-mapping",
+  "canonicalUrl": "http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir",
+  "canonical": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping",
+  "candidateBases": [
+    "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping"
+  ],
+  "fileName": "iti-68.html",
+  "originalFileName": "iti-68.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/trifork_ch-epr-fhir@hpd-mapping/iti-68.html",
+  "pagePath": "iti-68.html",
+  "pageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-68.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 410,
+  "totalDiagramLength": 410,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68",
+    "caseJson": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/case.json",
+    "before": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/before",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/before/index.html"
+    },
+    "after": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/after",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/failure",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/source",
+      "html": "pages/trifork/ch-epr-fhir/hpd-mapping/5.0.0/iti-68/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-68.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "nw-gmsa-nw-gmsa-github-com-main-set",
+  "storageId": "nw-gmsa_nw-gmsa.github.com@main",
+  "packageId": "fhir.nwgenomics.nhs.uk#0.2.2",
+  "package": "fhir.nwgenomics.nhs.uk",
+  "version": "0.2.2",
+  "title": "NHS North West Genomics",
+  "repo": "nw-gmsa/nw-gmsa.github.com/branches/main/qa.json",
+  "repoPath": "nw-gmsa/nw-gmsa.github.com",
+  "buildUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/nw-gmsa/nw-gmsa.github.com/tree/main",
+  "canonicalUrl": "https://fhir.nwgenomics.nhs.uk/ImplementationGuide/fhir.nwgenomics.nhs.uk",
+  "canonical": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main"
+  ],
+  "fileName": "SET.html",
+  "originalFileName": "SET.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nw-gmsa_nw-gmsa.github.com@main/SET.html",
+  "pagePath": "SET.html",
+  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "mermaid-init.js"
+  },
+  "diagramCount": 4,
+  "maxDiagramLength": 806,
+  "totalDiagramLength": 2504,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET",
+    "caseJson": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/case.json",
+    "before": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/before",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/after",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/failure",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/source",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/SET/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"
+}

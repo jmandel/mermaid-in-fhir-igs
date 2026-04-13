@@ -1,0 +1,57 @@
+{
+  "slug": "hl7-cz-hdr-main-implementation-notes-cs",
+  "storageId": "HL7-cz_hdr@main",
+  "packageId": "hl7.fhir.cz.hdr#0.1.0",
+  "package": "hl7.fhir.cz.hdr",
+  "version": "0.1.0",
+  "title": "HL7 Czech Hospital Discharge Report Implementation Guide",
+  "repo": "HL7-cz/hdr/branches/main/qa.json",
+  "repoPath": "HL7-cz/hdr",
+  "buildUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/HL7-cz/hdr/tree/main",
+  "canonicalUrl": "https://hl7.cz/fhir/hdr/ImplementationGuide/hl7.fhir.cz.hdr",
+  "canonical": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7-cz/hdr/branches/main"
+  ],
+  "fileName": "implementation-notes-cs.html",
+  "originalFileName": "implementation-notes-cs.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7-cz_hdr@main/implementation-notes-cs.html",
+  "pagePath": "implementation-notes-cs.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes-cs.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 1030,
+  "totalDiagramLength": 2060,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs",
+    "caseJson": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/case.json",
+    "before": {
+      "dir": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/before",
+      "html": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/after",
+      "html": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/failure",
+      "html": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/source",
+      "html": "pages/HL7-cz/hdr/main/0.1.0/implementation-notes-cs/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes-cs.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7-cz/hdr/branches/main/assets/js/mermaid-init.js"
+}

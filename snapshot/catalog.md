@@ -1,31 +1,3702 @@
 # FHIR IG Mermaid Diagram Catalog
 
-> Auto-generated 2026-04-10 from [build.fhir.org](https://build.fhir.org/ig/qas.json) CI builds
-> Lookback: 90 days — **96 diagrams** from **17 IGs**
+> Auto-generated 2026-04-13 from [build.fhir.org](https://build.fhir.org/ig/qas.json) CI builds
+> Lookback: 90 days — **213 diagrams** from **38 repo/branch builds**
 
 ### Diagram types
 
 | Type | Count |
 |------|------:|
-| graph | 55 |
-| sequenceDiagram | 16 |
-| flowchart | 13 |
+| graph | 89 |
+| sequenceDiagram | 68 |
+| flowchart | 29 |
+| stateDiagram-v2 | 15 |
 | classDiagram | 8 |
-| stateDiagram-v2 | 3 |
+| pie | 2 |
+| gantt | 1 |
 | erDiagram | 1 |
-| **Total** | **96** |
+| **Total** | **213** |
 
 ---
 
-## smart.permission-tickets (0.1.0)
+## ehealthsuisse/ch-epr-fhir @ master
+
+**Package:** `ch.fhir.ig.ch-epr-fhir#5.0.0`
+
+**CH EPR FHIR (R4)**
+
+[Build](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master) · [GitHub](https://github.com/ehealthsuisse/ch-epr-fhir/tree/master) · [Canonical](http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir)
+
+FHIR 4.0.1 · 2026-01-30
+
+### iti-mhd.html (#1) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+           'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Query| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C(Document Responder own community)
+    B --> D(Document Responders federated communities)
+```
+
+### iti-mhd.html (#2) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Retrieve| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C{own community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+### iti-mhd.html (#3) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Source] -->|Update Doc Metadata| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Source)
+    B --> C{own Community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+### iti-67.html (#4) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+           'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Query| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C(Document Responder own community)
+    B --> D(Document Responders federated communities)
+```
+
+### iti-68.html (#5) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-68.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Retrieve| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C{own community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+### ch-mhd-1.html (#6) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Source] -->|Update Doc Metadata| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Source)
+    B --> C{own Community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+## FHIR/ig-guidance @ master
+
+**Package:** `hl7.fhir.uv.howto#0.1.0`
+
+**Guidance for FHIR IG Creation**
+
+[Build](https://build.fhir.org/ig/FHIR/ig-guidance/branches/master) · [GitHub](https://github.com/FHIR/ig-guidance/tree/master) · [Canonical](http://hl7.org/fhir/uv/howto/ImplementationGuide/hl7.fhir.uv.howto)
+
+FHIR 5.0.0 · 2026-02-01
+
+### diagrams-mermaid.html — [view page](https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html)
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+## freshehr/interopen-uk-fhir-ps @ master
+
+**Package:** `hl7.fhir.au.ps#0.6.0-cibuild`
+
+**AU Patient Summary Implementation Guide**
+
+[Build](https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master) · [GitHub](https://github.com/freshehr/interopen-uk-fhir-ps/tree/master) · [Canonical](http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps)
+
+FHIR 4.0.1 · 2026-02-15
+
+### uc-interstate.html (#1) — [view page](https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/uc-interstate.html)
+
+```mermaid
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  actor Attending GP as Attending GP
+  participant Clinic CIS as Clinic CIS
+  participant Patient Summary Host as Patient Summary Host
+  Attending GP ->> Clinic CIS: Scan QR for Patient Summary access
+  Clinic CIS ->> Patient Summary Host: Retrieve Patient Summary
+  Attending GP ->> Clinic CIS: View Patient Summary
+```
+
+### uc-referral.html (#2) — [view page](https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/master/uc-referral.html)
+
+```mermaid
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  participant GP CIS as GP CIS
+  actor Endocrinologist as Endocrinologist
+  participant Endocrinologist CIS as Endocrinologist CIS
+  Endocrinologist ->> Endocrinologist CIS: Access Referral and embedded Patient Summary
+  Endocrinologist CIS ->> GP CIS: Check for updates and retrieve current Patient Summary
+  Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
+```
+
+## HL7-cz/hdr @ main
+
+**Package:** `hl7.fhir.cz.hdr#0.1.0`
+
+**HL7 Czech Hospital Discharge Report Implementation Guide**
+
+[Build](https://build.fhir.org/ig/HL7-cz/hdr/branches/main) · [GitHub](https://github.com/HL7-cz/hdr/tree/main) · [Canonical](https://hl7.cz/fhir/hdr/ImplementationGuide/hl7.fhir.cz.hdr)
+
+FHIR 4.0.1 · 2026-03-20
+
+### implementation-notes.html (#1) — [view page](https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes.html)
+
+```mermaid
+classDiagram
+  direction LR
+  class CZ_BundleHDR{
+    <<Bundle>>
+  }
+  CZ_BundleHDR *-- "1" CZ_CompositionHdr
+  CZ_BundleHDR *-- "1" CZ_PatientCore
+  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
+  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
+  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
+  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
+  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
+  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
+  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
+  CZ_EncounterHdr *-- "1" CZ_PatientCore
+  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
+  
+
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[legalAuthenticator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[resultValidator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: author
+  CZ_CompositionHdr --> CZ_PatientCore: subject
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [start]
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [end]
+  CZ_EncounterHdr --> CZ_OrganizationCore: serviceProvider
+  CZ_CompositionHdr --> CZ_OrganizationCore: castodian
+```
+
+### implementation-notes-cs.html (#2) — [view page](https://build.fhir.org/ig/HL7-cz/hdr/branches/main/implementation-notes-cs.html)
+
+```mermaid
+classDiagram
+  direction LR
+  class CZ_BundleHDR{
+    <<Bundle>>
+  }
+  CZ_BundleHDR *-- "1" CZ_CompositionHdr
+  CZ_BundleHDR *-- "1" CZ_PatientCore
+  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
+  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
+  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
+  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
+  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
+  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
+  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
+  CZ_EncounterHdr *-- "1" CZ_PatientCore
+  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
+  
+
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[legalAuthenticator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[resultValidator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: author
+  CZ_CompositionHdr --> CZ_PatientCore: subject
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [start]
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [end]
+  CZ_EncounterHdr --> CZ_OrganizationCore: serviceProvider
+  CZ_CompositionHdr --> CZ_OrganizationCore: castodian
+```
+
+## HL7-cz/img @ master
+
+**Package:** `hl7.fhir.cz.img#0.1.0-ballot`
+
+**HL7 Czech Imaging Report IG**
+
+[Build](https://build.fhir.org/ig/HL7-cz/img/branches/master) · [GitHub](https://github.com/HL7-cz/img/tree/master) · [Canonical](https://hl7.cz/fhir/img/ImplementationGuide/hl7.fhir.cz.img)
+
+FHIR 4.0.1 · 2026-01-28
+
+### implementation-notes.html (#1) — [view page](https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes.html)
+
+```mermaid
+classDiagram
+  direction LR
+  class CZ_BundleImagingReport{
+    <<Bundle>>
+  }
+  CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
+  CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
+  CZ_BundleImagingReport *-- "1" CZ_PatientCore
+  CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImagingReport *-- "0..*" CZ_Practioner
+  CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
+  CZ_BundleImagingReport *-- "0..*" CZ_OrganizationCore
+  CZ_BundleImagingReport *-- "0..*" CZ_StudyImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ProcedureImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ObservationResultImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_KeyImageDocumentReference
+  CZ_BundleImagingReport *-- "0..*" CZ_ConditionImage
+  CZ_BundleImagingReport *-- "0..*" CZ_CarePlanImage
+
+  CZ_DiagnosticReport --> CZ_CompositionImagingReport: composition
+  
+
+  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: extension[basedOn]  
+  CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticreport-reference]
+  CZ_CompositionImagingReport --> CZ_Practioner: author[author]
+  CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
+  CZ_CompositionImagingReport --> CZ_Practioner: attester[legalAuthenticator]
+  CZ_CompositionImagingReport --> CZ_Practioner: attester[resultValidator]
+  CZ_CompositionImagingReport --> CZ_OrganizationCore: custodian
+  CZ_CompositionImagingReport --> CZ_PatientCore: subject
+  CZ_CompositionImagingReport --> CZ_StudyImaging: section[imagingstudy]
+  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: section[order]
+  CZ_CompositionImagingReport --> CZ_ConditionImage: section[clinicalQuestion]
+  CZ_CompositionImagingReport --> CZ_ProcedureImaging: section[procedure]
+  CZ_CompositionImagingReport --> CZ_StudyImaging: section[comparison]
+  CZ_CompositionImagingReport --> CZ_ObservationResultImaging: section[findings]
+  CZ_CompositionImagingReport --> CZ_KeyImageDocumentReference: section[findings]
+  CZ_CompositionImagingReport --> CZ_KeyImageDocumentReference: section[impression]
+  CZ_CompositionImagingReport --> CZ_ObservationResultImaging: section[impression]
+  CZ_CompositionImagingReport --> CZ_ConditionImage: section[impression]
+  CZ_CompositionImagingReport --> CZ_CarePlanImage: section[recommendation]
+```
+
+### implementation-notes-cs.html (#2) — [view page](https://build.fhir.org/ig/HL7-cz/img/branches/master/implementation-notes-cs.html)
+
+```mermaid
+classDiagram
+  direction LR
+  class CZ_BundleImagingReport{
+    <<Bundle>>
+  }
+  CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
+  CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
+  CZ_BundleImagingReport *-- "1" CZ_PatientCore
+  CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImagingReport *-- "0..*" CZ_Practioner
+  CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
+  CZ_BundleImagingReport *-- "0..*" CZ_OrganizationCore
+  CZ_BundleImagingReport *-- "0..*" CZ_StudyImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ProcedureImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_ObservationResultImaging
+  CZ_BundleImagingReport *-- "0..*" CZ_KeyImageDocumentReference
+  CZ_BundleImagingReport *-- "0..*" CZ_ConditionImage
+  CZ_BundleImagingReport *-- "0..*" CZ_CarePlanImage
+
+  CZ_DiagnosticReport --> CZ_CompositionImagingReport: composition
+  
+
+  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: extension[basedOn]  
+  CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticreport-reference]
+  CZ_CompositionImagingReport --> CZ_Practioner: author[author]
+  CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
+  CZ_CompositionImagingReport --> CZ_Practioner: attester[legalAuthenticator]
+  CZ_CompositionImagingReport --> CZ_Practioner: attester[resultValidator]
+  CZ_CompositionImagingReport --> CZ_OrganizationCore: custodian
+  CZ_CompositionImagingReport --> CZ_PatientCore: subject
+  CZ_CompositionImagingReport --> CZ_StudyImaging: section[imagingstudy]
+  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: section[order]
+  CZ_CompositionImagingReport --> CZ_ConditionImage: section[clinicalQuestion]
+  CZ_CompositionImagingReport --> CZ_ProcedureImaging: section[procedure]
+  CZ_CompositionImagingReport --> CZ_StudyImaging: section[comparison]
+  CZ_CompositionImagingReport --> CZ_ObservationResultImaging: section[findings]
+  CZ_CompositionImagingReport --> CZ_KeyImageDocumentReference: section[findings]
+  CZ_CompositionImagingReport --> CZ_KeyImageDocumentReference: section[impression]
+  CZ_CompositionImagingReport --> CZ_ObservationResultImaging: section[impression]
+  CZ_CompositionImagingReport --> CZ_ConditionImage: section[impression]
+  CZ_CompositionImagingReport --> CZ_CarePlanImage: section[recommendation]
+```
+
+## HL7/aitransparency-ig @ main
+
+**Package:** `hl7.fhir.uv.aitransparency#1.0.0-ballot`
+
+**AI Transparency on FHIR**
+
+[Build](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main) · [GitHub](https://github.com/HL7/aitransparency-ig/tree/main) · [Canonical](http://hl7.org/fhir/uv/aitransparency/ImplementationGuide/hl7.fhir.uv.aitransparency)
+
+FHIR 4.0.1 · 2026-03-30
+
+### general_guidance.html (#1) — [view page](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html)
+
+```mermaid
+classDiagram
+    class Resource {
+        <<FHIR Resource>>
+        id
+        meta.security = AIAIST
+        ...
+    }
+```
+
+### general_guidance.html (#2) — [view page](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html)
+
+```mermaid
+classDiagram
+    direction LR
+    class Resource {
+        <<FHIR Resource>>
+        id
+        meta.security = AIAIST
+        ...
+    }
+
+    class Provenance {
+        <<FHIR Resource>>
+        target : Reference resource created/updated
+        occurred : When
+        reason : `AIAST`
+        agent : Reference to AI Device
+        agent : References to other agents involved
+        entity : References to Model-Card DocumentReference
+        entity : References to other data used
+    }
+
+    class Device {
+        <<FHIR Resource>>
+        id
+        identifier
+        type = "AI"
+        extension : Specific kind of AI
+        modelNumber
+        manufacturer
+        manufactureDate
+        deviceName
+        version
+        owner
+        contact
+        url
+        note
+        safety
+        extension : model-card
+    }
+
+    class DocumentReference {
+        <<FHIR Resource>>
+        id
+        type = AImodelCard
+        category = AImodelCardMarkdownFormat | AImodelCardCHAIformat
+        description
+        version
+        data / url = codeable model-card details
+        data / url = pdf rendering
+    }
+
+    Resource "1..*" <-- Provenance : "Provenance.target"
+    Provenance --> Device : "Provenance.agent.who"
+    Provenance --> DocumentReference : "Provenance.entity.what"
+```
+
+## HL7/APIX---API-Exchange-for-Medicinal-Products @ draft-of-Developer-notes
+
+**Package:** `hl7.fhir.uv.apix#0.1.0`
+
+**API for the Exchange of Medicinal Product Information (APIX)**
+
+[Build](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes) · [GitHub](https://github.com/HL7/APIX---API-Exchange-for-Medicinal-Products/tree/draft-of-Developer-notes) · [Canonical](http://hl7.org/fhir/uv/apix/ImplementationGuide/hl7.fhir.uv.apix)
+
+FHIR 5.0.0 · 2026-02-04
+
+### workflow.html (#1) — [view page](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/workflow.html)
+
+```mermaid
+sequenceDiagram
+    participant C as Company
+    participant R as Regulator
+    
+    %% Phase 0: Registration
+    Note over C,R: Phase 0: Registration & Connection
+    C->>R: 0.1 Register with Regulator Portal
+    R-->>C: Client Credentials & Org ID
+    C->>R: 0.2 OAuth2 Authentication
+    
+    %% Phase 1: Submission
+    Note over C,R: Phase 1: Submission & Validation
+    par Upload Binaries/Bundles
+        C->>R: 1.1 POST PDFs (Binary)
+        C->>R: 1.1 POST Labels (Document Bundles)
+        C->>R: 1.1 POST CMC (Transaction Bundles)
+    end
+    C->>R: 1.2 POST DocumentReferences (IDs/Links)
+    C->>R: 1.3 POST Task (Orchestrator Index)
+    
+    activate R
+    R->>R: 2.0 Validate Application
+    
+    alt Validation Passes
+        R-->>C: 3.1 Ack Receipt & Validation Results
+    else Validation Fails
+        R->>C: 4.1 Request Missing Documents
+        C->>R: 4.2.1 Submit Missing Documents
+        R->>R: 4.2.2 Re-validate
+    end
+    
+    %% Phase 2: Review
+    Note over C,R: Phase 2: Review Cycles
+    
+    par Parallel Checks
+        rect rgb(240, 248, 255)
+            Note right of R: Technical Review
+            R->>R: 5.2.1 Check Compliance
+        end
+        
+        rect rgb(255, 250, 240)
+            Note right of R: Financial Review
+            R->>R: Review Financials
+            Note over R: 5.B.2 Invoice Sequence
+            R->>R: POST Invoice (Binary/Resource)
+            R->>R: POST DocumentReference
+            R->>C: POST Payment Task (Input: DocRef)
+            activate C
+            Note over C: 5.B.3 Payment Sequence
+            C->>C: POST Proof of Payment (Binary)
+            C->>C: POST DocumentReference
+            C-->>R: Update Task (Add Output DocRef)
+            deactivate C
+            R->>R: 5.B.4 Verify Proof & Set Task: completed
+        end
+    end
+    
+    loop Issue Resolution
+        alt Issue Found
+            Note over R: 5.3.1 Question Sequence
+            R->>R: POST Questionnaire
+            R->>R: POST DocumentReference
+            R->>C: POST Question Task (Input: DocRef)
+            activate C
+            Note over C: 5.3.2 Response Sequence
+            C->>C: POST QuestionnaireResponse
+            C->>C: POST DocumentReference
+            C-->>R: Update Task (Add Output DocRef)
+            deactivate C
+            R->>R: 5.3.3 Review & Set Task: completed
+        else No Issues
+            R->>R: Proceed to Decision
+        end
+    end
+    
+    %% Phase 3: Decision
+    Note over C,R: Phase 3: Final Decision
+    
+    alt Approved
+        R-->>C: 6.1 Notify Approval (Decision Letter)
+    else Rejected
+        R-->>C: 7.1 Notify Rejection
+    end
+    deactivate R
+```
+
+### subscriptions.html (#2) — [view page](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/subscriptions.html)
+
+```mermaid
+pie title Submission Status (Global)
+    "In Progress (Clock On)" : 45
+    "On Hold (Clock Stop)" : 15
+    "Approved" : 30
+    "Validation" : 10
+```
+
+### subscriptions.html (#3) — [view page](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/subscriptions.html)
+
+```mermaid
+gantt
+    title Regulatory Procedure Timeline
+    dateFormat  YYYY-MM-DD
+    section Procedure A (Fast)
+    Submission      :active,    p1, 2025-01-01, 3d
+    Validation      :           p2, after p1, 5d
+    Assessment      :           p3, after p2, 45d
+    Decision        :crit,      p4, after p3, 5d
+    section Procedure B (Delayed)
+    Submission      :active,    p5, 2025-01-15, 3d
+    Validation      :           p6, after p5, 5d
+    Assessment      :           p7, after p6, 20d
+    Clock Stop (Q&A):crit,      p8, after p7, 30d
+    Response Review :           p9, after p8, 25d
+    Decision        :           p10, after p9, 5d
+```
+
+### subscriptions.html (#4) — [view page](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/subscriptions.html)
+
+```mermaid
+pie title Avg. Duration by Phase (Days)
+    "Validation" : 12
+    "Assessment (Phase I)" : 75
+    "Clock Stop (Company Time)" : 45
+    "Final Decision" : 10
+```
+
+### architecture.html (#5) — [view page](https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/architecture.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as Applicant (RIM System)
+    participant Auth as Auth Server (OAuth2)
+    participant APIX as APIX FHIR Server
+    participant Val as Validation Engine
+
+    note over App, Val: Phase 1: Authentication & Submission
+    
+    App->>Auth: 1. Request Access Token
+    Auth-->>App: 2. Return JWT (Scope: system/Task.cruds)
+    
+    App->>APIX: 3. POST /Task (Submission Bundle)
+    APIX->>Val: 4. $validate Bundle
+    Val-->>APIX: 5. Validation Outcome (Pass)
+    APIX-->>App: 6. 201 Created (Task.status = received)
+
+    note over App, Val: Phase 2: Asynchronous Processing & Notification
+
+    APIX->>APIX: 7. Regulator Review (Status Change)
+    
+    par Real-Time Notification
+        APIX->>App: 8. POST Subscription Notification (Task.status = in-progress)
+    and Audit Logging
+        APIX->>APIX: 9. Create Provenance Record
+    end
+```
+
+## HL7/uv-pocd @ master
+
+**Package:** `hl7.fhir.uv.pocd#1.0.0`
+
+**Point-of-Care Device Implementation Guide**
+
+[Build](https://build.fhir.org/ig/HL7/uv-pocd/branches/master) · [GitHub](https://github.com/HL7/uv-pocd/tree/master) · [Canonical](http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd)
+
+FHIR 4.0.1 · 2026-03-19
+
+### overview.html — [view page](https://build.fhir.org/ig/HL7/uv-pocd/branches/master/overview.html)
+
+```mermaid
+graph TD
+    MDS["Medical Device System MDS<br/>Overall device system<br/>Device model and serial number<br/>Configuration and state"]
+    
+    VMD1["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., ECG module<br/>Model and serial number"]
+    VMD2["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., SpO2 module<br/>Model and serial number"]
+    VMD3["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., Infusion pump"]
+    
+    CH1["Channel<br/>Logical grouping<br/>e.g., Lead II"]
+    CH2["Channel<br/>Logical grouping<br/>e.g., Lead III"]
+    CH3["Channel<br/>Logical grouping"]
+    CH4["Channel<br/>Logical grouping<br/>e.g., Infusion line 1"]
+    
+    M1["Metric<br/>Measurement/Observation<br/>e.g., Heart Rate"]
+    M2["Metric<br/>Waveform<br/>e.g., ECG waveform"]
+    M3["Metric<br/>Measurement<br/>e.g., SpO2 %"]
+    M4["Metric<br/>Measurement<br/>e.g., Pulse Rate"]
+    M5["Metric<br/>Setting<br/>e.g., Infusion Rate"]
+    M6["Metric<br/>State<br/>e.g., Pump status"]
+    
+    MDS --> VMD1
+    MDS --> VMD2
+    MDS --> VMD3
+    
+    VMD1 --> CH1
+    VMD1 --> CH2
+    VMD2 --> CH3
+    VMD3 --> CH4
+    
+    CH1 --> M1
+    CH1 --> M2
+    CH2 --> M3
+    CH3 --> M4
+    CH4 --> M5
+    CH4 --> M6
+    
+    style MDS fill:#e1f5ff,stroke:#01579b,stroke-width:3px,color:#000
+    style VMD1 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style VMD2 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style VMD3 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style CH1 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH2 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH3 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH4 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style M1 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M2 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M3 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M4 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M5 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M6 fill:#4fc3f7,stroke:#0297d1,color:#000
+```
+
+## hl7au/au-fhir-ps @ master
+
+**Package:** `hl7.fhir.au.ps#1.0.0-ci-build`
+
+**AU Patient Summary Implementation Guide**
+
+[Build](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master) · [GitHub](https://github.com/hl7au/au-fhir-ps/tree/master) · [Canonical](http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps)
+
+FHIR 4.0.1 · 2026-04-08
+
+### uc-interstate.html (#1) — [view page](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-interstate.html)
+
+```mermaid
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  actor Attending GP as Attending GP
+  participant Clinic CIS as Clinic CIS
+  participant Patient Summary Host as Patient Summary Host
+  Attending GP ->> Clinic CIS: Scan QR for Patient Summary access
+  Clinic CIS ->> Patient Summary Host: Retrieve Patient Summary
+  Attending GP ->> Clinic CIS: View Patient Summary
+```
+
+### uc-referral.html (#2) — [view page](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-referral.html)
+
+```mermaid
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  participant GP CIS as GP CIS
+  actor Endocrinologist as Endocrinologist
+  participant Endocrinologist CIS as Endocrinologist CIS
+  Endocrinologist ->> Endocrinologist CIS: Access Referral and embedded Patient Summary
+  Endocrinologist CIS ->> GP CIS: Check for updates and retrieve current Patient Summary
+  Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
+```
+
+## HL7Austria/ELGA-MOPED-R5 @ main
+
+**Package:** `elga.moped#0.1.0`
+
+**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
+
+[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/main) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
+
+FHIR 5.0.0 · 2026-04-08
+
+### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/moped_konzepte.html)
+
+```mermaid
+graph TD
+    Master[MasterComposition]
+
+    subgraph Spezialisierungen
+        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
+        Antwort[AntwortComposition<br />VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br />]
+        Siegel[SiegelComposition<br />Composition.status=final]
+    end
+
+    Master --> Aufnahme
+    Master --> Anfrage
+    Master --> Antwort
+    Master --> Entlassung
+    Master --> Abrechnung
+    Master --> Entscheiden
+    Master --> Siegel
+```
+
+### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/moped_konzepte.html)
+
+```mermaid
+graph TD
+  CompV1[Composition/123/_history/1]
+  CompV2[Composition/123/_history/2]
+  CompV3[Composition/123/_history/3]
+
+  Prov1[Provenance A]
+  Prov2[Provenance B]
+  Prov3[Provenance C]
+
+  Prov1 --> CompV1
+  Prov2 --> CompV2
+  Prov3 --> CompV3
+```
+
+### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/actors.html)
+
+```mermaid
+graph LR
+    KH[Krankenanstalt]
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
+```
+
+### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/actors.html)
+
+```mermaid
+graph LR
+    SV[Sozialversicherung]
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
+```
+
+### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/actors.html)
+
+```mermaid
+graph LR
+    LGF[Landesgesundheitsfonds]
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
+```
+
+### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/actors.html)
+
+```mermaid
+graph LR
+    BMSGPK[BMSGPK]
+    Moped[Moped] 
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+```
+
+### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/actors.html)
+
+```mermaid
+graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
+```
+
+### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+```
+
+### AF_moped_fall_prozessuebergreifend.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/AF_moped_fall_prozessuebergreifend.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+## HL7Austria/ELGA-MOPED-R5 @ fix-main
+
+**Package:** `elga.moped#0.1.0`
+
+**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
+
+[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/fix-main) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
+
+FHIR 5.0.0 · 2026-03-29
+
+### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/moped_konzepte.html)
+
+```mermaid
+graph TD
+    Master[MasterComposition]
+
+    subgraph Spezialisierungen
+        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
+        Antwort[AntwortComposition<br />VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br />]
+        Siegel[SiegelComposition<br />Composition.status=final]
+    end
+
+    Master --> Aufnahme
+    Master --> Anfrage
+    Master --> Antwort
+    Master --> Entlassung
+    Master --> Abrechnung
+    Master --> Entscheiden
+    Master --> Siegel
+```
+
+### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/moped_konzepte.html)
+
+```mermaid
+graph TD
+  CompV1[Composition/123/_history/1]
+  CompV2[Composition/123/_history/2]
+  CompV3[Composition/123/_history/3]
+
+  Prov1[Provenance A]
+  Prov2[Provenance B]
+  Prov3[Provenance C]
+
+  Prov1 --> CompV1
+  Prov2 --> CompV2
+  Prov3 --> CompV3
+```
+
+### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html)
+
+```mermaid
+graph LR
+    KH[Krankenanstalt]
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
+```
+
+### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html)
+
+```mermaid
+graph LR
+    SV[Sozialversicherung]
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
+```
+
+### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html)
+
+```mermaid
+graph LR
+    LGF[Landesgesundheitsfonds]
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
+```
+
+### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html)
+
+```mermaid
+graph LR
+    BMSGPK[BMSGPK]
+    Moped[Moped] 
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+```
+
+### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/actors.html)
+
+```mermaid
+graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
+```
+
+### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+```
+
+### AF6.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF6.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#12) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: POST VAERequest 1
+    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
+    SV->>MP: POST VAEResponse 1
+    Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
+
+    KH->>MP: POST VAERequest 2
+    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
+    Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
+
+    SV->>MP: POST VAEResponse 2
+    Note over SV: Bestätigung Verlängerung<br/>(16.09.2025-21.09.2025)
+    Note over MP: Moped behält die gültigen Übernahmen für beide Zeiträume<br/>(VAEResponse 1 & VAEResponse 2)
+```
+
+### AF28bis32.html (#13) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+    KH->>MP: Anfrage VAE <br/>POST VAERequest 1
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
+    SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
+    Note over SV: Negative VAE
+    Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
+    alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt modifizierte Anfrage an ÖGK
+    else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
+      KH->>MP: $update mit SVS referenziert in der neuen Coverage
+      Note over KH: KH setzt die SVS als zuständige Versicherung
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt neue Anfrage an SVS
+    else  Patient wird zum Selbstzahler
+      KH->>MP: $update mit Selbstzahler Coverage
+      Note over KH: KH meldet Patienten als Selbstzahler 
+    end
+```
+
+### AF28bis32.html (#14) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#15) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as MP
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#16) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/fix-main/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+## HL7Austria/ELGA-MOPED-R5 @ 607-Anwendungsfall-31---genehmigung-nach-ablehnung
+
+**Package:** `elga.moped#0.1.0`
+
+**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
+
+[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/607-Anwendungsfall-31---genehmigung-nach-ablehnung) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
+
+FHIR 5.0.0 · 2026-01-20
+
+### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/moped_konzepte.html)
+
+```mermaid
+graph TD
+    Master[MasterComposition]
+
+    subgraph Spezialisierungen
+        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
+        Antwort[AntwortComposition<br />VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br />]
+        Siegel[SiegelComposition<br />Composition.status=final]
+    end
+
+    Master --> Aufnahme
+    Master --> Anfrage
+    Master --> Antwort
+    Master --> Entlassung
+    Master --> Abrechnung
+    Master --> Entscheiden
+    Master --> Siegel
+```
+
+### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/moped_konzepte.html)
+
+```mermaid
+graph TD
+  CompV1[Composition/123/_history/1]
+  CompV2[Composition/123/_history/2]
+  CompV3[Composition/123/_history/3]
+
+  Prov1[Provenance A]
+  Prov2[Provenance B]
+  Prov3[Provenance C]
+
+  Prov1 --> CompV1
+  Prov2 --> CompV2
+  Prov3 --> CompV3
+```
+
+### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html)
+
+```mermaid
+graph LR
+    KH[Krankenanstalt]
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
+```
+
+### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html)
+
+```mermaid
+graph LR
+    SV[Sozialversicherung]
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
+```
+
+### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html)
+
+```mermaid
+graph LR
+    LGF[Landesgesundheitsfonds]
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
+```
+
+### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html)
+
+```mermaid
+graph LR
+    BMSGPK[BMSGPK]
+    Moped[Moped] 
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+```
+
+### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html)
+
+```mermaid
+graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
+```
+
+### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+```
+
+### AF6.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/AF6.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#12) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+## HL7Austria/ELGA-MOPED-R5 @ 599-Falsche-0-0-Kardinalitäten-entfernen
+
+**Package:** `elga.moped#0.1.0`
+
+**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
+
+[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/599-Falsche-0-0-Kardinalitäten-entfernen) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
+
+FHIR 5.0.0 · 2026-01-20
+
+### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/moped_konzepte.html)
+
+```mermaid
+graph TD
+    Master[MasterComposition]
+
+    subgraph Spezialisierungen
+        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
+        Antwort[AntwortComposition<br />VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br />]
+        Siegel[SiegelComposition<br />Composition.status=final]
+    end
+
+    Master --> Aufnahme
+    Master --> Anfrage
+    Master --> Antwort
+    Master --> Entlassung
+    Master --> Abrechnung
+    Master --> Entscheiden
+    Master --> Siegel
+```
+
+### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/moped_konzepte.html)
+
+```mermaid
+graph TD
+  CompV1[Composition/123/_history/1]
+  CompV2[Composition/123/_history/2]
+  CompV3[Composition/123/_history/3]
+
+  Prov1[Provenance A]
+  Prov2[Provenance B]
+  Prov3[Provenance C]
+
+  Prov1 --> CompV1
+  Prov2 --> CompV2
+  Prov3 --> CompV3
+```
+
+### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/actors.html)
+
+```mermaid
+graph LR
+    KH[Krankenanstalt]
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
+```
+
+### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/actors.html)
+
+```mermaid
+graph LR
+    SV[Sozialversicherung]
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
+```
+
+### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/actors.html)
+
+```mermaid
+graph LR
+    LGF[Landesgesundheitsfonds]
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
+```
+
+### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/actors.html)
+
+```mermaid
+graph LR
+    BMSGPK[BMSGPK]
+    Moped[Moped] 
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+```
+
+### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/actors.html)
+
+```mermaid
+graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
+```
+
+### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+```
+
+### anwendungsfaelle.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/anwendungsfaelle.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+    
+    KH->> MP: $aufnehmen
+    Note over KH: Susi Sonnenschein wird aufgenommen
+
+    KH->>MP: $update
+    Note over KH: ÖGK Wien als zuständige Versicherung gesetzt
+
+    KH->>MP: $anfragen
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
+
+    SV->>MP: $antworten (Status 00)
+    Note over SV: Fallübernahme bestätigt (Status 00) 
+
+    KH->>MP: $update
+    Note over KH: Verlegung auf Abteilung Innere Medizin 
+
+    KH->>MP: $update
+    Note over KH: Diagnose „Herzinsuffizienz“ und Leistung „EKG“ erfasst 
+
+    KH->>MP: $entlassen
+    Note over KH: Susi Sonnenschein wird entlassen 
+    loop $abrechnen / $entscheiden (vorläufig)
+        KH->>MP:$abrechnen 
+        Note over KH: Abrechnung aller Leistungen eingereicht
+        LGF-->>MP: $entscheiden 
+        Note over LGF: Alle Posten genehmigt (keine Änderungen)
+    end
+
+    %% Finale Abrechnung und Entscheidung
+    KH->>MP: final $abrechnen 
+    Note over KH: Finale Abrechnung nach Entlassung
+
+    LGF->>MP: final $entscheiden
+    Note over LGF: Endgültige Entscheidung zur Abrechnung 
+    Note over LGF: Kosteninformation wird übermittelt 
+
+    Bund->>MP: GET Composition?status=final
+    Note over Bund: Zugriff auf finale Composition 
+
+    SV->>MP: $antworten
+    Note over SV: Rückmeldung zur Kosteninformation
+
+    Note over MP: Fall für Moped abgeschlossen
+```
+
+### AF2.html (#12) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF2.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH ->> MP: $aufnehmen
+    Note over KH: Patient wird aufgenommen
+```
+
+### AF6.html (#13) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF6.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF14.html (#14) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF14.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: $aufnehmen
+    Note over KH: Patient wird aufgenommen (mit einer Selbstzahler-Coverage)
+
+    KH->>MP: $update
+    Note over KH: Verlegung auf Abteilung Innere Medizin
+
+    KH->>MP: $update
+    Note over KH: Diagnose „Herzinsuffizienz“ und Leistung „EKG“ erfasst 
+
+    KH->>MP: $entlassen
+    Note over KH: Patient wird entlassen 
+
+    loop $abrechnen / $entscheiden (vorläufig)
+        KH->>MP: $abrechnen
+        Note over KH: Abrechnung aller Leistungen eingereicht 
+
+        LGF->>MP: $entscheiden
+        Note over LGF: Alle Posten genehmigt (keine Änderungen)
+    end 
+
+    %% Finale Abrechnung und Entscheidung
+    KH->>MP: final $abrechnen
+    Note over KH: Finale Abrechnung nach Entlassung
+
+    LGF->>MP: final $entscheiden
+    Note over LGF: Endgültige Entscheidung zur Abrechnung 
+
+    Bund->>MP: GET Composition?status=final
+    Note over Bund: Zugriff auf finale Composition
+```
+
+### AF17.html (#15) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF17.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KHB as KH B
+    end
+    box rgb(245, 229, 153)
+    actor KHA as KH A
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KHA->>MP: $aufnehmen
+    Note over KHA: Patient wird aufgenommen
+    KHA-->>KHB: Patient wird ins KH B gebracht
+    Note over KHA: Patient muss für Diagnostik in das KH B
+    KHB-->>KHA: Patient wird zurück ins KH A gebracht
+    Note over KHB: Diagnostik durchgeführt
+    KHA->>MP: $update
+    Note over KHA: KH A meldet die Leistung an Moped<br /> -> gibt im Procedure statt einer Referenz auf die <br /> eigene Abteilung eine Referenz auf KH B an
+```
+
+### AF19.html (#16) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF19.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    %% Aufnahme
+    KH->>MP: $aufnehmen
+    Note over KH: POST Patient, Encounter, ... <br />TransferEncounter mit Referenz auf Aufnahmeabteilung
+
+    %% Interne Verlegung
+    KH->>MP: $update – interne Verlegung
+    Note over KH: PUT alter TransferEncounter (finished, Enddatum) <br />+ POST neuer TransferEncounter (neue Abteilung)
+```
+
+### AF20.html (#17) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF20.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: $aufnehmen
+    Note over KH: Patient:in wird am 2025-07-20 auf Abteilung „Innere Medizin“ aufgenommen<br />→ Encounter status: in-progress <br /> TransferEncounter Abteilung: "Innere Medizin"
+
+    loop Beurlaubungs-Zyklus
+        KH->>MP: $update 
+        Note over KH: Patient:in am 2025-07-22 auf Urlaub<br />→ Encounter status: on-hold <br />Verlegung auf TransferEncounter mit Funktionscode 100000
+
+        KH->>MP: $update 
+        Note over KH:Patient:in kehrt am 2025-07-24 zurück <br />→ Encounter status: in-progress <br />TransferEncounter Abteilung: „Innere Medizin“
+    end
+```
+
+### AF23bis25.html (#18) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF23bis25.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: $entlassen
+    Note over KH: Patient wird entlassen und im gleichen Aufruf<br /> die Hauptdiagnose mitgeliefert
+```
+
+### AF23bis25.html (#19) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF23bis25.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 245, 188)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: $aufnehmen
+    Note over KH: Patient:in wird aufgenommen<br />(Encounter status: in-progress)
+
+    KH->>MP: $update
+    Note over KH: Encounter-Status auf "discharged" gesetzt<br />(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
+
+    KH->>MP: $update 
+    Note over KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
+
+    KH->>MP: $entlassen
+    Note over KH: Encounter-Status final auf "completed" gesetzt
+```
+
+### AF28bis32.html (#20) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: POST VAERequest 1
+    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
+    SV->>MP: POST VAEResponse 1
+    Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
+
+    KH->>MP: POST VAERequest 2
+    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
+    Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
+
+    SV->>MP: POST VAEResponse 2
+    Note over SV: Bestätigung Verlängerung<br/>(16.09.2025-21.09.2025)
+    Note over MP: Moped behält die gültigen Übernahmen für beide Zeiträume<br/>(VAEResponse 1 & VAEResponse 2)
+```
+
+### AF28bis32.html (#21) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+    KH->>MP: Anfrage VAE <br/>POST VAERequest 1
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
+    SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
+    Note over SV: Negative VAE
+    Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
+    alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt modifizierte Anfrage an ÖGK
+    else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
+      KH->>MP: $update mit SVS referenziert in der neuen Coverage
+      Note over KH: KH setzt die SVS als zuständige Versicherung
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt neue Anfrage an SVS
+    else  Patient wird zum Selbstzahler
+      KH->>MP: $update mit Selbstzahler Coverage
+      Note over KH: KH meldet Patienten als Selbstzahler 
+    end
+```
+
+### AF28bis32.html (#22) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#23) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as MP
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF28bis32.html (#24) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/599-Falsche-0-0-Kardinalitäten-entfernen/AF28bis32.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+## HL7Austria/ELGA-MOPED-R5 @ 770-aufnehmen-puzzleteil
+
+**Package:** `elga.moped#0.1.0`
+
+**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
+
+[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/770-aufnehmen-puzzleteil) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
+
+FHIR 5.0.0 · 2026-04-07
+
+### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/moped_konzepte.html)
+
+```mermaid
+graph TD
+    Master[MasterComposition]
+
+    subgraph Spezialisierungen
+        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
+        Antwort[AntwortComposition<br />VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br />]
+        Siegel[SiegelComposition<br />Composition.status=final]
+    end
+
+    Master --> Aufnahme
+    Master --> Anfrage
+    Master --> Antwort
+    Master --> Entlassung
+    Master --> Abrechnung
+    Master --> Entscheiden
+    Master --> Siegel
+```
+
+### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/moped_konzepte.html)
+
+```mermaid
+graph TD
+  CompV1[Composition/123/_history/1]
+  CompV2[Composition/123/_history/2]
+  CompV3[Composition/123/_history/3]
+
+  Prov1[Provenance A]
+  Prov2[Provenance B]
+  Prov3[Provenance C]
+
+  Prov1 --> CompV1
+  Prov2 --> CompV2
+  Prov3 --> CompV3
+```
+
+### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html)
+
+```mermaid
+graph LR
+    KH[Krankenanstalt]
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
+```
+
+### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html)
+
+```mermaid
+graph LR
+    SV[Sozialversicherung]
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
+```
+
+### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html)
+
+```mermaid
+graph LR
+    LGF[Landesgesundheitsfonds]
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
+```
+
+### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html)
+
+```mermaid
+graph LR
+    BMSGPK[BMSGPK]
+    Moped[Moped] 
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+```
+
+### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/actors.html)
+
+```mermaid
+graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
+```
+
+### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+```
+
+### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/workflowmanagement.html)
+
+```mermaid
+stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+```
+
+### AF_moped_fall_vae.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+
+    KH->>MP: POST VAERequest 1
+    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
+    SV->>MP: POST VAEResponse 1
+    Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
+
+    KH->>MP: POST VAERequest 2
+    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
+    Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
+
+    SV->>MP: POST VAEResponse 2
+    Note over SV: Bestätigung Verlängerung<br/>(16.09.2025-21.09.2025)
+    Note over MP: Moped behält die gültigen Übernahmen für beide Zeiträume<br/>(VAEResponse 1 & VAEResponse 2)
+```
+
+### AF_moped_fall_vae.html (#12) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+    KH->>MP: Anfrage VAE <br/>POST VAERequest 1
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
+    SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
+    Note over SV: Negative VAE
+    Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
+    alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt modifizierte Anfrage an ÖGK
+    else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
+      KH->>MP: $update mit SVS referenziert in der neuen Coverage
+      Note over KH: KH setzt die SVS als zuständige Versicherung
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt neue Anfrage an SVS
+    else  Patient wird zum Selbstzahler
+      KH->>MP: $update mit Selbstzahler Coverage
+      Note over KH: KH meldet Patienten als Selbstzahler 
+    end
+```
+
+### AF_moped_fall_vae.html (#13) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF_moped_fall_vae.html (#14) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as MP
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF_moped_fall_vae.html (#15) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_vae.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+### AF_moped_fall_prozessuebergreifend.html (#16) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/770-aufnehmen-puzzleteil/AF_moped_fall_prozessuebergreifend.html)
+
+```mermaid
+---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
+```
+
+## IHE/ITI.DeIdHandbook @ main
+
+**Package:** `ihe.iti.deid#0.0.1-current`
+
+**De-Identification Profile**
+
+[Build](https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main) · [GitHub](https://github.com/IHE/ITI.DeIdHandbook/tree/main) · [Canonical](https://profiles.ihe.net/ITI/DeId/ImplementationGuide/ihe.iti.deid)
+
+FHIR 4.0.1 · 2026-03-19
+
+### process.html — [view page](https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/process.html)
+
+```mermaid
+graph TD
+    subgraph "Stage 1: Preliminary De-Identification"
+        direction LR
+        A[Identified Data] -->|Reversible Pseudonymization| B(Reversible-Pseudonymized Data);
+    end
+
+    subgraph "Stage 2: Advanced De-Identification"
+        direction LR
+        B -->|Irreversible Pseudonymization| C(Irreversibly Pseudonymized Data);
+        C -->|Anonymization / Negligible Risk| D(Anonymous Data);
+    end
+    
+    subgraph "Stage 3: Recipient Verification"
+        direction LR
+        D --> E(Recipient Risk Verification);
+        C -->|Anonymization / Non-Negligible Risk| E;
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#9c9,stroke:#333,stroke-width:2px
+    style E fill:#f5f5f5,stroke:#333,stroke-width:2px
+```
+
+## IKNL/PZP-FHIR-R4 @ issue137-legallycapable
+
+**Package:** `iknl.fhir.r4.pzp#1.0.0-rc2`
+
+**Advance Care Planning (PZP)**
+
+[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/issue137-legallycapable) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
+
+FHIR 4.0.1 · 2026-04-13
+
+### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-model.html)
+
+```mermaid
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --> Encounter
+    CommunicationRequest -- "sender, subject" --> Patient
+    CommunicationRequest -- "requester" --> PractitionerRole
+    CommunicationRequest -- "recipient" --> RelatedPerson
+    Consent -- "patient, provision.actor" --> Patient
+    Consent -- "provision.actor" --> PractitionerRole
+    Consent -- "provision.actor" --> RelatedPerson
+    DeviceUseStatement -- "device" --> Device
+    DeviceUseStatement -- "subject" --> Patient
+    DeviceUseStatement -- "extension" --> PractitionerRole
+    Encounter -- "subject" --> Patient
+    Encounter -- "participant" --> PractitionerRole
+    Encounter -- "reasonReference" --> Procedure
+    Encounter -- "participant" --> RelatedPerson
+    Goal -- "subject" --> Patient
+    Observation -- "encounter" --> Encounter
+    Observation -- "subject" --> Patient
+    Observation -- "performer" --> PractitionerRole
+    Patient -- "contact.extension" --> RelatedPerson
+    PractitionerRole -- "practitioner" --> Practitioner
+    Procedure -- "encounter" --> Encounter
+    Procedure -- "performer, subject" --> Patient
+    Procedure -- "performer" --> PractitionerRole
+    Procedure -- "performer" --> RelatedPerson
+    RelatedPerson -- "patient" --> Patient
+```
+
+### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
+            activate S
+            S-->>C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C->>S: GET /Goal?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S-->>C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type=http://snomed.info/sct|72506001,465460004,468542000,704707009,1263462004,1236894001<br />&_include=DeviceUseStatement:device
+            activate S
+            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|223449006
+            activate S
+            S-->>C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C->>S: GET [Reference URL]
+        S-->>C: 200 OK (Referenced Resource)
+    end
+```
+
+### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br>(Client)
+    participant S as ACP Actor Provider<br>(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+```
+
+## IKNL/PZP-FHIR-R4 @ update-questionnaire
+
+**Package:** `iknl.fhir.r4.pzp#1.0.0-rc1`
+
+**Advance Care Planning (PZP)**
+
+[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/update-questionnaire) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
+
+FHIR 4.0.1 · 2026-03-02
+
+### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/data-model.html)
+
+```mermaid
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --> Encounter
+    CommunicationRequest -- "sender, subject" --> Patient
+    CommunicationRequest -- "requester" --> PractitionerRole
+    CommunicationRequest -- "recipient" --> RelatedPerson
+    Consent -- "patient, provision.actor" --> Patient
+    Consent -- "provision.actor" --> PractitionerRole
+    Consent -- "provision.actor" --> RelatedPerson
+    DeviceUseStatement -- "device" --> Device
+    DeviceUseStatement -- "subject" --> Patient
+    DeviceUseStatement -- "extension" --> PractitionerRole
+    Encounter -- "subject" --> Patient
+    Encounter -- "participant" --> PractitionerRole
+    Encounter -- "reasonReference" --> Procedure
+    Encounter -- "participant" --> RelatedPerson
+    Goal -- "subject" --> Patient
+    Observation -- "encounter" --> Encounter
+    Observation -- "subject" --> Patient
+    Observation -- "performer" --> PractitionerRole
+    Patient -- "contact.extension" --> RelatedPerson
+    PractitionerRole -- "practitioner" --> Practitioner
+    Procedure -- "encounter" --> Encounter
+    Procedure -- "performer, subject" --> Patient
+    Procedure -- "performer" --> PractitionerRole
+    Procedure -- "performer" --> RelatedPerson
+    RelatedPerson -- "patient" --> Patient
+```
+
+### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
+            activate S
+            S-->>C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C->>S: GET /Goal?patient=Patient/[id]<br />&description=http://snomed.info/sct|385987000,1351964001,713148004
+            activate S
+            S-->>C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S-->>C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type=http://snomed.info/sct|72506001,465460004,468542000,704707009,1263462004,1236894001<br />&_include=DeviceUseStatement:device
+            activate S
+            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C->>S: GET [Reference URL]
+        S-->>C: 200 OK (Referenced Resource)
+    end
+```
+
+### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/update-questionnaire/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br>(Client)
+    participant S as ACP Actor Provider<br>(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+```
+
+## IKNL/PZP-FHIR-R4 @ main
+
+**Package:** `iknl.fhir.r4.pzp#1.0.0-rc2`
+
+**Advance Care Planning (PZP)**
+
+[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/main) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
+
+FHIR 4.0.1 · 2026-03-03
+
+### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-model.html)
+
+```mermaid
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --> Encounter
+    CommunicationRequest -- "sender, subject" --> Patient
+    CommunicationRequest -- "requester" --> PractitionerRole
+    CommunicationRequest -- "recipient" --> RelatedPerson
+    Consent -- "patient, provision.actor" --> Patient
+    Consent -- "provision.actor" --> PractitionerRole
+    Consent -- "provision.actor" --> RelatedPerson
+    DeviceUseStatement -- "device" --> Device
+    DeviceUseStatement -- "subject" --> Patient
+    DeviceUseStatement -- "extension" --> PractitionerRole
+    Encounter -- "subject" --> Patient
+    Encounter -- "participant" --> PractitionerRole
+    Encounter -- "reasonReference" --> Procedure
+    Encounter -- "participant" --> RelatedPerson
+    Goal -- "subject" --> Patient
+    Observation -- "encounter" --> Encounter
+    Observation -- "subject" --> Patient
+    Observation -- "performer" --> PractitionerRole
+    Patient -- "contact.extension" --> RelatedPerson
+    PractitionerRole -- "practitioner" --> Practitioner
+    Procedure -- "encounter" --> Encounter
+    Procedure -- "performer, subject" --> Patient
+    Procedure -- "performer" --> PractitionerRole
+    Procedure -- "performer" --> RelatedPerson
+    RelatedPerson -- "patient" --> Patient
+```
+
+### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
+            activate S
+            S-->>C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C->>S: GET /Goal?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S-->>C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type=http://snomed.info/sct|72506001,465460004,468542000,704707009,1263462004,1236894001<br />&_include=DeviceUseStatement:device
+            activate S
+            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C->>S: GET [Reference URL]
+        S-->>C: 200 OK (Referenced Resource)
+    end
+```
+
+### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/main/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br>(Client)
+    participant S as ACP Actor Provider<br>(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+```
+
+## IKNL/PZP-FHIR-R4 @ Changelog
+
+**Package:** `iknl.fhir.r4.pzp#1.0.0-rc1`
+
+**Advance Care Planning (PZP)**
+
+[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/Changelog) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
+
+FHIR 4.0.1 · 2026-03-02
+
+### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-model.html)
+
+```mermaid
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --> Encounter
+    CommunicationRequest -- "sender, subject" --> Patient
+    CommunicationRequest -- "requester" --> PractitionerRole
+    CommunicationRequest -- "recipient" --> RelatedPerson
+    Consent -- "patient, provision.actor" --> Patient
+    Consent -- "provision.actor" --> PractitionerRole
+    Consent -- "provision.actor" --> RelatedPerson
+    DeviceUseStatement -- "device" --> Device
+    DeviceUseStatement -- "subject" --> Patient
+    Encounter -- "subject" --> Patient
+    Encounter -- "participant" --> PractitionerRole
+    Encounter -- "reasonReference" --> Procedure
+    Encounter -- "participant" --> RelatedPerson
+    Goal -- "subject" --> Patient
+    Observation -- "encounter" --> Encounter
+    Observation -- "subject" --> Patient
+    Observation -- "performer" --> PractitionerRole
+    Patient -- "contact.extension" --> RelatedPerson
+    PractitionerRole -- "practitioner" --> Practitioner
+    Procedure -- "encounter" --> Encounter
+    Procedure -- "performer, subject" --> Patient
+    Procedure -- "performer" --> PractitionerRole
+    Procedure -- "performer" --> RelatedPerson
+    RelatedPerson -- "patient" --> Patient
+```
+
+### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
+            activate S
+            S-->>C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C->>S: GET /Goal?patient=Patient/[id]<br />&description=http://snomed.info/sct|385987000,1351964001,713148004
+            activate S
+            S-->>C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S-->>C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type:in=https://api.iknl.nl/docs/pzp/r4/ValueSet/ACP-MedicalDeviceProductType-ICD<br />&_include=DeviceUseStatement:device
+            activate S
+            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C->>S: GET [Reference URL]
+        S-->>C: 200 OK (Referenced Resource)
+    end
+```
+
+### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/Changelog/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br>(Client)
+    participant S as ACP Actor Provider<br>(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+```
+
+## IKNL/PZP-FHIR-R4 @ QA
+
+**Package:** `iknl.fhir.r4.pzp#1.0.0-rc1`
+
+**Advance Care Planning (PZP)**
+
+[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/QA) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/QA) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
+
+FHIR 4.0.1 · 2026-02-27
+
+### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/QA/data-model.html)
+
+```mermaid
+flowchart TB
+
+    %% ---- Style Definitions for Categories ----
+    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
+    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
+    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
+    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
+    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
+
+    %% ---- Subgraph Definitions ----
+    subgraph "CommunicationRequest"
+        ACPInformRelativesRequest
+    end
+
+    subgraph "Consent"
+        ACPAdvanceDirective
+        ACPTreatmentDirective
+    end
+
+    subgraph "Device"
+        ACPMedicalDeviceProductICD
+    end
+
+    subgraph "DeviceUseStatement"
+        ACPMedicalDevice
+    end
+
+    subgraph "Encounter"
+        ACPEncounter
+    end
+
+    subgraph "Goal"
+        ACPMedicalPolicyGoal
+    end
+
+    subgraph "Patient"
+        ACPPatient
+    end
+
+    subgraph "Practitioner"
+        ACPHealthProfessionalPractitioner
+    end
+
+    subgraph "PractitionerRole"
+        ACPHealthProfessionalPractitionerRole
+    end
+
+    subgraph "Procedure"
+        ACPProcedure
+    end
+
+    subgraph "RelatedPerson"
+        ACPContactPerson
+    end
+
+    subgraph "Observation"
+        ACPOrganDonationChoiceRegistration
+        ACPPositionRegardingEuthanasia
+        ACPPreferredPlaceOfDeath
+        ACPSenseOfPurpose
+        ACPSpecificCareWishes
+    end
+
+    %% ---- Style Assignments ----
+    class ACPInformRelativesRequest C2
+    class ACPAdvanceDirective C0
+    class ACPTreatmentDirective C0
+    class ACPMedicalDeviceProductICD C2
+    class ACPMedicalDevice C2
+    class ACPEncounter C3
+    class ACPMedicalPolicyGoal C0
+    class ACPSpecificCareWishes C0
+    class ACPPreferredPlaceOfDeath C0
+    class ACPPositionRegardingEuthanasia C0
+    class ACPOrganDonationChoiceRegistration C0
+    class ACPSenseOfPurpose C0
+    class ACPPatient C1
+    class ACPHealthProfessionalPractitioner C1
+    class ACPHealthProfessionalPractitionerRole C1
+    class ACPProcedure C3
+    class ACPContactPerson C1
+
+    %% ---- Resource Type References ----
+    CommunicationRequest -- "encounter" --> Encounter
+    CommunicationRequest -- "sender, subject" --> Patient
+    CommunicationRequest -- "requester" --> PractitionerRole
+    CommunicationRequest -- "recipient" --> RelatedPerson
+    Consent -- "patient, provision.actor" --> Patient
+    Consent -- "provision.actor" --> PractitionerRole
+    Consent -- "provision.actor" --> RelatedPerson
+    DeviceUseStatement -- "device" --> Device
+    DeviceUseStatement -- "subject" --> Patient
+    Encounter -- "subject" --> Patient
+    Encounter -- "participant" --> PractitionerRole
+    Encounter -- "reasonReference" --> Procedure
+    Encounter -- "participant" --> RelatedPerson
+    Goal -- "subject" --> Patient
+    Observation -- "encounter" --> Encounter
+    Observation -- "subject" --> Patient
+    Observation -- "performer" --> PractitionerRole
+    Patient -- "contact.extension" --> RelatedPerson
+    PractitionerRole -- "practitioner" --> Practitioner
+    Procedure -- "encounter" --> Encounter
+    Procedure -- "performer, subject" --> Patient
+    Procedure -- "performer" --> PractitionerRole
+    Procedure -- "performer" --> RelatedPerson
+    RelatedPerson -- "patient" --> Patient
+```
+
+### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/QA/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br />(Client)
+    participant S as ACP Actor Provider<br />(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+  
+        par 
+            %% 1. Procedures
+            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
+            activate S
+            S-->>C: 200 OK: Bundle (Procedure + Encounter)
+            deactivate S
+        and
+            %% 2. Consent (TreatmentDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 3. Consent (AdvanceCareDirective)
+            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
+            activate S
+            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
+            deactivate S
+        and
+            %% 4. Goals
+            C->>S: GET /Goal?patient=Patient/[id]<br />&description=http://snomed.info/sct|385987000,1351964001,713148004
+            activate S
+            S-->>C: 200 OK: Bundle (Goal)
+            deactivate S
+        and
+            %% 5. Observations
+            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
+            activate S
+            S-->>C: 200 OK: Bundle (Observation)
+            deactivate S
+        and
+            %% 6. Devices
+            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type=http://snomed.info/sct|72506001,465460004,468542000,704707009,1263462004,1236894001<br />&_include=DeviceUseStatement:device
+            activate S
+            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
+            deactivate S
+        and
+            %% 7. CommunicationRequests
+            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
+            activate S
+            S-->>C: 200 OK: Bundle (CommunicationRequest)
+            deactivate S
+        end
+    end
+
+    opt Resolve Additional References
+        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
+        C->>S: GET [Reference URL]
+        S-->>C: 200 OK (Referenced Resource)
+    end
+```
+
+### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/QA/data-exchange.html)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as ACP Actor Consulter<br>(Client)
+    participant S as ACP Actor Provider<br>(Server)
+
+    note over C, S: Prerequisite: client possesses access token & Patient ID
+
+    rect rgb(240, 248, 255)
+        
+        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
+        activate S
+
+        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
+
+        deactivate S
+    end
+```
+
+## jmandel/smart-permission-tickets-wip @ main
+
+**Package:** `smart.permission-tickets#0.1.0`
 
 **SMART Permission Tickets**
 
-[Build](https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/spec-plan-33-glossary-data-holder) · [GitHub](https://github.com/jmandel/smart-permission-tickets-wip/tree/spec-plan-33-glossary-data-holder) · [Canonical](http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets)
+[Build](https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main) · [GitHub](https://github.com/jmandel/smart-permission-tickets-wip/tree/main) · [Canonical](http://smarthealthit.org/ig/permission-tickets/ImplementationGuide/smart.permission-tickets)
 
-FHIR 4.0.1 · 2026-04-10
+FHIR 4.0.1 · 2026-04-09
 
-### index.html — [view page](https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/spec-plan-33-glossary-data-holder/index.html)
+### index.html — [view page](https://build.fhir.org/ig/jmandel/smart-permission-tickets-wip/branches/main/index.html)
 
 ```mermaid
 sequenceDiagram
@@ -54,7 +3725,337 @@ sequenceDiagram
     Server-->>Client: FHIR Resources
 ```
 
-## fhir.nwgenomics.nhs.uk (0.2.2)
+## JohnMoehrke/xacml-consent @ main
+
+**Package:** `johnmoehrke.xacml-consent.example#0.1.0`
+
+**John Moehrke XACML Consent Example**
+
+[Build](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main) · [GitHub](https://github.com/JohnMoehrke/xacml-consent/tree/main) · [Canonical](http://johnmoehrke.github.io/xacml-consent/ImplementationGuide/johnmoehrke.xacml-consent.example)
+
+FHIR 4.0.1 · 2026-02-11
+
+### generic.html (#1) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html)
+
+```mermaid
+graph TD
+    A[FHIR Consent Resource] -->|policy.uri| B[XACML Overriding Policy]
+    A -->|"source[x]"| C[XACML Patient Consent Policy]
+    style B fill:#ff0000,color:#fff
+    style C fill:#ff0000,color:#fff
+```
+
+### ab352.html (#2) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
+
+```mermaid
+graph TD
+    Start((Medical Record Action)) --> Destination{Destination?}
+
+    %% IN-STATE FLOW
+    Destination -->|CA Data Exchange| InState[<b>IN-STATE</b>]
+    InState --> DxFGate{Specific Consent on File?}
+    
+    DxFGate -->|No| AutoFilter[<b>AUTO-FILTER: ENABLED</b>]
+    AutoFilter -->|Action| Scrub[Scrub Sensitive Codes]
+    Scrub --> SharePartial[Share General Data Only]
+    
+    DxFGate -->|Yes| FilterOff[<b>Follow Consent #40;AUTO-FILTER:disabled#41;</b>]
+    FilterOff --> ShareFull[Share Consent Permitted Record via DxF]
+
+    %% OUT-OF-STATE FLOW
+    Destination -->|Cross Border| OutState[<b>OUT-OF-STATE</b>]
+    OutState --> ShieldGate{Specific Consent on File?}
+    
+    ShieldGate -->|No| Block[<b>AB 352 SHIELD: BLOCKED</b>]
+    Block --> Partial[Release Non-Sensitive Data Only]
+    
+    ShieldGate -->|Yes| Consented[<b>Follow Consent</b>]
+    Consented --> Full[Release Consent Permitted Record]
+
+    %% Formatting
+    style AutoFilter fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+    style FilterOff fill:#9f9,stroke:#333
+    style Block fill:#f99,stroke:#333
+```
+
+### ab352.html (#3) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
+
+```mermaid
+flowchart TD
+
+    A["Request to access/disclose data"] --> B["PEP collects attributes"]
+    B --> C["Attributes: action, sensitivity, recipient jurisdiction, purpose"]
+    C --> D["PDP evaluates PolicySet urn:org:hospital:policyset:AB352"]
+
+    D --> E1{"Action = disclose?"}
+    E1 -- Yes --> F1{"Sensitivity in AB352 set?"}
+    F1 -- Yes --> G1{"Recipient jurisdiction != CA?"}
+    G1 -- Yes --> H1["Deny<br/>Obligation: log-denial"]
+    G1 -- No --> I1["Continue evaluation<br/>(local org policies)"]
+    F1 -- No --> I1
+
+    E1 -- No --> E2{"Action = access/use?"}
+    E2 -- Yes --> F2{"Recipient jurisdiction = CA<br/>AND purpose = TREATMENT?"}
+    F2 -- Yes --> H2["Permit<br/>Obligation: segment-sensitive-data"]
+    F2 -- No --> I2["NotApplicable or other org policies"]
+
+    E2 -- No --> I2
+
+    H2 --> J["PEP enforces segmentation<br/>(EHR/HIE data segregation)"]
+    H1 --> K["PEP denies disclosure<br/>and records AuditEvent"]
+```
+
+### ab352.html (#4) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
+
+```mermaid
+graph TD
+    PS["<b>PolicySet:</b> AB352 Compliance<br/>Target: CA-HOSPITAL<br/>Combining Alg: Deny-Overrides"]
+    
+    PS --> P1_T
+    PS --> P2_T
+    PS --> P3_T
+
+    %% Policy 1
+    subgraph P1 ["Policy 1: Data Disclosure Control"]
+        P1_T["Target: Action = DISCLOSE"]
+        P1_R1["Rule: Deny Out-of-State"]
+        P1_C{"Condition:<br/>Is Sensitive Health Data?<br/>AND Recipient != CA?"}
+        P1_O["Obligation: Log Denial Reason"]
+        
+        P1_T --> P1_R1
+        P1_R1 --> P1_C
+        P1_R1 --> P1_O
+    end
+
+    %% Policy 2
+    subgraph P2 ["Policy 2: In-State Clinical Use"]
+        P2_T["Target: Action = ACCESS/USE"]
+        P2_R1["Rule: Permit Treatment"]
+        P2_C{"Condition:<br/>Recipient = CA?<br/>AND Purpose = TREATMENT?"}
+        
+        P2_T --> P2_R1
+        P2_R1 --> P2_C
+    end
+
+    %% Policy 3
+    subgraph P3 ["Policy 3: Mandatory Segmentation"]
+        P3_T["Target: Any"]
+        P3_R1["Rule: Permit"]
+        P3_O["Obligation: Trigger Segmentation Engine<br/>for Abortion/Gender Care/Contraception"]
+        
+        P3_T --> P3_R1
+        P3_R1 --> P3_O
+    end
+
+    %% Styling
+    style PS fill:#f9f,stroke:#333,stroke-width:4px
+    style P1_R1 fill:#ff9999,stroke:#c00
+    style P2_R1 fill:#99ff99,stroke:#0c0
+    style P3_O fill:#bbdaff,stroke:#00f
+```
+
+## Minsal-CL/R2BO @ master
+
+**Package:** `hl7.fhir.cl.minsal.r2bo#0.2.0-draft`
+
+**Repositorio de Reportes de Biopsias Oncológicas**
+
+[Build](https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master) · [GitHub](https://github.com/Minsal-CL/R2BO/tree/master) · [Canonical](https://interoperabilidad.minsal.cl/fhir/ig/r2bo/ImplementationGuide/hl7.fhir.cl.minsal.r2bo)
+
+FHIR 4.0.1 · 2026-01-27
+
+### design-consideration.html — [view page](https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html)
+
+```mermaid
+classDiagram
+    class ApDiagnosticReport
+    class ApComposition 
+    ApDiagnosticReport --> ApComposition: extension[composition]
+    ApComposition --> ApDiagnosticReport: extension[diagnosticReport-reference]
+```
+
+## nuts-foundation/nl-generic-functions-ig @ dezi-proof-version
+
+**Package:** `fhir.nl.gf#0.3.0`
+
+**Netherlands - Generic Functions for data exchange Implementation Guide**
+
+[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/dezi-proof-version) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+
+FHIR 4.0.1 · 2026-03-12
+
+### credential-DeziIDTokenCredential.html — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/dezi-proof-version/credential-DeziIDTokenCredential.html)
+
+```mermaid
+graph TD
+    VC[DeziIDTokenCredential]
+    VC -->|credentialSubject| HP[HealthcareProvider]
+    HP -->|id| DID["did:web:za1.example"]
+    HP -->|identifier| URA["87654321 (URA)"]
+    HP -->|name| NAME["Zorgaanbieder"]
+    HP -->|employs| HW[HealthcareWorker]
+    HW -->|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
+    HW -->|initials| INIT["B.B."]
+    HW -->|surnamePrefix| PRE["van der"]
+    HW -->|surname| SUR["Jansen"]
+    HW -->|roles| ROLES["01.041, ... (RoleCodeNL)"]
+```
+
+## nuts-foundation/nl-generic-functions-ig @ care-services-soft-delete
+
+**Package:** `fhir.nl.gf#0.3.0`
+
+**Netherlands - Generic Functions for data exchange Implementation Guide**
+
+[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/care-services-soft-delete) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+
+FHIR 4.0.1 · 2026-03-03
+
+### credential-DeziIDTokenCredential.html — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/care-services-soft-delete/credential-DeziIDTokenCredential.html)
+
+```mermaid
+graph TD
+    VC[DeziIDTokenCredential]
+    VC -->|credentialSubject| HP[HealthcareProvider]
+    HP -->|id| DID["did:web:za1.example"]
+    HP -->|identifier| URA["87654321 (URA)"]
+    HP -->|name| NAME["Zorgaanbieder"]
+    HP -->|employs| HW[HealthcareWorker]
+    HW -->|identifier| UZI["900000009 (UZI/Dezi-id)"]
+    HW -->|initials| INIT["B.B."]
+    HW -->|surnamePrefix| PRE["van der"]
+    HW -->|surname| SUR["Jansen"]
+    HW -->|roles| ROLES["01.041, ... (RoleCodeNL)"]
+```
+
+## nuts-foundation/nl-generic-functions-ig @ main
+
+**Package:** `fhir.nl.gf#0.3.0`
+
+**Netherlands - Generic Functions for data exchange Implementation Guide**
+
+[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/main) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+
+FHIR 4.0.1 · 2026-04-08
+
+### credential-DeziUserCredential.html — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/credential-DeziUserCredential.html)
+
+```mermaid
+graph TD
+    VC[DeziUserCredential]
+    VC -->|credentialSubject| HP[HealthcareProvider]
+    HP -->|id| DID["did:web:za1.example"]
+    HP -->|identifier| URA["87654321 (URA)"]
+    HP -->|name| NAME["Zorgaanbieder"]
+    HP -->|employs| HW[HealthcareWorker]
+    HW -->|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
+    HW -->|initials| INIT["B.B."]
+    HW -->|surnamePrefix| PRE["van der"]
+    HW -->|surname| SUR["Jansen"]
+    HW -->|role| ROLE["01.041"]
+    HW -->|role_name| ROLENAME["Revalidatiearts"]
+    HW -->|role_registry| ROLEREG["http://www.dezi.nl/rol_bron/big"]
+```
+
+## nuts-foundation/nl-generic-functions-ig @ add-patient-enrollment-credential
+
+**Package:** `fhir.nl.gf#0.3.0`
+
+**Netherlands - Generic Functions for data exchange Implementation Guide**
+
+[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/add-patient-enrollment-credential) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+
+FHIR 4.0.1 · 2026-04-08
+
+### credential-DeziUserCredential.html (#1) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-DeziUserCredential.html)
+
+```mermaid
+graph TD
+    VC[DeziUserCredential]
+    VC -->|credentialSubject| HP[HealthcareProvider]
+    HP -->|id| DID["did:web:za1.example"]
+    HP -->|identifier| URA["87654321 (URA)"]
+    HP -->|name| NAME["Zorgaanbieder"]
+    HP -->|employs| HW[HealthcareWorker]
+    HW -->|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
+    HW -->|initials| INIT["B.B."]
+    HW -->|surnamePrefix| PRE["van der"]
+    HW -->|surname| SUR["Jansen"]
+    HW -->|role| ROLE["01.041"]
+    HW -->|role_name| ROLENAME["Revalidatiearts"]
+    HW -->|role_registry| ROLEREG["http://www.dezi.nl/rol_bron/big"]
+```
+
+### credential-PatientEnrollmentCredential.html (#2) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-PatientEnrollmentCredential.html)
+
+```mermaid
+graph TD
+    VC[PatientEnrollmentCredential]
+    VC -->|issuer| ISSUER["did:x509 (UZI Z- or N-pas)"]
+    VC -->|credentialSubject| HP["HealthcareProvider"]
+    HP -->|id| HPID["did:web:huisarts-delinden.nl"]
+    HP -->|hasEnrollment| PE["PatientEnrollment"]
+    PE -->|patient| PAT["Patient"]
+    PAT -->|identifier| PATID["Identifier"]
+    PATID -->|system| PATSYS["http://fhir.nl/fhir/NamingSystem/bsn"]
+    PATID -->|value| PATVAL["999911234 (BSN)"]
+    PE -->|enrolledBy| HW["HealthcareWorker"]
+    HW -->|identifier| HWID["Identifier"]
+    HWID -->|system| HWSYS["http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"]
+    HWID -->|value| HWVAL["90001234 (UZI-nr-pers)"]
+```
+
+## nuts-foundation/nl-generic-functions-ig @ add-healthcare-professional-delegation-credential
+
+**Package:** `fhir.nl.gf#0.3.0`
+
+**Netherlands - Generic Functions for data exchange Implementation Guide**
+
+[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/add-healthcare-professional-delegation-credential) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+
+FHIR 4.0.1 · 2026-04-08
+
+### credential-DeziUserCredential.html (#1) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-DeziUserCredential.html)
+
+```mermaid
+graph TD
+    VC[DeziUserCredential]
+    VC -->|credentialSubject| HP[HealthcareProvider]
+    HP -->|id| DID["did:web:za1.example"]
+    HP -->|identifier| URA["87654321 (URA)"]
+    HP -->|name| NAME["Zorgaanbieder"]
+    HP -->|employs| HW[HealthcareWorker]
+    HW -->|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
+    HW -->|initials| INIT["B.B."]
+    HW -->|surnamePrefix| PRE["van der"]
+    HW -->|surname| SUR["Jansen"]
+    HW -->|role| ROLE["01.041"]
+    HW -->|role_name| ROLENAME["Revalidatiearts"]
+    HW -->|role_registry| ROLEREG["http://www.dezi.nl/rol_bron/big"]
+```
+
+### credential-HealthcareProfessionalDelegationCredential.html (#2) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html)
+
+```mermaid
+graph TD
+    VC[HealthcareProfessionalDelegationCredential]
+    VC -->|issuer| ISSUER["did:x509 (UZI Z-pas)"]
+    VC -->|credentialSubject| HP["HealthcareProvider"]
+    HP -->|id| HPID["did:web:huisarts-delinden.nl"]
+    HP -->|hasDelegation| DEL["Delegation"]
+    DEL -->|delegatedBy| HCP["HealthcareProfessional"]
+    HCP -->|identifier| HCPID["Identifier"]
+    HCPID -->|system| HCPSYS["http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"]
+    HCPID -->|value| HCPVAL["90001234 (UZI-nr-pers)"]
+    HCP -->|roleCode| HCPROLE["01.015 (UZI rolcode)"]
+    DEL -->|scope| SCOPE["DelegationScope"]
+    SCOPE -->|authorizationRule| RULE["http://gis-nl.example/authorizationRule/example"]
+    SCOPE -->|authorizedActions| ACTIONS["[read, write]"]
+```
+
+## nw-gmsa/nw-gmsa.github.com @ main
+
+**Package:** `fhir.nwgenomics.nhs.uk#0.2.2`
 
 **NHS North West Genomics**
 
@@ -1169,481 +5170,154 @@ graph TD;
     INT --> |Send Laboratory Report<br/>LAB-3 HL7 v2 ORU_R01| Practitioner[<b>Order Placer</b><br/>EPR]
 ```
 
-## hl7.fhir.cz.hdr (0.1.0)
+## SHIFT-Task-Force/SLS-ValueSets @ new-build
 
-**HL7 Czech Hospital Discharge Report Implementation Guide**
+**Package:** `SHIFT-Task-Force.SLS-ValueSets#0.1.0`
 
-[Build](https://build.fhir.org/ig/HL7-cz/hdr/branches/Pavlina) · [GitHub](https://github.com/HL7-cz/hdr/tree/Pavlina) · [Canonical](https://hl7.cz/fhir/hdr/ImplementationGuide/hl7.fhir.cz.hdr)
+**SHIFT SLS ValueSets Implementation Guide**
 
-FHIR 4.0.1 · 2026-04-10
+[Build](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build) · [GitHub](https://github.com/SHIFT-Task-Force/SLS-ValueSets/tree/new-build) · [Canonical](http://SHIFT-Task-Force.github.io/SLS-ValueSets/ImplementationGuide/SHIFT-Task-Force.SLS-ValueSets)
 
-### implementation-notes.html (#1) — [view page](https://build.fhir.org/ig/HL7-cz/hdr/branches/Pavlina/implementation-notes.html)
+FHIR 4.0.1 · 2026-03-04
+
+### sls.html (#1) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/sls.html)
 
 ```mermaid
-classDiagram
-  direction LR
-  class CZ_BundleHDR{
-    <<Bundle>>
-  }
-  CZ_BundleHDR *-- "1" CZ_CompositionHdr
-  CZ_BundleHDR *-- "1" CZ_PatientCore
-  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
-  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
-  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
-  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
-  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
-  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
-  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
-  CZ_EncounterHdr *-- "1" CZ_PatientCore
-  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
-  
+graph TD
+  A[DocumentReference or Bundle] --> B[Code Analysis Engine]
+  B --> C{Sensitive Topic Detected?}
+  C -->|Yes| D[Apply meta.security Labels]
+  C -->|No| E[No Labeling Needed]
 
-  CZ_CompositionHdr --> CZ_PractitionerRole: attester[legalAuthenticator]
-  CZ_CompositionHdr --> CZ_PractitionerRole: attester[resultValidator]
-  CZ_CompositionHdr --> CZ_PractitionerRole: author
-  CZ_CompositionHdr --> CZ_PatientCore: subject
-  CZ_CompositionHdr --> CZ_EncounterHdr: period [start]
-  CZ_CompositionHdr --> CZ_EncounterHdr: period [end]
-  CZ_EncounterHdr --> CZ_OrganizationCore: serviceProvider
-  CZ_CompositionHdr --> CZ_OrganizationCore: castodian
+  D --> F[Updated Resource with Labels]
+  F --> G[Provenance]
+  G --> H[Agent: NLP Engine]
+  G --> I[Entity: Original Resource]
+
+  F --> J[AuditEvent]
+  J --> K[Who/What/When/Where]
 ```
 
-### implementation-notes-cs.html (#2) — [view page](https://build.fhir.org/ig/HL7-cz/hdr/branches/Pavlina/implementation-notes-cs.html)
+### ab352.html (#2) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/ab352.html)
 
 ```mermaid
-classDiagram
-  direction LR
-  class CZ_BundleHDR{
-    <<Bundle>>
-  }
-  CZ_BundleHDR *-- "1" CZ_CompositionHdr
-  CZ_BundleHDR *-- "1" CZ_PatientCore
-  CZ_BundleHDR *-- "0..*" CZ_PractionerCore
-  CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
-  CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
-  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
-  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
-  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
-  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
-  CZ_EncounterHdr *-- "1" CZ_PatientCore
-  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
-  
+graph TD
+    Start((Medical Record Action)) --> Destination{Destination?}
 
-  CZ_CompositionHdr --> CZ_PractitionerRole: attester[legalAuthenticator]
-  CZ_CompositionHdr --> CZ_PractitionerRole: attester[resultValidator]
-  CZ_CompositionHdr --> CZ_PractitionerRole: author
-  CZ_CompositionHdr --> CZ_PatientCore: subject
-  CZ_CompositionHdr --> CZ_EncounterHdr: period [start]
-  CZ_CompositionHdr --> CZ_EncounterHdr: period [end]
-  CZ_EncounterHdr --> CZ_OrganizationCore: serviceProvider
-  CZ_CompositionHdr --> CZ_OrganizationCore: castodian
+    %% IN-STATE FLOW
+    Destination -->|CA Data Exchange| InState[<b>IN-STATE</b>]
+    InState --> DxFGate{Specific Consent on File?}
+    
+    DxFGate -->|No| AutoFilter[<b>AUTO-FILTER: ENABLED</b>]
+    AutoFilter -->|Action| Scrub[Scrub Sensitive Codes]
+    Scrub --> SharePartial[Share General Data Only]
+    
+    DxFGate -->|Yes| FilterOff[<b>Follow Consent #40;AUTO-FILTER:disabled#41;</b>]
+    FilterOff --> ShareFull[Share Consent Permitted Record via DxF]
+
+    %% OUT-OF-STATE FLOW
+    Destination -->|Cross Border| OutState[<b>OUT-OF-STATE</b>]
+    OutState --> ShieldGate{Specific Consent on File?}
+    
+    ShieldGate -->|No| Block[<b>AB 352 SHIELD: BLOCKED</b>]
+    Block --> Partial[Release Non-Sensitive Data Only]
+    
+    ShieldGate -->|Yes| Consented[<b>Follow Consent</b>]
+    Consented --> Full[Release Consent Permitted Record]
+
+    %% Formatting
+    style AutoFilter fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+    style FilterOff fill:#9f9,stroke:#333
+    style Block fill:#f99,stroke:#333
 ```
 
-## hl7.fhir.cz.ems (0.0.2)
-
-**HL7 Czech EMS Implementation Guide**
-
-[Build](https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master) · [GitHub](https://github.com/HL7-cz/cz-ems/tree/master) · [Canonical](https://hl7.cz/fhir/cz-ems/ImplementationGuide/hl7.fhir.cz.ems)
-
-FHIR 4.0.1 · 2026-04-09
-
-### implementation-notes.html (#1) — [view page](https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes.html)
+### ab352.html (#3) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/ab352.html)
 
 ```mermaid
-classDiagram
-  direction LR
-  class CZ_BundleEms{
-    <<Bundle>>
-  }
-  CZ_BundleEms *-- "1..1" CZ_CompositionEms
-  CZ_BundleEms *-- "1..1" CZ_TaskEms
-  CZ_BundleEms *-- "1..*" CZ_EncounterEms
-  CZ_BundleEms *-- "1..*" CZ_PatientCore
-  CZ_BundleEms *-- "0..*" CZ_Coverage
-  CZ_BundleEms *-- "0..*" CZ_Practioner
-  CZ_BundleEms *-- "0..*" CZ_DeviceObserver
-  CZ_BundleEms *-- "0..*" CZ_OrganizationCore
-  CZ_BundleEms *-- "0..*" CZ_CareTeamEms
-  CZ_BundleEms *-- "0..*" CZ_CarePlanEms
-  CZ_BundleEms *-- "0..*" CZ_CommunicationEms
-  CZ_BundleEms *-- "0..*" CZ_ConditionEms
-  CZ_BundleEms *-- "0..*" CZ_AllergyIntoleranceEms
-  CZ_BundleEms *-- "0..*" CZ_FamilyMemberHistoryEms
-  CZ_BundleEms *-- "0..*" CZ_FlagEms
-  CZ_BundleEms *-- "0..*" CZ_ImmunizationEms
-  CZ_BundleEms *-- "0..*" CZ_ImmunizationRecommendationEms
-  CZ_BundleEms *-- "0..*" CZ_LocationEms
-  CZ_BundleEms *-- "0..*" CZ_VehicleLocationEms
-  CZ_BundleEms *-- "0..*" CZ_MedicationAdministrationEms
-  CZ_BundleEms *-- "0..*" CZ_ProcedureEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationBMIEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationHeightEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationInfectiousContactEMS
-  CZ_BundleEms *-- "0..*" CZ_ObservationOtherOFEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationOxygenEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationSDOHEMS
-  CZ_BundleEms *-- "0..*" CZ_ObservationTravelEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationVitalSignsEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationWeightEms
-  
-  CZ_TaskEms -->  CZ_CompositionEms: composition
+flowchart TD
 
-  CZ_CompositionEms --> CZ_TaskEms: extension[basedOn]  
-  CZ_CompositionEms --> CZ_EncounterEms: encounter
-  CZ_CompositionEms --> CZ_Practioner: author[author]
-  CZ_CompositionEms --> CZ_DeviceObserver: author[authoring-device]
-  CZ_CompositionEms --> CZ_Practioner: informationRecipient[legalAuthenticator]
-  CZ_CompositionEms --> CZ_OrganizationCore: custodian
-  CZ_CompositionEms --> CZ_PatientCore: subject
-  CZ_CompositionEms --> CZ_ObservationBMIEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationHeightEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationInfectiousContactEMS: section[findings]
-  CZ_CompositionEms --> CZ_ObservationOtherOFEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationOxygenEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationSDOHEMS: section[findings]
-  CZ_CompositionEms --> CZ_ObservationTravelEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationVitalSignsEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationWeightEms: section[findings]
-  CZ_CompositionEms --> CZ_TaskEms: section[dispatch]
-  CZ_CompositionEms --> CZ_LocationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_CommunicationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_VehicleLocationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_CareTeamEms: section[dispatch]
-  CZ_CompositionEms --> CZ_Practioner: section[dispatch]
-  CZ_CompositionEms --> CZ_PractionerRole: section[dispatch]
-  CZ_CompositionEms --> CZ_RelatedPerson: section[dispatch]
-  CZ_CompositionEms --> CZ_TaskEms: section[timeline]
-  CZ_CompositionEms --> CZ_CommunicationEms: section[timeline]
-  CZ_CompositionEms --> CZ_EncounterEms: section[timeline]
-  CZ_CompositionEms --> CZ_ConditionEms: section[patientHx]
-  CZ_CompositionEms --> CZ_MedicalDevice: section[medicalDevices]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[significantProcedures]
-  CZ_CompositionEms --> CZ_ObservationTravelEms: section[TravelHx]
-  CZ_CompositionEms --> CZ_ImmunizationEMS: section[immunizations]
-  CZ_CompositionEms --> CZ_ImmunizationRecommendationEMS: section[immunizations]
-  CZ_CompositionEms --> DocumentReference: section[immunizations]
-  CZ_CompositionEms --> CZ_ObservationInfectiousContactEMS: section[infectiousContacts]
-  CZ_CompositionEms --> CZ_FamilyMemberHistoryEms: section[familyHistory]
-  CZ_CompositionEms --> CZ_ObservationSDOHEMS: section[socialHistory]
-  CZ_CompositionEms --> Observation: section[alcoholUse]
-  CZ_CompositionEms --> Observation: section[tobaccoUse]
-  CZ_CompositionEms --> Observation: section[drugUse]
-  CZ_CompositionEms --> CZ_AllergyIntoleranceEms: section[allergies]
-  CZ_CompositionEms --> CZ_FlagEms: section[allergies]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[procedure]
-  CZ_CompositionEms --> CZ_ConditionEms: section[diagnosticSummary]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[courseOfTreatment]
-  CZ_CompositionEms --> CZ_CarePlanEms: section[recommendations]
-  CZ_CompositionEms --> CZ_Coverage: section[payers]
-  CZ_CompositionEms --> CZ_Attachment: section[attachments]
+    A["Request to access/disclose data"] --> B["PEP collects attributes"]
+    B --> C["Attributes: action, sensitivity, recipient jurisdiction, purpose"]
+    C --> D["PDP evaluates PolicySet urn:org:hospital:policyset:AB352"]
+
+    D --> E1{"Action = disclose?"}
+    E1 -- Yes --> F1{"Sensitivity in AB352 set?"}
+    F1 -- Yes --> G1{"Recipient jurisdiction != CA?"}
+    G1 -- Yes --> H1["Deny<br/>Obligation: log-denial"]
+    G1 -- No --> I1["Continue evaluation<br/>(local org policies)"]
+    F1 -- No --> I1
+
+    E1 -- No --> E2{"Action = access/use?"}
+    E2 -- Yes --> F2{"Recipient jurisdiction = CA<br/>AND purpose = TREATMENT?"}
+    F2 -- Yes --> H2["Permit<br/>Obligation: segment-sensitive-data"]
+    F2 -- No --> I2["NotApplicable or other org policies"]
+
+    E2 -- No --> I2
+
+    H2 --> J["PEP enforces segmentation<br/>(EHR/HIE data segregation)"]
+    H1 --> K["PEP denies disclosure<br/>and records AuditEvent"]
 ```
 
-### implementation-notes-cs.html (#2) — [view page](https://build.fhir.org/ig/HL7-cz/cz-ems/branches/master/implementation-notes-cs.html)
+### ab352.html (#4) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/ab352.html)
 
 ```mermaid
-classDiagram
-  direction LR
-  class CZ_BundleEms{
-    <<Bundle>>
-  }
-  CZ_BundleEms *-- "1..1" CZ_CompositionEms
-  CZ_BundleEms *-- "1..1" CZ_TaskEms
-  CZ_BundleEms *-- "1..*" CZ_EncounterEms
-  CZ_BundleEms *-- "1..*" CZ_PatientCore
-  CZ_BundleEms *-- "0..*" CZ_Coverage
-  CZ_BundleEms *-- "0..*" CZ_Practioner
-  CZ_BundleEms *-- "0..*" CZ_DeviceObserver
-  CZ_BundleEms *-- "0..*" CZ_OrganizationCore
-  CZ_BundleEms *-- "0..*" CZ_CareTeamEms
-  CZ_BundleEms *-- "0..*" CZ_CarePlanEms
-  CZ_BundleEms *-- "0..*" CZ_CommunicationEms
-  CZ_BundleEms *-- "0..*" CZ_ConditionEms
-  CZ_BundleEms *-- "0..*" CZ_AllergyIntoleranceEms
-  CZ_BundleEms *-- "0..*" CZ_FamilyMemberHistoryEms
-  CZ_BundleEms *-- "0..*" CZ_FlagEms
-  CZ_BundleEms *-- "0..*" CZ_ImmunizationEms
-  CZ_BundleEms *-- "0..*" CZ_ImmunizationRecommendationEms
-  CZ_BundleEms *-- "0..*" CZ_LocationEms
-  CZ_BundleEms *-- "0..*" CZ_VehicleLocationEms
-  CZ_BundleEms *-- "0..*" CZ_MedicationAdministrationEms
-  CZ_BundleEms *-- "0..*" CZ_ProcedureEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationBMIEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationHeightEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationInfectiousContactEMS
-  CZ_BundleEms *-- "0..*" CZ_ObservationOtherOFEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationOxygenEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationSDOHEMS
-  CZ_BundleEms *-- "0..*" CZ_ObservationTravelEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationVitalSignsEms
-  CZ_BundleEms *-- "0..*" CZ_ObservationWeightEms
-  
-  CZ_TaskEms --> CZ_CompositionEms: composition
+graph TD
+    PS["<b>PolicySet:</b> AB352 Compliance<br/>Target: CA-HOSPITAL<br/>Combining Alg: Deny-Overrides"]
+    
+    PS --> P1_T
+    PS --> P2_T
+    PS --> P3_T
 
-  CZ_CompositionEms --> CZ_TaskEms: extension[basedOn]  
-  CZ_CompositionEms --> CZ_EncounterEms: encounter
-  CZ_CompositionEms --> CZ_Practioner: author[author]
-  CZ_CompositionEms --> CZ_DeviceObserver: author[authoring-device]
-  CZ_CompositionEms --> CZ_Practioner: informationRecipient[legalAuthenticator]
-  CZ_CompositionEms --> CZ_OrganizationCore: custodian
-  CZ_CompositionEms --> CZ_PatientCore: subject
-  CZ_CompositionEms --> CZ_ObservationBMIEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationHeightEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationInfectiousContactEMS: section[findings]
-  CZ_CompositionEms --> CZ_ObservationOtherOFEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationOxygenEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationSDOHEMS: section[findings]
-  CZ_CompositionEms --> CZ_ObservationTravelEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationVitalSignsEms: section[findings]
-  CZ_CompositionEms --> CZ_ObservationWeightEms: section[findings]
-  CZ_CompositionEms --> CZ_TaskEms: section[dispatch]
-  CZ_CompositionEms --> CZ_LocationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_CommunicationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_VehicleLocationEms: section[dispatch]
-  CZ_CompositionEms --> CZ_CareTeamEms: section[dispatch]
-  CZ_CompositionEms --> CZ_Practioner: section[dispatch]
-  CZ_CompositionEms --> CZ_PractionerRole: section[dispatch]
-  CZ_CompositionEms --> CZ_RelatedPerson: section[dispatch]
-  CZ_CompositionEms --> CZ_TaskEms: section[timeline]
-  CZ_CompositionEms --> CZ_CommunicationEms: section[timeline]
-  CZ_CompositionEms --> CZ_EncounterEms: section[timeline]
-  CZ_CompositionEms --> CZ_ConditionEms: section[patientHx]
-  CZ_CompositionEms --> CZ_MedicalDevice: section[medicalDevices]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[significantProcedures]
-  CZ_CompositionEms --> CZ_ObservationTravelEms: section[TravelHx]
-  CZ_CompositionEms --> CZ_ImmunizationEMS: section[immunizations]
-  CZ_CompositionEms --> CZ_ImmunizationRecommendationEMS: section[immunizations]
-  CZ_CompositionEms --> DocumentReference: section[immunizations]
-  CZ_CompositionEms --> CZ_ObservationInfectiousContactEMS: section[infectiousContacts]
-  CZ_CompositionEms --> CZ_FamilyMemberHistoryEms: section[familyHistory]
-  CZ_CompositionEms --> CZ_ObservationSDOHEMS: section[socialHistory]
-  CZ_CompositionEms --> Observation: section[alcoholUse]
-  CZ_CompositionEms --> Observation: section[tobaccoUse]
-  CZ_CompositionEms --> Observation: section[drugUse]
-  CZ_CompositionEms --> CZ_AllergyIntoleranceEms: section[allergies]
-  CZ_CompositionEms --> CZ_FlagEms: section[allergies]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[procedure]
-  CZ_CompositionEms --> CZ_ConditionEms: section[diagnosticSummary]
-  CZ_CompositionEms --> CZ_ProcedureEms: section[courseOfTreatment]
-  CZ_CompositionEms --> CZ_CarePlanEms: section[recommendations]
-  CZ_CompositionEms --> CZ_Coverage: section[payers]
-  CZ_CompositionEms --> CZ_Logo: section[attachments]
-```
-
-## iknl.fhir.r4.pzp (1.0.0-rc2)
-
-**Advance Care Planning (PZP)**
-
-[Build](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable) · [GitHub](https://github.com/IKNL/PZP-FHIR-R4/tree/issue137-legallycapable) · [Canonical](https://api.iknl.nl/docs/pzp/r4/ImplementationGuide/iknl.fhir.r4.pzp)
-
-FHIR 4.0.1 · 2026-04-09
-
-### data-model.html (#1) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-model.html)
-
-```mermaid
-flowchart TB
-
-    %% ---- Style Definitions for Categories ----
-    classDef C0 fill:#e6f3ff,stroke:#b3d9ff,color:#000
-    classDef C1 fill:#e6ffe6,stroke:#b3ffb3,color:#000
-    classDef C2 fill:#fff5e6,stroke:#ffddb3,color:#000
-    classDef C3 fill:#f0e6ff,stroke:#d9b3ff,color:#000
-    classDef C4 fill:#f2f2f2,stroke:#cccccc,color:#000
-
-    %% ---- Subgraph Definitions ----
-    subgraph "CommunicationRequest"
-        ACPInformRelativesRequest
-    end
-
-    subgraph "Consent"
-        ACPAdvanceDirective
-        ACPTreatmentDirective
-    end
-
-    subgraph "Device"
-        ACPMedicalDeviceProductICD
-    end
-
-    subgraph "DeviceUseStatement"
-        ACPMedicalDevice
-    end
-
-    subgraph "Encounter"
-        ACPEncounter
-    end
-
-    subgraph "Goal"
-        ACPMedicalPolicyGoal
-    end
-
-    subgraph "Patient"
-        ACPPatient
-    end
-
-    subgraph "Practitioner"
-        ACPHealthProfessionalPractitioner
-    end
-
-    subgraph "PractitionerRole"
-        ACPHealthProfessionalPractitionerRole
-    end
-
-    subgraph "Procedure"
-        ACPProcedure
-    end
-
-    subgraph "RelatedPerson"
-        ACPContactPerson
-    end
-
-    subgraph "Observation"
-        ACPOrganDonationChoiceRegistration
-        ACPPositionRegardingEuthanasia
-        ACPPreferredPlaceOfDeath
-        ACPSenseOfPurpose
-        ACPSpecificCareWishes
-    end
-
-    %% ---- Style Assignments ----
-    class ACPInformRelativesRequest C2
-    class ACPAdvanceDirective C0
-    class ACPTreatmentDirective C0
-    class ACPMedicalDeviceProductICD C2
-    class ACPMedicalDevice C2
-    class ACPEncounter C3
-    class ACPMedicalPolicyGoal C0
-    class ACPSpecificCareWishes C0
-    class ACPPreferredPlaceOfDeath C0
-    class ACPPositionRegardingEuthanasia C0
-    class ACPOrganDonationChoiceRegistration C0
-    class ACPSenseOfPurpose C0
-    class ACPPatient C1
-    class ACPHealthProfessionalPractitioner C1
-    class ACPHealthProfessionalPractitionerRole C1
-    class ACPProcedure C3
-    class ACPContactPerson C1
-
-    %% ---- Resource Type References ----
-    CommunicationRequest -- "encounter" --> Encounter
-    CommunicationRequest -- "sender, subject" --> Patient
-    CommunicationRequest -- "requester" --> PractitionerRole
-    CommunicationRequest -- "recipient" --> RelatedPerson
-    Consent -- "patient, provision.actor" --> Patient
-    Consent -- "provision.actor" --> PractitionerRole
-    Consent -- "provision.actor" --> RelatedPerson
-    DeviceUseStatement -- "device" --> Device
-    DeviceUseStatement -- "subject" --> Patient
-    DeviceUseStatement -- "extension" --> PractitionerRole
-    Encounter -- "subject" --> Patient
-    Encounter -- "participant" --> PractitionerRole
-    Encounter -- "reasonReference" --> Procedure
-    Encounter -- "participant" --> RelatedPerson
-    Goal -- "subject" --> Patient
-    Observation -- "encounter" --> Encounter
-    Observation -- "subject" --> Patient
-    Observation -- "performer" --> PractitionerRole
-    Patient -- "contact.extension" --> RelatedPerson
-    PractitionerRole -- "practitioner" --> Practitioner
-    Procedure -- "encounter" --> Encounter
-    Procedure -- "performer, subject" --> Patient
-    Procedure -- "performer" --> PractitionerRole
-    Procedure -- "performer" --> RelatedPerson
-    RelatedPerson -- "patient" --> Patient
-```
-
-### data-exchange.html (#2) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-exchange.html)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant C as ACP Actor Consulter<br />(Client)
-    participant S as ACP Actor Provider<br />(Server)
-
-    note over C, S: Prerequisite: client possesses access token & Patient ID
-
-    rect rgb(240, 248, 255)
-  
-        par 
-            %% 1. Procedures
-            C->>S: GET /Procedure?patient=Patient/[id]<br />&code=sct|713603004<br />&_include=Procedure:encounter
-            activate S
-            S-->>C: 200 OK: Bundle (Procedure + Encounter)
-            deactivate S
-        and
-            %% 2. Consent (TreatmentDirective)
-            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|treatment<br />&category=http://snomed.info/sct|129125009<br />&_include=Consent:actor
-            activate S
-            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
-            deactivate S
-        and
-            %% 3. Consent (AdvanceCareDirective)
-            C->>S: GET /Consent?patient=Patient/[id]<br />&scope=http://terminology.hl7.org/CodeSystem/consentscope|adr<br />&category=http://terminology.hl7.org/CodeSystem/consentcategorycodes|acd<br />&_include=Consent:actor
-            activate S
-            S-->>C: 200 OK: Bundle (Consent + PractitionerRole + RelatedPerson)
-            deactivate S
-        and
-            %% 4. Goals
-            C->>S: GET /Goal?patient=Patient/[id]<br />&category=http://snomed.info/sct|713603004
-            activate S
-            S-->>C: 200 OK: Bundle (Goal)
-            deactivate S
-        and
-            %% 5. Observations
-            C->>S: GET /Observation?patient=Patient/[id]<br />&code=http://snomed.info/sct|153851000146100,395091006,340171000146104,247751003
-            activate S
-            S-->>C: 200 OK: Bundle (Observation)
-            deactivate S
-        and
-            %% 6. Devices
-            C->>S: GET /DeviceUseStatement?patient=Patient/[id]<br />&device.type=http://snomed.info/sct|72506001,465460004,468542000,704707009,1263462004,1236894001<br />&_include=DeviceUseStatement:device
-            activate S
-            S-->>C: 200 OK: Bundle (DeviceUseStatement + Device)
-            deactivate S
-        and
-            %% 7. CommunicationRequests
-            C->>S: GET /CommunicationRequest?patient=Patient/[id]<br />&category=http://snomed.info/sct|223449006
-            activate S
-            S-->>C: 200 OK: Bundle (CommunicationRequest)
-            deactivate S
-        end
-    end
-
-    opt Resolve Additional References
-        note over C: If resources contain unresolved references<br />(e.g., to Practitioner), Client performs subsequent GETs
-        C->>S: GET [Reference URL]
-        S-->>C: 200 OK (Referenced Resource)
-    end
-```
-
-### data-exchange.html (#3) — [view page](https://build.fhir.org/ig/IKNL/PZP-FHIR-R4/branches/issue137-legallycapable/data-exchange.html)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant C as ACP Actor Consulter<br>(Client)
-    participant S as ACP Actor Provider<br>(Server)
-
-    note over C, S: Prerequisite: client possesses access token & Patient ID
-
-    rect rgb(240, 248, 255)
+    %% Policy 1
+    subgraph P1 ["Policy 1: Data Disclosure Control"]
+        P1_T["Target: Action = DISCLOSE"]
+        P1_R1["Rule: Deny Out-of-State"]
+        P1_C{"Condition:<br/>Is Sensitive Health Data?<br/>AND Recipient != CA?"}
+        P1_O["Obligation: Log Denial Reason"]
         
-        C->>S: GET /QuestionnaireResponse?subject=Patient/[id]<br>&questionnaire=https://api.iknl.nl/docs/pzp/r4/Questionnaire/ACP-zib2020
-        activate S
-
-        S-->>C: 200 OK: Bundle (QuestionnaireResponse)
-
-        deactivate S
+        P1_T --> P1_R1
+        P1_R1 --> P1_C
+        P1_R1 --> P1_O
     end
+
+    %% Policy 2
+    subgraph P2 ["Policy 2: In-State Clinical Use"]
+        P2_T["Target: Action = ACCESS/USE"]
+        P2_R1["Rule: Permit Treatment"]
+        P2_C{"Condition:<br/>Recipient = CA?<br/>AND Purpose = TREATMENT?"}
+        
+        P2_T --> P2_R1
+        P2_R1 --> P2_C
+    end
+
+    %% Policy 3
+    subgraph P3 ["Policy 3: Mandatory Segmentation"]
+        P3_T["Target: Any"]
+        P3_R1["Rule: Permit"]
+        P3_O["Obligation: Trigger Segmentation Engine<br/>for Abortion/Gender Care/Contraception"]
+        
+        P3_T --> P3_R1
+        P3_R1 --> P3_O
+    end
+
+    %% Styling
+    style PS fill:#f9f,stroke:#333,stroke-width:4px
+    style P1_R1 fill:#ff9999,stroke:#c00
+    style P2_R1 fill:#99ff99,stroke:#0c0
+    style P3_O fill:#bbdaff,stroke:#00f
 ```
 
-## hl7.fhir.au.ps (1.0.0-ci-build)
+## steveswinsburg/au-fhir-ps @ master
+
+**Package:** `hl7.fhir.au.ps#0.6.0-cibuild`
 
 **AU Patient Summary Implementation Guide**
 
-[Build](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master) · [GitHub](https://github.com/hl7au/au-fhir-ps/tree/master) · [Canonical](http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps)
+[Build](https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master) · [GitHub](https://github.com/steveswinsburg/au-fhir-ps/tree/master) · [Canonical](http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps)
 
-FHIR 4.0.1 · 2026-04-08
+FHIR 4.0.1 · 2026-02-10
 
-### uc-interstate.html (#1) — [view page](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-interstate.html)
+### uc-interstate.html (#1) — [view page](https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-interstate.html)
 
 ```mermaid
 ---
@@ -1659,7 +5333,7 @@ sequenceDiagram
   Attending GP ->> Clinic CIS: View Patient Summary
 ```
 
-### uc-referral.html (#2) — [view page](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/uc-referral.html)
+### uc-referral.html (#2) — [view page](https://build.fhir.org/ig/steveswinsburg/au-fhir-ps/branches/master/uc-referral.html)
 
 ```mermaid
 ---
@@ -1675,382 +5349,205 @@ sequenceDiagram
   Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
 ```
 
-## fhir.nl.gf (0.3.0)
+## trifork/ch-epr-fhir @ hpd-mapping
 
-**Netherlands - Generic Functions for data exchange Implementation Guide**
+**Package:** `ch.fhir.ig.ch-epr-fhir#5.0.0`
 
-[Build](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential) · [GitHub](https://github.com/nuts-foundation/nl-generic-functions-ig/tree/add-healthcare-professional-delegation-credential) · [Canonical](http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf)
+**CH EPR FHIR (R4)**
 
-FHIR 4.0.1 · 2026-04-08
+[Build](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping) · [GitHub](https://github.com/trifork/ch-epr-fhir/tree/hpd-mapping) · [Canonical](http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir)
 
-### credential-DeziUserCredential.html (#1) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-DeziUserCredential.html)
+FHIR 4.0.1 · 2026-04-13
 
-```mermaid
-graph TD
-    VC[DeziUserCredential]
-    VC -->|credentialSubject| HP[HealthcareProvider]
-    HP -->|id| DID["did:web:za1.example"]
-    HP -->|identifier| URA["87654321 (URA)"]
-    HP -->|name| NAME["Zorgaanbieder"]
-    HP -->|employs| HW[HealthcareWorker]
-    HW -->|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
-    HW -->|initials| INIT["B.B."]
-    HW -->|surnamePrefix| PRE["van der"]
-    HW -->|surname| SUR["Jansen"]
-    HW -->|role| ROLE["01.041"]
-    HW -->|role_name| ROLENAME["Revalidatiearts"]
-    HW -->|role_registry| ROLEREG["http://www.dezi.nl/rol_bron/big"]
-```
-
-### credential-HealthcareProfessionalDelegationCredential.html (#2) — [view page](https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-healthcare-professional-delegation-credential/credential-HealthcareProfessionalDelegationCredential.html)
+### iti-mhd.html (#1) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-mhd.html)
 
 ```mermaid
-graph TD
-    VC[HealthcareProfessionalDelegationCredential]
-    VC -->|issuer| ISSUER["did:x509 (UZI Z-pas)"]
-    VC -->|credentialSubject| HP["HealthcareProvider"]
-    HP -->|id| HPID["did:web:huisarts-delinden.nl"]
-    HP -->|hasDelegation| DEL["Delegation"]
-    DEL -->|delegatedBy| HCP["HealthcareProfessional"]
-    HCP -->|identifier| HCPID["Identifier"]
-    HCPID -->|system| HCPSYS["http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"]
-    HCPID -->|value| HCPVAL["90001234 (UZI-nr-pers)"]
-    HCP -->|roleCode| HCPROLE["01.015 (UZI rolcode)"]
-    DEL -->|scope| SCOPE["DelegationScope"]
-    SCOPE -->|authorizationRule| RULE["http://gis-nl.example/authorizationRule/example"]
-    SCOPE -->|authorizedActions| ACTIONS["[read, write]"]
-```
-
-## elga.moped (0.1.0)
-
-**Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)**
-
-[Build](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile) · [GitHub](https://github.com/HL7Austria/ELGA-MOPED-R5/tree/802-entlassen-puzzleteile) · [Canonical](https://elga.moped.at/ImplementationGuide/elga.moped)
-
-FHIR 5.0.0 · 2026-04-08
-
-### moped_konzepte.html (#1) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/moped_konzepte.html)
-
-```mermaid
-graph TD
-    Master[MasterComposition]
-
-    subgraph Spezialisierungen
-        Aufnahme[AufnahmeComposition<br />Patient & Encounter vorhanden]
-        Anfrage[AnfrageComposition<br />Versicherer vorhanden]
-        Antwort[AntwortComposition<br />VAEResponse vorhanden]
-        Entlassungsaviso[EntlassungsAvisoComposition<br />Entlassungsdatum vorhanden]
-        Entlassung[EntlassungVollstaendigComposition<br />Entlassungsdatum und Hauptdiagnose vorhanden]
-        Abrechnung[AbrechnungsComposition<br />Patient Entlassen, Diagnosen und Leistungen erfasst]
-        Entscheiden[EntscheidenComposition<br />]
-        Siegel[SiegelComposition<br />Composition.status=final]
-    end
-
-    Master --> Aufnahme
-    Master --> Anfrage
-    Master --> Antwort
-    Master --> Entlassung
-    Master --> Abrechnung
-    Master --> Entscheiden
-    Master --> Siegel
-```
-
-### moped_konzepte.html (#2) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/moped_konzepte.html)
-
-```mermaid
-graph TD
-  CompV1[Composition/123/_history/1]
-  CompV2[Composition/123/_history/2]
-  CompV3[Composition/123/_history/3]
-
-  Prov1[Provenance A]
-  Prov2[Provenance B]
-  Prov3[Provenance C]
-
-  Prov1 --> CompV1
-  Prov2 --> CompV2
-  Prov3 --> CompV3
-```
-
-### actors.html (#3) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/actors.html)
-
-```mermaid
-graph LR
-    KH[Krankenanstalt]
-    Moped[Moped] 
-    KH --->|POST $aufnehmen| Moped 
-    KH -->|POST $update| Moped
-    KH -->|POST $anfragen| Moped
-    KH -->|POST $entlassen| Moped
-    KH -->|POST $abrechnen| Moped
-    KH -->|POST $stornieren| Moped
-    KH -->|POST $einmelden| Moped
-    Moped -->|GET VAEResponse| KH
-    Moped --->|GET ClaimResponse| KH
-```
-
-### actors.html (#4) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/actors.html)
-
-```mermaid
-graph LR
-    SV[Sozialversicherung]
-    Moped[Moped] 
-    Moped --->|GET VAERequest?status=active| SV
-    Moped --->|GET ARKRequest?status=active| SV
-    SV --->|POST $antworten| Moped
-```
-
-### actors.html (#5) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/actors.html)
-
-```mermaid
-graph LR
-    LGF[Landesgesundheitsfonds]
-    Moped[Moped] 
-    Moped --->|GET Claim| LGF
-    Moped --->|GET QuestionnaireResponse| LGF
-    LGF --->|POST $entscheiden| Moped
-    LGF --->|POST $melden| Moped
-```
-
-### actors.html (#6) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/actors.html)
-
-```mermaid
-graph LR
-    BMSGPK[BMSGPK]
-    Moped[Moped] 
-    Moped --->|GET Composition?status=final| BMSGPK 
-    Moped --->|POST Measure/$evaluate-measure| BMSGPK
-```
-
-### actors.html (#7) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/actors.html)
-
-```mermaid
-graph LR
-    Register[Register]
-    Moped[Moped] 
-    KH[Krankenanstalt]
-    KH --->|POST $update<br />einer fallbezogenen QuestionnaireResponse| Moped 
-    Moped --->|GET QuestionnaireResponse| Register
-```
-
-### workflowmanagement.html (#8) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/workflowmanagement.html)
-
-```mermaid
-stateDiagram-v2
-    [*] --> partial : $aufnehmen (initiale Composition)
-    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
-    partial --> final : Freigabe durch LGF
-    
-    partial --> entered_in_error : $stornieren
-```
-
-### workflowmanagement.html (#9) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/workflowmanagement.html)
-
-```mermaid
-stateDiagram-v2
-    [*] --> in_progress : $aufnehmen
-    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
-    on_hold --> in_progress : Rückkehr aus Beurlaubung
-
-    in_progress --> discharged : $update 
-    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
-
-    in_progress --> entered_in_error : $stornieren
-    on_hold --> entered_in_error : $stornieren
-    discharged --> entered_in_error : $stornieren
-```
-
-### workflowmanagement.html (#10) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/workflowmanagement.html)
-
-```mermaid
-stateDiagram-v2
-    [*] --> active : Ressource wird eingebracht
-
-    active --> cancelled : Stornierung durch KH
-    active --> entered_in_error : Fehler erkannt
-    active --> [*] : Verarbeitet
-```
-
-### AF_moped_fall_prozessuebergreifend.html (#11) — [view page](https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/802-entlassen-puzzleteile/AF_moped_fall_prozessuebergreifend.html)
-
-```mermaid
----
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
-```
-
-## hl7.fhir.uv.aitransparency (1.0.0-ballot)
-
-**AI Transparency on FHIR**
-
-[Build](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main) · [GitHub](https://github.com/HL7/aitransparency-ig/tree/main) · [Canonical](http://hl7.org/fhir/uv/aitransparency/ImplementationGuide/hl7.fhir.uv.aitransparency)
-
-FHIR 4.0.1 · 2026-03-30
-
-### general_guidance.html (#1) — [view page](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html)
-
-```mermaid
-classDiagram
-    class Resource {
-        <<FHIR Resource>>
-        id
-        meta.security = AIAIST
-        ...
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+           'fontSize': '14px'
+        }
     }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Query| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C(Document Responder own community)
+    B --> D(Document Responders federated communities)
 ```
 
-### general_guidance.html (#2) — [view page](https://build.fhir.org/ig/HL7/aitransparency-ig/branches/main/general_guidance.html)
+### iti-mhd.html (#2) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-mhd.html)
 
 ```mermaid
-classDiagram
-    direction LR
-    class Resource {
-        <<FHIR Resource>>
-        id
-        meta.security = AIAIST
-        ...
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
     }
-
-    class Provenance {
-        <<FHIR Resource>>
-        target : Reference resource created/updated
-        occurred : When
-        reason : `AIAST`
-        agent : Reference to AI Device
-        agent : References to other agents involved
-        entity : References to Model-Card DocumentReference
-        entity : References to other data used
-    }
-
-    class Device {
-        <<FHIR Resource>>
-        id
-        identifier
-        type = "AI"
-        extension : Specific kind of AI
-        modelNumber
-        manufacturer
-        manufactureDate
-        deviceName
-        version
-        owner
-        contact
-        url
-        note
-        safety
-        extension : model-card
-    }
-
-    class DocumentReference {
-        <<FHIR Resource>>
-        id
-        type = AImodelCard
-        category = AImodelCardMarkdownFormat | AImodelCardCHAIformat
-        description
-        version
-        data / url = codeable model-card details
-        data / url = pdf rendering
-    }
-
-    Resource "1..*" <-- Provenance : "Provenance.target"
-    Provenance --> Device : "Provenance.agent.who"
-    Provenance --> DocumentReference : "Provenance.entity.what"
+}%%
+flowchart LR
+    A[Document Consumer] -->|Retrieve| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C{own community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
 ```
 
-## hl7.fhir.uv.pocd (1.0.0)
-
-**Point-of-Care Device Implementation Guide**
-
-[Build](https://build.fhir.org/ig/HL7/uv-pocd/branches/version-1.1.0) · [GitHub](https://github.com/HL7/uv-pocd/tree/version-1.1.0) · [Canonical](http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd)
-
-FHIR 4.0.1 · 2026-03-27
-
-### overview.html — [view page](https://build.fhir.org/ig/HL7/uv-pocd/branches/version-1.1.0/overview.html)
+### iti-mhd.html (#3) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-mhd.html)
 
 ```mermaid
-graph TD
-    MDS["Medical Device System MDS<br/>Overall device system<br/>Device model and serial number<br/>Configuration and state"]
-    
-    VMD1["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., ECG module<br/>Model and serial number"]
-    VMD2["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., SpO2 module<br/>Model and serial number"]
-    VMD3["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., Infusion pump"]
-    
-    CH1["Channel<br/>Logical grouping<br/>e.g., Lead II"]
-    CH2["Channel<br/>Logical grouping<br/>e.g., Lead III"]
-    CH3["Channel<br/>Logical grouping"]
-    CH4["Channel<br/>Logical grouping<br/>e.g., Infusion line 1"]
-    
-    M1["Metric<br/>Measurement/Observation<br/>e.g., Heart Rate"]
-    M2["Metric<br/>Waveform<br/>e.g., ECG waveform"]
-    M3["Metric<br/>Measurement<br/>e.g., SpO2 %"]
-    M4["Metric<br/>Measurement<br/>e.g., Pulse Rate"]
-    M5["Metric<br/>Setting<br/>e.g., Infusion Rate"]
-    M6["Metric<br/>State<br/>e.g., Pump status"]
-    
-    MDS --> VMD1
-    MDS --> VMD2
-    MDS --> VMD3
-    
-    VMD1 --> CH1
-    VMD1 --> CH2
-    VMD2 --> CH3
-    VMD3 --> CH4
-    
-    CH1 --> M1
-    CH1 --> M2
-    CH2 --> M3
-    CH3 --> M4
-    CH4 --> M5
-    CH4 --> M6
-    
-    style MDS fill:#e1f5ff,stroke:#01579b,stroke-width:3px,color:#000
-    style VMD1 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
-    style VMD2 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
-    style VMD3 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
-    style CH1 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
-    style CH2 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
-    style CH3 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
-    style CH4 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
-    style M1 fill:#4fc3f7,stroke:#0297d1,color:#000
-    style M2 fill:#4fc3f7,stroke:#0297d1,color:#000
-    style M3 fill:#4fc3f7,stroke:#0297d1,color:#000
-    style M4 fill:#4fc3f7,stroke:#0297d1,color:#000
-    style M5 fill:#4fc3f7,stroke:#0297d1,color:#000
-    style M6 fill:#4fc3f7,stroke:#0297d1,color:#000
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Source] -->|Update Doc Metadata| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Source)
+    B --> C{own Community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
 ```
 
-## ch.fhir.ig.ch-umzh-connect (1.0.0-cibuild)
+### iti-67.html (#4) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-67.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+           'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Query| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C(Document Responder own community)
+    B --> D(Document Responders federated communities)
+```
+
+### iti-68.html (#5) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/iti-68.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Consumer] -->|Retrieve| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Consumer)
+    B --> C{own community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+### ch-mhd-1.html (#6) — [view page](https://build.fhir.org/ig/trifork/ch-epr-fhir/branches/hpd-mapping/ch-mhd-1.html)
+
+```mermaid
+%%{
+    init: {
+        'theme': 'neutral',
+        'themeVariables': {
+            'fontSize': '14px'
+        }
+    }
+}%%
+flowchart LR
+    A[Document Source] -->|Update Doc Metadata| B(Document Responder
+    Option Federated Cross Community Access
+    Grouped with Document Source)
+    B --> C{own Community?}
+    C -->|yes| D(Document Responder own community)
+    C -->|no| E(Document Responder federated community)
+```
+
+## umzhconnect/umzhconnect-ig @ mr_ortho_uc
+
+**Package:** `ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild`
 
 **CH UMZH Connect IG (R4)**
 
-[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/oe_mcsd) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
+[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/mr_ortho_uc) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
 
-FHIR 4.0.1 · 2026-03-24
+FHIR 4.0.1 · 2026-02-25
 
-### core-concepts.html (#1) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd/core-concepts.html)
+### usecase-referral-orthopedic.html — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/usecase-referral-orthopedic.html)
+
+```mermaid
+sequenceDiagram
+    title Referral - Orthopedic Surgery
+
+    participant HospitalP as HospitalP(lacer)
+    participant HospitalF as HospitalF(ulfiller)
+    activate HospitalP
+    HospitalP->>HospitalP: POST ServiceRequest-ReferralOrthopedicSurgery
+    HospitalP->>HospitalF: POST Task (basedOn/focus: ServiceRequest-ReferralOrthopedicSurgery)
+    activate HospitalF
+    HospitalF-->>HospitalP: created
+    deactivate HospitalP
+    deactivate HospitalF
+    
+    HospitalF->>HospitalP: GET Resources (Diagnoses, Medications, Reports)
+    activate HospitalF
+    activate HospitalP
+    HospitalP-->>HospitalF: return search results (Bundle)
+    deactivate HospitalF
+    deactivate HospitalP
+
+    Note over HospitalF: Request additional information<br/>(smoking status) via Questionnaire
+    HospitalF->>HospitalF: Update Task<br/>(owner: HospitalP, businessStatus: on-hold,<br/>output: QuestionnaireSmokingStatus)
+    activate HospitalF
+    HospitalF-->>HospitalP: Notify Task updated
+    activate HospitalP
+    HospitalP->>HospitalF: GET Task
+    HospitalF-->>HospitalP: Return Task
+    HospitalP->>HospitalF: GET Questionnaire by canonical
+    HospitalF-->>HospitalP: Return QuestionnaireSmokingStatus
+    HospitalP-->>HospitalP: Practitioner fills out Questionnaire
+    HospitalP->>HospitalF: POST QuestionnaireResponse
+    HospitalF-->>HospitalP: created
+    HospitalP->>HospitalF: PATCH Task (owner: HospitalF, input: QuestionnaireResponseSmokingStatus)
+    HospitalF-->>HospitalP: updated
+    deactivate HospitalP
+    deactivate HospitalF
+
+    HospitalF->>HospitalF: Update Task<br/>(businessStatus: completed, output: Report)
+    activate HospitalF
+    HospitalF-->>HospitalP: Notify Task updated
+    activate HospitalP
+    HospitalP->> HospitalF: GET Task?_id=...&_include=Task:ch-umzhconnectig-task-outputreference
+    HospitalF-->>HospitalP: return result (Bundle)
+    deactivate HospitalP
+    deactivate HospitalF
+```
+
+## umzhconnect/umzhconnect-ig @ main
+
+**Package:** `ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild`
+
+**CH UMZH Connect IG (R4)**
+
+[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/main) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
+
+FHIR 4.0.1 · 2026-03-23
+
+### core-concepts.html (#1) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/core-concepts.html)
 
 ```mermaid
 sequenceDiagram
@@ -2085,7 +5582,7 @@ sequenceDiagram
     end
 ```
 
-### security.html (#2) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd/security.html)
+### security.html (#2) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/security.html)
 
 ```mermaid
 flowchart LR
@@ -2094,7 +5591,7 @@ flowchart LR
     RS -->|Validates Token| AS
 ```
 
-### security.html (#3) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd/security.html)
+### security.html (#3) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/security.html)
 
 ```mermaid
 sequenceDiagram
@@ -2124,7 +5621,7 @@ sequenceDiagram
   end
 ```
 
-### security.html (#4) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd/security.html)
+### security.html (#4) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/security.html)
 
 ```mermaid
 flowchart TB
@@ -2134,7 +5631,7 @@ flowchart TB
     API[API gateway] --->|Route request| RS[Resource Server]
 ```
 
-### usecase-referral-orthopedic.html (#5) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/oe_mcsd/usecase-referral-orthopedic.html)
+### usecase-referral-orthopedic.html (#5) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/usecase-referral-orthopedic.html)
 
 ```mermaid
 sequenceDiagram
@@ -2184,439 +5681,459 @@ sequenceDiagram
     deactivate Fulfiller
 ```
 
-## SHIFT-Task-Force.SLS-ValueSets (0.1.0)
+## umzhconnect/umzhconnect-ig @ improve-readme-add-samples
 
-**SHIFT SLS ValueSets Implementation Guide**
+**Package:** `ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild`
 
-[Build](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main) · [GitHub](https://github.com/SHIFT-Task-Force/SLS-ValueSets/tree/main) · [Canonical](http://SHIFT-Task-Force.github.io/SLS-ValueSets/ImplementationGuide/SHIFT-Task-Force.SLS-ValueSets)
+**CH UMZH Connect IG (R4)**
+
+[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/improve-readme-add-samples) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
 
 FHIR 4.0.1 · 2026-03-04
 
-### sls.html (#1) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/sls.html)
+### core-concepts.html (#1) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/core-concepts.html)
 
 ```mermaid
-graph TD
-  A[DocumentReference or Bundle] --> B[Code Analysis Engine]
-  B --> C{Sensitive Topic Detected?}
-  C -->|Yes| D[Apply meta.security Labels]
-  C -->|No| E[No Labeling Needed]
-
-  D --> F[Updated Resource with Labels]
-  F --> G[Provenance]
-  G --> H[Agent: NLP Engine]
-  G --> I[Entity: Original Resource]
-
-  F --> J[AuditEvent]
-  J --> K[Who/What/When/Where]
+sequenceDiagram
+    title Process flow between Placer and Fulfiller
+    actor Placer
+    actor Fulfiller
+    activate Placer
+    Placer->>Placer: Create Service Request
+    deactivate Placer
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Create Task
+    activate Fulfiller
+    Fulfiller->>Placer: Task Response
+    deactivate Fulfiller
+    end
+    rect rgb(191, 223, 255)
+    Fulfiller->>Placer: Request Resources
+    activate Placer
+    Placer->>Fulfiller: Resources Response
+    deactivate Placer
+    end
+    alt optional
+        rect rgb(191, 223, 255)
+        Fulfiller->>Placer: Send Notification
+        end
+    end
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Request Results
+    activate Fulfiller
+    Fulfiller->>Placer: Results Response
+    deactivate Fulfiller
+    end
 ```
 
-### ab352.html (#2) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html)
+### security.html (#2) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/security.html)
 
 ```mermaid
-graph TD
-    Start((Medical Record Action)) --> Destination{Destination?}
-
-    %% IN-STATE FLOW
-    Destination -->|CA Data Exchange| InState[<b>IN-STATE</b>]
-    InState --> DxFGate{Specific Consent on File?}
-    
-    DxFGate -->|No| AutoFilter[<b>AUTO-FILTER: ENABLED</b>]
-    AutoFilter -->|Action| Scrub[Scrub Sensitive Codes]
-    Scrub --> SharePartial[Share General Data Only]
-    
-    DxFGate -->|Yes| FilterOff[<b>Follow Consent #40;AUTO-FILTER:disabled#41;</b>]
-    FilterOff --> ShareFull[Share Consent Permitted Record via DxF]
-
-    %% OUT-OF-STATE FLOW
-    Destination -->|Cross Border| OutState[<b>OUT-OF-STATE</b>]
-    OutState --> ShieldGate{Specific Consent on File?}
-    
-    ShieldGate -->|No| Block[<b>AB 352 SHIELD: BLOCKED</b>]
-    Block --> Partial[Release Non-Sensitive Data Only]
-    
-    ShieldGate -->|Yes| Consented[<b>Follow Consent</b>]
-    Consented --> Full[Release Consent Permitted Record]
-
-    %% Formatting
-    style AutoFilter fill:#fff4dd,stroke:#d4a017,stroke-width:2px
-    style FilterOff fill:#9f9,stroke:#333
-    style Block fill:#f99,stroke:#333
+flowchart LR
+    Client <-->|Client Authentication & Token Issue| AS[Authorization Server]
+    Client <-->|Presents Token<br>Grants or Denies Access| RS[Resource Server]
+    RS -->|Validates Token| AS
 ```
 
-### ab352.html (#3) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html)
+### security.html (#3) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/security.html)
 
 ```mermaid
-flowchart TD
+sequenceDiagram
+  title Referral and External Service Requests Resource Fetching Flow
 
-    A["Request to access/disclose data"] --> B["PEP collects attributes"]
-    B --> C["Attributes: action, sensitivity, recipient jurisdiction, purpose"]
-    C --> D["PDP evaluates PolicySet urn:org:hospital:policyset:AB352"]
+  participant C as Client (Fulfiller)
+  participant AS as Authorization Server
+  participant AG as API Gateway (Placer)
+  participant PE as Policy Engine
+  participant FHIR as FHIR Server / Consent Store (Placer)
 
-    D --> E1{"Action = disclose?"}
-    E1 -- Yes --> F1{"Sensitivity in AB352 set?"}
-    F1 -- Yes --> G1{"Recipient jurisdiction != CA?"}
-    G1 -- Yes --> H1["Deny<br/>Obligation: log-denial"]
-    G1 -- No --> I1["Continue evaluation<br/>(local org policies)"]
-    F1 -- No --> I1
+  Note over C,AS: Machine-to-machine: Client Credentials flow
+  C->>AS: Token request (client auth) + requested scopes<br/>(+ consent_id context if used)
+  AS-->>C: Access token (scopes + claims)<br/>(optional: includes consent_id claim, <br/>optional: sender-constrained)
 
-    E1 -- No --> E2{"Action = access/use?"}
-    E2 -- Yes --> F2{"Recipient jurisdiction = CA<br/>AND purpose = TREATMENT?"}
-    F2 -- Yes --> H2["Permit<br/>Obligation: segment-sensitive-data"]
-    F2 -- No --> I2["NotApplicable or other org policies"]
-
-    E2 -- No --> I2
-
-    H2 --> J["PEP enforces segmentation<br/>(EHR/HIE data segregation)"]
-    H1 --> K["PEP denies disclosure<br/>and records AuditEvent"]
+  C->>AG: API request + Authorization: Bearer <token>
+  AG->>AG: Validate token (sig, iss, aud, exp, scopes)<br/>(+ validate sender-constraint if FAPI)
+  AG->>PE: AuthZ decision request:<br/>(client identity, requested <br/>operation/resource,<br/>consent context from token/headers)
+  PE->>FHIR: Fetch/validate Consent (by consent_id)<br/>+ evaluate rules / ownership / audience
+  PE->>FHIR: Evaluate whether requested resource(s)<br/>are in ServiceRequest graph referenced by consent
+  PE-->>AG: Permit / Deny
+  alt Permit
+    AG->>FHIR: Forward request
+    FHIR->>C: Response: return permitted resources<br/>(+ optional fine-grained enforcement)
+  else Deny
+    AG-->>C: 403 Forbidden
+  end
 ```
 
-### ab352.html (#4) — [view page](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/main/ab352.html)
+### security.html (#4) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/security.html)
 
 ```mermaid
-graph TD
-    PS["<b>PolicySet:</b> AB352 Compliance<br/>Target: CA-HOSPITAL<br/>Combining Alg: Deny-Overrides"]
-    
-    PS --> P1_T
-    PS --> P2_T
-    PS --> P3_T
+flowchart TB
+    Client -->|HTTP Request| API
+    API -->|grant?| PE[Policy engine]
+    PE -->|Yes/No| API
+    API[API gateway] --->|Route request| RS[Resource Server]
+```
 
-    %% Policy 1
-    subgraph P1 ["Policy 1: Data Disclosure Control"]
-        P1_T["Target: Action = DISCLOSE"]
-        P1_R1["Rule: Deny Out-of-State"]
-        P1_C{"Condition:<br/>Is Sensitive Health Data?<br/>AND Recipient != CA?"}
-        P1_O["Obligation: Log Denial Reason"]
-        
-        P1_T --> P1_R1
-        P1_R1 --> P1_C
-        P1_R1 --> P1_O
+### usecase-referral-orthopedic.html (#5) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/improve-readme-add-samples/usecase-referral-orthopedic.html)
+
+```mermaid
+sequenceDiagram
+    title Referral - Orthopedic Surgery
+
+    participant HospitalP as HospitalP(lacer)
+    participant HospitalF as HospitalF(ulfiller)
+    activate HospitalP
+    HospitalP->>HospitalP: POST ServiceRequest-ReferralOrthopedicSurgery
+    HospitalP->>HospitalF: POST Task (basedOn/focus: ServiceRequest-ReferralOrthopedicSurgery)
+    activate HospitalF
+    HospitalF-->>HospitalP: created
+    deactivate HospitalP
+    deactivate HospitalF
+    
+    HospitalF->>HospitalP: GET Resources (Diagnoses, Medications, Reports)
+    activate HospitalF
+    activate HospitalP
+    HospitalP-->>HospitalF: return search results (Bundle)
+    deactivate HospitalF
+    deactivate HospitalP
+
+    Note over HospitalF: Request additional information<br/>(smoking status) via Questionnaire
+    HospitalF->>HospitalF: Update Task<br/>(owner: HospitalP, businessStatus: on-hold,<br/>output: QuestionnaireSmokingStatus)
+    activate HospitalF
+    HospitalF-->>HospitalP: Notify Task updated
+    activate HospitalP
+    HospitalP->>HospitalF: GET Task
+    HospitalF-->>HospitalP: Return Task
+    HospitalP->>HospitalF: GET Questionnaire by canonical
+    HospitalF-->>HospitalP: Return QuestionnaireSmokingStatus
+    HospitalP-->>HospitalP: Practitioner fills out Questionnaire
+    HospitalP->>HospitalF: POST QuestionnaireResponse
+    HospitalF-->>HospitalP: created
+    HospitalP->>HospitalF: PATCH Task (owner: HospitalF, input: QuestionnaireResponseSmokingStatus)
+    HospitalF-->>HospitalP: updated
+    deactivate HospitalP
+    deactivate HospitalF
+
+    HospitalF->>HospitalF: Update Task<br/>(businessStatus: completed, output: Report)
+    activate HospitalF
+    HospitalF-->>HospitalP: Notify Task updated
+    activate HospitalP
+    HospitalP->> HospitalF: GET Task?_id=...&_include=Task:ch-umzhconnectig-task-outputreference
+    HospitalF-->>HospitalP: return result (Bundle)
+    deactivate HospitalP
+    deactivate HospitalF
+```
+
+## umzhconnect/umzhconnect-ig @ fixes-index-page
+
+**Package:** `ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild`
+
+**CH UMZH Connect IG (R4)**
+
+[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/fixes-index-page) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
+
+FHIR 4.0.1 · 2026-03-05
+
+### core-concepts.html (#1) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/core-concepts.html)
+
+```mermaid
+sequenceDiagram
+    title Process flow between Placer and Fulfiller
+    actor Placer
+    actor Fulfiller
+    activate Placer
+    Placer->>Placer: Create Service Request
+    deactivate Placer
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Create Task
+    activate Fulfiller
+    Fulfiller->>Placer: Task Response
+    deactivate Fulfiller
+    end
+    rect rgb(191, 223, 255)
+    Fulfiller->>Placer: Request Resources
+    activate Placer
+    Placer->>Fulfiller: Resources Response
+    deactivate Placer
+    end
+    alt optional
+        rect rgb(191, 223, 255)
+        Fulfiller->>Placer: Send Notification
+        end
+    end
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Request Results
+    activate Fulfiller
+    Fulfiller->>Placer: Results Response
+    deactivate Fulfiller
+    end
+```
+
+### security.html (#2) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/security.html)
+
+```mermaid
+flowchart LR
+    Client <-->|Client Authentication & Token Issue| AS[Authorization Server]
+    Client <-->|Presents Token<br>Grants or Denies Access| RS[Resource Server]
+    RS -->|Validates Token| AS
+```
+
+### security.html (#3) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/security.html)
+
+```mermaid
+sequenceDiagram
+  title Referral and External Service Requests Resource Fetching Flow
+
+  participant C as Client (Fulfiller)
+  participant AS as Authorization Server
+  participant AG as API Gateway (Placer)
+  participant PE as Policy Engine
+  participant FHIR as FHIR Server / Consent Store (Placer)
+
+  Note over C,AS: Machine-to-machine: Client Credentials flow
+  C->>AS: Token request (client auth) + requested scopes<br/>(+ consent_id context if used)
+  AS-->>C: Access token (scopes + claims)<br/>(optional: includes consent_id claim, <br/>optional: sender-constrained)
+
+  C->>AG: API request + Authorization: Bearer <token>
+  AG->>AG: Validate token (sig, iss, aud, exp, scopes)<br/>(+ validate sender-constraint if FAPI)
+  AG->>PE: AuthZ decision request:<br/>(client identity, requested <br/>operation/resource,<br/>consent context from token/headers)
+  PE->>FHIR: Fetch/validate Consent (by consent_id)<br/>+ evaluate rules / ownership / audience
+  PE->>FHIR: Evaluate whether requested resource(s)<br/>are in ServiceRequest graph referenced by consent
+  PE-->>AG: Permit / Deny
+  alt Permit
+    AG->>FHIR: Forward request
+    FHIR->>C: Response: return permitted resources<br/>(+ optional fine-grained enforcement)
+  else Deny
+    AG-->>C: 403 Forbidden
+  end
+```
+
+### security.html (#4) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/security.html)
+
+```mermaid
+flowchart TB
+    Client -->|HTTP Request| API
+    API -->|grant?| PE[Policy engine]
+    PE -->|Yes/No| API
+    API[API gateway] --->|Route request| RS[Resource Server]
+```
+
+### usecase-referral-orthopedic.html (#5) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/fixes-index-page/usecase-referral-orthopedic.html)
+
+```mermaid
+sequenceDiagram
+    title Referral - Orthopedic Surgery
+
+    participant Placer as Placer
+    participant Fulfiller as Fulfiller
+    activate Placer
+    Placer->>Placer: POST ServiceRequest-ReferralOrthopedicSurgery
+    Placer->>Fulfiller: POST Task (basedOn/focus: ServiceRequest-ReferralOrthopedicSurgery)
+    activate Fulfiller
+    Fulfiller-->>Placer: created
+    deactivate Placer
+    deactivate Fulfiller
+
+    Fulfiller->>Placer: GET Resources (Diagnoses, Medications, Reports)
+    activate Fulfiller
+    activate Placer
+    Placer-->>Fulfiller: return search results (Bundle)
+    deactivate Fulfiller
+    deactivate Placer
+
+    Note over Fulfiller: Request additional information<br/>(smoking status) via Questionnaire
+    Fulfiller->>Fulfiller: Update Task<br/>(owner: Placer, businessStatus: on-hold,<br/>output: QuestionnaireSmokingStatus)
+    activate Fulfiller
+    Fulfiller-->>Placer: Notify Task updated
+    activate Placer
+    Placer->>Fulfiller: GET Task
+    Fulfiller-->>Placer: Return Task
+    Placer->>Fulfiller: GET Questionnaire by canonical
+    Fulfiller-->>Placer: Return QuestionnaireSmokingStatus
+    Placer-->>Placer: Practitioner fills out Questionnaire
+    Placer->>Fulfiller: POST QuestionnaireResponse
+    Fulfiller-->>Placer: created
+    Placer->>Fulfiller: PATCH Task (owner: Fulfiller, input: QuestionnaireResponseSmokingStatus)
+    Fulfiller-->>Placer: updated
+    deactivate Placer
+    deactivate Fulfiller
+
+    Fulfiller->>Fulfiller: Update Task<br/>(businessStatus: completed, output: Report)
+    activate Fulfiller
+    Fulfiller-->>Placer: Notify Task updated
+    activate Placer
+    Placer->> Fulfiller: GET Task?_id=...&_include=Task:ch-umzhconnectig-task-outputreference
+    Fulfiller-->>Placer: return result (Bundle)
+    deactivate Placer
+    deactivate Fulfiller
+```
+
+## umzhconnect/umzhconnect-ig @ aa_update_general_documentation
+
+**Package:** `ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild`
+
+**CH UMZH Connect IG (R4)**
+
+[Build](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation) · [GitHub](https://github.com/umzhconnect/umzhconnect-ig/tree/aa_update_general_documentation) · [Canonical](http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect)
+
+FHIR 4.0.1 · 2026-02-26
+
+### core-concepts.html (#1) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/core-concepts.html)
+
+```mermaid
+sequenceDiagram
+    title Process flow between Placer and Fulfiller
+    actor Placer
+    actor Fulfiller
+    activate Placer
+    Placer->>Placer: Create Service Request
+    deactivate Placer
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Create Task
+    activate Fulfiller
+    Fulfiller->>Placer: Task Response
+    deactivate Fulfiller
+    end
+    rect rgb(191, 223, 255)
+    Fulfiller->>Placer: Request Resources
+    activate Placer
+    Placer->>Fulfiller: Resources Response
+    deactivate Placer
+    end
+    alt optional
+        rect rgb(191, 223, 255)
+        Fulfiller->>Placer: Send Notification
+        end
+    end
+    rect rgb(191, 223, 255)
+    Placer->>Fulfiller: Request Results
+    activate Fulfiller
+    Fulfiller->>Placer: Results Response
+    deactivate Fulfiller
+    end
+```
+
+### security.html (#2) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/security.html)
+
+```mermaid
+flowchart LR
+    Client <-->|Client Authentication & Token Issue| AS[Authorization Server]
+    Client <-->|Presents Token<br>Grants or Denies Access| RS[Resource Server]
+    RS -->|Validates Token| AS
+```
+
+### security.html (#3) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/security.html)
+
+```mermaid
+sequenceDiagram
+  title Referral and External Service Requests Resource Fetching Flow
+
+  participant C as Client (Fulfiller)
+  participant AS as Authorization Server
+  participant AG as API Gateway (Placer)
+  participant PE as Policy Engine
+  participant FHIR as FHIR Server / Consent Store (Placer)
+
+  Note over C,AS: Machine-to-machine: Client Credentials flow
+  C->>AS: Token request (client auth) + requested scopes<br/>(+ consent_id context if used)
+  AS-->>C: Access token (scopes + claims)<br/>(optional: includes consent_id claim, <br/>optional: sender-constrained)
+
+  C->>AG: API request + Authorization: Bearer <token>
+  AG->>AG: Validate token (sig, iss, aud, exp, scopes)<br/>(+ validate sender-constraint if FAPI)
+  AG->>PE: AuthZ decision request:<br/>(client identity, requested <br/>operation/resource,<br/>consent context from token/headers)
+  PE->>FHIR: Fetch/validate Consent (by consent_id)<br/>+ evaluate rules / ownership / audience
+  PE->>FHIR: Evaluate whether requested resource(s)<br/>are in ServiceRequest graph referenced by consent
+  PE-->>AG: Permit / Deny
+  alt Permit
+    AG->>FHIR: Forward request
+    FHIR->>C: Response: return permitted resources<br/>(+ optional fine-grained enforcement)
+  else Deny
+    AG-->>C: 403 Forbidden
+  end
+```
+
+### security.html (#4) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/security.html)
+
+```mermaid
+flowchart TB
+    Client -->|HTTP Request| API
+    API -->|grant?| PE[Policy engine]
+    PE -->|Yes/No| API
+    API[API gateway] --->|Route request| RS[Resource Server]
+```
+
+### usecase-referral-orthopedic.html (#5) — [view page](https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/aa_update_general_documentation/usecase-referral-orthopedic.html)
+
+```mermaid
+sequenceDiagram
+    actor HospitalP as HospitalP (Placer)
+    actor HospitalF as HospitalF (Fulfiller)
+    
+    rect rgb(191, 223, 255)
+    HospitalP->>HospitalP: Create ServiceRequest SR-HospitalP001
+    HospitalP->>HospitalF: Create Task (focus: SR-HospitalP001)
+    activate HospitalF
+    HospitalF-->>HospitalP: Notify Task T-UKB001 created
+    deactivate HospitalF
+    end
+    
+    rect rgb(191, 223, 255)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(status: accepted)
+    HospitalF->>HospitalP: Request Resources (Diagnoses, Medications)
+    activate HospitalP
+    HospitalP->>HospitalF: Resources Response
+    deactivate HospitalP
+    end
+    
+    rect rgb(191, 223, 255)
+    HospitalF->>HospitalF: Create Questionnaire (smoking status)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(owner: Placer, businessStatus: on-hold,<br/>output: Questionnaire)
+    HospitalF-->>HospitalP: Notify Task update
+    activate HospitalP
+    HospitalP->>HospitalF: Fetch Task T-UKB001
+    HospitalF->>HospitalP: Response (Task incl. Questionnaire)
+    HospitalP->>HospitalP: Fill out Questionnaire
+    HospitalP->>HospitalF: Post QuestionnaireResponse (smoking status)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(owner: Fulfiller, businessStatus: in-progress,<br/>input: QuestionnaireResponse)
+    deactivate HospitalP
+    end
+    
+    rect rgb(255, 230, 204)
+    Note over HospitalF: Create Appointment A-UKB001 (initial consult)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(status: in-progress, output: A-UKB001)
+    HospitalF-->>HospitalP: Notify Task update
     end
 
-    %% Policy 2
-    subgraph P2 ["Policy 2: In-State Clinical Use"]
-        P2_T["Target: Action = ACCESS/USE"]
-        P2_R1["Rule: Permit Treatment"]
-        P2_C{"Condition:<br/>Recipient = CA?<br/>AND Purpose = TREATMENT?"}
-        
-        P2_T --> P2_R1
-        P2_R1 --> P2_C
+    rect rgb(255, 230, 204)
+    Note over HospitalF: Create Appointment A-UKB002 (preop)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(status: in-progress, output: A-UKB002)
+    HospitalF-->>HospitalP: Notify Task update
     end
 
-    %% Policy 3
-    subgraph P3 ["Policy 3: Mandatory Segmentation"]
-        P3_T["Target: Any"]
-        P3_R1["Rule: Permit"]
-        P3_O["Obligation: Trigger Segmentation Engine<br/>for Abortion/Gender Care/Contraception"]
-        
-        P3_T --> P3_R1
-        P3_R1 --> P3_O
+    rect rgb(204, 255, 204)
+    Note over HospitalF: Create Appointment A-UKB003 (surgery)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(status: in-progress, output: A-UKB003)
+    HospitalF-->>HospitalP: Notify Task update
     end
-
-    %% Styling
-    style PS fill:#f9f,stroke:#333,stroke-width:4px
-    style P1_R1 fill:#ff9999,stroke:#c00
-    style P2_R1 fill:#99ff99,stroke:#0c0
-    style P3_O fill:#bbdaff,stroke:#00f
-```
-
-## johnmoehrke.xacml-consent.example (0.1.0)
-
-**John Moehrke XACML Consent Example**
-
-[Build](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main) · [GitHub](https://github.com/JohnMoehrke/xacml-consent/tree/main) · [Canonical](http://johnmoehrke.github.io/xacml-consent/ImplementationGuide/johnmoehrke.xacml-consent.example)
-
-FHIR 4.0.1 · 2026-02-11
-
-### generic.html (#1) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/generic.html)
-
-```mermaid
-graph TD
-    A[FHIR Consent Resource] -->|policy.uri| B[XACML Overriding Policy]
-    A -->|"source[x]"| C[XACML Patient Consent Policy]
-    style B fill:#ff0000,color:#fff
-    style C fill:#ff0000,color:#fff
-```
-
-### ab352.html (#2) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
-
-```mermaid
-graph TD
-    Start((Medical Record Action)) --> Destination{Destination?}
-
-    %% IN-STATE FLOW
-    Destination -->|CA Data Exchange| InState[<b>IN-STATE</b>]
-    InState --> DxFGate{Specific Consent on File?}
     
-    DxFGate -->|No| AutoFilter[<b>AUTO-FILTER: ENABLED</b>]
-    AutoFilter -->|Action| Scrub[Scrub Sensitive Codes]
-    Scrub --> SharePartial[Share General Data Only]
-    
-    DxFGate -->|Yes| FilterOff[<b>Follow Consent #40;AUTO-FILTER:disabled#41;</b>]
-    FilterOff --> ShareFull[Share Consent Permitted Record via DxF]
-
-    %% OUT-OF-STATE FLOW
-    Destination -->|Cross Border| OutState[<b>OUT-OF-STATE</b>]
-    OutState --> ShieldGate{Specific Consent on File?}
-    
-    ShieldGate -->|No| Block[<b>AB 352 SHIELD: BLOCKED</b>]
-    Block --> Partial[Release Non-Sensitive Data Only]
-    
-    ShieldGate -->|Yes| Consented[<b>Follow Consent</b>]
-    Consented --> Full[Release Consent Permitted Record]
-
-    %% Formatting
-    style AutoFilter fill:#fff4dd,stroke:#d4a017,stroke-width:2px
-    style FilterOff fill:#9f9,stroke:#333
-    style Block fill:#f99,stroke:#333
-```
-
-### ab352.html (#3) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
-
-```mermaid
-flowchart TD
-
-    A["Request to access/disclose data"] --> B["PEP collects attributes"]
-    B --> C["Attributes: action, sensitivity, recipient jurisdiction, purpose"]
-    C --> D["PDP evaluates PolicySet urn:org:hospital:policyset:AB352"]
-
-    D --> E1{"Action = disclose?"}
-    E1 -- Yes --> F1{"Sensitivity in AB352 set?"}
-    F1 -- Yes --> G1{"Recipient jurisdiction != CA?"}
-    G1 -- Yes --> H1["Deny<br/>Obligation: log-denial"]
-    G1 -- No --> I1["Continue evaluation<br/>(local org policies)"]
-    F1 -- No --> I1
-
-    E1 -- No --> E2{"Action = access/use?"}
-    E2 -- Yes --> F2{"Recipient jurisdiction = CA<br/>AND purpose = TREATMENT?"}
-    F2 -- Yes --> H2["Permit<br/>Obligation: segment-sensitive-data"]
-    F2 -- No --> I2["NotApplicable or other org policies"]
-
-    E2 -- No --> I2
-
-    H2 --> J["PEP enforces segmentation<br/>(EHR/HIE data segregation)"]
-    H1 --> K["PEP denies disclosure<br/>and records AuditEvent"]
-```
-
-### ab352.html (#4) — [view page](https://build.fhir.org/ig/JohnMoehrke/xacml-consent/branches/main/ab352.html)
-
-```mermaid
-graph TD
-    PS["<b>PolicySet:</b> AB352 Compliance<br/>Target: CA-HOSPITAL<br/>Combining Alg: Deny-Overrides"]
-    
-    PS --> P1_T
-    PS --> P2_T
-    PS --> P3_T
-
-    %% Policy 1
-    subgraph P1 ["Policy 1: Data Disclosure Control"]
-        P1_T["Target: Action = DISCLOSE"]
-        P1_R1["Rule: Deny Out-of-State"]
-        P1_C{"Condition:<br/>Is Sensitive Health Data?<br/>AND Recipient != CA?"}
-        P1_O["Obligation: Log Denial Reason"]
-        
-        P1_T --> P1_R1
-        P1_R1 --> P1_C
-        P1_R1 --> P1_O
+    rect rgb(204, 255, 204)
+    HospitalF->>HospitalF: Update Task T-UKB001<br/>(status: completed, output: R-UKB001)
+    HospitalF-->>HospitalP: Notify Task update
     end
-
-    %% Policy 2
-    subgraph P2 ["Policy 2: In-State Clinical Use"]
-        P2_T["Target: Action = ACCESS/USE"]
-        P2_R1["Rule: Permit Treatment"]
-        P2_C{"Condition:<br/>Recipient = CA?<br/>AND Purpose = TREATMENT?"}
-        
-        P2_T --> P2_R1
-        P2_R1 --> P2_C
-    end
-
-    %% Policy 3
-    subgraph P3 ["Policy 3: Mandatory Segmentation"]
-        P3_T["Target: Any"]
-        P3_R1["Rule: Permit"]
-        P3_O["Obligation: Trigger Segmentation Engine<br/>for Abortion/Gender Care/Contraception"]
-        
-        P3_T --> P3_R1
-        P3_R1 --> P3_O
-    end
-
-    %% Styling
-    style PS fill:#f9f,stroke:#333,stroke-width:4px
-    style P1_R1 fill:#ff9999,stroke:#c00
-    style P2_R1 fill:#99ff99,stroke:#0c0
-    style P3_O fill:#bbdaff,stroke:#00f
 ```
 
-## hl7.fhir.uv.howto (0.1.0)
+## UPM-NTHC/PH-RoadSafetyIG @ main
 
-**Guidance for FHIR IG Creation**
-
-[Build](https://build.fhir.org/ig/FHIR/ig-guidance/branches/master) · [GitHub](https://github.com/FHIR/ig-guidance/tree/master) · [Canonical](http://hl7.org/fhir/uv/howto/ImplementationGuide/hl7.fhir.uv.howto)
-
-FHIR 5.0.0 · 2026-02-01
-
-### diagrams-mermaid.html — [view page](https://build.fhir.org/ig/FHIR/ig-guidance/branches/master/diagrams-mermaid.html)
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-## ch.fhir.ig.ch-epr-fhir (5.0.0)
-
-**CH EPR FHIR (R4)**
-
-[Build](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master) · [GitHub](https://github.com/ehealthsuisse/ch-epr-fhir/tree/master) · [Canonical](http://fhir.ch/ig/ch-epr-fhir/ImplementationGuide/ch.fhir.ig.ch-epr-fhir)
-
-FHIR 4.0.1 · 2026-01-30
-
-### iti-mhd.html (#1) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-           'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Consumer] -->|Query| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Consumer)
-    B --> C(Document Responder own community)
-    B --> D(Document Responders federated communities)
-```
-
-### iti-mhd.html (#2) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-            'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Consumer] -->|Retrieve| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Consumer)
-    B --> C{own community?}
-    C -->|yes| D(Document Responder own community)
-    C -->|no| E(Document Responder federated community)
-```
-
-### iti-mhd.html (#3) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-mhd.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-            'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Source] -->|Update Doc Metadata| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Source)
-    B --> C{own Community?}
-    C -->|yes| D(Document Responder own community)
-    C -->|no| E(Document Responder federated community)
-```
-
-### iti-67.html (#4) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-67.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-           'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Consumer] -->|Query| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Consumer)
-    B --> C(Document Responder own community)
-    B --> D(Document Responders federated communities)
-```
-
-### iti-68.html (#5) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/iti-68.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-            'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Consumer] -->|Retrieve| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Consumer)
-    B --> C{own community?}
-    C -->|yes| D(Document Responder own community)
-    C -->|no| E(Document Responder federated community)
-```
-
-### ch-mhd-1.html (#6) — [view page](https://build.fhir.org/ig/ehealthsuisse/ch-epr-fhir/branches/master/ch-mhd-1.html)
-
-```mermaid
-%%{
-    init: {
-        'theme': 'neutral',
-        'themeVariables': {
-            'fontSize': '14px'
-        }
-    }
-}%%
-flowchart LR
-    A[Document Source] -->|Update Doc Metadata| B(Document Responder
-    Option Federated Cross Community Access
-    Grouped with Document Source)
-    B --> C{own Community?}
-    C -->|yes| D(Document Responder own community)
-    C -->|no| E(Document Responder federated community)
-```
-
-## hl7.fhir.cl.minsal.r2bo (0.2.0-draft)
-
-**Repositorio de Reportes de Biopsias Oncológicas**
-
-[Build](https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master) · [GitHub](https://github.com/Minsal-CL/R2BO/tree/master) · [Canonical](https://interoperabilidad.minsal.cl/fhir/ig/r2bo/ImplementationGuide/hl7.fhir.cl.minsal.r2bo)
-
-FHIR 4.0.1 · 2026-01-27
-
-### design-consideration.html — [view page](https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html)
-
-```mermaid
-classDiagram
-    class ApDiagnosticReport
-    class ApComposition 
-    ApDiagnosticReport --> ApComposition: extension[composition]
-    ApComposition --> ApDiagnosticReport: extension[diagnosticReport-reference]
-```
-
-## example.fhir.ph.roadsafety (0.3.0)
+**Package:** `example.fhir.ph.roadsafety#0.3.0`
 
 **DRAFT PH Road Safety Implementation Guide**
 
-[Build](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/cron-schedule) · [GitHub](https://github.com/UPM-NTHC/PH-RoadSafetyIG/tree/cron-schedule) · [Canonical](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/ImplementationGuide/example.fhir.ph.roadsafety)
+[Build](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main) · [GitHub](https://github.com/UPM-NTHC/PH-RoadSafetyIG/tree/main) · [Canonical](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/ImplementationGuide/example.fhir.ph.roadsafety)
 
-FHIR 4.0.1 · 2026-01-22
+FHIR 4.0.1 · 2026-01-21
 
-### data-modelling.html — [view page](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/cron-schedule/data-modelling.html)
+### data-modelling.html — [view page](https://build.fhir.org/ig/UPM-NTHC/PH-RoadSafetyIG/branches/main/data-modelling.html)
 
 ```mermaid
 flowchart LR

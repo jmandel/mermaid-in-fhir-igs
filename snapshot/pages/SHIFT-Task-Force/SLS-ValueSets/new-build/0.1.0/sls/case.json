@@ -1,0 +1,57 @@
+{
+  "slug": "shift-task-force-sls-valuesets-new-build-sls",
+  "storageId": "SHIFT-Task-Force_SLS-ValueSets@new-build",
+  "packageId": "SHIFT-Task-Force.SLS-ValueSets#0.1.0",
+  "package": "SHIFT-Task-Force.SLS-ValueSets",
+  "version": "0.1.0",
+  "title": "SHIFT SLS ValueSets Implementation Guide",
+  "repo": "SHIFT-Task-Force/SLS-ValueSets/branches/new-build/qa.json",
+  "repoPath": "SHIFT-Task-Force/SLS-ValueSets",
+  "buildUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build",
+  "branch": "new-build",
+  "githubUrl": "https://github.com/SHIFT-Task-Force/SLS-ValueSets/tree/new-build",
+  "canonicalUrl": "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ImplementationGuide/SHIFT-Task-Force.SLS-ValueSets",
+  "canonical": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build",
+  "candidateBases": [
+    "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build"
+  ],
+  "fileName": "sls.html",
+  "originalFileName": "sls.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/SHIFT-Task-Force_SLS-ValueSets@new-build/sls.html",
+  "pagePath": "sls.html",
+  "pageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/sls.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 366,
+  "totalDiagramLength": 732,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls",
+    "caseJson": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/case.json",
+    "before": {
+      "dir": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/before",
+      "html": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/before/index.html"
+    },
+    "after": {
+      "dir": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/after",
+      "html": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/failure",
+      "html": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/source",
+      "html": "pages/SHIFT-Task-Force/SLS-ValueSets/new-build/0.1.0/sls/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/sls.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/branches/new-build/assets/js/mermaid-init.js"
+}

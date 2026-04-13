@@ -1,0 +1,57 @@
+{
+  "slug": "minsal-cl-r2bo-master-design-consideration",
+  "storageId": "Minsal-CL_R2BO@master",
+  "packageId": "hl7.fhir.cl.minsal.r2bo#0.2.0-draft",
+  "package": "hl7.fhir.cl.minsal.r2bo",
+  "version": "0.2.0-draft",
+  "title": "Repositorio de Reportes de Biopsias Oncológicas",
+  "repo": "Minsal-CL/R2BO/branches/master/qa.json",
+  "repoPath": "Minsal-CL/R2BO",
+  "buildUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/Minsal-CL/R2BO/tree/master",
+  "canonicalUrl": "https://interoperabilidad.minsal.cl/fhir/ig/r2bo/ImplementationGuide/hl7.fhir.cl.minsal.r2bo",
+  "canonical": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master"
+  ],
+  "fileName": "design-consideration.html",
+  "originalFileName": "design-consideration.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/Minsal-CL_R2BO@master/design-consideration.html",
+  "pagePath": "design-consideration.html",
+  "pageUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 211,
+  "totalDiagramLength": 422,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration",
+    "caseJson": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/case.json",
+    "before": {
+      "dir": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/before",
+      "html": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/before/index.html"
+    },
+    "after": {
+      "dir": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/after",
+      "html": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/failure",
+      "html": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/source",
+      "html": "pages/Minsal-CL/R2BO/master/0.2.0-draft/design-consideration/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/design-consideration.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/Minsal-CL/R2BO/branches/master/assets/js/mermaid-init.js"
+}

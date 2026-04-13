@@ -1,0 +1,57 @@
+{
+  "slug": "ihe-iti-deidhandbook-main-process",
+  "storageId": "IHE_ITI.DeIdHandbook@main",
+  "packageId": "ihe.iti.deid#0.0.1-current",
+  "package": "ihe.iti.deid",
+  "version": "0.0.1-current",
+  "title": "De-Identification Profile",
+  "repo": "IHE/ITI.DeIdHandbook/branches/main/qa.json",
+  "repoPath": "IHE/ITI.DeIdHandbook",
+  "buildUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/IHE/ITI.DeIdHandbook/tree/main",
+  "canonicalUrl": "https://profiles.ihe.net/ITI/DeId/ImplementationGuide/ihe.iti.deid",
+  "canonical": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main"
+  ],
+  "fileName": "process.html",
+  "originalFileName": "process.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/IHE_ITI.DeIdHandbook@main/process.html",
+  "pagePath": "process.html",
+  "pageUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/process.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 853,
+  "totalDiagramLength": 1706,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process",
+    "caseJson": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/case.json",
+    "before": {
+      "dir": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/before",
+      "html": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/before/index.html"
+    },
+    "after": {
+      "dir": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/after",
+      "html": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/failure",
+      "html": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/source",
+      "html": "pages/IHE/ITI.DeIdHandbook/main/0.0.1-current/process/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/process.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/IHE/ITI.DeIdHandbook/branches/main/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "hl7-uv-pocd-master-overview",
+  "storageId": "HL7_uv-pocd@master",
+  "packageId": "hl7.fhir.uv.pocd#1.0.0",
+  "package": "hl7.fhir.uv.pocd",
+  "version": "1.0.0",
+  "title": "Point-of-Care Device Implementation Guide",
+  "repo": "HL7/uv-pocd/branches/master/qa.json",
+  "repoPath": "HL7/uv-pocd",
+  "buildUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master",
+  "branch": "master",
+  "githubUrl": "https://github.com/HL7/uv-pocd/tree/master",
+  "canonicalUrl": "http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd",
+  "canonical": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7/uv-pocd/branches/master"
+  ],
+  "fileName": "overview.html",
+  "originalFileName": "overview.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7_uv-pocd@master/overview.html",
+  "pagePath": "overview.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/overview.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 2107,
+  "totalDiagramLength": 4214,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7/uv-pocd/master/1.0.0/overview",
+    "caseJson": "pages/HL7/uv-pocd/master/1.0.0/overview/case.json",
+    "before": {
+      "dir": "pages/HL7/uv-pocd/master/1.0.0/overview/before",
+      "html": "pages/HL7/uv-pocd/master/1.0.0/overview/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7/uv-pocd/master/1.0.0/overview/after",
+      "html": "pages/HL7/uv-pocd/master/1.0.0/overview/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7/uv-pocd/master/1.0.0/overview/failure",
+      "html": "pages/HL7/uv-pocd/master/1.0.0/overview/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7/uv-pocd/master/1.0.0/overview/source",
+      "html": "pages/HL7/uv-pocd/master/1.0.0/overview/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/overview.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7/uv-pocd/branches/master/assets/js/mermaid-init.js"
+}

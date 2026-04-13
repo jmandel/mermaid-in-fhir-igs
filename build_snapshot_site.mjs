@@ -108,17 +108,23 @@ async function loadReviewOverrides() {
   const map = new Map();
   for (const item of items) {
     if (!item.packageId || !item.fileName) continue;
-    map.set(makeReviewOverrideKey(item.packageId, item.fileName), item);
+    map.set(makeReviewOverrideKey(item.repoPath, item.branch, item.packageId, item.fileName), item);
   }
   return map;
 }
 
-function makeReviewOverrideKey(packageId, fileName) {
-  return `${packageId}::${fileName}`;
+function makeReviewOverrideKey(repoPath, branch, packageId, fileName) {
+  const scopedRepo = repoPath || '';
+  const scopedBranch = branch || '';
+  return `${scopedRepo}::${scopedBranch}::${packageId}::${fileName}`;
 }
 
 function findReviewOverride(testCase) {
-  return reviewOverrides.get(makeReviewOverrideKey(testCase.packageId, testCase.fileName)) || null;
+  return (
+    reviewOverrides.get(makeReviewOverrideKey(testCase.repoPath, testCase.branch, testCase.packageId, testCase.fileName)) ||
+    reviewOverrides.get(makeReviewOverrideKey('', '', testCase.packageId, testCase.fileName)) ||
+    null
+  );
 }
 
 function applyReviewOverrides(report) {
@@ -792,6 +798,8 @@ function compareIndexItems(a, b) {
   const rankA = reviewSortValue(a);
   const rankB = reviewSortValue(b);
   if (rankA !== rankB) return rankB - rankA;
+  if ((a.repoPath || '') !== (b.repoPath || '')) return (a.repoPath || '').localeCompare(b.repoPath || '');
+  if ((a.branch || '') !== (b.branch || '')) return (a.branch || '').localeCompare(b.branch || '');
   if (a.packageId !== b.packageId) return a.packageId.localeCompare(b.packageId);
   return a.fileName.localeCompare(b.fileName);
 }

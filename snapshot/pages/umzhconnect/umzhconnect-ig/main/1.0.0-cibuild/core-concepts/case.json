@@ -1,0 +1,57 @@
+{
+  "slug": "umzhconnect-umzhconnect-ig-main-core-concepts",
+  "storageId": "umzhconnect_umzhconnect-ig@main",
+  "packageId": "ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild",
+  "package": "ch.fhir.ig.ch-umzh-connect",
+  "version": "1.0.0-cibuild",
+  "title": "CH UMZH Connect IG (R4)",
+  "repo": "umzhconnect/umzhconnect-ig/branches/main/qa.json",
+  "repoPath": "umzhconnect/umzhconnect-ig",
+  "buildUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/umzhconnect/umzhconnect-ig/tree/main",
+  "canonicalUrl": "http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect",
+  "canonical": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main"
+  ],
+  "fileName": "core-concepts.html",
+  "originalFileName": "core-concepts.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/umzhconnect_umzhconnect-ig@main/core-concepts.html",
+  "pagePath": "core-concepts.html",
+  "pageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/core-concepts.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 791,
+  "totalDiagramLength": 1582,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts",
+    "caseJson": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/case.json",
+    "before": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/before",
+      "html": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/before/index.html"
+    },
+    "after": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/after",
+      "html": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/failure",
+      "html": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/source",
+      "html": "pages/umzhconnect/umzhconnect-ig/main/1.0.0-cibuild/core-concepts/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/core-concepts.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-main-moped-konzepte",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@main",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/main/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/main",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main"
+  ],
+  "fileName": "moped_konzepte.html",
+  "originalFileName": "moped_konzepte.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@main/moped_konzepte.html",
+  "pagePath": "moped_konzepte.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/moped_konzepte.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 853,
+  "totalDiagramLength": 1097,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/moped_konzepte/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/moped_konzepte.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid-init.js"
+}

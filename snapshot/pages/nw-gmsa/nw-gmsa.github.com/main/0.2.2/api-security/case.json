@@ -1,0 +1,57 @@
+{
+  "slug": "nw-gmsa-nw-gmsa-github-com-main-api-security",
+  "storageId": "nw-gmsa_nw-gmsa.github.com@main",
+  "packageId": "fhir.nwgenomics.nhs.uk#0.2.2",
+  "package": "fhir.nwgenomics.nhs.uk",
+  "version": "0.2.2",
+  "title": "NHS North West Genomics",
+  "repo": "nw-gmsa/nw-gmsa.github.com/branches/main/qa.json",
+  "repoPath": "nw-gmsa/nw-gmsa.github.com",
+  "buildUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/nw-gmsa/nw-gmsa.github.com/tree/main",
+  "canonicalUrl": "https://fhir.nwgenomics.nhs.uk/ImplementationGuide/fhir.nwgenomics.nhs.uk",
+  "canonical": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main"
+  ],
+  "fileName": "api-security.html",
+  "originalFileName": "api-security.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nw-gmsa_nw-gmsa.github.com@main/api-security.html",
+  "pagePath": "api-security.html",
+  "pageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "mermaid-init.js"
+  },
+  "diagramCount": 8,
+  "maxDiagramLength": 854,
+  "totalDiagramLength": 4384,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security",
+    "caseJson": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/case.json",
+    "before": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/before",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/after",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/failure",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/source",
+      "html": "pages/nw-gmsa/nw-gmsa.github.com/main/0.2.2/api-security/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"
+}

@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Security - CH UMZH Connect IG (R4) v1.0.0-cibuild</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/hl7.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/css/fhir.css" rel="stylesheet"/>
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+ 
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+            <!--
+<div id="family-nav">
+	<a id="logo" no-external="true" href="http://hl7.org/fhir"> <img
+		alt="logo fhir" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/images/fhir-logo-www.png" />
+	</a>
+</div>
+-->
+
+
+            <div id="family-nav">
+                <a id="logo" no-external="true" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/searchform.html">
+                    <img src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/images/search.png" alt="Search FHIR" />
+                </a>
+            </div>
+            <div id="hl7-nav">
+    <a id="logo" no-external="true" href="https://umzh.uzh.ch/">
+        <img alt="visit the website" height="60" src="../../../../../../../vendor/https/umzh.uzh.ch/favicon.ico" />
+    </a>            
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CH UMZH Connect IG (R4)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-cibuild - ci-build
+
+
+
+  <img alt="Switzerland flag" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/images/che.svg" height="16" title="Switzerland"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/index.html">Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/background.html">Background</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/core-concepts.html">Core Concepts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/security.html">Security</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/guidance-reference-architecture.html">Reference Architecture</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/guidance-security-implementation.html">Security Implementation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/usecase-referral-orthopedic.html">Referral - Orthopedic Surgery</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/usecase-referral-sarcoma-tumorboard.html">Referral - Sarcoma Tumor Board</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/toc.html'><b>Table of Contents</b></a></li><li><b>Security</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">CH UMZH Connect IG (R4), published by UMZH. This guide is not an authorized publication; it is the continuous build for version 1.0.0-cibuild  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/umzhconnect/umzhconnect-ig/'>https://github.com/umzhconnect/umzhconnect-ig/</a> and changes regularly. See the <a href='http://fhir.ch/ig/ch-umzh-connect/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Security</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#general-approach---oauth" id="markdown-toc-general-approach---oauth">General approach - OAuth</a></li>
+  <li><a href="#health-specifics---smartonfhir" id="markdown-toc-health-specifics---smartonfhir">Health specifics - SMARTonFHIR</a></li>
+  <li><a href="#consent-centric-authorization" id="markdown-toc-consent-centric-authorization">Consent-centric authorization</a></li>
+  <li><a href="#authorization-enforcement" id="markdown-toc-authorization-enforcement">Authorization enforcement</a></li>
+  <li><a href="#security-enhancement" id="markdown-toc-security-enhancement">Security enhancement</a></li>
+  <li><a href="#level-1--basic-client-credentials-shared-secret" id="markdown-toc-level-1--basic-client-credentials-shared-secret">Level 1 — Basic client credentials (shared secret)</a></li>
+  <li><a href="#level-2--private_key_jwt-asymmetric-proof-no-central-pki-required" id="markdown-toc-level-2--private_key_jwt-asymmetric-proof-no-central-pki-required">Level 2 — <code class="language-plaintext highlighter-rouge">private_key_jwt</code> (asymmetric proof, no central PKI required)</a></li>
+  <li><a href="#level-3--mtls-mutual-tls" id="markdown-toc-level-3--mtls-mutual-tls">Level 3 — mTLS (mutual TLS)</a></li>
+  <li><a href="#policy-triggers---governance-rules-for-up-leveling" id="markdown-toc-policy-triggers---governance-rules-for-up-leveling">Policy triggers - governance rules for up-leveling</a>    <ul>
+      <li><a href="#suggested-triggers-for-mandating-level-2-private_key_jwt" id="markdown-toc-suggested-triggers-for-mandating-level-2-private_key_jwt">Suggested triggers for <strong>mandating Level 2 (</strong><code class="language-plaintext highlighter-rouge">private_key_jwt</code><strong>)</strong></a></li>
+      <li><a href="#suggested-triggers-for-mandating-level-3-mtls" id="markdown-toc-suggested-triggers-for-mandating-level-3-mtls">Suggested triggers for <strong>mandating Level 3 (mTLS)</strong></a></li>
+      <li><a href="#scope-based-policy-mapping" id="markdown-toc-scope-based-policy-mapping">Scope-based policy mapping</a></li>
+    </ul>
+  </li>
+  <li><a href="#high-risk-level-3-and-the-applicability-of-the-fapi20-profile" id="markdown-toc-high-risk-level-3-and-the-applicability-of-the-fapi20-profile">High risk, level 3 and the applicability of the FAPI2.0 profile</a></li>
+</ul>
+
+</div>
+<p>In this article:</p>
+
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#general-approach---oauth">Genaral approach - OAuth</a></li>
+  <li><a href="#health-specifics---smartonfhir">Health specifics - SMARTonFHIR</a></li>
+  <li><a href="#consent-centric-authorization">Consent-centric authorization</a></li>
+  <li><a href="#authorization-enforcement">Authorization enforcement</a></li>
+  <li><a href="#security-enhancement">Security enhancement</a></li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>In this article we address security, authorization, and trust frameworks suitable for an open yet controlled healthcare API ecosystem. Out of the perspective of our pilot-project with two participants exposing data to each other through open but secured APIs, we show a hands on guide how each participant can/must secure his APIs based on industry standards, and examine how these approaches are expandable as ecosystems grows in terms of participants, software vendors, and regulatory expectations.</p>
+
+<p>The use case considered is one where the placer creates a task at the fulfiller referencing a service request on placer’s side, the fulfiller based on the task proceeds to fetch the corresponding service request, and proceeds with an API based to query and fetch further resources referenced.</p>
+
+<p>OAuth 2.0 and OpenID Connect–based architectures are the de-facto standard today for securing APIs, Security profiles such as SMART on FHIR define standards for health-specific use-cases and the OpenID Foundation’s FAPI 2.0 sharpens security awareness by enforcing measures to mitigate particular risk scenarios. In this article we explore to what extent theses standards are applicable for our problem and where additional measures may be suitable.</p>
+
+<p>Special attention is given to machine-to-machine interactions, which are central to referral and order workflows, and to design decisions around client authentication, including private key–based mechanisms, mutual TLS (mTLS), and layered combinations of both. The concept however should be extensible to user/human centric authentication and authorization and particularly compatible with the future E-ID initiative, identifying Swiss registered users.</p>
+
+<h3 id="general-approach---oauth">General approach - OAuth</h3>
+
+<p>Todays de-facto standard for securing Web-APIs is <strong>OAuth &amp; OpenIDConnect</strong>. In general OAuth is quite loosely defined and allows various ways of implementation. On a very high-level you could think of it like the following:</p>
+
+<blockquote>
+  <p><em>An application (possibly in combination with a logged in user) would like to access data from an external service. It therefore requests a security token from an authorization authority by providing credentials and uses this token in the request to the data service to provide proof of access rights and hence being allowed to access the data.</em></p>
+</blockquote>
+
+<p><strong>We follow industry standards with the use of OAuth/OIDC to segregate duties between identity management, token issuance, authentication &amp; authorization enforcement.</strong></p>
+
+<p><strong>OAuth glossary</strong></p>
+
+<p><strong>Authorization Server (AS) -</strong> The system that issues tokens after validating identity, credentials, or policies.
+<strong>Resource Server (RS) -</strong> The API or service that receives and validates tokens before granting access.
+<strong>Client -</strong> The application requesting access on behalf of a user or system.
+<strong>Access Token -</strong> A short‑lived credential the client uses to call APIs.
+<strong>Scopes -</strong> Fine‑grained permissions describing what the client is allowed to access.
+<strong>Claims -</strong> Attributes embedded in a token (e.g., user ID, roles, tenant, expiry).
+<strong>Client Authentication -</strong> How a client proves its identity to the authorization server (e.g., client secret, mTLS, private key JWT).
+<strong>Grant Type -</strong> The method a client uses to obtain tokens (e.g., Authorization Code, Client Credentials).
+<strong>Policy engine</strong> - system that evaluates rules (“policies”) to decide whether a specific action is allowed</p>
+
+<pre><code class="language-mermaid">flowchart LR
+    Client &lt;--&gt;|Client Authentication &amp; Token Issue| AS[Authorization Server]
+    Client &lt;--&gt;|Presents Token&lt;br&gt;Grants or Denies Access| RS[Resource Server]
+    RS --&gt;|Validates Token| AS
+</code></pre>
+
+<p><strong>Machine-To-Machine communication</strong></p>
+
+<p>Our principal focus will be on machine-to-machine communication: an organization allowing access to a set of data records to another organization without knowing which person is actually sending the request. It is likely that in later scenarios this option should also be considered an can be achieved by using alternative OAuth flows.</p>
+
+<p>The <strong>client-credentials OAuth flow</strong> is the common way to approach this, where the client presents credentials and information about the action is it about to execute (scopes) to the resource server and in exchange receives an <strong>access token.</strong></p>
+
+<p>The access token again the client injects in the request to the <strong>resource server</strong> (the organization holding the sensitive patient data) and the latter can validate the token and grant or deny access.</p>
+
+<h3 id="health-specifics---smartonfhir">Health specifics - SMARTonFHIR</h3>
+
+<p>SMART on FHIR defines a <strong>standard way for apps to securely connect to healthcare data</strong> by combining:</p>
+
+<ul>
+  <li><strong>OAuth 2.0–based authorization</strong></li>
+  <li><strong>FHIR as the data API</strong></li>
+  <li><strong>A consistent launch protocol</strong> for apps inside or outside an EHR</li>
+  <li><strong>A unified way to request permissions</strong> using SMART scopes (i.e. <strong>system/Patient.r</strong> - read patient data etc..)</li>
+</ul>
+
+<p>In practice, it gives app developers a predictable, interoperable method to authenticate, obtain tokens, and read/write clinical data across different EHR systems without custom integrations.</p>
+
+<p>In our particular case we use SMART in the context of our use cases, for example:</p>
+
+<ul>
+  <li>Ask permission to create a task resource at partyX - scope: system/Task.w</li>
+  <li>Ask permission to read service request data from partyY - scope: system/ServiceRequest.rs</li>
+</ul>
+
+<h3 id="consent-centric-authorization">Consent-centric authorization</h3>
+
+<p>Our use-cases of referrals and external service requests strongly suggest to dynamically authorize the audience (the counter party) to a very limited data set. Think of creating a consent when the service request is created:</p>
+
+<blockquote>
+  <p><em>For a given time I authorize partyB (represented by clientX) to read all data referenced by my given service request.</em></p>
+</blockquote>
+
+<p>This consent stands in contrast to commonly used ‘general consent’ by a patient for data usage in research. In our case the consent defines either a rule based or explicit set of resources which the counter party is authorized to access.</p>
+
+<p>A consent with appropriate properties is typically stored at the consent issuers location, treated as a resource itself and receiving a unique identification at time of creation. This identification is commonly communicated to the counter party in combination with the given case an optionally made available to the authorization service as well.</p>
+
+<p>The API consuming party (counter party) uses the consent identification in the authorization flow and ultimately the API provider extracts the consent, matches it to the request and grants access after verifying consistency of the consents rules with the current API request.</p>
+
+<p>Consent as part of the authorization flow may logically not be necessary - the restricting party may query all its consents and check if one is matching the current API request. However defining the consent identification as part of the authorization flow and access token may significantly simplify the authorization enforcement. The API consumer in essence tells the API provider in which <strong>context</strong> the API request is executed.</p>
+
+<p>The FHIR specification supports a dedicated consent resource. Any FHIR server implementation therefore enables the local storage of consents with associated logic.</p>
+
+<p>Below is an example of the sequence of a request for a referenced resource and the authorization verification, permit and return, or deny workflow.</p>
+
+<pre><code class="language-mermaid">sequenceDiagram
+  title Referral and External Service Requests Resource Fetching Flow
+
+  participant C as Client (Fulfiller)
+  participant AS as Authorization Server
+  participant AG as API Gateway (Placer)
+  participant PE as Policy Engine
+  participant FHIR as FHIR Server / Consent Store (Placer)
+
+  Note over C,AS: Machine-to-machine: Client Credentials flow
+  C-&gt;&gt;AS: Token request (client auth) + requested scopes&lt;br/&gt;(+ consent_id context if used)
+  AS--&gt;&gt;C: Access token (scopes + claims)&lt;br/&gt;(optional: includes consent_id claim, &lt;br/&gt;optional: sender-constrained)
+
+  C-&gt;&gt;AG: API request + Authorization: Bearer &lt;token&gt;
+  AG-&gt;&gt;AG: Validate token (sig, iss, aud, exp, scopes)&lt;br/&gt;(+ validate sender-constraint if FAPI)
+  AG-&gt;&gt;PE: AuthZ decision request:&lt;br/&gt;(client identity, requested &lt;br/&gt;operation/resource,&lt;br/&gt;consent context from token/headers)
+  PE-&gt;&gt;FHIR: Fetch/validate Consent (by consent_id)&lt;br/&gt;+ evaluate rules / ownership / audience
+  PE-&gt;&gt;FHIR: Evaluate whether requested resource(s)&lt;br/&gt;are in ServiceRequest graph referenced by consent
+  PE--&gt;&gt;AG: Permit / Deny
+  alt Permit
+    AG-&gt;&gt;FHIR: Forward request
+    FHIR-&gt;&gt;C: Response: return permitted resources&lt;br/&gt;(+ optional fine-grained enforcement)
+  else Deny
+    AG--&gt;&gt;C: 403 Forbidden
+  end
+</code></pre>
+
+<h3 id="authorization-enforcement">Authorization enforcement</h3>
+
+<p>An enterprise grade web-service architecture, involves a number of steps for processing an HTTP request - DMZ / Firewall, TLS (HTTPS) termination, authentication, request routing, request processing and fine-grained authorization on resource server, etc.</p>
+
+<pre><code class="language-mermaid">flowchart TB
+    Client --&gt;|HTTP Request| API
+    API --&gt;|grant?| PE[Policy engine]
+    PE --&gt;|Yes/No| API
+    API[API gateway] ---&gt;|Route request| RS[Resource Server]
+</code></pre>
+
+<p>We can think of a 3 step process to enforce security:</p>
+
+<ul>
+  <li>Authentication - token extraction and validation -&gt; we know the identity</li>
+  <li>Scope Authorization - ensure that scope parameters match the requested parameters</li>
+  <li>Consent enforcement &amp; fine-grained authorization</li>
+</ul>
+
+<p>A common approach would be to handle the first (and optinally the second) step in the API gateway and the second and third step by the policy engine. In our case it would mean to ensure that all requested resources are part of the 'child graph' of the service request, which is scope of the consent.</p>
+
+<p>In general it should be mentioned that fine-grained authorization may be a very complex task to perform on the standard FHIR API due to a variaty of factors, such es a broad range of search parameters covered by standard FHIR APIs. This is quite well covered in this project:
+<a href="https://developers.google.com/open-health-stack/fhir-info-gateway">Google FHIR Info Gateway</a>
+Our generapproach is to whitelist only the neccessary endpoints and parameters required to enable our use case. The complexity of the authorization enforcement is therefore essentially reduced.</p>
+
+<h3 id="security-enhancement">Security enhancement</h3>
+
+<p>As the basic client credentials flow is subject to a number of security weaknesses, we define a stepwise security up-leveling approach for client authentication. Initial integrations may start with basic client credentials to enable rapid onboarding and piloting. As participants move to production and access higher-risk scopes, authentication is upgraded to private_key_jwt, replacing shared secrets with asymmetric keys registered during onboarding—without requiring a central PKI. For the highest assurance scenarios, the ecosystem supports mutual TLS (mTLS), strengthening client identity binding and reducing token replay risks. This staged model preserves a consistent authorization flow while providing a clear, operationally manageable path to stronger security.</p>
+
+<p>The <strong>authorization model and APIs remain stable</strong>, while the <strong>client authentication method</strong> is strengthened over time. This makes the ecosystem scalable: partners can join quickly with minimal operational overhead, and then adopt stronger mechanisms when justified by risk, regulatory requirements, or production needs.</p>
+
+<h3 id="level-1--basic-client-credentials-shared-secret">Level 1 — Basic client credentials (shared secret)</h3>
+
+<ul>
+  <li><strong>Goal:</strong> fastest onboarding; simplest implementation for pilots.</li>
+  <li><strong>Mechanism:</strong> <code class="language-plaintext highlighter-rouge">client_id</code> + shared secret used for token endpoint authentication.</li>
+  <li><strong>Main trade-offs:</strong> shared secret distribution and rotation burden; higher impact if secrets leak; weaker non-repudiation.</li>
+  <li><strong>Best fit:</strong> sandbox environments, limited scopes, early partner testing.</li>
+</ul>
+
+<h3 id="level-2--private_key_jwt-asymmetric-proof-no-central-pki-required">Level 2 — <code class="language-plaintext highlighter-rouge">private_key_jwt</code> (asymmetric proof, no central PKI required)</h3>
+
+<ul>
+  <li><strong>Goal:</strong> remove shared secrets and increase assurance while keeping onboarding practical.</li>
+  <li><strong>Mechanism:</strong> the client generates its own key pair and registers the <strong>public key / JWKS</strong> with the authorization server during onboarding. The client authenticates to the token endpoint by signing a JWT assertion with the private key.</li>
+  <li><strong>Key benefits:</strong> no shared secrets; cleaner key rotation; improved proof-of-possession characteristics; compatible with central client registration.</li>
+  <li><strong>Operational needs:</strong> JWKS registration, rotation procedure, and key rollover support.</li>
+</ul>
+
+<h3 id="level-3--mtls-mutual-tls">Level 3 — mTLS (mutual TLS)</h3>
+
+<ul>
+  <li><strong>Goal:</strong> highest assurance for client identity binding and stronger replay resistance.</li>
+  <li><strong>Mechanism:</strong> client presents an X.509 certificate at the TLS layer; the authorization server (and optionally the resource server) validates it. Optionally, tokens can be sender-constrained to the client certificate.</li>
+  <li><strong>Key benefits:</strong> strong client authentication; reduced token replay risk; high confidence in client identity.</li>
+  <li><strong>Operational needs:</strong> certificate lifecycle management (issuance, rotation, revocation), trust anchors (internal CA or managed PKI), and monitoring.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Level</th>
+      <th style="text-align: left">Client authentication</th>
+      <th style="text-align: left">When to use</th>
+      <th style="text-align: left">Security benefits</th>
+      <th style="text-align: left">Operational footprint</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>1</strong></td>
+      <td style="text-align: left">Basic client credentials (shared secret)</td>
+      <td style="text-align: left">Sandbox, PoC, low-risk scopes, early pilots</td>
+      <td style="text-align: left">Quick start; baseline access control</td>
+      <td style="text-align: left">Secret distribution + rotation; higher blast radius if leaked</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>2</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">private_key_jwt</code> (JWKS registered at onboarding)</td>
+      <td style="text-align: left">Production default; medium/high-risk scopes; external partners</td>
+      <td style="text-align: left">No shared secrets; stronger client proof; easier key rotation</td>
+      <td style="text-align: left">Manage JWKS + key rollover; validate signed assertions</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>3</strong></td>
+      <td style="text-align: left">mTLS (optionally sender-constrained tokens)</td>
+      <td style="text-align: left">Highest-risk scopes; regulated workflows; large-scale ecosystem</td>
+      <td style="text-align: left">Strong client identity binding; replay resistance</td>
+      <td style="text-align: left">Certificate lifecycle + trust model; revocation/rotation processes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="policy-triggers---governance-rules-for-up-leveling">Policy triggers - governance rules for up-leveling</h2>
+
+<p>Use policy triggers to make the ladder actionable and predictable. The goal is to avoid “security by negotiation” and keep onboarding consistent.</p>
+
+<h3 id="suggested-triggers-for-mandating-level-2-private_key_jwt">Suggested triggers for <strong>mandating Level 2 (</strong><code class="language-plaintext highlighter-rouge">private_key_jwt</code><strong>)</strong></h3>
+
+<p>Mandate Level 2 when <strong>any</strong> of the following applies:</p>
+
+<ul>
+  <li><strong>Production access</strong> (non-sandbox environment).</li>
+  <li>Client requests <strong>write access</strong> (create/update) or privileged scopes.</li>
+  <li>Partner is <strong>cross-organization</strong> (external vendor/provider) and not under the same administrative domain.</li>
+  <li>Integration handles <strong>sensitive clinical content</strong> beyond minimal administrative data.</li>
+  <li><strong>Audit requirements</strong> demand stronger attribution than shared secrets can provide.</li>
+</ul>
+
+<h3 id="suggested-triggers-for-mandating-level-3-mtls">Suggested triggers for <strong>mandating Level 3 (mTLS)</strong></h3>
+
+<p>Mandate Level 3 when <strong>any</strong> of the following applies:</p>
+
+<ul>
+  <li>Access to <strong>high-impact scopes</strong> (e.g., broad patient search, bulk data export, or highly sensitive categories).</li>
+  <li><strong>High-volume / high-automation</strong> clients (service-to-service) where replay risk and credential theft impact is elevated.</li>
+  <li>Regulatory, contractual, or security policy requires <strong>certificate-based authentication</strong>.</li>
+  <li>The ecosystem reaches a scale where centralized governance needs <strong>stronger identity binding</strong> and standardized system trust.</li>
+  <li>A partner shows elevated risk indicators (e.g., repeated security incidents, weak security posture, or inability to manage key material safely).</li>
+</ul>
+
+<h3 id="scope-based-policy-mapping">Scope-based policy mapping</h3>
+
+<p>A possible scope mapping may look like:</p>
+
+<ul>
+  <li><strong>Read-only, low-risk scopes</strong> → Level 1 in sandbox; Level 2 in production.</li>
+  <li><strong>Write / workflow-triggering scopes</strong> → Level 2 minimum.</li>
+  <li><strong>Bulk/export/high-risk scopes</strong> → Level 3.</li>
+</ul>
+
+<h2 id="high-risk-level-3-and-the-applicability-of-the-fapi20-profile">High risk, level 3 and the applicability of the FAPI2.0 profile</h2>
+
+<p>The generic client credentials flow has potential security weaknesses. The main risks are:</p>
+
+<ul>
+  <li><strong>Static client secrets</strong> → reusable if compromised</li>
+  <li><strong>Static trust model</strong> → Hard to scale or federate (one auth server, trust anchor and issuer)</li>
+  <li><strong>Replay and automation abuse</strong> → Compromised access tokens lead to automated attacks</li>
+</ul>
+
+<p>Following the policies reaching level 3, high-risk, employing mTLS, which cryptographically binds the token (or at least the session) to the client’s TLS certificate, so the token is only usable when presented over a TLS connection that proves possession of the matching private key.</p>
+
+<p>mTLS and other additional security enhancements are included in the definition of <a href="https://openid.net/specs/fapi-security-profile-2_0-final.html">OpenID FAPI2.0</a> in order to mitigate these risks by adding standardized measurements defined by RFCs (RFC 5280, RFC 8705, RFC 6749, RFC 7519). In essence it defines how to</p>
+
+<ul>
+  <li>add mTLS transport security to all connections</li>
+  <li>populate tokens with cryptographic information</li>
+  <li>how to pass cryptographic information between transport and application layer</li>
+</ul>
+
+<p>FAPI2.0 enforcement adds requirements to classical certification management with PKI-infrastructure. Reference implementations (like Denmark) make use of a central PKI-infrastructure and certificate issuance and signing which reduces client side complexity (trust store etc) however requires central trust and single point of failure risk.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://umzh.uzh.ch/">UMZH</a>.  Package ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 23, 2026 14:44+0000">2026-03-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/qa.html">QA Report</a>
+                 
+                
+
+
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

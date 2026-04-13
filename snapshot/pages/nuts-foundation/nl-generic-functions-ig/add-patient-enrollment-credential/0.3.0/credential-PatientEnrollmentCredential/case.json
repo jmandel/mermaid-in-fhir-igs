@@ -1,0 +1,57 @@
+{
+  "slug": "nuts-foundation-nl-generic-functions-ig-add-patient-enrollment-credential-credential-patientenrollmentcredential",
+  "storageId": "nuts-foundation_nl-generic-functions-ig@add-patient-enrollment-credential",
+  "packageId": "fhir.nl.gf#0.3.0",
+  "package": "fhir.nl.gf",
+  "version": "0.3.0",
+  "title": "Netherlands - Generic Functions for data exchange Implementation Guide",
+  "repo": "nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/qa.json",
+  "repoPath": "nuts-foundation/nl-generic-functions-ig",
+  "buildUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential",
+  "branch": "add-patient-enrollment-credential",
+  "githubUrl": "https://github.com/nuts-foundation/nl-generic-functions-ig/tree/add-patient-enrollment-credential",
+  "canonicalUrl": "http://nuts-foundation.github.io/nl-generic-functions-ig/ImplementationGuide/fhir.nl.gf",
+  "canonical": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential",
+  "candidateBases": [
+    "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential"
+  ],
+  "fileName": "credential-PatientEnrollmentCredential.html",
+  "originalFileName": "credential-PatientEnrollmentCredential.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/nuts-foundation_nl-generic-functions-ig@add-patient-enrollment-credential/credential-PatientEnrollmentCredential.html",
+  "pagePath": "credential-PatientEnrollmentCredential.html",
+  "pageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-PatientEnrollmentCredential.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 667,
+  "totalDiagramLength": 1334,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential",
+    "caseJson": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/case.json",
+    "before": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/before",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/before/index.html"
+    },
+    "after": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/after",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/failure",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/source",
+      "html": "pages/nuts-foundation/nl-generic-functions-ig/add-patient-enrollment-credential/0.3.0/credential-PatientEnrollmentCredential/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/credential-PatientEnrollmentCredential.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/add-patient-enrollment-credential/assets/js/mermaid-init.js"
+}

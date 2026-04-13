@@ -1,0 +1,56 @@
+{
+  "slug": "freshehr-interopen-uk-fhir-ps-interopen-hack-uc-interstate",
+  "storageId": "freshehr_interopen-uk-fhir-ps@interopen-hack",
+  "packageId": "hl7.fhir.uk.ps#0.1.0-cibuild",
+  "package": "hl7.fhir.uk.ps",
+  "version": "0.1.0-cibuild",
+  "title": "UK Patient Summary Implementation Guide",
+  "repo": "freshehr/interopen-uk-fhir-ps/branches/interopen-hack/qa.json",
+  "repoPath": "freshehr/interopen-uk-fhir-ps",
+  "buildUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack",
+  "branch": "interopen-hack",
+  "githubUrl": "https://github.com/freshehr/interopen-uk-fhir-ps/tree/interopen-hack",
+  "canonicalUrl": "http://hl7.org.uk/fhir/ps/ImplementationGuide/hl7.fhir.uk.ps",
+  "canonical": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack",
+  "candidateBases": [
+    "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack"
+  ],
+  "fileName": "uc-interstate.html",
+  "originalFileName": "uc-interstate.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/freshehr_interopen-uk-fhir-ps@interopen-hack/uc-interstate.html",
+  "pagePath": "uc-interstate.html",
+  "pageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/uc-interstate.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 365,
+  "totalDiagramLength": 365,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate",
+    "caseJson": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/case.json",
+    "before": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/before",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/before/index.html"
+    },
+    "after": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/after",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/failure",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/source",
+      "html": "pages/freshehr/interopen-uk-fhir-ps/interopen-hack/0.1.0-cibuild/uc-interstate/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/uc-interstate.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/freshehr/interopen-uk-fhir-ps/branches/interopen-hack/assets/js/mermaid-init.js"
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-main-af-moped-fall-prozessuebergreifend",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@main",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/main/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "branch": "main",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/main",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main"
+  ],
+  "fileName": "AF_moped_fall_prozessuebergreifend.html",
+  "originalFileName": "AF_moped_fall_prozessuebergreifend.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@main/AF_moped_fall_prozessuebergreifend.html",
+  "pagePath": "AF_moped_fall_prozessuebergreifend.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/AF_moped_fall_prozessuebergreifend.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 1,
+  "maxDiagramLength": 585,
+  "totalDiagramLength": 585,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/main/0.1.0/AF_moped_fall_prozessuebergreifend/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/AF_moped_fall_prozessuebergreifend.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/main/assets/js/mermaid-init.js"
+}

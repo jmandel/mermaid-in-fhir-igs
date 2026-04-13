@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>DeziUserCredential - Netherlands - Generic Functions for data exchange Implementation Guide v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9.3"}
+    h3,h4,h5,h6{--heading-prefix:"9.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Netherlands - Generic Functions for data exchange Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+
+  <img alt="Netherlands flag" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/index.html">Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/care-services.html">Care Services Directory</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/routing.html">Routing</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/localization.html">Localization</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/consent.html">Consent</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/identification.html">Identification</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/authentication.html">Authentication</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/authorization.html">Authorization</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/credential-catalog.html">Credential Catalog</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/history.html">History</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/toc.html'><b>Table of Contents</b></a></li><li><a href='https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/credential-catalog.html'><b>Credential Catalog</b></a></li><li><b>DeziUserCredential</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Netherlands - Generic Functions for data exchange Implementation Guide, published by Stichting Nuts. This guide is not an authorized publication; it is the continuous build for version 0.3.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/nuts-foundation/nl-generic-functions-ig/'>https://github.com/nuts-foundation/nl-generic-functions-ig/</a> and changes regularly. See the <a href='http://nuts-foundation.github.io/nl-generic-functions-ig/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>DeziUserCredential</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<!--
+SPDX-FileCopyrightText: 2026 Steven van der Vegt
+SPDX-FileCopyrightText: 2026 Rein Krul
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
+<h3 id="deziusercredential">DeziUserCredential</h3>
+
+<p>This specification specifies the <code class="language-plaintext highlighter-rouge">DeziUserCredential</code> and includes steps to create and verify the credential.</p>
+
+<p>The credential is a non-standard credential since it wraps the Dezi OIDC ID-Token and allows a verifier to interact with it like it is a verifiable credential. This allows the information from Dezi to be combined with other credentials during the authentication process. Ideally the issuer will in time issue the information in a VC format which will make this specification obsolete.</p>
+
+<h4 id="overview">Overview</h4>
+
+<p><strong>Purpose</strong>: Assert the identity of a Dezi entity (user) and its relationship to a healthcare provider.</p>
+
+<p><strong>Issuer</strong>: Dezi</p>
+
+<p><strong>Subject</strong>: The healthcare provider in the role of employer to the Dezi person.</p>
+
+<p><strong>Status</strong>: draft</p>
+
+<p><strong>Terminology:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Claim</th>
+      <th>Code or system</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HealthcareProvider.identifier</code></td>
+      <td>URA code (UZI Register Abonneenummer) identifying the healthcare organization. OID: <code class="language-plaintext highlighter-rouge">2.16.528.1.1007.3.3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Employee.identifier</code></td>
+      <td>UZI/Dezi-id code identifying the healthcare worker. OID: <code class="language-plaintext highlighter-rouge">2.16.528.1.1007.3.1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Employee.role</code></td>
+      <td>valueset <a href="https://decor.nictiz.nl/pub/medicatieproces/mp-html-20200122T161947/voc-2.16.840.1.113883.2.4.3.11.60.1.11.2-2018-09-10T000000.html">RoleCodeNL for care givers</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Employee.role_name</code></td>
+      <td>Human-readable name of the role</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Employee.role_registry</code></td>
+      <td>Registry from which the role originates (e.g., <code class="language-plaintext highlighter-rouge">http://www.dezi.nl/rol_bron/big</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="semantic-relations">Semantic relations</h4>
+
+<p>The credential expresses the following graph structure:</p>
+
+<pre><code class="language-mermaid">graph TD
+    VC[DeziUserCredential]
+    VC --&gt;|credentialSubject| HP[HealthcareProvider]
+    HP --&gt;|id| DID["did:web:za1.example"]
+    HP --&gt;|identifier| URA["87654321 (URA)"]
+    HP --&gt;|name| NAME["Zorgaanbieder"]
+    HP --&gt;|employs| HW[HealthcareWorker]
+    HW --&gt;|identifier| UZI["900000009 (UZI/Dezi-nummer)"]
+    HW --&gt;|initials| INIT["B.B."]
+    HW --&gt;|surnamePrefix| PRE["van der"]
+    HW --&gt;|surname| SUR["Jansen"]
+    HW --&gt;|role| ROLE["01.041"]
+    HW --&gt;|role_name| ROLENAME["Revalidatiearts"]
+    HW --&gt;|role_registry| ROLEREG["http://www.dezi.nl/rol_bron/big"]
+</code></pre>
+
+<h4 id="example-credential">Example credential</h4>
+
+<p>The following is a non-normative example of a <code class="language-plaintext highlighter-rouge">DeziUserCredential</code>.
+It asserts that Healthcare Provider <em>Medisch centrum</em> (URA 87654321) employs <em>B.B. van der Jansen</em> with UZI 87654321 in the role of Revalidatiearts.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://www.w3.org/ns/credentials/v2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"https://example.org/contexts/dezi/v1"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"VerifiableCredential"</span><span class="p">,</span><span class="w"> </span><span class="s2">"DeziUserCredential"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"did:web:dezi.nl"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-31-07T11:15:27Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validUntil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-30-07T11:16:37Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credentialSubject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HealthcareProvider"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"did:web:zorgaanbieder.example"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medisch centrum"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"employee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HealthcareWorker"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"900000009"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"initials"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B.B."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"surnamePrefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"van der"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"surname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jansen"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.041"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Revalidatiearts"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"role_registry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.dezi.nl/rol_bron/big"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DeziIDJWT07"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jwt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJSUzI1NiIsImtpZCI6IjMyNWRlOWFiLTQzMzAtNGMwMS04MjRlLWQ5YmQwYzM3Y2NhMCIsImprdSI6Imh0dHBzOi8vYXV0aC5kZXppLm5sL2p3a3MuanNvbiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MWIxZmFmYy00ZWM3LTQ0ODktYTI4MC04ZDBhNTBhM2Q1YTkiLCJpc3MiOiJhYm9ubmVlLmRlemkubmwiLCJleHAiOjE3NDAxMzExNzYsIm5iZiI6MTczMjE4MjM3NiwianNvbl9zY2hlbWEiOiJodHRwczovL3d3dy5kZXppLm5sL2pzb25fc2NoZW1hcy92MS92ZXJrbGFyaW5nLmpzb24iLCJsb2FfZGV6aSI6Imh0dHA6Ly9laWRhcy5ldXJvcGUuZXUvTG9BL2hpZ2giLCJ2ZXJrbGFyaW5nX2lkIjoiODUzOWY3NWQtNjM0Yy00N2RiLWJiNDEtMjg3OTFkZmQxZjhkIiwiZGV6aV9udW1tZXIiOiI5MDAwMDAwMDkiLCJ2b29ybGV0dGVycyI6IkIuQi4iLCJ2b29ydm9lZ3NlbCI6InZhbiBkZXIiLCJhY2h0ZXJuYWFtIjoiSmFuc2VuIiwiYWJvbm5lZV9udW1tZXIiOiI4NzY1NDMyMSIsImFib25uZWVfbmFhbSI6Ik1lZGlzY2ggY2VudHJ1bSIsInJvbF9jb2RlIjoiMDEuMDQxIiwicm9sX25hYW0iOiJSZXVtYXRvbG9vZyIsInJvbF9jb2RlX2Jyb24iOiJodHRwOi8vd3d3LmRlemkubmwvcm9sX2NvZGVfYnJvbi9iaWciLCJzdGF0dXNfdXJpIjoiaHR0cHM6Ly9hdXRoLmRlemkubmwvc3RhdHVzL3YxL3ZlcmtsYXJpbmcvODUzOWY3NWQtNjM0Yy00N2RiLWJiNDEtMjg3OTFkZmQxZjhkIn0.SIGNATURE"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="creating-the-credential-from-a-dezi-attestation">Creating the Credential from a Dezi Attestation</h4>
+
+<p>To create a <code class="language-plaintext highlighter-rouge">DeziUserCredential</code> from a Dezi attestation, perform the following mapping:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Credential field</th>
+      <th>Source</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@context</code></td>
+      <td>Static</td>
+      <td>Always <code class="language-plaintext highlighter-rouge">["https://www.w3.org/ns/credentials/v2", "https://example.org/contexts/dezi/v1"]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">type</code></td>
+      <td>Static</td>
+      <td>Always <code class="language-plaintext highlighter-rouge">["VerifiableCredential", "DeziUserCredential"]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">issuer</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.iss</code></td>
+      <td>The Dezi issuer, represented as a URL (e.g., <code class="language-plaintext highlighter-rouge">https://max.proeftuin.Dezi-online.rdobeheer.nl</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">validFrom</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.nbf</code></td>
+      <td>Convert epoch timestamp to ISO 8601 datetime</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">validUntil</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.exp</code></td>
+      <td>Convert epoch timestamp to ISO 8601 datetime</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.id</code></td>
+      <td>Derived</td>
+      <td>DID representing the healthcare provider</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.identifier</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.abonnee_nummer</code></td>
+      <td>Abonnee nummer (URA) of the healthcare provider</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.abonnee_naam</code></td>
+      <td>Name of the healthcare organization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.identifier</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.dezi_nummer</code></td>
+      <td>The healthcare worker's Dezi number</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.initials</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.voorletters</code></td>
+      <td>Initials of the healthcare worker</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.surnamePrefix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.voorvoegsel</code></td>
+      <td>Surname prefix</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.surname</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.achternaam</code></td>
+      <td>Family name of the healthcare worker</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_code</code></td>
+      <td>Role code for the selected organization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.role_name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_naam</code></td>
+      <td>Human-readable name of the role</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">credentialSubject.employee.role_registry</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_code_bron</code></td>
+      <td>Registry from which the role originates (e.g., <code class="language-plaintext highlighter-rouge">http://www.dezi.nl/rol_bron/big</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">proof.type</code></td>
+      <td>Static</td>
+      <td>Always <code class="language-plaintext highlighter-rouge">DeziIDJWT</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">proof.jwt</code></td>
+      <td>Input</td>
+      <td>The original signed JWT from Dezi</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Notes on creation:</strong></p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">credentialSubject.id</code> should be constructed as a DID that identifies the healthcare provider. The exact method depends on the DID infrastructure in use.</li>
+  <li>Timestamps in the JWT (<code class="language-plaintext highlighter-rouge">nbf</code>, <code class="language-plaintext highlighter-rouge">exp</code>) are Unix epoch seconds and must be converted to ISO 8601 format.</li>
+</ul>
+
+<h4 id="validation">Validation</h4>
+
+<p>Validation of this credential is non-typical since the issuer does not issue the credential itself but a signed attestation.
+The <code class="language-plaintext highlighter-rouge">proof.type</code> of this credential is a custom <code class="language-plaintext highlighter-rouge">DeziIDJWT07</code> where the <code class="language-plaintext highlighter-rouge">07</code> suffix indicates that it contains an attestation ("verklaring"), as specified in the <a href="https://www.dezi.nl/documenten/2025/12/15/koppelvlakspecificatie-dezi-voor-platform--en-softwareleveranciers">0.7 version</a> of the Vendor Specification.</p>
+
+<p>Validation consists of the following steps:</p>
+
+<ol>
+  <li>Verify the Dezi attestation JWT version (indicated by the credential proof type suffix) is supported by the implementation.</li>
+  <li>Verify the attestation JWT following the instructions of Dezi (signature validation using JWKS from the <code class="language-plaintext highlighter-rouge">jku</code> header claim, expiration checks, etc.)</li>
+  <li>Verify the revocation status according to Dezi's revocation endpoint.</li>
+  <li>Verify that the values from the credential subject match with the values in the JWT:</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Credential path</th>
+      <th>JWT path</th>
+      <th>Validation rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.issuer</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.iss</code></td>
+      <td>Must match (after DID resolution if applicable)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.validFrom</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.nbf</code></td>
+      <td>Must be equal (converted to epoch)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.validUntil</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.exp</code></td>
+      <td>Must be equal (converted to epoch)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.identifier</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.abonnee_nummer</code></td>
+      <td>Must match the abonnee nummer</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.abonnee_naam</code></td>
+      <td>Must match the abonnee name</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.identifier</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.dezi_nummer</code></td>
+      <td>Must be equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.initials</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.voorletters</code></td>
+      <td>Must be equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.surnamePrefix</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.voorvoegsel</code></td>
+      <td>Must be equal (both may be null)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.surname</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.achternaam</code></td>
+      <td>Must be equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_code</code></td>
+      <td>Must be equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.role_name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_naam</code></td>
+      <td>Must be equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vc.credentialSubject.employee.role_registry</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jwt.verklaring.rol_code_bron</code></td>
+      <td>Must be equal</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="proof-of-possession">Proof of possession</h4>
+
+<p>Normally, VCs bind to a subject through credentialSubject.id, typically a DID that the holder can prove control over (for example, by including the credential in a Verifiable Presentation and signing the VP with an assertion key associated with the DID). This credential differs: Dezi does not verify or include credentialSubject.id in the JWT. The binding is instead through credentialSubject.identifier (the URA code).</p>
+
+<p>To establish proof of possession, the verifier must:</p>
+
+<ol>
+  <li>Obtain an additional credential that asserts the holder's relationship to the URA identifier</li>
+  <li>Verify that the credentialSubject.identifier in this credential matches the URA asserted in the accompanying credential</li>
+  <li>Verify the holder controls the DID in the accompanying credential through standard proof of possession mechanisms</li>
+</ol>
+
+<p>This means DeziUserCredential cannot be used standalone for authentication. It must be presented alongside a credential that binds the holder's DID to the healthcare provider identifier (URA).</p>
+
+<p>It also means credentialSubject.identifier (the URA) in this credential cannot be treated as a verified claim about the healthcare provider. It is included for structural compatibility with the VC data model, but carries no cryptographic assurance from Dezi.</p>
+
+<h4 id="encoding-and-limitations">Encoding and Limitations</h4>
+
+<p>This credential can only be expressed using JSON or JSON-LD encoding with a custom <code class="language-plaintext highlighter-rouge">DeziIDJWT07</code> proof type (where <code class="language-plaintext highlighter-rouge">07</code> indicates Dezi v0.7). Unlike standard VC proofs, the proof does not contain a signature over the credential. Instead, it embeds the original Dezi attestation:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DeziIDJWT07"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jwt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJSUzI1NiIs..."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Authenticity is established by validating the embedded attestation JWT according to Dezi specifications, then verifying that credential claims match the JWT claims.</p>
+
+<p><strong>Why not JWT encoding?</strong> The VC Data Model 1.1 JWT encoding requires the credential issuer to sign the JWT. Since the Dezi attestation is obtained from the OIDC userinfo endpoint (not as a VC-JWT) and we cannot control its structure, we wrap it instead.</p>
+
+<h5 id="limitations">Limitations</h5>
+
+<p>Since this proof is non-standard, VC libraries might not be able to validate it out of the box and custom validation is required. Also, since claims appear in both the credential and the embedded attestation JWT, the validation needs to check for consistency between the two.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nuts.nl">Stichting Nuts</a>.  Package fhir.nl.gf#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 8, 2026 13:23+0000">2026-04-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nuts-foundation/nl-generic-functions-ig/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,57 @@
+{
+  "slug": "umzhconnect-umzhconnect-ig-mr-ortho-uc-usecase-referral-orthopedic",
+  "storageId": "umzhconnect_umzhconnect-ig@mr_ortho_uc",
+  "packageId": "ch.fhir.ig.ch-umzh-connect#1.0.0-cibuild",
+  "package": "ch.fhir.ig.ch-umzh-connect",
+  "version": "1.0.0-cibuild",
+  "title": "CH UMZH Connect IG (R4)",
+  "repo": "umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/qa.json",
+  "repoPath": "umzhconnect/umzhconnect-ig",
+  "buildUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc",
+  "branch": "mr_ortho_uc",
+  "githubUrl": "https://github.com/umzhconnect/umzhconnect-ig/tree/mr_ortho_uc",
+  "canonicalUrl": "http://fhir.ch/ig/ch-umzh-connect/ImplementationGuide/ch.fhir.ig.ch-umzh-connect",
+  "canonical": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc",
+  "candidateBases": [
+    "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc"
+  ],
+  "fileName": "usecase-referral-orthopedic.html",
+  "originalFileName": "usecase-referral-orthopedic.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/umzhconnect_umzhconnect-ig@mr_ortho_uc/usecase-referral-orthopedic.html",
+  "pagePath": "usecase-referral-orthopedic.html",
+  "pageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/usecase-referral-orthopedic.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 2,
+  "maxDiagramLength": 1920,
+  "totalDiagramLength": 3840,
+  "diagramKinds": [
+    "mermaid-element",
+    "pre.language-mermaid"
+  ],
+  "fixturePaths": {
+    "root": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic",
+    "caseJson": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/case.json",
+    "before": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/before",
+      "html": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/before/index.html"
+    },
+    "after": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/after",
+      "html": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/failure",
+      "html": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/source",
+      "html": "pages/umzhconnect/umzhconnect-ig/mr_ortho_uc/1.0.0-cibuild/usecase-referral-orthopedic/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/usecase-referral-orthopedic.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/umzhconnect/umzhconnect-ig/branches/mr_ortho_uc/assets/js/mermaid-init.js"
+}

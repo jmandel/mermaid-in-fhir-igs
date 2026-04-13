@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Laboratory Testing Workflow (LTW) - NHS North West Genomics v0.2.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+    
+
+   <!--   <style>
+    svg { background-size: 50% ; }
+    </style> -->
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/prism.css" rel="stylesheet" />
+
+    <!-- Placeholder for child template CSS declarations -->
+<link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/ihe.css" rel="stylesheet"/>
+<link href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="../../../../../../../vendor/https/www.googletagmanager.com/gtag/js__q_867e93efd0.js" async> </script> 
+
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/favicon.png"/>
+      <link rel="stylesheet" href="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/font-awesome.min.css">
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/prism.js"></script>
+<!--   <script type="text/javascript"src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid.min.js"></script>
+     <script type="text/javascript" src="../../../../../../../shared/assets/347ab4816feffe8f-mermaid-init.js"></script>
+   <script type="text/javascript"src="../../../../../../../vendor/https/cdn.jsdelivr.net/npm/mermaid_11.12.0/dist/mermaid.min.js"></script> -->
+   <script type="text/javascript" src="../../../../../../../shared/assets/9ca2e980a372e887-mermaid.js"></script>
+   <script type="text/javascript"src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mermaid-init.js"></script>
+
+
+<style type="text/css">h2{--heading-prefix:"3"}
+ h3,h4,h5,h6{--heading-prefix:"3"}</style>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<!-- <div id="family-nav">
+    <a id="iheuk-logo" no-external="true" href="https://ihe-uk.org/"><img height="50" alt="Visit the IHE UK website" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/iheuk-logo.png"/> </a>
+</div> -->
+<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="nhse-logo" no-external="true" href="https://www.nw-gmsa.nhs.uk/"><img height="50" alt="MFT Logo" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/nwgmsa-logo.svg"/></a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NHS North West Genomics</span>
+            <br/>
+            <span style="display:inline-block;">0.2.2 - ci-build
+
+
+
+  <img alt="United Kingdom flag" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/images/gbr.svg" height="16" title="United Kingdom"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Analysis and Design (Volume 1)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/design.html">Design Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW.html">Laboratory Testing Workflow (LTW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ILW.html">Inter-Laboratory Workflow (ILW)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SET.html">Specimen Event Tracking (SET)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/HIE.html">Health Information Exchange (HIE)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/mCSD.html">Care Services Discovery (mCSD)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PAM.html">Patient Administration (PAM)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/api-security.html">API Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interfaces (Volume 2)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/exchange.html">Exchange Overview</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html">Placer Order Management [LAB-1] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-3.html">Order Results Management [LAB-3] HL7 FHIR</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PDQm.html">Patient Matching [PDQm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/MHD.html">Document Exchange [MHD]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/QEDm.html">Resource Access [QEDm]</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/IUA.html">Authorisation [IUA]</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models (Volume 3)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/data-intro.html">Data Contracts and Issue Reporting</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestOrder.html">Genomic Test Order (Template)</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestReport.html">Genomic Test Report (Template)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefacts (Volume 4)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/artifacts.html">HL7 FHIR R4</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/hl7v2.html">HL7 v2.5.1</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Development
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/testing.html">Environments and Testing</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/support.html">Support</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/architecture.html">Architecture</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/toc.html'><b>Table of Contents</b></a></li><li><b>Laboratory Testing Workflow (LTW)</b></li>
+
+          <span style="float:right;">
+
+            <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/business-analysis.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PAM.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NHS North West Genomics, published by NHS North West Genomics. This guide is not an authorized publication; it is the continuous build for version 0.2.2  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/nw-gmsa/nw-gmsa.github.com/'>https://github.com/nw-gmsa/nw-gmsa.github.com/</a> and changes regularly. See the <a href='https://fhir.nwgenomics.nhs.uk/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Laboratory Testing Workflow (LTW)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+  <li><a href="#actors-and-transactions" id="markdown-toc-actors-and-transactions">Actors and Transactions</a></li>
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#laboratory-order-lab-1" id="markdown-toc-laboratory-order-lab-1">Laboratory Order (LAB-1)</a>    <ul>
+      <li><a href="#use-case-genomic-test-order" id="markdown-toc-use-case-genomic-test-order">Use Case: Genomic Test Order</a></li>
+    </ul>
+  </li>
+  <li><a href="#laboratory-report-lab-3" id="markdown-toc-laboratory-report-lab-3">Laboratory Report (LAB-3)</a>    <ul>
+      <li><a href="#use-case-genomic-test-report" id="markdown-toc-use-case-genomic-test-report">Use Case: Genomic Test Report</a></li>
+      <li><a href="#order-and-report-use-case-summary" id="markdown-toc-order-and-report-use-case-summary">Order and Report Use Case Summary</a></li>
+      <li><a href="#relationship-to-nhs-england-genomic-order-management-service-fhir-api" id="markdown-toc-relationship-to-nhs-england-genomic-order-management-service-fhir-api">Relationship to NHS England Genomic Order Management Service FHIR API</a></li>
+    </ul>
+  </li>
+  <li><a href="#reflex-order-genomic-test-following-on-from-pathology-test" id="markdown-toc-reflex-order-genomic-test-following-on-from-pathology-test">Reflex Order (Genomic Test following on from Pathology Test)</a>    <ul>
+      <li><a href="#use-case-genomic-test-order-following-on-from-pathology-test-order" id="markdown-toc-use-case-genomic-test-order-following-on-from-pathology-test-order">Use Case: Genomic Test Order following on from Pathology Test Order</a></li>
+    </ul>
+  </li>
+  <li><a href="#work-order-management-lab-4" id="markdown-toc-work-order-management-lab-4">Work Order Management (LAB-4)</a>    <ul>
+      <li><a href="#use-case-work-order-management" id="markdown-toc-use-case-work-order-management">Use Case: Work Order Management</a></li>
+    </ul>
+  </li>
+  <li><a href="#use-case-genomic-order-notifications" id="markdown-toc-use-case-genomic-order-notifications">Use Case: Genomic Order Notifications</a>    <ul>
+      <li><a href="#as-is-process" id="markdown-toc-as-is-process">As is Process</a></li>
+    </ul>
+  </li>
+  <li><a href="#security-considerations" id="markdown-toc-security-considerations">Security Considerations</a></li>
+  <li><a href="#cross-profile-considerations" id="markdown-toc-cross-profile-considerations">Cross-Profile Considerations</a></li>
+</ul>
+
+</div>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://www.ihe.net/uploadedFiles/Documents/PaLM/IHE_PaLM_TF_Vol1.pdf">IHE Pathology and Laboratory Medicine (PaLM) Technical Framework - Volume 1</a> HL7 v2</li>
+</ol>
+
+<h2 id="actors-and-transactions">Actors and Transactions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-OrderPlacer.html">Order Placer</a></td>
+      <td>Commonly known as the Electronic Patient Record (EPR) System or Order Communications System</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-OrderFiller.html">Order Filler</a></td>
+      <td>Genomic Laboratory Hub (GLH), Laboratory Information System (LIMS)</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-AutomationManager.html">Automation Manager</a></td>
+      <td>Performed by Laboratory Information System (LIMS)</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-OrderResultTracker.html">Order Result Tracker</a></td>
+      <td>This is often provided by Electronic Patient Record (EPR) Systems</td>
+    </tr>
+    <tr>
+      <td>Laboratory Report (Clinical Document)</td>
+      <td>See <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-ClinicalDocument.html">Clinical Document</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-Intermediary.html">Intermediary</a></td>
+      <td>E.g. Regional or Trust Integration Engine</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>See also Ref A <code class="language-plaintext highlighter-rouge">Section 3 Laboratory Testing Workflow (LTW) Profile</code> for detailed description of actors.</p>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="312px" preserveAspectRatio="none" style="width:747px;height:312px;background:#FFFFFF;" version="1.1" viewBox="0 0 747 312" width="747px" zoomAndPan="magnify"><title>IHE LTW Actor Diagram</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="184.2012" x="274.4128" y="22.9951">IHE LTW Actor Diagram</text><!--entity Placer--><g class="entity" data-entity="Placer" data-source-line="4" data-uid="ent0002" id="entity_Placer"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="107.459" x="7" y="157.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="17" y="180.292">Order Placer</text></g><!--entity Filler--><g class="entity" data-entity="Filler" data-source-line="5" data-uid="ent0003" id="entity_Filler"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98.5723" x="374" y="157.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="384" y="180.292">Order Filler</text></g><!--entity Manager--><g class="entity" data-entity="Manager" data-source-line="6" data-uid="ent0004" id="entity_Manager"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="167.3555" x="339" y="270.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.3555" x="349" y="293.292">Automation Manager</text></g><!--entity Tracker--><g class="entity" data-entity="Tracker" data-source-line="7" data-uid="ent0005" id="entity_Tracker"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="165.8789" x="340.5" y="44.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145.8789" x="350.5" y="67.292">Order Result Tracker</text></g><!--link Placer to Filler--><g class="link" data-entity-1="Placer" data-entity-2="Filler" data-source-line="9" data-uid="lnk6" id="link_Placer_Filler"><path d="M114.06,175.2969 C184.07,175.2969 299.76,175.2969 367.81,175.2969" fill="none" id="Placer-to-Filler" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="373.81,175.2969,364.81,171.2969,368.81,175.2969,364.81,179.2969,373.81,175.2969" style="stroke:#181818;stroke-width:1;" /><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html" target="_top" title="LAB-1.html" xlink:actuate="onRequest" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html" xlink:show="new" xlink:title="LAB-1.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="223.2725" x="132.5" y="168.3638">Placer Order Management (LAB-1)</text></a></g><!--reverse link Placer to Filler--><g class="link" data-entity-1="Placer" data-entity-2="Filler" data-source-line="10" data-uid="lnk8" id="link_Placer_Filler"><path d="M120.0946,192.7398 C127.1846,194.3298 128.55,194.3869 135.5,195.2969 C183.31,201.5669 304.73,201.8969 352.5,195.2969 C359.48,194.3369 366.73,192.8569 373.83,191.1369" fill="none" id="Placer-backto-Filler" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="114.24,191.4269,122.1466,197.2994,119.1188,192.521,123.8972,189.4932,114.24,191.4269" style="stroke:#181818;stroke-width:1;" /><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-2.html" target="_top" title="LAB-2.html" xlink:actuate="onRequest" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-2.html" xlink:show="new" xlink:title="LAB-2.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="215.0205" x="136.5" y="191.3638">Filler Order Management (LAB-2)</text></a></g><!--reverse link Tracker to Filler--><g class="link" data-entity-1="Tracker" data-entity-2="Filler" data-source-line="12" data-uid="lnk10" id="link_Tracker_Filler"><path d="M423.5,86.6369 C423.5,107.4969 423.5,136.2769 423.5,157.0769" fill="none" id="Tracker-backto-Filler" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="423.5,80.6369,419.5,89.6369,423.5,85.6369,427.5,89.6369,423.5,80.6369" style="stroke:#181818;stroke-width:1;" /><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-3.html" target="_top" title="LAB-3.html" xlink:actuate="onRequest" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-3.html" xlink:show="new" xlink:title="LAB-3.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="230.8896" x="424.5" y="123.3638">Order Results Management (LAB-3)</text></a></g><!--link Filler to Manager--><g class="link" data-entity-1="Filler" data-entity-2="Manager" data-source-line="13" data-uid="lnk11" id="link_Filler_Manager"><path d="M373.92,180.0069 C344.47,185.0569 309.31,196.7069 290.5,223.2969 C272.26,249.0769 296.8549,263.3899 333.0549,272.8499" fill="none" id="Filler-to-Manager" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="338.86,274.3669,331.1638,268.2213,334.0225,273.1027,329.1411,275.9614,338.86,274.3669" style="stroke:#181818;stroke-width:1;" /><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-4.html" target="_top" title="LAB-4.html" xlink:actuate="onRequest" xlink:href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-4.html" xlink:show="new" xlink:title="LAB-4.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="217.0454" x="291.5" y="236.3638">Work Order Management (LAB-4)</text></a></g><!--reverse link Filler to Manager--><g class="link" data-entity-1="Filler" data-entity-2="Manager" data-source-line="14" data-uid="lnk13" id="link_Filler_Manager"><path d="M478.821,192.7941 C506.401,203.5341 527.06,218.0269 513.5,240.2969 C505.45,253.5069 492.37,263.1669 478.59,270.1669" fill="none" id="Filler-backto-Manager" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="473.23,190.6169,480.1651,197.6101,477.8892,192.4312,483.068,190.1553,473.23,190.6169" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="221.5269" x="517.5" y="236.3638">Test Results Management (LAB-5)</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">IHE LTW Actor Diagram</p>
+</figure>
+<p><br clear="all" /></p>
+
+<p>Initially only the IHE <code class="language-plaintext highlighter-rouge">LAB-1</code> and <code class="language-plaintext highlighter-rouge">LAB-3</code> is in focus.</p>
+
+<p>Later stages will include the use of <a href="https://digital.nhs.uk/developer/api-catalogue/genomic-order-management-service-fhir">Genomic Order Management Service</a>.</p>
+
+<div class="alert alert-info" role="alert">
+<b>Interaction:</b> LAB-1 <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html" _target="_blank">Genomic Test Order O21</a> HL7 FHIR and <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/hl7v2.html#oml_o21-laboratory-order" _target="_blank">Laboratory Order OML_021</a> HL7 v2
+<br />
+<b>Interaction:</b> LAB-3 <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-3.html" _target="_blank">Genomic Test Report R01</a> HL7 FHIR and <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/hl7v2.html#oru_r01-unsolicited-transmission-of-an-observation-message" _target="_blank">Unsolicited Results ORU_R01</a> HL7 v2 
+</div>
+
+<h2 id="overview">Overview</h2>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW_20Use_20Case_201_20and_202.drawio.png" alt="Genomic LTW Business Process" />
+<br clear="all" /></p>
+<p class="figureTitle">Genomic LTW Business Process</p>
+<p><br clear="all" /></p>
+
+<blockquote>
+  <p>The sample may not need collecting by the ordering clinician for 2 reasons</p>
+  <ul>
+    <li>it has already been sent to the GLH and extracted DNA is already stored there</li>
+    <li>the sample is somewhere else in the country. In this instance the ordering clinician will need to arrange the sample transfer to the GLH.</li>
+  </ul>
+</blockquote>
+
+<p>The processes above are described in more detail in:</p>
+
+<ul>
+  <li><a href="#use-case-genomic-test-order">Use Case 1: Genomic Test Order</a> for the order</li>
+  <li><a href="#use-case-genomic-test-report">Use Case 2: Genomic Test Report</a> for the report</li>
+</ul>
+
+<p>From a high level perspective the process is</p>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="193px" preserveAspectRatio="none" style="width:388px;height:193px;background:#FFFFFF;" version="1.1" viewBox="0 0 388 193" width="388px" zoomAndPan="magnify"><defs /><g><g><title>Order Placer</title><rect fill="#000000" fill-opacity="0.00000" height="150.6641" width="8" x="51.7295" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="55" x2="55" y1="36.2969" y2="186.9609" /></g><g><title>Order Filler</title><rect fill="#000000" fill-opacity="0.00000" height="150.6641" width="8" x="280.3462" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="284.0601" x2="284.0601" y1="36.2969" y2="186.9609" /></g><g class="participant participant-head" data-participant="EPR"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.459" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="12" y="24.9951">Order Placer</text></g><g class="participant participant-head" data-participant="LIMS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92.5723" x="238.0601" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="245.0601" y="24.9951">Order Filler</text></g><g class="message" data-participant-1="EPR" data-participant-2="LIMS"><polygon fill="#181818" points="272.3462,78.5625,282.3462,82.5625,272.3462,86.5625,276.3462,82.5625" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="55.7295" x2="278.3462" y1="82.5625" y2="82.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1323" x="62.7295" y="62.3638">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32.7412" x="62.7295" y="77.4966">Send</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="160.6973" x="99.9966" y="77.4966">Laboratory Order O21</text></g><g class="message" data-participant-1="LIMS" data-participant-2="LIMS"><line style="stroke:#181818;stroke-width:1;" x1="284.3462" x2="326.3462" y1="111.6953" y2="111.6953" /><line style="stroke:#181818;stroke-width:1;" x1="326.3462" x2="326.3462" y1="111.6953" y2="124.6953" /><line style="stroke:#181818;stroke-width:1;" x1="285.3462" x2="326.3462" y1="124.6953" y2="124.6953" /><polygon fill="#181818" points="295.3462,120.6953,285.3462,124.6953,295.3462,128.6953,291.3462,124.6953" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90.4351" x="291.3462" y="106.6294">Perform Tests</text></g><g class="message" data-participant-1="LIMS" data-participant-2="EPR"><polygon fill="#181818" points="66.7295,164.9609,56.7295,168.9609,66.7295,172.9609,62.7295,168.9609" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="60.7295" x2="283.3462" y1="168.9609" y2="168.9609" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1323" x="72.7295" y="148.7622">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32.7412" x="72.7295" y="163.895">Send</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="167.3496" x="109.9966" y="163.895">Laboratory Report R01</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Genomics Simplified Sequence Diagram</p>
+</figure>
+<p><br clear="all" /></p>
+
+<p>Where the <code class="language-plaintext highlighter-rouge">Order Placer</code> sends the <strong>Laboratory Order</strong> to the <code class="language-plaintext highlighter-rouge">Order Filler</code>, the lab performs the test and then sends the <strong>Laboratory Report</strong> back to the <code class="language-plaintext highlighter-rouge">Order Placer</code>. However, variations can exist such as the order is updated or the order is entered directly on the <code class="language-plaintext highlighter-rouge">Order Filler</code>system (these are currently out of scope).</p>
+
+<h2 id="laboratory-order-lab-1">Laboratory Order (LAB-1)</h2>
+
+<pre><code class="language-mermaid">graph TD;
+    OrderPlacer["&lt;b&gt;Order Placer&lt;/b&gt;&lt;br/&gt;(EPR or Order Comms)"] --&gt; |1. Send Genomic Laboratory Order&lt;br/&gt;HL7 v2 ORM_O01 or OML_O21| OR[Acute Hospitals&lt;br/&gt;Trust Integration Engine]
+       OrderPlacer --&gt; |"2. Asks for (Order)"| SpecimenCollection
+    SpecimenCollection[Specimen Collection] --&gt; |3. Sends Specimen| OrderFiller
+    OR --&gt; |"1a. HL7 FHIR Message O21&lt;br/&gt;(IHE LTW)"| RIE[Middleware&lt;br/&gt;Regional Orchestration Engine] 
+    RIE --&gt; |"1c. Send Genomic Laboratory Order&lt;br/&gt;HL7 FHIR Message O21&lt;br/&gt;(IHE LTW)"| CDR[NW Genomics&lt;br/&gt;Clinical Data Repository]
+    CDR --&gt; |1d. Send FHIR Event Notification| Any["Any &lt;br/&gt;(future)"]
+    RIE --&gt; |"1b. Send Genomic Laboratory Order&lt;br/&gt;HL7 v2 OML_O21&lt;br/&gt;(IHE LTW)"| EHRTIE[NW Genomics&lt;br/&gt;Laboratory Information Management System] 
+    RIE --&gt; |"1b. Send Genomic Laboratory Order&lt;br/&gt;FHIR Transaction&lt;br/&gt;via NHS England Genomic Order Management Service"| GOMS["External&lt;br/&gt;Laboratory Information Management System&lt;br/&gt;(Future)"] 
+    EHRTIE --&gt; OrderFiller[&lt;b&gt;Order Filler&lt;/b&gt;]
+    GOMS --&gt; OrderFiller
+
+    classDef green fill:#D5E8D4;
+    classDef yellow fill:#FFF2CC;
+    class RIE green;
+    class OR green;
+    class CDR yellow;
+</code></pre>
+
+<h3 id="use-case-genomic-test-order">Use Case: Genomic Test Order</h3>
+
+<p>An order is created by the clinical practice and placed to the laboratory.</p>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="298px" preserveAspectRatio="none" style="width:259px;height:298px;background:#FFFFFF;" version="1.1" viewBox="0 0 259 298" width="259px" zoomAndPan="magnify"><defs /><g><ellipse cx="129.5947" cy="20" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1;" /><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="216.377" x="21.4063" y="50" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="196.377" x="31.4063" y="71.1387">Select Genomic Test Order Form</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="237.1895" x="11" y="103.9688" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="217.1895" x="21" y="125.1074">Complete Genomic Test Order Form</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="221.9258" x="18.6318" y="157.9375" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="201.9258" x="28.6318" y="179.0762">Submit Genomic Test Order Form</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="109.8828" x="74.6533" y="211.9063" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89.8828" x="84.6533" y="233.0449">Collect Sample</text><ellipse cx="129.5947" cy="276.875" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1;" /><ellipse cx="129.5947" cy="276.875" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="129.5947" x2="129.5947" y1="30" y2="50" /><polygon fill="#181818" points="125.5947,40,129.5947,50,133.5947,40,129.5947,44" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="129.5947" x2="129.5947" y1="83.9688" y2="103.9688" /><polygon fill="#181818" points="125.5947,93.9688,129.5947,103.9688,133.5947,93.9688,129.5947,97.9688" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="129.5947" x2="129.5947" y1="137.9375" y2="157.9375" /><polygon fill="#181818" points="125.5947,147.9375,129.5947,157.9375,133.5947,147.9375,129.5947,151.9375" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="129.5947" x2="129.5947" y1="191.9063" y2="211.9063" /><polygon fill="#181818" points="125.5947,201.9063,129.5947,211.9063,133.5947,201.9063,129.5947,205.9063" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="129.5947" x2="129.5947" y1="245.875" y2="265.875" /><polygon fill="#181818" points="125.5947,255.875,129.5947,265.875,133.5947,255.875,129.5947,259.875" style="stroke:#181818;stroke-width:1;" /></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Genomics Test Order Activity</p>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="select-genomic-test-order-form">Select Genomic Test Order Form</h4>
+
+<p>Within the system creating the genomics order, the practitioner will select a form for the test required. Below are several examples from <a href="https://mft.nhs.uk/nwglh/documents/test-request-forms/">North West Genomic Laboratory Hub - Test Request Forms</a>.
+How this is implemented will vary between different NHS organisations and systems they use.</p>
+
+<table style="width:100%">
+  <tr>
+    <td>
+       <img style="padding:3px;width:80%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/NW_20GLH_20Genomic_20Testing_20Request_20Form_20_E2_80_93_20Rare_20Disease.png" alt="NW GLH Genomic Testing Request Form – Rare Disease" />
+      <p class="figureTitle">NW GLH Genomic Testing Request Form – Rare Disease</p>   
+    </td>
+    <td>
+       <img style="padding:3px;width:80%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Request_20for_20Genetic_20Testing_20for_20Haemoglobinopathies.png" alt="Request for Genetic Testing for Haemoglobinopathies" />
+      <p class="figureTitle">Request for Genetic Testing for Haemoglobinopathies</p>   
+    </td>
+  </tr>
+</table>
+
+<h4 id="complete-genomic-test-order-form">Complete Genomic Test Order Form</h4>
+
+<p>These forms may (/will?) will have a computable definition called an <a href="https://hl7.org/fhir/R4/questionnaire.html">template (FHIR Questionnaire)</a> which will list the technical content requirements for the form. At present only one archetype has been defined:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestOrder.html">NW GMSA Genomics Test Order Panel</a></li>
+</ul>
+
+<p>This archetype definition can also support <a href="https://build.fhir.org/ig/HL7/sdc/index.html">HL7 Structured Data Capture</a> should the Order Placer system support these features.</p>
+
+<h4 id="submit-genomic-test-order-form">Submit Genomic Test Order Form</h4>
+
+<p>The completed form is submitted to the Regional Orchestration Engine using:</p>
+
+<div class="alert alert-info" role="alert">
+<b>Interaction:</b> <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LAB-1.html" _target="_blank">Genomic Test Order O21</a> 
+</div>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="438px" preserveAspectRatio="none" style="width:642px;height:438px;background:#FFFFFF;" version="1.1" viewBox="0 0 642 438" width="642px" zoomAndPan="magnify"><defs /><g><g><title>Order Placer</title><rect fill="#000000" fill-opacity="0.00000" height="378.4609" width="8" x="51.7295" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="55" x2="55" y1="52.5938" y2="431.0547" /></g><g><title>Intermediary</title><rect fill="#000000" fill-opacity="0.00000" height="378.4609" width="8" x="276.5933" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="280.459" x2="280.459" y1="52.5938" y2="431.0547" /></g><g><title>Order Filler</title><rect fill="#000000" fill-opacity="0.00000" height="378.4609" width="8" x="497.0137" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="500.7275" x2="500.7275" y1="52.5938" y2="431.0547" /></g><g class="participant participant-head" data-participant="EPR"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.459" x="5" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="12" y="41.292">Order Placer</text></g><g class="participant participant-head" data-participant="TIE"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="328.2686" x="116.459" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90.5078" x="235.3394" y="24.9951">Intermediary</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314.2686" x="123.459" y="41.292">NW GLH Regional Orchestration Engine (RIE)</text></g><g class="participant participant-head" data-participant="LIMS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92.5723" x="454.7275" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="461.7275" y="41.292">Order Filler</text></g><g class="message" data-participant-1="EPR" data-participant-2="EPR"><line style="stroke:#181818;stroke-width:1;" x1="55.7295" x2="97.7295" y1="83.7266" y2="83.7266" /><line style="stroke:#181818;stroke-width:1;" x1="97.7295" x2="97.7295" y1="83.7266" y2="96.7266" /><line style="stroke:#181818;stroke-width:1;" x1="56.7295" x2="97.7295" y1="96.7266" y2="96.7266" /><polygon fill="#181818" points="66.7295,92.7266,56.7295,96.7266,66.7295,100.7266,62.7295,96.7266" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150.9219" x="62.7295" y="78.6606">Select Test Order Form</text></g><g class="message" data-participant-1="EPR" data-participant-2="EPR"><line style="stroke:#181818;stroke-width:1;" x1="55.7295" x2="97.7295" y1="125.8594" y2="125.8594" /><line style="stroke:#181818;stroke-width:1;" x1="97.7295" x2="97.7295" y1="125.8594" y2="138.8594" /><line style="stroke:#181818;stroke-width:1;" x1="56.7295" x2="97.7295" y1="138.8594" y2="138.8594" /><polygon fill="#181818" points="66.7295,134.8594,56.7295,138.8594,66.7295,142.8594,62.7295,138.8594" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173.4688" x="62.7295" y="120.7935">Complete Test Order Form</text></g><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="635.3398" x="0" y="167.4258" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="635.3398" y1="167.4258" y2="167.4258" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="635.3398" y1="170.4258" y2="170.4258" /><rect fill="#EEEEEE" height="23.1328" style="stroke:#000000;stroke-width:2;" width="271.9878" x="181.676" y="156.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="253.4619" x="187.676" y="172.9263">Submit Test Order Form IHE LAB-1</text><g class="message" data-participant-1="EPR" data-participant-2="TIE"><polygon fill="#181818" points="268.5933,237.3906,278.5933,241.3906,268.5933,245.3906,272.5933,241.3906" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="55.7295" x2="274.5933" y1="241.3906" y2="241.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1323" x="62.7295" y="206.0591">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157.5234" x="62.7295" y="221.1919">Send HL7 FHIR Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="160.6973" x="62.7295" y="236.3247">Laboratory Order O21</text></g><g class="message" data-participant-1="TIE" data-participant-2="LIMS"><polygon fill="#181818" points="489.0137,281.6563,499.0137,285.6563,489.0137,289.6563,493.0137,285.6563" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="280.5933" x2="495.0137" y1="285.6563" y2="285.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143.3682" x="287.5933" y="265.4575">Send HL7 v2 Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="67.9136" x="287.5933" y="280.5903">OML_O21</text></g><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="635.3398" x="0" y="314.2227" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="635.3398" y1="314.2227" y2="314.2227" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="635.3398" y1="317.2227" y2="317.2227" /><rect fill="#EEEEEE" height="23.1328" style="stroke:#000000;stroke-width:2;" width="127.4326" x="253.9536" y="303.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="108.9067" x="259.9536" y="319.7231">Collect Sample</text><g class="message" data-participant-1="EPR" data-participant-2="EPR"><line style="stroke:#181818;stroke-width:1;" x1="55.7295" x2="97.7295" y1="357.9219" y2="357.9219" /><line style="stroke:#181818;stroke-width:1;" x1="97.7295" x2="97.7295" y1="357.9219" y2="370.9219" /><line style="stroke:#181818;stroke-width:1;" x1="56.7295" x2="97.7295" y1="370.9219" y2="370.9219" /><polygon fill="#181818" points="66.7295,366.9219,56.7295,370.9219,66.7295,374.9219,62.7295,370.9219" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97.373" x="62.7295" y="352.856">Collect Sample</text></g><g class="message" data-participant-1="LIMS" data-participant-2="LIMS"><line style="stroke:#181818;stroke-width:1;" x1="501.0137" x2="543.0137" y1="400.0547" y2="400.0547" /><line style="stroke:#181818;stroke-width:1;" x1="543.0137" x2="543.0137" y1="400.0547" y2="413.0547" /><line style="stroke:#181818;stroke-width:1;" x1="502.0137" x2="543.0137" y1="413.0547" y2="413.0547" /><polygon fill="#181818" points="512.0137,409.0547,502.0137,413.0547,512.0137,417.0547,508.0137,413.0547" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120.3262" x="508.0137" y="394.9888">Update Test Order</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Genomics Test Order Sequence Diagram - LAB-1</p>
+</figure>
+<p><br clear="all" /></p>
+
+<p>For submission, this form will be converted by the <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-OrderPlacer.html">Order Placer</a> to a communication format called <a href="https://hl7.org/fhir/R4/index.html">HL7 FHIR</a> (and for compatability reasons <a href="https://en.wikipedia.org/wiki/Health_Level_7#HL7_Version_2">HL7 v2</a>.
+If the <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ActorDefinition-OrderPlacer.html">Order Placer</a> has a FHIR enabled Electronic Patient Record (e.g. EPIC, Cerner, Meditech, etc), they may use <a href="https://build.fhir.org/ig/HL7/sdc/extraction.html">HL7 SDC - Form Data Extraction</a> to assist with this process.</p>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/SDC_20Overview.drawio.png" alt="Order Test Form - Data Extraction Overview" />
+<br clear="all" /></p>
+<p class="figureTitle">Order Test Form - Data Extraction Overview</p>
+<p><br clear="all" /></p>
+
+<div class="alert alert-info" role="alert">
+<b>Domain Archetype:</b> <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestOrder.html" _target="_blank">Genomic Test Order (Template)</a> 
+</div>
+
+<p>The FHIR exchange style used <a href="https://hl7.org/fhir/R4/messaging.html">FHIR Message</a> following <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/MessageDefinition-laboratory-order.html">laboratory-order</a> message definition. This definition is based on HL7 v2 <code class="language-plaintext highlighter-rouge">OML_O21 Laboratory Order</code> which simplifies conversion to/from pipe+hat (v2) and json (FHIR) formats.</p>
+
+<blockquote>
+  <p>At present, the NW GLH Laboratory Information Management System (LIMS) will not support HL7 FHIR. The Regional Integration Exchange (RIE) will perform conversion between v2 and FHIR formats.</p>
+</blockquote>
+
+<p>This message is an <a href="https://martinfowler.com/bliki/DDD_Aggregate.html">aggregate (DDD)</a>/<a href="https://en.wikipedia.org/wiki/Archetype_(information_science)">archetype</a> and so is a collection of FHIR Resources (similar to v2 segements) which is described in <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Questionnaire-GenomicTestOrder.html">Genomic Test Order</a>.</p>
+
+<h4 id="communicating-ask-at-order-entry-questions-and-prior-results">Communicating Ask at Order Entry questions and prior results</h4>
+
+<p>See also <a href="https://hl7.eu/fhir/laboratory/StructureDefinition-ServiceRequest-eu-lab.html#communicating-ask-at-order-entry-questions-and-prior-results">HL7 Europe Laboratory Report - ServiceRequest</a>
+This message can be extended by <a href="https://hl7.org/fhir/R4/questionnaire.html">template (FHIR Questionnaire)</a> which allows the definition of additional questions to be defined for the <code class="language-plaintext highlighter-rouge">laboratory order</code>.</p>
+
+<p>The detail of this form/template defines:</p>
+
+<p><img style="padding:3px;width:700px;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/sdc-order-test-form.png" alt="Order Test Form Example (extract)" />
+<br clear="all" /></p>
+<p class="figureTitle">Order Text Form Example (extract)</p>
+<p><br clear="all" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>CodeSystem</th>
+      <th>Code</th>
+      <th>FHIR Profile</th>
+      <th>HL7 v2 Segment</th>
+      <th>FHIR Questionniare <br />item.type</th>
+      <th>FHIR Observation <br />value[x]</th>
+      <th>v2 OBX-2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Does This Test Relate to a Pregnancy</td>
+      <td>SNOMED</td>
+      <td>77386006</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/StructureDefinition-Observation.html">Observation</a></td>
+      <td>OBX</td>
+      <td>boolean</td>
+      <td>valueBoolean</td>
+      <td>CE (<a href="https://terminology.hl7.org/5.1.0/CodeSystem-v2-tables.html">code 0136</a>)</td>
+    </tr>
+    <tr>
+      <td>Sample</td>
+      <td>LOINC</td>
+      <td>68992-7</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/StructureDefinition-Observation-Panel.html">Observation-Panel</a></td>
+      <td>OBR</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>High Infection Risk Sample</td>
+      <td>SNOMED</td>
+      <td>281269004</td>
+      <td><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/StructureDefinition-Observation.html">Observation</a></td>
+      <td>OBX</td>
+      <td>boolean</td>
+      <td>valueBoolean</td>
+      <td>CE (<a href="https://terminology.hl7.org/5.1.0/CodeSystem-v2-tables.html">code 0136</a>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>It is not expected the NW GLH Laboratory Information Management System (LIMS) will support UK SNOMED CT, and the RIE will handle the conversion either internally using <a href="https://hl7.org/fhir/R4/conceptmap.html">FHIR ConceptMap</a> or a terminology service with the following capabilities <a href="https://profiles.ihe.net/ITI/SVCM/index.html">IHE Sharing Valuesets, Codes, and Maps (SVCM)</a></p>
+</blockquote>
+
+<h4 id="collect-sample-and-update-genomic-test-order">Collect Sample and Update Genomic Test Order</h4>
+
+<p>After submitting the original order, the sample will be collected and sent to the Order Filler. The Order Filler will update the Test Order to include details such as a specimen collection date, order filler number, etc.</p>
+
+<h4 id="relationship-to-nhs-england-pathology">Relationship to NHS England Pathology</h4>
+
+<p>This guide builds on the use cases described in the <a href="https://simplifier.net/guide/pathology-fhir-implementation-guide/Home/Design/Background">NHS England Pathology FHIR Implementation Guide</a>, extending them to support a wider range of stakeholders and introducing standards for the Laboratory Order LAB-1.</p>
+
+<p>Key differences include:</p>
+
+<ul>
+  <li><strong>Workflow foundation:</strong> The <a href="https://www.ihe.net/uploadedFiles/Documents/PaLM/IHE_PaLM_TF_Vol1.pdf">IHE Laboratory and Testing Worflow LTW</a> is used as the reference model for describing laboratory testing processes.</li>
+  <li><strong>Order Placer role:</strong> The GP Electronic Patient Record (EPR) System and the Order Communications System together form the Order Placer role, which may also be fulfilled by other EPR systems.</li>
+  <li><strong>Intermediary between Order Placer and Order Filler:</strong> This intermediary performs message translation and code conversion.</li>
+  <li><strong>Order Result Tracker role:</strong> For results, the GP EPR System acts as the Order Result Tracker, though other systems (e.g. Secondary Care EPR) can provide this function.</li>
+  <li><strong>Intermediary between Order Filler and Order Result Tracker:</strong> This intermediary also handles message translation and code conversion.</li>
+  <li><strong>Canonical model:</strong> A standardised model (<a href="https://en.wikipedia.org/wiki/Canonical_model">Canonical model</a>), expressed in HL7 FHIR, that can be implemented using HL7 v2, FHIR, and IHE XDS. It aligns with the latest HL7 UK Core and NHS England Data Model and Dictionary. While primarily focused on genomics, it incorporates elements from pathology and radiology for compatibility, and mandates the use of NHS England National Procedure Codes.</li>
+</ul>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Relationship_20to_20NHS_20England_20Pathology.drawio.png" alt="Relationship to NHS England Pathology" />
+<br clear="all" /></p>
+<p class="figureTitle">Relationship to NHS England Pathology</p>
+<p><br clear="all" /></p>
+
+<h2 id="laboratory-report-lab-3">Laboratory Report (LAB-3)</h2>
+
+<pre><code class="language-mermaid">graph TD;
+    OrderFiller["&lt;b&gt;Order Filler&lt;/b&gt;&lt;br/&gt;Diagnostic Testing (LIMS)"] --&gt; |"1. Sends HL7 v2 ORU_R01&lt;br/&gt;(IHE LTW)"| RIE[Middleware&lt;br/&gt;NW Genomics&lt;br/&gt;Regional Orchestration Engine] 
+    RIE --&gt; |"1a. Sends HL7 v2 ORU_R01&lt;br/&gt;(IHE LTW)"| TIE[Middleware&lt;br/&gt;Acute Hospitals&lt;br/&gt;Trust Integration Engine] 
+    TIE--&gt; |"1a. Sends HL7 v2 ORU_R01&lt;br/&gt;(IHE LTW)"| EHRTIE[North West&lt;br/&gt;NHS Trust&lt;br/&gt;EHR] 
+    RIE--&gt; |"1a. Sends HL7 v2 ORU_R01&lt;br/&gt;(IHE LTW)"| BOARD["NHS Wales&lt;br/&gt;Health Board&lt;br/&gt; (future?)"]
+    RIE --&gt; |"1a. Sends FHIR Transaction&lt;br/&gt;via NHS England Genomic Order Management Service"| GOMS["NHS England&lt;br/&gt;NHS Trust&lt;br/&gt;EHR (Future)"] 
+    RIE --&gt; |1b. Sends HL7 v2 MDM_T02 or IHE XDS| ICSTIE[Integrated Care System &lt;br/&gt; Document Repository]
+    RIE --&gt; |1c. Sends HL7 FHIR R4&lt;br/&gt;Message O21| CDR[NW Genomics&lt;br/&gt;Clinical Data Repository]
+    CDR --&gt; |1d. Sends FHIR Event Notification| Any["Any &lt;br/&gt;(future)"]
+    GOMS --&gt; OrderPlacer[&lt;b&gt;Order Placer&lt;/b&gt;]
+    EHRTIE --&gt; OrderPlacer
+    BOARD--&gt; OrderPlacer
+
+    classDef green fill:#D5E8D4;
+    classDef yellow fill:#FFF2CC;
+    class RIE green;
+    class TIE green;
+    class CDR yellow;
+</code></pre>
+
+<h3 id="use-case-genomic-test-report">Use Case: Genomic Test Report</h3>
+
+<p>A report is created by the clinical practice and sent to the order result tracker.</p>
+
+<h4 id="genomic-test-report-description">Genomic Test Report Description</h4>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="244px" preserveAspectRatio="none" style="width:302px;height:244px;background:#FFFFFF;" version="1.1" viewBox="0 0 302 244" width="302px" zoomAndPan="magnify"><defs /><g><ellipse cx="151.1484" cy="20" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1;" /><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="280.2969" x="11" y="50" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="260.2969" x="21" y="71.1387">Performs Tests requested in the Test Order</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="182.9023" x="59.6973" y="103.9688" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="162.9023" x="69.6973" y="125.1074">Write Genomic Test Report</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="219.9336" x="41.1816" y="157.9375" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="199.9336" x="51.1816" y="179.0762">Send (final) Genomic Test Report</text><ellipse cx="151.1484" cy="222.9063" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1;" /><ellipse cx="151.1484" cy="222.9063" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="151.1484" x2="151.1484" y1="30" y2="50" /><polygon fill="#181818" points="147.1484,40,151.1484,50,155.1484,40,151.1484,44" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="151.1484" x2="151.1484" y1="83.9688" y2="103.9688" /><polygon fill="#181818" points="147.1484,93.9688,151.1484,103.9688,155.1484,93.9688,151.1484,97.9688" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="151.1484" x2="151.1484" y1="137.9375" y2="157.9375" /><polygon fill="#181818" points="147.1484,147.9375,151.1484,157.9375,155.1484,147.9375,151.1484,151.9375" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="151.1484" x2="151.1484" y1="191.9063" y2="211.9063" /><polygon fill="#181818" points="147.1484,201.9063,151.1484,211.9063,155.1484,201.9063,151.1484,205.9063" style="stroke:#181818;stroke-width:1;" /></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Genomics Test Report Activity</p>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="sendshare-genomic-test-report">Send/Share Genomic Test Report</h4>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LaboratoryReportExplainedPage1.drawio.png" alt="Genomic Report Page 1" />
+<br clear="all" /></p>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LaboratoryReportExplainedPage2.drawio.png" alt="Genomic Report Page 2" />
+<br clear="all" /></p>
+<p class="figureTitle">Genomic Report Example</p>
+<p><br clear="all" /></p>
+
+<div class="alert alert-info" role="alert">
+<b>Domain Archetype:</b> <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/StructureDefinition-Composition-GenomicReport.html" _target="_blank">Genomic Test Report (Composition)</a> 
+</div>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="579px" preserveAspectRatio="none" style="width:750px;height:579px;background:#FFFFFF;" version="1.1" viewBox="0 0 750 579" width="750px" zoomAndPan="magnify"><defs /><g><rect fill="none" height="148.7969" style="stroke:#000000;stroke-width:1.5;" width="575.9502" x="49" y="153.8594" /><g><title>Order Placer</title><rect fill="#000000" fill-opacity="0.00000" height="520.2578" width="8" x="105.7295" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="109" x2="109" y1="52.5938" y2="572.8516" /></g><g><title>Intermediary</title><rect fill="#000000" fill-opacity="0.00000" height="520.2578" width="8" x="335.1968" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="339.0625" x2="339.0625" y1="52.5938" y2="572.8516" /></g><g><title>Order Filler</title><rect fill="#000000" fill-opacity="0.00000" height="520.2578" width="8" x="564.6641" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="568.3779" x2="568.3779" y1="52.5938" y2="572.8516" /></g><g class="participant participant-head" data-participant="EPR"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.459" x="59" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="66" y="41.292">Order Placer</text></g><g class="participant participant-head" data-participant="TIE"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="328.2686" x="175.0625" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90.5078" x="293.9429" y="24.9951">Intermediary</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314.2686" x="182.0625" y="41.292">NW GLH Regional Orchestration Engine (RIE)</text></g><g class="participant participant-head" data-participant="LIMS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92.5723" x="522.3779" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="529.3779" y="41.292">Order Filler</text></g><g class="message" data-participant-1="LIMS" data-participant-2="LIMS"><line style="stroke:#181818;stroke-width:1;" x1="568.6641" x2="610.6641" y1="83.7266" y2="83.7266" /><line style="stroke:#181818;stroke-width:1;" x1="610.6641" x2="610.6641" y1="83.7266" y2="96.7266" /><line style="stroke:#181818;stroke-width:1;" x1="569.6641" x2="610.6641" y1="96.7266" y2="96.7266" /><polygon fill="#181818" points="579.6641,92.7266,569.6641,96.7266,579.6641,100.7266,575.6641,96.7266" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156.457" x="575.6641" y="78.6606">Perform Diagnostic Test</text></g><g class="message" data-participant-1="LIMS" data-participant-2="LIMS"><line style="stroke:#181818;stroke-width:1;" x1="568.6641" x2="610.6641" y1="125.8594" y2="125.8594" /><line style="stroke:#181818;stroke-width:1;" x1="610.6641" x2="610.6641" y1="125.8594" y2="138.8594" /><line style="stroke:#181818;stroke-width:1;" x1="569.6641" x2="610.6641" y1="138.8594" y2="138.8594" /><polygon fill="#181818" points="579.6641,134.8594,569.6641,138.8594,579.6641,142.8594,575.6641,138.8594" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160.7734" x="575.6641" y="120.7935">Write Preliminary Report</text></g><path d="M49,153.8594 L118.4512,153.8594 L118.4512,160.9922 L108.4512,170.9922 L49,170.9922 L49,153.8594" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="148.7969" style="stroke:#000000;stroke-width:1.5;" width="575.9502" x="49" y="153.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="24.4512" x="64" y="166.9263">opt</text><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="743.4375" x="0" y="191.5586" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="743.4375" y1="191.5586" y2="191.5586" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="743.4375" y1="194.5586" y2="194.5586" /><rect fill="#EEEEEE" height="23.1328" style="stroke:#000000;stroke-width:2;" width="390.8857" x="176.2759" y="180.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="372.3599" x="182.2759" y="197.0591">Send (Preliminary) Genomic Test Report IHE LAB-3</text><g class="message" data-participant-1="LIMS" data-participant-2="TIE"><polygon fill="#181818" points="350.1968,246.3906,340.1968,250.3906,350.1968,254.3906,346.1968,250.3906" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="344.1968" x2="567.6641" y1="250.3906" y2="250.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143.3682" x="356.1968" y="230.1919">Send HL7 v2 Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="205.4673" x="356.1968" y="245.3247">Laboratory Report ORU_R01</text></g><g class="message" data-participant-1="TIE" data-participant-2="EPR"><polygon fill="#181818" points="120.7295,290.6563,110.7295,294.6563,120.7295,298.6563,116.7295,294.6563" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="114.7295" x2="338.1968" y1="294.6563" y2="294.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143.3682" x="126.7295" y="274.4575">Send HL7 v2 Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="205.4673" x="126.7295" y="289.5903">Laboratory Report ORU_R01</text></g><g class="message" data-participant-1="LIMS" data-participant-2="LIMS"><line style="stroke:#181818;stroke-width:1;" x1="568.6641" x2="610.6641" y1="330.7891" y2="330.7891" /><line style="stroke:#181818;stroke-width:1;" x1="610.6641" x2="610.6641" y1="330.7891" y2="343.7891" /><line style="stroke:#181818;stroke-width:1;" x1="569.6641" x2="610.6641" y1="343.7891" y2="343.7891" /><polygon fill="#181818" points="579.6641,339.7891,569.6641,343.7891,579.6641,347.7891,575.6641,343.7891" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110.4619" x="575.6641" y="325.7231">Complete Report</text></g><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="743.4375" x="0" y="372.3555" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="743.4375" y1="372.3555" y2="372.3555" /><line style="stroke:#000000;stroke-width:1;" x1="0" x2="743.4375" y1="375.3555" y2="375.3555" /><rect fill="#EEEEEE" height="23.1328" style="stroke:#000000;stroke-width:2;" width="338.8984" x="202.2695" y="361.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="320.3726" x="208.2695" y="377.856">Send (final) Genomic Test Report IHE LAB-3</text><g class="message" data-participant-1="LIMS" data-participant-2="TIE"><polygon fill="#181818" points="350.1968,427.1875,340.1968,431.1875,350.1968,435.1875,346.1968,431.1875" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="344.1968" x2="567.6641" y1="431.1875" y2="431.1875" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143.3682" x="356.1968" y="410.9888">Send HL7 v2 Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="205.4673" x="356.1968" y="426.1216">Laboratory Report ORU_R01</text></g><g class="message" data-participant-1="TIE" data-participant-2="EPR"><polygon fill="#181818" points="120.7295,471.4531,110.7295,475.4531,120.7295,479.4531,116.7295,475.4531" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="114.7295" x2="338.1968" y1="475.4531" y2="475.4531" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143.3682" x="126.7295" y="455.2544">Send HL7 v2 Message</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="205.4673" x="126.7295" y="470.3872">Laboratory Report ORU_R01</text></g><path d="M5,488.4531 L5,513.4531 L444,513.4531 L444,498.4531 L434,488.4531 L5,488.4531" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M434,488.4531 L434,498.4531 L444,498.4531 L434,488.4531" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="263.2944" x="88.5183" y="505.52">When all tests in the order are complete</text><g class="message" data-participant-1="TIE" data-participant-2="EPR"><polygon fill="#181818" points="120.7295,550.8516,110.7295,554.8516,120.7295,558.8516,116.7295,554.8516" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="114.7295" x2="338.1968" y1="554.8516" y2="554.8516" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172.3008" x="126.7295" y="534.6528">Task complete notification</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193.3687" x="126.7295" y="549.7856">(Can be an email notification)</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Genomics Test Report Sequence Diagram - LAB-3</p>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="main-process-flow">Main Process Flow</h4>
+
+<ul>
+  <li>Optional Preliminary Report Stage
+    <ul>
+      <li>Perform Diagnostic Test → Write Preliminary Report (Order Filler).</li>
+      <li>Send (Preliminary) Genomic Test Report IHE LAB-3 from the Order Filler to the Intermediary (RIE).</li>
+      <li>RIE sends HL7 v2 message Laboratory Report ORU_R01 to the Order Placer.</li>
+      <li>The same HL7 v2 message is also sent from the Intermediary to the Order Placer.</li>
+    </ul>
+  </li>
+  <li>Final Report Stage
+    <ul>
+      <li>Complete Report (Order Filler).</li>
+      <li>Send (Final) Genomic Test Report IHE LAB-3 from the Order Filler to the Intermediary (RIE).</li>
+      <li>RIE sends HL7 v2 message Laboratory Report ORU_R01 to the Order Placer.</li>
+    </ul>
+  </li>
+  <li>Completion Notification
+    <ul>
+      <li>When all tests in the order are complete, a Task Complete Notification is sent to the Order Placer.
+        <ul>
+          <li>This notification can be sent via email or another messaging system.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="order-and-report-use-case-summary">Order and Report Use Case Summary</h3>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Order_20Entry.drawio.png" alt="Genomic Order and Report Summary" />
+<br clear="all" /></p>
+<p class="figureTitle">Genomic Order and Report Summary</p>
+<p><br clear="all" /></p>
+
+<p>Genomic Test Order and Report use cases form part of a broader diagnostic testing workflow, which is guided by:</p>
+
+<ul>
+  <li><a href="https://www.nice.org.uk/">NICE</a> standards</li>
+  <li><strong>Getting It Right First Time (GIRFT)</strong> best practice pathways (e.g. <a href="https://gettingitrightfirsttime.co.uk/wp-content/uploads/2024/03/BestPracticeTimedDiagnosticCancerPathwayssummary-guide-March-24-V3.pdf">Getting It Right First Time (GIRFT) Best Practice Timed Diagnostic Cancer pathways </a></li>
+  <li>Local Diagnostic Pathway Guidance.</li>
+</ul>
+
+<p>These pathways are technically implmented and generally align with the <a href="https://www.ihe.net/uploadedFiles/Documents/PaLM/IHE_PaLM_TF_Vol1.pdf">IHE Laboratory and Testing Worflow LTW</a> (for Imaging workflows see <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf">IHE Radiology (RAD)</a>)</p>
+
+<p>Within EHR systems, test orders are usually created through an <strong>Order Entry Form</strong> (also referred to in health informatics as a <em>Template</em>). Reports are typically displayed in the EPR as a <em>Composition</em> (health informatics terminology).</p>
+
+<p>Between the <strong>Order Placer</strong> (e.g., consultant and EPR) and the <strong>Order Filler</strong> (e.g., laboratory and LIMS), various intermediary systems are used. These are often called Trust Integration Engines (TIEs). The most widely used messaging standard is HL7 v2.</p>
+
+<p>To modernise these workflows, the North West GMSA is also introducing <strong>FHIR</strong>. Alongside this, a regional canonical data model—compatible with HL7 v2, FHIR, and IHE XDS—is being developed. This model aims to reduce the need for multiple message transformations by establishing a common (regional) NHS core data standard.</p>
+
+<h3 id="relationship-to-nhs-england-genomic-order-management-service-fhir-api">Relationship to NHS England Genomic Order Management Service FHIR API</h3>
+
+<p>This guide builds on the use cases outlined in <a href="https://simplifier.net/guide/genomic-order-management-service-fhir-api/Home/Design/Background">NHS England Genomic Order Management Service FHIR API - Background</a>, expanding them to support a broader range of participants and introducing standards for the <code class="language-plaintext highlighter-rouge">Laboratory Order LAB-1</code>.
+Key differences include:</p>
+
+<ul>
+  <li><strong>Workflow basis:</strong> The <a href="https://www.ihe.net/uploadedFiles/Documents/PaLM/IHE_PaLM_TF_Vol1.pdf">IHE Laboratory and Testing Worflow LTW</a> serves as the primary reference for describing laboratory testing processes.</li>
+  <li><strong>Message translation and code conversion:</strong> The Regional Orchestration Engine (RIE) handles translations and code mappings to and from the Genomic Order Management Service FHIR API.</li>
+  <li><strong>Routing of orders and reports:</strong> The RIE routes orders and reports for other GMSAs through the Genomic Order Management Service FHIR API.</li>
+  <li><strong>Regional workflow consistency:</strong> Existing regional workflows remain largely unchanged, with both HL7 v2 and FHIR standardised across the region.</li>
+  <li><strong>Report compatibility:</strong> Reports are aligned with neighbouring Welsh NHS systems, using DHCW HL7 v2 ORU as the core model for both HL7 v2 and FHIR in the North West.</li>
+</ul>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/Relationship_20to_20NHS_20England_20Genomic_20Order_20Management_20Service.drawio.png" alt="Relationship to NHS England Genomic Order Management Service FHIR API" />
+<br clear="all" /></p>
+<p class="figureTitle">Relationship to NHS England Genomic Order Management Service</p>
+<p><br clear="all" /></p>
+
+<h2 id="reflex-order-genomic-test-following-on-from-pathology-test">Reflex Order (Genomic Test following on from Pathology Test)</h2>
+
+<p>A reflex order in a laboratory is a process where a second diagnostic test (e.g. Genomics)) is performed on an existing patient sample based on the results of an initial test, without a new order from the physician (original Order Placer). This practice helps provide more comprehensive diagnostic information efficiently, potentially leading to quicker diagnoses and avoiding the need for another specimen collection.</p>
+
+<h3 id="use-case-genomic-test-order-following-on-from-pathology-test-order">Use Case: Genomic Test Order following on from Pathology Test Order</h3>
+
+<pre><code class="language-mermaid">
+graph TD;
+    subgraph Pathology["Pathology - Greater Manchester ICS"]
+        OrderPlacer[Order Placer&lt;br/&gt;e.g. MFT EPIC] --&gt; |"1. Sends Laboratory Order (Pathology)&lt;br/&gt;ORM_O01 or OML_O21"| OrderFiller["Order Filler (Pathology)&lt;br/&gt;e.g. MFT EPIC Beaker or CFT Shire"]
+        OrderPlacer --&gt; |"2. Asks for (Orders)"| SpecimenCollection
+        SpecimenCollection[Specimen Collection] --&gt; |3. Sends Specimen| OrderFiller
+        OrderFiller --&gt; |4. Send Laboratory Report&lt;br/&gt;ORU_R01| OrderPlacer
+    end 
+    subgraph Genomics["Genomics - North West Region"]
+      OrderPlacerG["Order Placer (Pathology)"] --&gt; |5. Send Laboratory Order&lt;br/&gt;OML_O21| OrderFillerG["Order Filler (Genomics)&lt;br/&gt;e.g. iGene"]
+      OrderPlacerG --&gt; |6. Sends Specimen| OrderFillerG
+      OrderFillerG --&gt; |7. Sends Laboratory Report&lt;br/&gt;ORU_R01| OrderPlacerG
+    end
+
+    OrderFiller --&gt; OrderPlacerG
+    OrderFiller --&gt; |8. Sends Laboratory Report&lt;br/&gt;ORU_R01| OrderPlacer
+
+</code></pre>
+
+<div class="alert alert-info" role="alert">
+<b>Specimen Event Tracking:</b> See LAB-40 HL7 v2.9 SET <a href="https://wiki.ihe.net/index.php/Specimen_Event_Tracking" _target="_blank">IHE Specimen Event Tracking (SET)</a> and  <a href="https://hl7-definition.caristix.com/v2/HL7v2.7/TriggerEvents/OSM_R26" _target="_blank">Hl7 v2.7 OSM_R26 Unsolicited Specimen Shipment Manifest Message</a>
+</div>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/LTW_20Use_20Case_203.drawio.png" alt="Genomic LTW Business Process - Use Case 3" />
+<br clear="all" /></p>
+<p class="figureTitle">Genomic LTW Business Process - Use Case 3</p>
+<p><br clear="all" /></p>
+
+<p>In this use case the original order is raised by the <code class="language-plaintext highlighter-rouge">Order Placer</code> and sent to a Pathology LIMS (<code class="language-plaintext highlighter-rouge">Pathology Order Filler</code>). The Pathology LIMS follows the processes outlined in <a href="#use-case-genomic-test-order">Use Case 1: Genomic Test Order</a> and <a href="#use-case-genomic-test-report">Use Case 2: Genomic Test Report</a> for pathology testing.<br />
+As part of this testing, the clinical process requires a genomics test to be performed.
+This genomics process is largely the same except for:</p>
+<ul>
+  <li>The order is sent as one interaction as the sample does not need to be collected.</li>
+  <li>The order should contain the pathology report detailing the results of the pathology tests.</li>
+</ul>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="487px" preserveAspectRatio="none" style="width:755px;height:487px;background:#FFFFFF;" version="1.1" viewBox="0 0 755 487" width="755px" zoomAndPan="magnify"><defs /><g><rect fill="none" height="139.6641" style="stroke:#000000;stroke-width:1.5;" width="739.3076" x="10" y="111.5625" /><rect fill="none" height="197.9297" style="stroke:#000000;stroke-width:1.5;" width="739.3076" x="10" y="265.2266" /><g><title>Order Placer</title><rect fill="#000000" fill-opacity="0.00000" height="443.8594" width="8" x="66.7295" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="70" x2="70" y1="36.2969" y2="480.1563" /></g><g><title>Order Filler (Pathology)</title><rect fill="#000000" fill-opacity="0.00000" height="443.8594" width="8" x="336.2949" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="339.5337" x2="339.5337" y1="36.2969" y2="480.1563" /></g><g><title>Order Filler (Genomics)</title><rect fill="#000000" fill-opacity="0.00000" height="443.8594" width="8" x="646.625" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="649.9424" x2="649.9424" y1="36.2969" y2="480.1563" /></g><g class="participant participant-head" data-participant="EPR"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.459" x="20" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="27" y="24.9951">Order Placer</text></g><g class="participant participant-head" data-participant="LIMSP"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177.5225" x="251.5337" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.5225" x="258.5337" y="24.9951">Order Filler (Pathology)</text></g><g class="participant participant-head" data-participant="LIMSG"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177.3652" x="561.9424" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.3652" x="568.9424" y="24.9951">Order Filler (Genomics)</text></g><g class="message" data-participant-1="EPR" data-participant-2="LIMSP"><polygon fill="#181818" points="328.2949,63.4297,338.2949,67.4297,328.2949,71.4297,332.2949,67.4297" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="70.7295" x2="334.2949" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245.5654" x="77.7295" y="62.3638">Submit Laboratory Order O21 (LAB-1)</text></g><g class="message" data-participant-1="LIMSP" data-participant-2="EPR"><polygon fill="#181818" points="81.7295,92.5625,71.7295,96.5625,81.7295,100.5625,77.7295,96.5625" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="75.7295" x2="339.2949" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237.4976" x="87.7295" y="91.4966">Send Laboratory Report R01 (LAB-3)</text></g><path d="M10,111.5625 L79.4512,111.5625 L79.4512,118.6953 L69.4512,128.6953 L10,128.6953 L10,111.5625" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="139.6641" style="stroke:#000000;stroke-width:1.5;" width="739.3076" x="10" y="111.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="24.4512" x="25" y="124.6294">opt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="304.2993" x="94.4512" y="123.7729">[Genomic Order created by original order placer]</text><path d="M254,133.6953 L254,158.6953 L736,158.6953 L736,143.6953 L726,133.6953 L254,133.6953" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M726,133.6953 L726,143.6953 L736,143.6953 L726,133.6953" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="295.0137" x="343.3801" y="150.7622">Same specimen can reused for multiple tests</text><g class="message" data-participant-1="EPR" data-participant-2="LIMSG"><polygon fill="#181818" points="638.625,180.9609,648.625,184.9609,638.625,188.9609,642.625,184.9609" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="70.7295" x2="644.625" y1="184.9609" y2="184.9609" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="232.4385" x="77.7295" y="179.895">Submit Genomic Order O21 (LAB-1)</text></g><g class="message" data-participant-1="LIMSP" data-participant-2="LIMSG"><polygon fill="#181818" points="638.625,210.0938,648.625,214.0938,638.625,218.0938,642.625,214.0938" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="340.2949" x2="644.625" y1="214.0938" y2="214.0938" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="286.3301" x="347.2949" y="209.0278">Send Specimen (not a technical interaction)</text></g><g class="message" data-participant-1="LIMSG" data-participant-2="EPR"><polygon fill="#181818" points="81.7295,239.2266,71.7295,243.2266,81.7295,247.2266,77.7295,243.2266" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="75.7295" x2="649.625" y1="243.2266" y2="243.2266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="224.3706" x="87.7295" y="238.1606">Send Genomic Report R01 (LAB-3)</text></g><path d="M10,265.2266 L79.4512,265.2266 L79.4512,272.3594 L69.4512,282.3594 L10,282.3594 L10,265.2266" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="197.9297" style="stroke:#000000;stroke-width:1.5;" width="739.3076" x="10" y="265.2266" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="24.4512" x="25" y="278.2935">opt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="304.2671" x="94.4512" y="277.437">[Order Filler (Pathology) creates Genomic Order]</text><path d="M254,287.3594 L254,312.3594 L736,312.3594 L736,297.3594 L726,287.3594 L254,287.3594" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M726,287.3594 L726,297.3594 L736,297.3594 L726,287.3594" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="295.0137" x="343.3801" y="304.4263">Same specimen can reused for multiple tests</text><g class="message" data-participant-1="LIMSP" data-participant-2="LIMSG"><polygon fill="#181818" points="638.625,334.625,648.625,338.625,638.625,342.625,642.625,338.625" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="340.2949" x2="644.625" y1="338.625" y2="338.625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="232.4385" x="347.2949" y="333.5591">Submit Genomic Order O21 (LAB-1)</text></g><g class="message" data-participant-1="LIMSP" data-participant-2="EPR"><polygon fill="#181818" points="81.7295,363.7578,71.7295,367.7578,81.7295,371.7578,77.7295,367.7578" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="75.7295" x2="339.2949" y1="367.7578" y2="367.7578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235.9614" x="87.7295" y="362.6919">Copy of Genomic Order O22 (LAB-2)</text></g><g class="message" data-participant-1="LIMSP" data-participant-2="LIMSG"><polygon fill="#181818" points="638.625,392.8906,648.625,396.8906,638.625,400.8906,642.625,396.8906" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="340.2949" x2="644.625" y1="396.8906" y2="396.8906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="286.3301" x="347.2949" y="391.8247">Send Specimen (not a technical interaction)</text></g><g class="message" data-participant-1="LIMSG" data-participant-2="LIMSP"><polygon fill="#181818" points="351.2949,422.0234,341.2949,426.0234,351.2949,430.0234,347.2949,426.0234" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="345.2949" x2="649.625" y1="426.0234" y2="426.0234" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="224.3706" x="357.2949" y="420.9575">Send Genomic Report R01 (LAB-3)</text></g><g class="message" data-participant-1="LIMSG" data-participant-2="EPR"><polygon fill="#181818" points="81.7295,451.1563,71.7295,455.1563,81.7295,459.1563,77.7295,455.1563" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="75.7295" x2="649.625" y1="455.1563" y2="455.1563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="224.3706" x="87.7295" y="450.0903">Send Genomic Report R01 (LAB-3)</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Multiple Diagnostic Tests - LAB-1 and LAB-3</p>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="main-process-flow-1">Main Process Flow</h4>
+
+<ul>
+  <li>Initial Laboratory Order
+    <ul>
+      <li>Step 1: The Order Placer submits a Laboratory Order O21 (LAB-1) to Order Filler (Pathology).</li>
+      <li>Step 2: Order Filler (Pathology) sends back a Laboratory Report R01 (LAB-3).</li>
+      <li>Note: As required by local clinical guidelines, this step can also include imaging orders.</li>
+    </ul>
+  </li>
+  <li>Optional Path 1 – Genomic Order created by original order placer
+    <ul>
+      <li>Condition: [Genomic Order created by original order placer].</li>
+      <li>Note: The same specimen can be reused for multiple tests.</li>
+      <li>Step 3: Order Placer submits a Genomic Order O21 (LAB-2) to Order Filler (Genomics).</li>
+      <li>Step 4: Specimen is sent from Order Placer to Genomics.</li>
+      <li>Step 5: Order Filler (Genomics) sends a Genomic Report R01 (LAB-3) back to the Order Placer.</li>
+    </ul>
+  </li>
+  <li>Optional Path 2 – Genomic Order created by Pathology
+    <ul>
+      <li>Condition: [Order Filler (Pathology) creates Genomic Order].</li>
+      <li>Note: The same specimen can be reused for multiple tests.</li>
+      <li>Step 6: Order Filler (Pathology) submits a Genomic Order O21 (LAB-2) to Order Filler (Genomics).</li>
+      <li>Step 7: Specimen is sent from Pathology to Genomics.</li>
+      <li>Step 8: Order Filler (Genomics) sends a Genomic Report R01 (LAB-3) to Order Filler (Pathology).</li>
+      <li>Step 9: Pathology sends the Genomic Report R01 (LAB-3) to the Order Placer.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="diagnostic-cancer-pathways">Diagnostic Cancer Pathways</h4>
+
+<p>This use case can often occur around cancer:</p>
+
+<p><img style="padding:3px;width:20%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/cancer-diagnostics.png" alt="Cancer Diagnostics" />
+<br clear="all" /></p>
+<p class="figureTitle">Cancer Diagnostics</p>
+<p><br clear="all" /></p>
+
+<h5 id="colorectal-cancerdiagnostic-pathways-example">Colorectal Cancer—Diagnostic Pathways Example</h5>
+
+<p>The details of this are beyond the scope of this guide, for more details see <a href="https://gettingitrightfirsttime.co.uk/wp-content/uploads/2024/03/BestPracticeTimedDiagnosticCancerPathwayssummary-guide-March-24-V3.pdf">Getting It Right First Time (GIRFT) Best Practice Timed Diagnostic Cancer pathways </a></p>
+
+<p>For information on <code class="language-plaintext highlighter-rouge">Genomic Tests on the bowel cancer cells</code>, see <a href="https://www.macmillan.org.uk/cancer-information-and-support/bowel-cancer/tests-on-the-bowel-cancer-cells">macmillan.org.uk</a> and <a href="https://www.nice.org.uk/guidance/dg27">NICE DG27 Molecular testing strategies for Lynch syndrome in people with colorectal cancer</a></p>
+
+<p><img style="padding:3px;width:90%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/ERIC.drawio.png" alt="Colorectal Cancer Diagnostics and Patient Referrals" />
+<br clear="all" /></p>
+<p class="figureTitle">Colorectal Cancer Diagnostics and Patient Referrals</p>
+<p><br clear="all" /></p>
+
+<h2 id="work-order-management-lab-4">Work Order Management (LAB-4)</h2>
+
+<h3 id="use-case-work-order-management">Use Case: Work Order Management</h3>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="505px" preserveAspectRatio="none" style="width:861px;height:505px;background:#FFFFFF;" version="1.1" viewBox="0 0 861 505" width="861px" zoomAndPan="magnify"><defs /><g><rect fill="none" height="104.5313" style="stroke:#000000;stroke-width:1.5;" width="713.9351" x="24" y="148.9922" /><rect fill="none" height="134.7969" style="stroke:#000000;stroke-width:1.5;" width="831.9976" x="24" y="267.5234" /><g><title>Order Placer</title><rect fill="#000000" fill-opacity="0.00000" height="446.125" width="8" x="80.7295" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="84" x2="84" y1="52.5938" y2="498.7188" /></g><g><title>Automation Manager</title><rect fill="#000000" fill-opacity="0.00000" height="446.125" width="8" x="350.2949" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="353.3945" x2="353.3945" y1="52.5938" y2="498.7188" /></g><g><title>Order Filler</title><rect fill="#000000" fill-opacity="0.00000" height="446.125" width="8" x="649.1294" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="652.3237" x2="652.3237" y1="52.5938" y2="498.7188" /></g><g><title>Order Filler</title><rect fill="#000000" fill-opacity="0.00000" height="446.125" width="8" x="787.9663" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="791.9351" x2="791.9351" y1="52.5938" y2="498.7188" /></g><g class="participant participant-head" data-participant="EPR"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.459" x="34" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.459" x="41" y="41.292">Order Placer</text></g><g class="participant participant-head" data-participant="RIE"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="227.8008" x="240.3945" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.3555" x="280.6172" y="24.9951">Automation Manager</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="213.8008" x="247.3945" y="41.292">Regional Orchestration Engine</text></g><g class="participant participant-head" data-participant="LIMSP"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="149.6113" x="578.3237" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="613.8433" y="24.9951">Order Filler</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135.6113" x="585.3237" y="41.292">(North West GMSA)</text></g><g class="participant participant-head" data-participant="LIMSG"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108.0625" x="737.9351" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5723" x="752.6802" y="24.9951">Order Filler</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94.0625" x="744.9351" y="41.292">(other GMSA)</text></g><g class="message" data-participant-1="EPR" data-participant-2="RIE"><polygon fill="#181818" points="342.2949,79.7266,352.2949,83.7266,342.2949,87.7266,346.2949,83.7266" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="84.7295" x2="348.2949" y1="83.7266" y2="83.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245.5654" x="91.7295" y="78.6606">Submit Laboratory Order O21 (LAB-1)</text></g><path d="M242,96.7266 L242,136.7266 L464,136.7266 L464,106.7266 L454,96.7266 L242,96.7266" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M454,96.7266 L454,106.7266 L464,106.7266 L454,96.7266" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159.5229" x="248" y="113.7935">Route order as required,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201.6206" x="248" y="128.9263">splitting the order is necessary</text><path d="M24,148.9922 L93.4512,148.9922 L93.4512,156.125 L83.4512,166.125 L24,166.125 L24,148.9922" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="104.5313" style="stroke:#000000;stroke-width:1.5;" width="713.9351" x="24" y="148.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="24.4512" x="39" y="162.0591">opt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="160.166" x="108.4512" y="161.2026">[North West GMSA Order]</text><g class="message" data-participant-1="RIE" data-participant-2="LIMSP"><polygon fill="#181818" points="641.1294,183.2578,651.1294,187.2578,641.1294,191.2578,645.1294,187.2578" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="354.2949" x2="647.1294" y1="187.2578" y2="187.2578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="274.8345" x="361.2949" y="182.1919">Submit Genomic Order O21 (LAB-1/LAB-4)</text></g><g class="message" data-participant-1="LIMSP" data-participant-2="RIE"><polygon fill="#181818" points="365.2949,212.3906,355.2949,216.3906,365.2949,220.3906,361.2949,216.3906" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="359.2949" x2="652.1294" y1="216.3906" y2="216.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237.4976" x="371.2949" y="211.3247">Send Laboratory Report R01 (LAB-3)</text></g><g class="message" data-participant-1="RIE" data-participant-2="EPR"><polygon fill="#181818" points="95.7295,241.5234,85.7295,245.5234,95.7295,249.5234,91.7295,245.5234" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="89.7295" x2="353.2949" y1="245.5234" y2="245.5234" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237.4976" x="101.7295" y="240.4575">Send Laboratory Report R01 (LAB-3)</text></g><path d="M24,267.5234 L93.4512,267.5234 L93.4512,274.6563 L83.4512,284.6563 L24,284.6563 L24,267.5234" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="134.7969" style="stroke:#000000;stroke-width:1.5;" width="831.9976" x="24" y="267.5234" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="24.4512" x="39" y="280.5903">opt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="124.9854" x="108.4512" y="279.7339">[Other GMSA Order]</text><g class="message" data-participant-1="RIE" data-participant-2="LIMSG"><polygon fill="#181818" points="779.9663,316.9219,789.9663,320.9219,779.9663,324.9219,783.9663,320.9219" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="354.2949" x2="785.9663" y1="320.9219" y2="320.9219" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="274.8345" x="361.2949" y="300.7231">Submit Genomic Order O21 (LAB-1/LAB-4)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="306.1602" x="361.2949" y="315.856">Using Genomic Order Management Service API</text></g><g class="message" data-participant-1="LIMSG" data-participant-2="RIE"><polygon fill="#181818" points="365.2949,361.1875,355.2949,365.1875,365.2949,369.1875,361.2949,365.1875" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="359.2949" x2="790.9663" y1="365.1875" y2="365.1875" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.2056" x="371.2949" y="344.9888">Send Laboratory Report R01</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="306.1602" x="371.2949" y="360.1216">Using Genomic Order Management Service API</text></g><g class="message" data-participant-1="RIE" data-participant-2="EPR"><polygon fill="#181818" points="95.7295,390.3203,85.7295,394.3203,95.7295,398.3203,91.7295,394.3203" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="89.7295" x2="353.2949" y1="394.3203" y2="394.3203" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237.4976" x="101.7295" y="389.2544">Send Laboratory Report R01 (LAB-3)</text></g><path d="M5,414.3203 L5,439.3203 L434,439.3203 L434,424.3203 L424,414.3203 L5,414.3203" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M424,414.3203 L424,424.3203 L434,424.3203 L424,414.3203" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="263.2944" x="83.4504" y="431.3872">When all tests in the order are complete</text><g class="message" data-participant-1="RIE" data-participant-2="EPR"><polygon fill="#181818" points="95.7295,476.7188,85.7295,480.7188,95.7295,484.7188,91.7295,480.7188" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="89.7295" x2="353.2949" y1="480.7188" y2="480.7188" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172.3008" x="101.7295" y="460.52">Task complete notification</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193.3687" x="101.7295" y="475.6528">(Can be an email notification)</text></g></g></svg>
+<p id="fX.X.X.X-X" class="figureTitle">Work Order Management LAB-4</p>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="main-process-flow-2">Main Process Flow</h4>
+
+<ul>
+  <li>Order Submission
+    <ul>
+      <li>The Order Placer submits a Laboratory Order O21 (LAB-1) to the Automation Manager.</li>
+      <li>The Automation Manager decides whether to route or split the order as needed depending on the requested tests.</li>
+    </ul>
+  </li>
+  <li>Conditional Routing (opt blocks)
+    <ul>
+      <li>[North West GMSA Order]
+        <ul>
+          <li>The Automation Manager submits a Genomic Order O21 (LAB-1/LAB-4) to Order Filler (North West GMSA).</li>
+          <li>The Order Filler sends back Laboratory Report R01 to the Automation Manager.</li>
+          <li>The Automation Manager forwards this Laboratory Report R01 to the Order Placer.</li>
+        </ul>
+      </li>
+      <li>[Other GMSA Order]
+        <ul>
+          <li>The Automation Manager submits a Genomic Order O21 (LAB-1/LAB-4) using the Genomic Order Management Service API to Order Filler (other GMSA).</li>
+          <li>The Order Filler returns Laboratory Report R01 via the same API.</li>
+          <li>The Automation Manager sends this Laboratory Report R01 to the Order Placer.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Completion
+    <ul>
+      <li>When all tests in the order are complete, the Automation Manager sends a task complete notification (which can be an email) to the Order Placer.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="use-case-genomic-order-notifications">Use Case: Genomic Order Notifications</h2>
+
+<p><img style="padding:3px;width:95%;" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/OrderCommunicationAndNotifications.drawio.png" alt="Order Communication and Notifications" />
+<br clear="all" /></p>
+<p class="figureTitle">Genomic Order Notifications - Use Case 4</p>
+<p><br clear="all" /></p>
+
+<h3 id="as-is-process">As is Process</h3>
+
+<p>(From North West Children Cancer. This is centred around laboratory tests, genomic tests will have similar notification systems)</p>
+
+<ul>
+  <li>Blood test requested by Primary Treatment Centre (PTC)</li>
+  <li>Blood sample taken by Community Nurse or Paediatric Oncology Shared Care Unit (POSCU) and the specimen details are documented</li>
+  <li>Blood Laboratory Order is created and a laboratory order request is sent to the laboratory</li>
+  <li>Blood test performed by laboratory</li>
+  <li>Laboratory writes up a blood results report (laboratory report)</li>
+  <li>Laboratory report sent to Community Nurse or POSCU</li>
+  <li>Laboratory report then sent to PTC</li>
+  <li>Community Nurse or POSCU calls PTC by phone to notify that the results have been sent and to confirm that they have been received</li>
+  <li>If results cannot be understood, PTC will call Community Nurse or POSCU to inform them. This is usually due to a defective message
+    <ul>
+      <li>Community Nurse or POSCU sends results in a different format (via telephone or re-writes the results out)</li>
+    </ul>
+  </li>
+  <li>PTC may edit a child's prescription on regimen in light of blood results and may need to recall a patient into hospital for additional tests</li>
+  <li>If prescription is amended then PTC must notify POSCU</li>
+</ul>
+
+<h2 id="security-considerations">Security Considerations</h2>
+
+<p>TODO - is OAuth2 based using client credentials flow.</p>
+
+<p>This may include <a href="https://profiles.ihe.net/ITI/IUA/index.html">IHE Internet User Authentication [IUA]</a> and <a href="https://profiles.ihe.net/ITI/BALP/index.html">IHE Basic Audit Log Patterns[BALP]</a> which includes use of:</p>
+
+<ul>
+  <li>OAuth2 Standard for <strong>Authorisation</strong>
+    <ul>
+      <li>including use of JWT access tokens and including future support for <a href="https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html">SMART-on-FHIR Scopes</a>)</li>
+    </ul>
+  </li>
+  <li>FHIR AuditEvent for <strong>Logging Access</strong></li>
+  <li>TLS for <strong>Transport Security</strong></li>
+</ul>
+
+<h2 id="cross-profile-considerations">Cross-Profile Considerations</h2>
+
+<p>It is recommended that the actors receive patient demographic and encounter updates only within the
+context of a work order. Whenever patient data changes, due to:</p>
+
+<ul>
+  <li>Update patient information (A31 or A08)</li>
+  <li>Patient transfer (A02)</li>
+  <li>Transfer cancelled (A12)</li>
+  <li>Patients merge (A40)</li>
+</ul>
+
+<p>Note: Event trigger definitions based on <a href="https://drive.google.com/drive/folders/1FRkyZvWpZB1nCKbvQbo-eW_q9VtlR3Ws">NHS England HL7 v2 ADT Message Specification</a> which is NHS England's supplement to IHE Technical Framework Volume2: <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-30.html">Patient Identity Management [ITI-30]</a> and  <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-31.html">Patient Encounter Management [ITI-31]</a>.</p>
+
+<p>It is common for this requirement to be answered by a combination of:</p>
+
+<ul>
+  <li><a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PAM.html">Patient Administration (PAM)</a></li>
+  <li><a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html">IHE Patient Administration Management (PAM)</a>//HL7 v2 ADT Patient Encounter Management (A02, A08 and A12)
+    <ul>
+      <li>(Denmark) HL7 FHIR version <a href="https://medcomfhir.dk/ig/hospitalnotification/">DK MedCom HospitalNotification</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/business-analysis.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/PAM.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nwgenomics.nhs.uk/contact-us">NHS North West Genomics</a>.  Package fhir.nwgenomics.nhs.uk#0.2.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:11+0000">2026-04-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/supplement-template/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://fhir.nwgenomics.nhs.uk/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/external.png"/></a>
+                 <script type="text/javascript" src="https://build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/.assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/nw-gmsa/nw-gmsa.github.com/branches/main/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

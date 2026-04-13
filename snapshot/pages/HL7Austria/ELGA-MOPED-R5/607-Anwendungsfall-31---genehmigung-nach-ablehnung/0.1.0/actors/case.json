@@ -1,0 +1,56 @@
+{
+  "slug": "hl7austria-elga-moped-r5-607-anwendungsfall-31-genehmigung-nach-ablehnung-actors",
+  "storageId": "HL7Austria_ELGA-MOPED-R5@607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "packageId": "elga.moped#0.1.0",
+  "package": "elga.moped",
+  "version": "0.1.0",
+  "title": "Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)",
+  "repo": "HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/qa.json",
+  "repoPath": "HL7Austria/ELGA-MOPED-R5",
+  "buildUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "branch": "607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "githubUrl": "https://github.com/HL7Austria/ELGA-MOPED-R5/tree/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "canonicalUrl": "https://elga.moped.at/ImplementationGuide/elga.moped",
+  "canonical": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung",
+  "candidateBases": [
+    "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung"
+  ],
+  "fileName": "actors.html",
+  "originalFileName": "actors.html",
+  "fullPath": "/tmp/mermaid-in-fhir-igs/content/HL7Austria_ELGA-MOPED-R5@607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html",
+  "pagePath": "actors.html",
+  "pageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html",
+  "scriptPaths": {
+    "mermaidPath": "assets/js/mermaid.js",
+    "mermaidInitPath": "assets/js/mermaid-init.js"
+  },
+  "diagramCount": 5,
+  "maxDiagramLength": 357,
+  "totalDiagramLength": 1101,
+  "diagramKinds": [
+    "mermaid-element"
+  ],
+  "fixturePaths": {
+    "root": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors",
+    "caseJson": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/case.json",
+    "before": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/before",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/before/index.html"
+    },
+    "after": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/after",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/after/index.html"
+    },
+    "failure": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/failure",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/failure/index.html"
+    },
+    "source": {
+      "dir": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/source",
+      "html": "pages/HL7Austria/ELGA-MOPED-R5/607-Anwendungsfall-31---genehmigung-nach-ablehnung/0.1.0/actors/source/index.html"
+    }
+  },
+  "resolvedPageUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/actors.html",
+  "remoteMermaidUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid.js",
+  "remoteMermaidInitUrl": "https://build.fhir.org/ig/HL7Austria/ELGA-MOPED-R5/branches/607-Anwendungsfall-31---genehmigung-nach-ablehnung/assets/js/mermaid-init.js"
+}

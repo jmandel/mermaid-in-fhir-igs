@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Architecture - API for the Exchange of Medicinal Product Information (APIX) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/project.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/prism.css" rel="stylesheet" />
+  	<link href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/css/cqf.css" rel="stylesheet" />
+    <style>
+    /* GitHub-style Alerts for APIX IG */
+
+    .markdown-alert {
+        padding: 12px 16px !important;
+        margin-bottom: 20px !important;
+        border-left: 4px solid #d0d7de !important;
+        border-radius: 6px !important;
+        background-color: #f6f8fa !important;
+        color: #1f2328 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+    }
+
+    .markdown-alert-title {
+        display: flex !important;
+        font-weight: 600 !important;
+        align-items: center !important;
+        line-height: 1 !important;
+        margin-bottom: 8px !important;
+        font-size: 14px !important;
+    }
+
+    /* Note (Blue) */
+    .markdown-alert.markdown-alert-note {
+        border-left-color: #0969da !important;
+        background-color: #f0f7ff !important;
+    }
+
+    .markdown-alert-note .markdown-alert-title {
+        color: #0969da !important;
+    }
+
+    .markdown-alert-note .markdown-alert-title::before {
+        content: 'ⓘ' !important;
+        margin-right: 8px !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+
+    /* Tip (Green) */
+    .markdown-alert.markdown-alert-tip {
+        border-left-color: #1a7f37 !important;
+        background-color: #f0fff4 !important;
+    }
+
+    .markdown-alert-tip .markdown-alert-title {
+        color: #1a7f37 !important;
+    }
+
+    .markdown-alert-tip .markdown-alert-title::before {
+        content: '💡' !important;
+        margin-right: 8px !important;
+    }
+
+    /* Important (Purple) */
+    .markdown-alert.markdown-alert-important {
+        border-left-color: #8250df !important;
+        background-color: #fbefff !important;
+    }
+
+    .markdown-alert-important .markdown-alert-title {
+        color: #8250df !important;
+    }
+
+    .markdown-alert-important .markdown-alert-title::before {
+        content: '❗' !important;
+        margin-right: 8px !important;
+    }
+
+    /* Warning (Yellow) */
+    .markdown-alert.markdown-alert-warning {
+        border-left-color: #9a6700 !important;
+        background-color: #fff8c5 !important;
+    }
+
+    .markdown-alert-warning .markdown-alert-title {
+        color: #9a6700 !important;
+    }
+
+    .markdown-alert-warning .markdown-alert-title::before {
+        content: '⚠️' !important;
+        margin-right: 8px !important;
+    }
+
+    /* Caution (Red) */
+    .markdown-alert.markdown-alert-caution {
+        border-left-color: #cf222e !important;
+        background-color: #fff1f0 !important;
+    }
+
+    .markdown-alert-caution .markdown-alert-title {
+        color: #cf222e !important;
+    }
+
+    .markdown-alert-caution .markdown-alert-title::before {
+        content: '🚫' !important;
+        margin-right: 8px !important;
+    }
+
+    /* Ensure paragraph spacing inside alerts */
+    .markdown-alert p {
+        margin: 4px 0 !important;
+    }
+</style>
+
+    <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/html5shiv.js"></script>
+    <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/61b335a46df05a7c-mermaid.js"></script>
+    <script type="text/javascript" src="../../../../../../../shared/assets/81fa36c19ffdc76b-mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">API for the Exchange of Medicinal Product Information (APIX)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="International flag" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/usecases.html">Use Cases</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Key elements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixtask.html">Task</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixsubscription.html">Subscription</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixsubscriptionTopic.html">SubscriptionTopic</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixsubscriptionNotificationAndStatus.html">SubscriptionNotification Bundle/SubscriptionStatus</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixorganizationEndpoint.html">Endpoint/Organization</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixdocumentReference.html">DocumentReference</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/workflow.html">Workflow Example</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/subscriptions.html">Real-Time Subscriptions</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/apixinteractionpattern.html">APIX Interaction Example</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/architecture.html">Architecture</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/toc.html'><b>Table of Contents</b></a></li><li><b>Architecture</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">API for the Exchange of Medicinal Product Information (APIX), published by HL7 International / Biomedical Research and Regulation. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/HL7/APIX---API-Exchange-for-Medicinal-Products/'>https://github.com/HL7/APIX---API-Exchange-for-Medicinal-Products/</a> and changes regularly. See the <a href='http://hl7.org/fhir/uv/apix/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Architecture</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R5/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#system-landscape" id="markdown-toc-system-landscape">System Landscape</a></li>
+  <li><a href="#data-governance-and-security" id="markdown-toc-data-governance-and-security">Data Governance and Security</a></li>
+  <li><a href="#binary-upload-guide-post-then-link" id="markdown-toc-binary-upload-guide-post-then-link">Binary Upload Guide (Post-then-Link)</a></li>
+</ul>
+
+</div>
+<div class="markdown-alert markdown-alert-note">
+  <p class="markdown-alert-title">Note</p>
+  <p>The architecture components below are illustrative suggestions only. Implementers are free to select any technologies or platforms (including on-premises, cloud-based, or hybrid solutions) that meet the specified functional requirements.</p>
+</div>
+
+<table style="width:100%; border-collapse: collapse; border: 1px solid #d0d0d0;">
+  <thead>
+    <tr style="background-color: #f5f5f5; text-align: left;">
+      <th style="padding: 12px; border: 1px solid #d0d0d0;">Component</th>
+      <th style="padding: 12px; border: 1px solid #d0d0d0;">Minimum Requirement</th>
+      <th style="padding: 12px; border: 1px solid #d0d0d0;">Recommendation / Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>FHIR Server<br />(Regulatory Authority and Submitting Company)</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">FHIR R5, conditional create/update, Subscriptions, SMART Backend Services</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Open-source or commercial servers such as HAPI FHIR, Smile CDR, Microsoft Azure API for FHIR, AWS HealthLake, Google Cloud Healthcare API, or any other compliant FHIR server</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>Authentication</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">SMART Backend Services (system-level scopes, JWT bearer tokens)</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Mandatory for production use</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>Subscriptions</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">R5-native or R5 backport, rest-hook channel with signed webhook delivery</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Mandatory for production environments</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>Validation Engine</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Support for <code>$validate</code> operation + custom regulatory rules Operation</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">May be implemented as part of the FHIR server, an API gateway, or a dedicated validation service</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>Audit</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Provenance resource created/updated on every relevant Task change</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Mandatory</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;"><strong>Search / Grouping</strong></td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Support for <code>groupIdentifier</code>, <code>partOf</code>, chaining, and reverse chaining as required by the profiles</td>
+      <td style="padding: 12px; border: 1px solid #d0d0d0; vertical-align: top;">Essential for workflow navigation and reporting</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="system-landscape">System Landscape</h3>
+
+<p>The following interaction diagram illustrates how these components work together in a production environment:</p>
+
+<pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant App as Applicant (RIM System)
+    participant Auth as Auth Server (OAuth2)
+    participant APIX as APIX FHIR Server
+    participant Val as Validation Engine
+
+    note over App, Val: Phase 1: Authentication &amp; Submission
+    
+    App-&gt;&gt;Auth: 1. Request Access Token
+    Auth--&gt;&gt;App: 2. Return JWT (Scope: system/Task.cruds)
+    
+    App-&gt;&gt;APIX: 3. POST /Task (Submission Bundle)
+    APIX-&gt;&gt;Val: 4. $validate Bundle
+    Val--&gt;&gt;APIX: 5. Validation Outcome (Pass)
+    APIX--&gt;&gt;App: 6. 201 Created (Task.status = received)
+
+    note over App, Val: Phase 2: Asynchronous Processing &amp; Notification
+
+    APIX-&gt;&gt;APIX: 7. Regulator Review (Status Change)
+    
+    par Real-Time Notification
+        APIX-&gt;&gt;App: 8. POST Subscription Notification (Task.status = in-progress)
+    and Audit Logging
+        APIX-&gt;&gt;APIX: 9. Create Provenance Record
+    end
+
+</pre>
+
+<h3 id="data-governance-and-security">Data Governance and Security</h3>
+
+<p>The APIX "Index Pattern" relies on a <strong>logical separation</strong> of data rather than physical silos. This approach ensures scalability while maintaining strict intellectual property (IP) protection.</p>
+
+<h4 id="logical-data-separation-multi-tenancy">Logical Data Separation (Multi-Tenancy)</h4>
+<p>In a shared regulatory environment, data for different medicinal products (e.g., Drug A vs. Drug B) sits in a common storage layer but is differentiated by FHIR metadata:</p>
+
+<ul>
+  <li><strong>Subject Linking</strong>: Every <code class="language-plaintext highlighter-rouge">DocumentReference</code> is linked to a specific <code class="language-plaintext highlighter-rouge">MedicinalProductDefinition</code> via the <code class="language-plaintext highlighter-rouge">subject</code> field, ensuring documents are contextually tied to the correct product lifecycle.</li>
+  <li><strong>Metadata Categorization</strong>: The <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">type</code> fields (using CTD Module and Section codes) provide the structural hierarchy needed to organize large submissions within the product context.</li>
+  <li><strong>Shared Infrastructure</strong>: While physical separation (e.g., dedicated database instances per company) is an implementation choice, the APIX standard is designed to work in a multi-tenant environment where metadata-driven filters provide the necessary isolation.</li>
+</ul>
+
+<h4 id="ip-protection-and-access-control">IP Protection and Access Control</h4>
+<p>To protect company trade secrets and clinical data, the following security principles are applied:</p>
+
+<ol>
+  <li><strong>SMART on FHIR &amp; OAuth2</strong>: All access is authenticated via system-level or user-level JWT tokens. These tokens carry claims about the user's organizational affiliation (e.g., <code class="language-plaintext highlighter-rouge">Org: SynthPharma</code>).</li>
+  <li><strong>Attribute-Based Access Control (ABAC)</strong>: The regulator's FHIR server acts as a Policy Enforcement Point. Every query is intercepted to ensure that a company can only search for or retrieve resources that "belong" to their organizational compartment.</li>
+  <li><strong>Security Labels</strong>: The <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> field allows for granular confidentiality tagging (e.g., <code class="language-plaintext highlighter-rouge">R</code> for Restricted). Access is denied unless the requester’s security clearance matches the document's label.</li>
+  <li><strong>Provenance &amp; Integrity</strong>: Every upload is tracked via a <code class="language-plaintext highlighter-rouge">Provenance</code> resource, providing a cryptographic audit trail that proves the origin and integrity of the submission, ensuring no unauthorized party has modified or accessed the index.</li>
+</ol>
+
+<h3 id="binary-upload-guide-post-then-link">Binary Upload Guide (Post-then-Link)</h3>
+
+<p>To handle large documents (e.g., 20MB PDFs) or massive data packages (e.g., 50GB stability datasets) without impacting API performance, APIX utilizes a two-step <strong>"Post-then-Link"</strong> mechanism.</p>
+
+<h4 id="step-1-upload-raw-binary">Step 1: Upload Raw Binary</h4>
+<p>The submittor posts the file as a raw octet-stream directly to the <code class="language-plaintext highlighter-rouge">/Binary</code> endpoint. This avoids the overhead of Base64 encoding.</p>
+
+<ul>
+  <li><strong>Request</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/Binary</code></li>
+  <li><strong>Header</strong>: <code class="language-plaintext highlighter-rouge">Content-Type: application/pdf</code> (or appropriate MIME type)</li>
+  <li><strong>Body</strong>: Raw binary bytes.</li>
+  <li><strong>Response</strong>: <code class="language-plaintext highlighter-rouge">201 Created</code> with a <code class="language-plaintext highlighter-rouge">Location</code> header (e.g., <code class="language-plaintext highlighter-rouge">Location: Binary/123</code>).</li>
+</ul>
+
+<h4 id="step-2-create-metadata-link-documentreference">Step 2: Create Metadata Link (<code class="language-plaintext highlighter-rouge">DocumentReference</code>)</h4>
+<p>The submittor creates a <code class="language-plaintext highlighter-rouge">DocumentReference</code> resource that "claims" the binary and provides regulatory context (CTD section, title, etc.).</p>
+
+<ul>
+  <li><strong>Content URL</strong>: Set <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> to the ID received in Step 1 (<code class="language-plaintext highlighter-rouge">Binary/123</code>).</li>
+  <li><strong>Metadata</strong>: Add <code class="language-plaintext highlighter-rouge">category</code> (e.g., Module 3) and <code class="language-plaintext highlighter-rouge">type</code> (e.g., Stability Report) to allow for indexing and search.</li>
+</ul>
+
+<h4 id="step-3-orchestrate-via-task">Step 3: Orchestrate via Task</h4>
+<p>The <code class="language-plaintext highlighter-rouge">DocumentReference</code> ID is added to the <code class="language-plaintext highlighter-rouge">Task.input</code> or <code class="language-plaintext highlighter-rouge">Task.output</code> array. The regulator can now discover the file through the Task and only retrieve the binary payload if needed.</p>
+
+<h4 id="technical-benefits">Technical Benefits</h4>
+<ul>
+  <li><strong>Memory Efficiency</strong>: The server can stream the binary directly to storage without loading the entire file into memory.</li>
+  <li><strong>Scalability</strong>: Supports massive files that would otherwise exceed JSON size limits.</li>
+  <li><strong>Resume-ability</strong>: If an upload is interrupted, only the specific Binary needs to be retried, not the entire submission package.</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/rcrim">HL7 International / Biomedical Research and Regulation</a>.  Package hl7.fhir.uv.apix#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Feb 4, 2026 10:52+0000">2026-02-04</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="../../../../../../../vendor/https/build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/draft-of-Developer-notes/assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
